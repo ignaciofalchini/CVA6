@@ -17,6 +17,22 @@ ips := xlnx_axi_clock_converter.xci  \
 ips := $(addprefix $(work-dir)/, $(ips))
 ips-target := $(join $(addsuffix /ip/, $(addprefix $(ip-dir)/, $(basename $(ips)))), $(ips))
 
+ifeq ($(BOARD),kr260)
+KR260_ATTEMPT ?= 1
+KR260_REPORT_DIR ?= ../../reports/kr260_port/attempt_$(KR260_ATTEMPT)
+export KR260_REPORT_DIR
+
+# KR260 is synthesis-only by design.  Do not add implementation or bitstream
+# targets here until the physical PS/PL memory and pin architecture is chosen.
+all: kr260-synth
+
+kr260-synth:
+	mkdir -p $(KR260_REPORT_DIR)
+	$(VIVADO) -mode batch -nojournal -log $(KR260_REPORT_DIR)/vivado.log -source scripts/run_kr260_synth_2.tcl
+
+.PHONY: kr260-synth
+
+else
 all: $(mcs)
 
 # Generate mcs from bitstream
@@ -35,6 +51,8 @@ $(ips): %.xci :
 	@cp $(ip-dir)/$(basename $(@F))/$(basename $(@F)).srcs/sources_1/ip/$(basename $(@F))/$(@F) $@
 
 mcs: $(mcs)
+
+endif
 
 program:
 	$(VIVADO) $(VIVADOFLAGS) -source scripts/program.tcl

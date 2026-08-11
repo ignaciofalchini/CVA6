@@ -38,7 +38,8 @@ test-location ?= output/test
 torture-logs :=
 # custom elf bin to run with sim or sim-verilator
 elf_file ?= tmp/riscv-tests/build/benchmarks/dhrystone.riscv
-# board name for bitstream generation. Currently supported: kc705, genesys2, nexys_video
+# board name for FPGA generation. Currently supported: kc705, genesys2, vc707,
+# nexys_video and kr260.
 BOARD ?= genesys2
 ALTERA_BOARD ?= DK-DEV-AGF014E3ES
 ALTERA_FAMILY ?= "AGILEX"
@@ -85,6 +86,11 @@ else ifeq ($(BOARD), vc707)
 else ifeq ($(BOARD), nexys_video)
   XILINX_PART := xc7a200tsbg484-1
   XILINX_BOARD := digilentinc.com:nexys_video:part0:1.1
+  CLK_PERIOD_NS := 40
+else ifeq ($(BOARD), kr260)
+  # Checked with Vivado 2026.1: get_board_parts *kr260* and get_parts *xck26*.
+  XILINX_PART := xck26-sfvc784-2LV-c
+  XILINX_BOARD := xilinx.com:kr260_som:part0:2.0
   CLK_PERIOD_NS := 40
 else
   $(error Unknown board - please specify a supported FPGA board)
@@ -285,6 +291,17 @@ src := $(filter-out $(xil_debug_filter), $(src))
 
 fpga_src += corev_apu/fpga/src/bootrom/bootrom_$(XLEN).sv
 fpga_src := $(addprefix $(root-dir), $(fpga_src))
+
+# The KR260 wrapper is deliberately independent of the legacy Xilinx board
+# wrapper and its Series-7 IP/peripheral sources.  The common CVA6, cache,
+# AXI, debug, CLINT and bootrom sources remain in the generated source list.
+ifeq ($(BOARD),kr260)
+  kr260_fpga_filter := $(addprefix $(root-dir), \
+    corev_apu/fpga/src/ariane_xilinx.sv \
+    corev_apu/fpga/src/ariane_peripherals_xilinx.sv \
+    corev_apu/fpga/src/fan_ctrl.sv)
+  kr260_fpga_filter += $(wildcard $(root-dir)corev_apu/fpga/src/ariane-ethernet/*.sv)
+endif
 
 # look for testbenches
 tbs := $(top_level_path) corev_apu/tb/ariane_testharness.sv core/cva6_rvfi.sv
@@ -792,7 +809,7 @@ fpga: $(ariane_pkg) $(src) $(fpga_src) $(uart_src) $(src_flist)
 	@echo read_verilog -sv {$(ariane_pkg)} >> corev_apu/fpga/scripts/add_sources.tcl
 	@echo read_verilog -sv {$(filter-out $(fpga_filter), $(src_flist))}		>> corev_apu/fpga/scripts/add_sources.tcl
 	@echo read_verilog -sv {$(filter-out $(fpga_filter), $(src))} 	   >> corev_apu/fpga/scripts/add_sources.tcl
-	@echo read_verilog -sv {$(fpga_src)}   >> corev_apu/fpga/scripts/add_sources.tcl
+	@echo read_verilog -sv {$(filter-out $(kr260_fpga_filter), $(fpga_src))}   >> corev_apu/fpga/scripts/add_sources.tcl
 	@echo "[FPGA] Generate Bitstream"
 	$(MAKE) -C corev_apu/fpga BOARD=$(BOARD) XILINX_PART=$(XILINX_PART) XILINX_BOARD=$(XILINX_BOARD) CLK_PERIOD_NS=$(CLK_PERIOD_NS)
 
