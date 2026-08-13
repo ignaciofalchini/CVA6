@@ -26,6 +26,10 @@ set_property include_dirs [list \
 ] [current_fileset]
 
 source scripts/add_sources.tcl
+if {[info exists ::env(KR260_MEMORY_TEST_BOOTROM)] &&
+    $::env(KR260_MEMORY_TEST_BOOTROM) eq "1"} {
+    source scripts/select_kr260_memory_test_bootrom.tcl
+}
 set debug_wrapper [file normalize src/ariane_kr260_debug.sv]
 if {[llength [get_files -quiet $debug_wrapper]] == 0} {
     add_files -fileset sources_1 -norecurse $debug_wrapper
