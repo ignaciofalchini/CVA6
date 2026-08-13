@@ -41,7 +41,7 @@ visible in `ariane_kr260_system.sv` and guarded by simulation assertions.
   |   |                                                                |
   |   v                                                                |
   | explicit boundary adapter (`ariane_kr260_system.sv`)               |
-  |   - address: subtract 0x8000_0000, then require result < 1 GiB      |
+  |   - address: subtract 0x8000_0000 from the decoded 1 GiB window    |
   |   - ID: zero-extend 5 -> 6; response bit 5 must remain zero         |
   |   - USER: discard inactive CVA6 USER, drive PS AW/ARUSER = 0        |
   |   - ATOP: require zero after the atomics adapter                    |
@@ -127,9 +127,10 @@ from an inaccessible web rendering.
 
 CVA6 emits 64-bit addresses, but only its decoded 1 GiB DRAM range reaches this
 boundary. HP0 accepts 49-bit physical addresses. The adapter first subtracts
-the CVA6 base and only then takes bits `[48:0]`; assertions reject any request
-outside the source window. No address-width converter is needed after this
-explicit remapping.
+the CVA6 base and only then takes bits `[48:0]`. The upstream crossbar decodes
+the 1 GiB source window and boundary assertions make that assumption executable
+in simulation. No address-width converter is needed after this explicit
+remapping.
 
 The reason a translation is mandatory is easy to miss: the PS `DDR_LOW` range
 has a size of exactly `0x8000_0000`, so CVA6 address `0x8000_0000` is the first
@@ -252,6 +253,22 @@ The Block Design contains only the PS, reset synchronization, reset inversion,
 and constants required by the reset IP. It enables only `S_AXI_HP0_FPD` among
 the PS-to-PL slave interfaces and disables unused PS AXI masters at the PL
 boundary. It does not add Linux or PL Ethernet/USB/SPI/GPIO.
+
+The first complete synthesis-only run used the opt-in KR260 memory-test
+bootrom and completed successfully in Vivado 2026.1:
+
+- `validate_bd_design`: success;
+- `generate_target all`: success;
+- `synth_design`: 0 errors and 0 critical warnings;
+- unexpected black boxes after opening the synthesized design: 0;
+- total: 57,779 LUT, 28,854 FF, 36 RAMB36 and 27 DSP;
+- PS/DDR wrapper contribution: 287 LUT and 40 FF.
+
+Vivado's synthesized timing estimate has setup margin (`WNS=29.497 ns`) but a
+small hold violation (`WHS=-0.033 ns`). `check_timing` also reports the
+unconstrained external JTAG clock and I/O. These are intentionally not hidden:
+only implementation can resolve routing hold and evidence-backed board routing
+can constrain JTAG. No implementation or bitstream was run.
 
 ## What synthesis cannot prove
 

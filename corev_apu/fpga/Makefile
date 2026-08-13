@@ -21,8 +21,12 @@ ifeq ($(BOARD),kr260)
 KR260_ATTEMPT ?= 1
 KR260_REPORT_DIR ?= ../../reports/kr260_port/attempt_$(KR260_ATTEMPT)
 KR260_DEBUG_REPORT_DIR ?= ../../reports/kr260_next_steps/debug
+KR260_SYSTEM_REPORT_DIR ?= ../../reports/kr260_next_steps/system_synth
+KR260_MEMORY_TEST_BOOTROM ?= 0
 export KR260_REPORT_DIR
 export KR260_DEBUG_REPORT_DIR
+export KR260_SYSTEM_REPORT_DIR
+export KR260_MEMORY_TEST_BOOTROM
 
 # KR260 is synthesis-only by design.  Do not add implementation or bitstream
 # targets here until the physical PS/PL memory and pin architecture is chosen.
@@ -36,7 +40,11 @@ kr260-debug-synth:
 	mkdir -p $(KR260_DEBUG_REPORT_DIR)
 	$(VIVADO) -mode batch -nojournal -log $(KR260_DEBUG_REPORT_DIR)/vivado.log -source scripts/run_kr260_debug_synth.tcl
 
-.PHONY: kr260-synth kr260-debug-synth
+kr260-system-synth:
+	mkdir -p $(KR260_SYSTEM_REPORT_DIR)
+	$(VIVADO) -mode batch -nojournal -log $(KR260_SYSTEM_REPORT_DIR)/vivado.log -source scripts/run_kr260_system_synth.tcl
+
+.PHONY: kr260-synth kr260-debug-synth kr260-system-synth
 
 else
 all: $(mcs)
