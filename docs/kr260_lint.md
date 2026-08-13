@@ -107,3 +107,17 @@ Para completar un lint dedicado todavía hace falta disponer, sin instalación g
 - Slang como frontend SystemVerilog adicional.
 
 Hasta entonces este estado debe leerse como “RTL compilable y elaborable por Vivado”, no como “lint exhaustivo limpio”.
+
+## Archivos agregados después de la pasada inicial
+
+Los wrappers creados en las fases posteriores también tienen comprobación de
+frontend, aunque siguen sin cobertura de un linter dedicado:
+
+- `ariane_kr260_debug.sv` fue compilado y sintetizado junto con los ILA/VIO
+  reales de Vivado, sin errores ni critical warnings;
+- `ariane_kr260_system.sv` pasó una compilación independiente con `xvlog` y la
+  síntesis completa junto con el Block Design ZynqMP/HP0, sin errores ni
+  critical warnings y sin black boxes inesperadas.
+
+Esto amplía la evidencia de compilabilidad a todos los wrappers nuevos, pero
+no cambia el estado global `PARTIAL`: todavía falta Verilator, Verible o Slang.
