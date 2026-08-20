@@ -172,7 +172,8 @@ module ariane_kr260_debug (
       .probe5 ( aw_control ),
       .probe6 ( m_axi_mem_wdata ),
       .probe7 ( w_control ),
-      .probe8 ( b_control )
+      .probe8 ( b_control ),
+      .probe9 ( rst_ni )
   );
 
   kr260_reset_vio i_kr260_reset_vio (
