@@ -4,8 +4,10 @@
 
 `ariane_kr260_debug.sv` envuelve al top mínimo `ariane_kr260` sin modificarlo. La variante mínima sigue siendo independiente de los IP de debug. El wrapper usa dos IP reales del catálogo de Vivado 2026.1, creados por `create_kr260_debug_ips.tcl`:
 
-- `kr260_axi_ila`: ILA de 9 probes, 2048 muestras y clock `clk_i`.
+- `kr260_axi_ila`: ILA de 10 probes, 2048 muestras y clock `clk_i`.
 - `kr260_reset_vio`: VIO con una entrada de 2 bits y una salida de 1 bit.
+
+El wrapper expone solamente `clk_i`. El JTAG DTM propio de CVA6 queda mantenido en reset; esto no afecta el acceso a ILA/VIO, que usa la cadena JTAG de configuración de la FPGA. Para generar el bitstream todavía hay que asignar `clk_i` a su pin físico y definir su `IOSTANDARD` en un XDC de la placa.
 
 La profundidad 2048 permite ver varios bursts y su respuesta sin el costo desmedido de una captura muy larga. La síntesis atribuye al ILA 17 RAMB36, 1587 LUT y 2667 FF; el VIO usa 103 LUT y 250 FF.
 
@@ -36,6 +38,7 @@ La profundidad 2048 permite ver varios bursts y su respuesta sin el costo desmed
 | `probe8[3:2]` | 2 | `m_axi_mem_bresp` | Respuesta final de escritura AXI. |
 | `probe8[1]` | 1 | `m_axi_mem_bvalid` | El destino presenta la respuesta B. |
 | `probe8[0]` | 1 | `m_axi_mem_bready` | CVA6 acepta la respuesta B. |
+| `probe9` | 1 | `core_rst_ni` | Reset activo-bajo efectivo que recibe el core. |
 
 Un handshake ocurre solamente en un ciclo con `VALID && READY`.
 
@@ -59,15 +62,15 @@ AXI permite desacoplar AW y W: no es obligatorio que ambos handshakes ocurran en
 
 ## VIO y soft reset
 
-`probe_in0[1]` observa el reset externo activo-bajo `rst_ni`; `probe_in0[0]` observa el reset efectivo `core_rst_ni`. `probe_out0[0]` controla `soft_reset` y se inicializa a cero.
+`probe_in0[1]` observa `soft_reset`; `probe_in0[0]` observa el reset efectivo activo-bajo `core_rst_ni`. `probe_out0[0]` controla `soft_reset` y se inicializa a uno para mantener el core en reset después de programar la FPGA.
 
 La combinación es:
 
 ```systemverilog
-assign core_rst_ni = rst_ni & ~soft_reset;
+assign core_rst_ni = ~soft_reset;
 ```
 
-Por lo tanto, el VIO sólo puede agregar una aserción de reset. No sustituye ni puede anular el reset físico. Esta lógica existe exclusivamente en el wrapper debug.
+El VIO es la única fuente de reset de este wrapper de debug. Después de programar la FPGA hay que cambiar `soft_reset` a cero desde Hardware Manager para liberar el core; `ariane_kr260` sincroniza internamente esa liberación.
 
 ## Generación y síntesis reproducibles
 
@@ -89,7 +92,7 @@ Resultado comprobado con Vivado 2026.1:
 - síntesis del top: `synth_design Complete!`, 0 errores y 0 critical warnings durante síntesis;
 - ILA y VIO reconocidos como cores Chipscope, con todos los anchos esperados;
 - recursos totales: 59.245 LUT, 31.794 FF, 55 RAMB36 y 27 DSP;
-- black boxes esperadas al abrir el DCP: `dbg_hub` y tres módulos `unread` intencionales sin salida; ninguna black box de IP de usuario inesperada.
+- black box esperada al abrir el DCP: `dbg_hub`; ninguna black box de IP de usuario inesperada.
 
 El timing de síntesis no sustituye timing post-place-and-route. El reporte muestra setup holgado a 25 MHz, pero violaciones hold estimadas antes de implementación; por regla de esta tanda no se ejecutó implementación.
 

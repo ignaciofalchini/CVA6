@@ -5,78 +5,76 @@
 // of Vivado debug IP.
 
 module ariane_kr260_debug (
-    input  logic        clk_i,
-    input  logic        rst_ni,
-
-    input  logic        tck_i,
-    input  logic        tms_i,
-    input  logic        tdi_i,
-    input  logic        trst_ni,
-    output logic        tdo_o,
-
-    output logic [4:0]  m_axi_mem_awid,
-    output logic [63:0] m_axi_mem_awaddr,
-    output logic [7:0]  m_axi_mem_awlen,
-    output logic [2:0]  m_axi_mem_awsize,
-    output logic [1:0]  m_axi_mem_awburst,
-    output logic        m_axi_mem_awlock,
-    output logic [3:0]  m_axi_mem_awcache,
-    output logic [2:0]  m_axi_mem_awprot,
-    output logic [3:0]  m_axi_mem_awqos,
-    output logic [5:0]  m_axi_mem_awatop,
-    output logic [3:0]  m_axi_mem_awregion,
-    output logic [63:0] m_axi_mem_awuser,
-    output logic        m_axi_mem_awvalid,
-    input  logic        m_axi_mem_awready,
-    output logic [63:0] m_axi_mem_wdata,
-    output logic [7:0]  m_axi_mem_wstrb,
-    output logic        m_axi_mem_wlast,
-    output logic [63:0] m_axi_mem_wuser,
-    output logic        m_axi_mem_wvalid,
-    input  logic        m_axi_mem_wready,
-    input  logic [4:0]  m_axi_mem_bid,
-    input  logic [1:0]  m_axi_mem_bresp,
-    input  logic [63:0] m_axi_mem_buser,
-    input  logic        m_axi_mem_bvalid,
-    output logic        m_axi_mem_bready,
-    output logic [4:0]  m_axi_mem_arid,
-    output logic [63:0] m_axi_mem_araddr,
-    output logic [7:0]  m_axi_mem_arlen,
-    output logic [2:0]  m_axi_mem_arsize,
-    output logic [1:0]  m_axi_mem_arburst,
-    output logic        m_axi_mem_arlock,
-    output logic [3:0]  m_axi_mem_arcache,
-    output logic [2:0]  m_axi_mem_arprot,
-    output logic [3:0]  m_axi_mem_arqos,
-    output logic [3:0]  m_axi_mem_arregion,
-    output logic [63:0] m_axi_mem_aruser,
-    output logic        m_axi_mem_arvalid,
-    input  logic        m_axi_mem_arready,
-    input  logic [4:0]  m_axi_mem_rid,
-    input  logic [63:0] m_axi_mem_rdata,
-    input  logic [1:0]  m_axi_mem_rresp,
-    input  logic        m_axi_mem_rlast,
-    input  logic [63:0] m_axi_mem_ruser,
-    input  logic        m_axi_mem_rvalid,
-    output logic        m_axi_mem_rready
+    input logic clk_i
 );
 
   logic soft_reset;
   logic core_rst_ni;
+  logic jtag_tdo_unused;
 
-  // The VIO reset is additive: the external active-low reset always retains
-  // control, while soft_reset can only assert an additional debug reset.
-  // ariane_kr260 performs its normal reset synchronization internally.
-  assign core_rst_ni = rst_ni & ~soft_reset;
+  // Keep the memory AXI interface internal in this debug-only experiment.
+  // The response side is intentionally left undriven; synthesis may trim any
+  // logic that is not retained by the ILA probes.
+  logic [4:0]  m_axi_mem_awid;
+  logic [63:0] m_axi_mem_awaddr;
+  logic [7:0]  m_axi_mem_awlen;
+  logic [2:0]  m_axi_mem_awsize;
+  logic [1:0]  m_axi_mem_awburst;
+  logic        m_axi_mem_awlock;
+  logic [3:0]  m_axi_mem_awcache;
+  logic [2:0]  m_axi_mem_awprot;
+  logic [3:0]  m_axi_mem_awqos;
+  logic [5:0]  m_axi_mem_awatop;
+  logic [3:0]  m_axi_mem_awregion;
+  logic [63:0] m_axi_mem_awuser;
+  logic        m_axi_mem_awvalid;
+  logic        m_axi_mem_awready;
+  logic [63:0] m_axi_mem_wdata;
+  logic [7:0]  m_axi_mem_wstrb;
+  logic        m_axi_mem_wlast;
+  logic [63:0] m_axi_mem_wuser;
+  logic        m_axi_mem_wvalid;
+  logic        m_axi_mem_wready;
+  logic [4:0]  m_axi_mem_bid;
+  logic [1:0]  m_axi_mem_bresp;
+  logic [63:0] m_axi_mem_buser;
+  logic        m_axi_mem_bvalid;
+  logic        m_axi_mem_bready;
+  logic [4:0]  m_axi_mem_arid;
+  logic [63:0] m_axi_mem_araddr;
+  logic [7:0]  m_axi_mem_arlen;
+  logic [2:0]  m_axi_mem_arsize;
+  logic [1:0]  m_axi_mem_arburst;
+  logic        m_axi_mem_arlock;
+  logic [3:0]  m_axi_mem_arcache;
+  logic [2:0]  m_axi_mem_arprot;
+  logic [3:0]  m_axi_mem_arqos;
+  logic [3:0]  m_axi_mem_arregion;
+  logic [63:0] m_axi_mem_aruser;
+  logic        m_axi_mem_arvalid;
+  logic        m_axi_mem_arready;
+  logic [4:0]  m_axi_mem_rid;
+  logic [63:0] m_axi_mem_rdata;
+  logic [1:0]  m_axi_mem_rresp;
+  logic        m_axi_mem_rlast;
+  logic [63:0] m_axi_mem_ruser;
+  logic        m_axi_mem_rvalid;
+  logic        m_axi_mem_rready;
+
+  // VIO is the reset source for this debug-only top.  Its output is configured
+  // to start asserted, and ariane_kr260 synchronizes reset release internally.
+  assign core_rst_ni = ~soft_reset;
 
   ariane_kr260 i_ariane_kr260 (
       .clk_i               ( clk_i ),
       .rst_ni              ( core_rst_ni ),
-      .tck_i               ( tck_i ),
-      .tms_i               ( tms_i ),
-      .tdi_i               ( tdi_i ),
-      .trst_ni             ( trst_ni ),
-      .tdo_o               ( tdo_o ),
+      // The CVA6 JTAG DTM is not exposed by this wrapper.  Keep it in reset;
+      // the Xilinx ILA/VIO remain accessible through the FPGA JTAG chain.
+      .tck_i               ( 1'b0 ),
+      .tms_i               ( 1'b1 ),
+      .tdi_i               ( 1'b0 ),
+      .trst_ni             ( 1'b0 ),
+      .tdo_o               ( jtag_tdo_unused ),
       .m_axi_mem_awid      ( m_axi_mem_awid ),
       .m_axi_mem_awaddr    ( m_axi_mem_awaddr ),
       .m_axi_mem_awlen     ( m_axi_mem_awlen ),
@@ -173,12 +171,13 @@ module ariane_kr260_debug (
       .probe6 ( m_axi_mem_wdata ),
       .probe7 ( w_control ),
       .probe8 ( b_control ),
-      .probe9 ( rst_ni )
+      .probe9 ( core_rst_ni ),
+      .probe10 ( clk_i )
   );
 
   kr260_reset_vio i_kr260_reset_vio (
       .clk        ( clk_i ),
-      .probe_in0  ( {rst_ni, core_rst_ni} ),
+      .probe_in0  ( {soft_reset, core_rst_ni} ),
       .probe_out0 ( soft_reset )
   );
 

@@ -30,7 +30,7 @@ proc kr260_get_or_create_ip {module_name core_name ip_root} {
 
 set ila_ip [kr260_get_or_create_ip kr260_axi_ila ila $debug_ip_root]
 set_property -dict [list \
-    CONFIG.C_NUM_OF_PROBES {9} \
+    CONFIG.C_NUM_OF_PROBES {11} \
     CONFIG.C_PROBE0_WIDTH {64} \
     CONFIG.C_PROBE1_WIDTH {13} \
     CONFIG.C_PROBE2_WIDTH {64} \
@@ -40,6 +40,8 @@ set_property -dict [list \
     CONFIG.C_PROBE6_WIDTH {64} \
     CONFIG.C_PROBE7_WIDTH {11} \
     CONFIG.C_PROBE8_WIDTH {4} \
+    CONFIG.C_PROBE9_WIDTH {1} \
+    CONFIG.C_PROBE10_WIDTH {1} \
     CONFIG.C_DATA_DEPTH {2048} \
     CONFIG.C_INPUT_PIPE_STAGES {0} \
 ] $ila_ip
@@ -50,7 +52,7 @@ set_property -dict [list \
     CONFIG.C_PROBE_IN0_WIDTH {2} \
     CONFIG.C_NUM_PROBE_OUT {1} \
     CONFIG.C_PROBE_OUT0_WIDTH {1} \
-    CONFIG.C_PROBE_OUT0_INIT_VAL {0x0} \
+    CONFIG.C_PROBE_OUT0_INIT_VAL {0x1} \
 ] $vio_ip
 
 foreach ip [list $ila_ip $vio_ip] {

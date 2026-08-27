@@ -306,6 +306,8 @@ assign test_en    = 1'b0;
 
 logic [NBSlave-1:0] pc_asserted;
 
+
+//Dejar esta entidad
 rstgen i_rstgen_main (
     .clk_i        ( clk                      ),
     .rst_ni       ( pll_locked & (~ndmreset) ),
@@ -313,6 +315,7 @@ rstgen i_rstgen_main (
     .rst_no       ( ndmreset_n               ),
     .init_no      (                          ) // keep open
 );
+
 
 assign rst_n = ~ddr_sync_reset;
 assign rst = ddr_sync_reset;

@@ -1,123 +1,216 @@
-# Lint y comprobaciones RTL del port KR260
+# Lint Verilator y comprobaciones RTL del port KR260
 
-## Alcance y limitación
+Fecha: 2026-08-16
+Commit: `57e2a6cdc0f0f2f3403b2918407832be49d08993`
+Baseline: `cd7ab551783cdcbfc4c5f6fd954924c34074f14a`
 
-El target comprobado es `BOARD=kr260 target=cv64a6_imafdc_sv39`, con XLEN=64, el mismo orden de fuentes e include paths usados por la síntesis validada. No se cambió RTL para silenciar reglas estilísticas.
+## Estado
 
-No hay un linter dedicado instalado. Por lo tanto, el resultado de esta fase es **PARTIAL**: `xvlog` y `synth_design -rtl` comprueban preprocesado, sintaxis, tipos, resolución de módulos, anchos y elaboración, pero no reemplazan el análisis de Verilator `--lint-only`, Verible o Slang.
+Respuesta a la pregunta de regresión RTL: `NO`.
 
-## Herramientas detectadas
+Verilator 5.050 completó el análisis de `ariane_kr260`, de `cva6` actual y
+baseline, y del sistema estructural sin crash ni error RTL del port. Los
+warnings potencialmente funcionales son idénticos al baseline o provienen de
+fuentes heredadas sin cambios.
 
-La búsqueda inicial fue:
+La corrida anterior con Verilator 5.020 permanece documentada como
+`INCONCLUSIVE`: no pudo terminar `V3Param` por un `SIGSEGV` de la herramienta.
 
-```sh
-command -v verible-verilog-lint
-command -v verilator
-command -v slang
-command -v iverilog
-command -v xvlog
+El análisis detallado y todos los conteos están en
+`reports/kr260_lint/FINAL_LINT_REPORT.md`.
+
+## Herramientas
+
+- Actual: `/home/nachofalchi/tools/verilator/bin/verilator`.
+- Actual: `Verilator 5.050 2026-07-01 rev v5.050`.
+- Corrida histórica: `/usr/bin/verilator`.
+- Corrida histórica: `Verilator 5.020 2024-01-01 rev (Debian 5.020-1)`.
+- `verible-verilog-lint` no está disponible; no se instaló nada.
+
+## Infraestructura reutilizada
+
+Se inspeccionaron `core/Flist.cva6`, el flujo Verilator del Makefile,
+`Bender.yml`, `util/flist_flattener.py`, los Makefiles FPGA y los Tcl de Vivado.
+La lista final no se construyó a mano: se reutilizó
+`reports/kr260_next_steps/lint/kr260_xvlog.f`, exportada tras
+`update_compile_order` por `corev_apu/fpga/scripts/run_kr260_lint.tcl`.
+
+La lista contiene 247 archivos HDL ordenados para síntesis. Se usaron estos
+includes:
+
+```text
+vendor/pulp-platform/common_cells/include
+vendor/pulp-platform/axi/include
+core/cache_subsystem/hpdcache/rtl/include
+corev_apu/register_interface/include
+core/include
 ```
 
-Ninguna apareció en el `PATH`. Luego se inspeccionó la instalación local de Vivado y se encontró:
+No se necesitó `-DXLEN=64`: la configuración proviene de
+`cv64a6_imafdc_sv39_config_pkg.sv`, con `CVA6Cfg` construido por el wrapper.
+Esto corresponde al target `cv64a6_imafdc_sv39`, `XLEN=64`, `BOARD=kr260`.
 
-- Vivado 2026.1, build 6511674.
-- `/home/nachofalchi/data/fpga-work/Xilinx/2026.1/Vivado/bin/xvlog`.
-- No se encontró Verible, Verilator, Slang ni Icarus dentro de la instalación local consultada.
-- No se descargó ni instaló software.
+## Comando principal
 
-## Flujo reproducible
-
-Primero se genera un proyecto temporal y se deja que Vivado resuelva el orden real de compilación. El script exporta ese orden y ejecuta elaboración RTL, con un único hilo:
+La primera pasada no usó `-Wno-*`, `lint_off`, waivers ni
+`verilator_config.vlt`:
 
 ```sh
-cd corev_apu/fpga
-mkdir -p ../../reports/kr260_next_steps/lint
-XILINX_PART=xck26-sfvc784-2LV-c \
-XILINX_BOARD=xilinx.com:kr260_som:part0:2.0 \
-KR260_LINT_REPORT_DIR=../../reports/kr260_next_steps/lint \
-/home/nachofalchi/data/fpga-work/Xilinx/2026.1/Vivado/bin/vivado \
-  -mode batch -nojournal \
-  -log ../../reports/kr260_next_steps/lint/vivado_rtl_elaboration.log \
-  -source scripts/run_kr260_lint.tcl
+verilator --lint-only --no-timing -Wall \
+  --top-module ariane_kr260 \
+  --Mdir /tmp/cva6_kr260_lint_minimal_57e2a6cdc \
+  -Ivendor/pulp-platform/common_cells/include \
+  -Ivendor/pulp-platform/axi/include \
+  -Icore/cache_subsystem/hpdcache/rtl/include \
+  -Icorev_apu/register_interface/include \
+  -Icore/include \
+  -f reports/kr260_next_steps/lint/kr260_xvlog.f
 ```
 
-Después se compila la misma lista como una sola unidad SystemVerilog. Esto conserva los macros que el flujo histórico comparte mediante `rvfi_types.svh` y `axi/{assign,typedef}.svh`:
+El log completo está en
+`reports/kr260_lint/verilator_ariane_kr260.log`.
 
-```sh
-/home/nachofalchi/data/fpga-work/Xilinx/2026.1/Vivado/bin/xvlog --sv \
-  -i vendor/pulp-platform/common_cells/include \
-  -i vendor/pulp-platform/axi/include \
-  -i core/cache_subsystem/hpdcache/rtl/include \
-  -i corev_apu/register_interface/include \
-  -i core/include \
-  -f reports/kr260_next_steps/lint/kr260_xvlog.f \
-  --log reports/kr260_next_steps/lint/xvlog.log
-```
+## Cobertura
 
-Las rutas del segundo comando se muestran desde la raíz del repositorio. Conviene ejecutarlo en un directorio temporal para que `xsim.dir` y `xvlog.pb` no ensucien el árbol de fuentes.
+- `ariane_kr260`: lista completa de 247 fuentes; Verilator emitió warnings
+  tempranos y luego sufrió `SIGSEGV` en `V3Param`.
+- `ariane_kr260_debug`: misma lista más el wrapper debug. ILA/VIO sólo existen
+  como DCP Vivado; no se inventaron stubs. La pasada aislada identifica
+  exactamente esos módulos como no disponibles.
+- `ariane_kr260_system`: misma lista más el RTL/netlist real del BD, los stubs
+  de síntesis existentes del PS/reset, el wrapper BD y el wrapper propio. El
+  comportamiento propietario del PS/DDR no está modelado por esos stubs.
+- `cva6`: pasada profunda completada tras suprimir solamente
+  `BLKANDNBLK`, una vez demostrado que sus 50 instancias son idénticas al
+  baseline y que el Makefile histórico ya suprime esa regla.
 
-## Resultado
+Logs principales:
 
-- `xvlog`: SUCCESS; 247 archivos, 0 errores, 0 critical warnings y 0 warnings.
-- `synth_design -rtl`: SUCCESS; 0 errores, 0 critical warnings y 327 warnings.
-- Top elaborado: `ariane_kr260`.
-- Parte: `xck26-sfvc784-2LV-c`.
-- Black boxes inesperados: 0.
+- `reports/kr260_lint/verilator_ariane_kr260.log`;
+- `reports/kr260_lint/verilator_kr260_debug.log`;
+- `reports/kr260_lint/verilator_kr260_system.log`;
+- `reports/kr260_lint/verilator_baseline.log`.
 
-Durante elaboración aparecen tres instancias `unread`. Son módulos intencionales de una entrada y ninguna salida que absorben señales para evitar avisos de pines abiertos. La síntesis completa previa los elimina y termina con cero black boxes; el script sólo permite referencias `unread*` y falla ante cualquier otra black box.
+## Baseline
 
-## Clasificación de diagnósticos
+El commit baseline se abrió en un worktree detached temporal; el working tree
+actual no se cambió. Con top `cva6`, actual y baseline tienen exactamente:
 
-### Errores reales
+- 50 `BLKANDNBLK` raw;
+- 33 `LATCH`;
+- 24 `UNDRIVEN`;
+- 28 `UNOPTFLAT` en la pasada profunda;
+- 229 `WIDTHEXPAND`;
+- 75 `WIDTHTRUNC`;
+- los mismos avisos de rangos, signed/unsigned y reset.
 
-No se encontraron errores de sintaxis, tipos, resolución de módulos, puertos ni anchos en la pasada final.
+El wrapper baseline `ariane_xilinx` también muestra cuatro `PINMISSING` de
+`axi2mem`, 11 `WIDTHCONCAT` y el mismo fallo interno. `ariane_kr260` muestra
+cuatro `PINMISSING` equivalentes y seis `WIDTHCONCAT`.
 
-### Warnings funcionalmente relevantes
+## Diagnósticos propios del port
 
-Vivado informó 22 casos `Synth 8-3848` de nets sin driver y seis `Synth 8-3936` de registros internos recortados. Los ejemplos están en PTW/MMU, load unit, CLINT y lógica interna del core. Ya aparecen al elaborar el diseño existente y no apuntan a `ariane_kr260.sv`; deben considerarse deuda RTL preexistente si en el futuro se habilitan las funciones asociadas, pero no justifican cambios locales al port.
+- Diez `PINCONNECTEMPTY` en `ariane_kr260.sv`: salidas deliberadamente
+  descartadas de reset, DMI/JTAG, adapter, RVFI y ROM.
+- Cuatro `PINMISSING` `user_i/user_o` en dos `axi2mem`: la misma omisión existe
+  en el wrapper FPGA del baseline.
+- Verilator 5.020 emitía seis `WIDTHCONCAT` en `AXI_XBAR_CFG`. Verilator
+  5.050 ya no los emite sin que se haya modificado ese RTL.
+- Cuatro `PINMISSING` adicionales del sistema: salidas no usadas de
+  `proc_sys_reset` en el netlist generado por Vivado.
+- El RTL propio debug/system no emitió warnings de ancho, driver, latch o loop
+  en la corrida 5.050.
 
-### Warnings esperados de integración
+No se observaron `MULTIDRIVEN` ni `CASEOVERLAP`. Los tres `CASEINCOMPLETE` de
+5.050 están en el `axi2mem.sv` heredado: estados inválidos y el AXI BURST
+reservado `2'b11`. Los `LATCH`, `UNDRIVEN`, `UNOPTFLAT`, `WIDTHEXPAND` y
+`WIDTHTRUNC` del núcleo tienen conteos idénticos al baseline.
 
-Los grupos repetidos `Synth 8-7129`, `8-7137` y `8-693` corresponden principalmente a bits o puertos sin carga en módulos genéricos: bits altos de dirección de la bootrom, campos AXI que `axi2mem` no consume y variantes parametrizadas. Vivado limita a 100 la impresión de algunos grupos. Son coherentes con la síntesis mínima ya validada y no se ocultaron.
+## AXI, memoria y debug
 
-### Warnings de herramienta o estilo
+La frontera `m_axi_mem_*` conecta todos los canales AW/W/B/AR/R y conserva
+READY/VALID. Los IDs CVA6 de 5 bits se extienden a 6 bits con cero para
+HP0_FPD; BID/RID se reducen a `[4:0]` con assertions sobre el bit alto. USER se
+fuerza a cero en el PS y retorna cero; ATOP se consume antes de la frontera y
+se verifica cero. La dirección resta `0x8000_0000` antes de seleccionar
+`[48:0]`, con assertions que limitan el tráfico a la ventana válida de 1 GiB.
 
-Los cuatro `Synth 8-11067` y un `8-11065` indican que Vivado trata ciertos parámetros de package o de listas formales como `localparam`. Son preexistentes y no se modificó RTL para evitarlos. Dos `filemgmt 56-315` ocurren durante el escaneo preliminar de fuentes; la elaboración posterior resuelve correctamente el diseño.
+No hay evidencia de un truncamiento silencioso válido, pérdida de ID,
+desconexión READY/VALID ni señal `m_axi_mem_*` abandonada. Verilator sólo cubre
+la conectividad estructural del PS/DDR, no el comportamiento interno de la IP.
+En debug, `dmi_rst_no` y `tdo_oe_o` son salidas deliberadamente no usadas; ILA
+y VIO quedan fuera de elaboración por ser DCP.
 
-### Warnings propios del wrapper KR260
+## Verilator 5.050
 
-No hay warnings cuya ubicación sea `corev_apu/fpga/src/ariane_kr260.sv` en el log final.
+- Versión: `Verilator 5.050 2026-07-01 rev v5.050`, ejecutada desde
+  `/home/nachofalchi/tools/verilator/bin/verilator`.
+- Se repitieron los comandos 5.020 con los mismos tops, filelists, includes,
+  defines y fuentes; sólo se sustituyeron el ejecutable y `--Mdir`.
+- No se usaron `-Wno-*`, `lint_off`, waivers ni modelos falsos.
 
-## Evidencia generada
+Resultados:
 
-Los logs y listados reproducibles quedan bajo `reports/kr260_next_steps/lint/`:
+- `ariane_kr260` completó el análisis sin crash ni error RTL y terminó al final
+  por 1321 warnings fatales de `-Wall`.
+- El `cva6` baseline completó sin crash ni error RTL con 1230 warnings. El
+  `cva6` actual produjo 1244; las únicas diferencias son los 10
+  `PINCONNECTEMPTY` y cuatro `PINMISSING` del wrapper presente sólo en el
+  filelist actual. `LATCH` (23), `UNDRIVEN` (24), `UNOPTFLAT` (2),
+  `WIDTHEXPAND` (213) y `WIDTHTRUNC` (75) son idénticos.
+- El wrapper baseline `ariane_xilinx -DGENESYSII` es rechazado por 5.050 antes
+  de elaborar: la rama histórica deja una coma final en la lista de parámetros.
+  Es un error preexistente del baseline que 5.020 aceptaba, no un error KR260.
+- `ariane_kr260_debug` llegó hasta dos `MODMISSING` esperados:
+  `kr260_axi_ila` y `kr260_reset_vio`. Sólo existen como DCP y no se crearon
+  stubs.
+- `ariane_kr260_system` completó el análisis estructural con 1658 warnings y
+  sin error RTL propio. Los 18 `UNDRIVEN` adicionales pertenecen exclusivamente
+  a los stubs de síntesis PS/reset; no hay modelo funcional propietario de
+  PS/DDR.
 
-- `vivado_rtl_elaboration.log`
-- `xvlog.log`
-- `compile_order.rpt`
-- `kr260_xvlog.f`
-- `rtl_blackboxes.rpt`
+Warnings nuevos observables con 5.050:
 
-## Pendiente
+- tres `CASEINCOMPLETE` en el `axi2mem.sv` heredado: estados codificados
+  inválidos y AXI BURST reservado `2'b11`;
+- un `SYNCASYNCNET` adicional sobre el reset del wrapper, cuya ruta síncrona
+  señalada es el `disable iff` de una assertion y no un segundo driver;
+- dos `UNUSEDSIGNAL` de `ps_awaddr_translated[63:49]` y
+  `ps_araddr_translated[63:49]`, esperados por la selección explícita `[48:0]`
+  posterior a la traducción y protegida por assertions de rango.
 
-Para completar un lint dedicado todavía hace falta disponer, sin instalación global, de al menos una de estas herramientas:
+Estos warnings no son evidencia de regresión: `axi2mem`, `axi_riscv_lrsc`,
+`dm_top` y `rstgen_bypass` son idénticos al baseline. No hay `BLKANDNBLK`,
+`MULTIDRIVEN`, `WIDTHCONCAT` ni warning de ancho/driver/latch/loop en los
+wrappers KR260. Fuera de esos dos `UNUSEDSIGNAL`, tampoco hay diagnóstico
+nuevo sobre `m_axi_mem_*`, IDs, USER, ATOP, READY/VALID o la traducción de
+direcciones.
 
-- Verilator y ejecutar `--lint-only` con la configuración `cv64a6_imafdc_sv39`.
-- Verible sobre el wrapper KR260, los wrappers de debug/sistema y los archivos FPGA nuevos.
-- Slang como frontend SystemVerilog adicional.
+Respecto de 5.020, desapareció el `SIGSEGV` de `V3Param` y el top principal
+llegó al final sin suprimir warnings. 5.050 dejó de reportar los 50
+`BLKANDNBLK` y los seis `WIDTHCONCAT`; además cambió conteos de `LATCH`,
+`UNOPTFLAT`, `ASCRANGE` y `WIDTHEXPAND` de forma igual en actual y baseline.
+Los logs completos están en `reports/kr260_lint/verilator_505_*.log`.
 
-Hasta entonces este estado debe leerse como “RTL compilable y elaborable por Vivado”, no como “lint exhaustivo limpio”.
+## Correcciones y límites
 
-## Archivos agregados después de la pasada inicial
+No se encontró un problema nuevo inequívoco y no se modificó RTL. Por ello no
+correspondía repetir `xvlog`, elaboración RTL o synthesis-only como validación
+de un fix, ni crear un commit. La compilación/elaboración Vivado previa sigue
+documentada: `xvlog` procesó 247 archivos sin errores ni warnings y los tres
+wrappers habían sido sintetizados sin errores ni black boxes inesperadas.
 
-Los wrappers creados en las fases posteriores también tienen comprobación de
-frontend, aunque siguen sin cobertura de un linter dedicado:
+El cambio preexistente en `corev_apu/fpga/src/ariane_xilinx.sv` permaneció
+intacto. No se ejecutó Implementation, Bitstream ni `git push`.
 
-- `ariane_kr260_debug.sv` fue compilado y sintetizado junto con los ILA/VIO
-  reales de Vivado, sin errores ni critical warnings;
-- `ariane_kr260_system.sv` pasó una compilación independiente con `xvlog` y la
-  síntesis completa junto con el Block Design ZynqMP/HP0, sin errores ni
-  critical warnings y sin black boxes inesperadas.
+## Conclusión
 
-Esto amplía la evidencia de compilabilidad a todos los wrappers nuevos, pero
-no cambia el estado global `PARTIAL`: todavía falta Verilator, Verible o Slang.
+> ¿El lint encontró evidencia de que el port a KR260 haya roto RTL que antes era válido?
+
+`NO`
+
+Verilator 5.050 completó `ariane_kr260`, ambos núcleos comparables y el sistema
+estructural sin crash ni error RTL del port. Los diagnósticos funcionales son
+idénticos al baseline o heredados, y no hay warning nuevo sobre la frontera
+AXI/memoria. La ausencia de modelos funcionales ILA/VIO/PS/DDR limita esa IP
+propietaria, pero no aporta evidencia de que KR260 haya roto RTL antes válido.
