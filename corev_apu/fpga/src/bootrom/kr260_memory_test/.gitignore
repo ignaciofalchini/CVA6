@@ -1,3 +1,5 @@
 bootrom_kr260_memory_test.*
+# Preserve the exact synthesizable ROM used by the hardware-validated build.
+!bootrom_kr260_memory_test.sv
 xsim.dir/
 xvlog.pb

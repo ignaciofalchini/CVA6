@@ -1,0 +1,15 @@
+# Preserve project/BD/IP definitions, not generated HDL, checkpoints or UI state.
+*
+!*/
+!.gitignore
+!*.xpr
+!*.bd
+!*.xci
+
+/.Xil/
+/*.cache/
+/*.gen/
+/*.hw/
+/*.ip_user_files/
+/*.runs/
+/*.sim/

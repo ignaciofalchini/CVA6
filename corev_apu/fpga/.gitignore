@@ -1,0 +1,10 @@
+# Local Vivado archives and historical copies (kept in the full backup).
+/*.zip
+/*.tar.gz
+/backups/
+/Makefile.orig
+/scripts/*.orig
+
+# Old generated BD products; the active BD lives in ariane_kr260_debug/.srcs.
+/src/ip/
+/src/ipshared/

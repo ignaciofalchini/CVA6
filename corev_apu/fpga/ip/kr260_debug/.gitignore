@@ -1,0 +1,5 @@
+# Standalone debug IP configuration is source; output products are regenerated.
+*
+!*/
+!.gitignore
+!*.xci

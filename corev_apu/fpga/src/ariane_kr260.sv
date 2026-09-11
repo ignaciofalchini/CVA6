@@ -9,6 +9,7 @@
 module ariane_kr260 (
     input  logic        clk_i,
     input  logic        rst_ni,
+    output logic        mem_rst_no,
 
     // Optional RISC-V Debug Transport Module pins.  Their physical routing is
     // deliberately left for a later KR260 hardware-integration stage.
@@ -63,7 +64,17 @@ module ariane_kr260 (
     input  logic        m_axi_mem_rlast,
     input  logic [63:0] m_axi_mem_ruser,
     input  logic        m_axi_mem_rvalid,
-    output logic        m_axi_mem_rready
+    output logic        m_axi_mem_rready,
+    output logic [31:0] debug_instruction_o,
+    output logic        debug_instruction_valid_o,
+    output logic [63:0] debug_commit_pc_o,
+    output logic        debug_commit_valid_o,
+    output logic        debug_commit_ack_o,
+    output logic [63:0] debug_mem_paddr_o,
+    output logic [63:0] debug_lsu_vaddr_o,
+    output logic [7:0]  debug_lsu_be_o,
+    output logic [7:0]  debug_commit_op_o,
+    output logic [3:0]  debug_lsu_fu_o
 );
 
   function automatic config_pkg::cva6_cfg_t build_fpga_config(
@@ -81,9 +92,21 @@ module ariane_kr260 (
   localparam type rvfi_probes_instr_t = `RVFI_PROBES_INSTR_T(CVA6Cfg);
   localparam type rvfi_probes_csr_t = `RVFI_PROBES_CSR_T(CVA6Cfg);
   localparam type rvfi_probes_t = struct packed {
-    logic csr;
-    logic instr;
+    rvfi_probes_csr_t   csr;
+    rvfi_probes_instr_t instr;
   };
+
+  rvfi_probes_t rvfi_probes;
+  assign debug_instruction_o       = rvfi_probes.instr.instruction[0];
+  assign debug_instruction_valid_o = rvfi_probes.instr.fetch_entry_valid[0];
+  assign debug_commit_pc_o         = rvfi_probes.instr.commit_instr_pc[0];
+  assign debug_commit_valid_o      = rvfi_probes.instr.commit_instr_valid[0];
+  assign debug_commit_ack_o        = rvfi_probes.instr.commit_ack[0];
+  assign debug_mem_paddr_o         = rvfi_probes.instr.mem_paddr;
+  assign debug_lsu_vaddr_o         = rvfi_probes.instr.lsu_ctrl_vaddr;
+  assign debug_lsu_be_o            = rvfi_probes.instr.lsu_ctrl_be;
+  assign debug_commit_op_o         = rvfi_probes.instr.commit_instr_op[0];
+  assign debug_lsu_fu_o            = rvfi_probes.instr.lsu_ctrl_fu;
 
   localparam int unsigned NrSlaves = 2;  // CVA6 and debug system-bus access
   localparam int unsigned NrMasters = 4; // DRAM, CLINT, ROM and debug memory
@@ -139,6 +162,8 @@ module ariane_kr260 (
       .rst_no      ( ndmreset_n ),
       .init_no     ( )
   );
+
+  assign mem_rst_no = ndmreset_n;
 
   // --------------------------------------------------------------------------
   // AXI crossbar: Debug, ROM, CLINT and the external DDR-memory boundary.
@@ -339,7 +364,7 @@ module ariane_kr260 (
       .irq_i         ( irq ),
       .ipi_i         ( ipi ),
       .time_irq_i    ( timer_irq ),
-      .rvfi_probes_o ( ),
+      .rvfi_probes_o ( rvfi_probes ),
       .debug_req_i   ( debug_req_irq ),
       .noc_req_o     ( axi_ariane_req ),
       .noc_resp_i    ( axi_ariane_resp )
@@ -399,11 +424,7 @@ module ariane_kr260 (
       .data_i ( rom_rdata )
   );
 
-`ifdef KR260_MEMORY_TEST_BOOTROM
   bootrom_kr260_memory_test i_bootrom (
-`else
-  bootrom_64 i_bootrom (
-`endif
       .clk_i   ( clk_i ),
       .req_i   ( rom_req ),
       .addr_i  ( rom_addr ),

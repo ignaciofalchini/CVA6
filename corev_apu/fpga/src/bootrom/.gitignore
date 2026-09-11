@@ -7,3 +7,6 @@ venv
 *.dtb
 bootrom*.h
 bootrom*.sv
+
+# Keep the normal ROM image referenced (but disabled) by the saved KR260 XPR.
+!bootrom_64.sv

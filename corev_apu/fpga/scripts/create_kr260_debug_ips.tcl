@@ -30,7 +30,7 @@ proc kr260_get_or_create_ip {module_name core_name ip_root} {
 
 set ila_ip [kr260_get_or_create_ip kr260_axi_ila ila $debug_ip_root]
 set_property -dict [list \
-    CONFIG.C_NUM_OF_PROBES {11} \
+    CONFIG.C_NUM_OF_PROBES {21} \
     CONFIG.C_PROBE0_WIDTH {64} \
     CONFIG.C_PROBE1_WIDTH {13} \
     CONFIG.C_PROBE2_WIDTH {64} \
@@ -41,7 +41,17 @@ set_property -dict [list \
     CONFIG.C_PROBE7_WIDTH {11} \
     CONFIG.C_PROBE8_WIDTH {4} \
     CONFIG.C_PROBE9_WIDTH {1} \
-    CONFIG.C_PROBE10_WIDTH {1} \
+    CONFIG.C_PROBE10_WIDTH {32} \
+    CONFIG.C_PROBE11_WIDTH {1} \
+    CONFIG.C_PROBE12_WIDTH {64} \
+    CONFIG.C_PROBE13_WIDTH {1} \
+    CONFIG.C_PROBE14_WIDTH {1} \
+    CONFIG.C_PROBE15_WIDTH {64} \
+    CONFIG.C_PROBE16_WIDTH {64} \
+    CONFIG.C_PROBE17_WIDTH {8} \
+    CONFIG.C_PROBE18_WIDTH {8} \
+    CONFIG.C_PROBE19_WIDTH {4} \
+    CONFIG.C_PROBE20_WIDTH {20} \
     CONFIG.C_DATA_DEPTH {2048} \
     CONFIG.C_INPUT_PIPE_STAGES {0} \
 ] $ila_ip
@@ -60,6 +70,9 @@ foreach ip [list $ila_ip $vio_ip] {
     if {[llength $xci] != 1} {
         set xci [get_files -quiet */[get_property NAME $ip].xci]
     }
+    if {[llength $xci] != 1} {
+        error "Expected exactly one XCI for [get_property NAME $ip], got: $xci"
+    }
     generate_target {instantiation_template} $xci
     generate_target all $xci
     create_ip_run $xci
@@ -75,6 +88,17 @@ foreach ip [list $ila_ip $vio_ip] {
         continue
     }
 
+    # Reconfiguration can invalidate the old OOC result. Reset only this IP
+    # run when stale; do not rerun an unchanged, complete VIO unnecessarily.
+    if {[get_property NEEDS_REFRESH $ip_run]} {
+        reset_run $ip_run
+    } else {
+        set status [get_property STATUS $ip_run]
+        if {[string match "*Complete*" $status] && ![string match "*Failed*" $status]} {
+            puts "KR260_DEBUG_IP_STATUS:$run_name=Reused up-to-date run"
+            continue
+        }
+    }
     launch_runs $ip_run -jobs 1
     wait_on_run $ip_run
 

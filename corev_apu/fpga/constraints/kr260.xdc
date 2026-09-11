@@ -1,6 +1,4 @@
-# KR260 minimal synthesis target.
-#
-# `clk_i` is an intentionally abstract PL clock input.  No PACKAGE_PIN or
-# IOSTANDARD is assigned until the KR260 PS/PL clocking and board wiring are
-# selected.  The 40 ns period is the requested initial 25 MHz CVA6 frequency.
-create_clock -name cva6_clk -period 40.000 [get_ports clk_i]
+# 25 MHz external clock
+create_clock -period 40.000 -name clk [get_ports clk_i]
+set_property PACKAGE_PIN C3 [get_ports clk_i]
+set_property IOSTANDARD LVCMOS18 [get_ports clk_i]

@@ -1,61 +1,50 @@
-# KR260 debug-wrapper elaboration and synthesis-only flow.
+# KR260 elaboration and synthesis-only flow for the saved GUI project.
 # No implementation, placement, routing, or bitstream commands are present.
+# Save and close the GUI project before running this script in batch mode.
+# The project's BD is the source of truth; backups are never loaded here.
 
-if {![info exists ::env(XILINX_PART)] || ![info exists ::env(XILINX_BOARD)]} {
-    error "XILINX_PART and XILINX_BOARD must be set"
-}
 if {![info exists ::env(KR260_DEBUG_REPORT_DIR)]} {
     error "KR260_DEBUG_REPORT_DIR must be set"
 }
 
 set project ariane_kr260_debug
-set project_dir [file normalize $project]
+set fpga_dir [file normalize [file join [file dirname [info script]] ..]]
+set project_dir [file join $fpga_dir $project]
+set project_file [file join $project_dir ${project}.xpr]
+set bd_source [file join $project_dir ${project}.srcs sources_1 bd \
+    ariane_kr260_ps_bd ariane_kr260_ps_bd.bd]
+foreach required_file [list $project_file $bd_source] {
+    if {![file isfile $required_file]} {
+        error "Missing saved GUI project file: $required_file; no backup will be used"
+    }
+}
+if {[llength [current_project -quiet]] != 0} {
+    error "Run this script in a fresh Vivado batch session after saving and closing the GUI project"
+}
 set report_dir [file normalize $::env(KR260_DEBUG_REPORT_DIR)]
 file mkdir $report_dir
 
 set_param general.maxThreads 1
-create_project $project $project_dir -force -part $::env(XILINX_PART)
-set_property board_part $::env(XILINX_BOARD) [current_project]
+open_project $project_file
 
-set_property include_dirs [list \
-    "../../vendor/pulp-platform/common_cells/include" \
-    "../../vendor/pulp-platform/axi/include" \
-    "../../core/cache_subsystem/hpdcache/rtl/include" \
-    "../register_interface/include" \
-    "../../core/include" \
-] [current_fileset]
-
-source scripts/add_sources.tcl
-if {[info exists ::env(KR260_MEMORY_TEST_BOOTROM)] &&
-    $::env(KR260_MEMORY_TEST_BOOTROM) eq "1"} {
-    source scripts/select_kr260_memory_test_bootrom.tcl
+# Preserve the saved source set, IP settings, constraints and run strategies.
+# Never recreate this directory with create_project -force: it contains the
+# canonical BD edited by the user in Vivado.
+set bd_file [get_files -quiet $bd_source]
+if {[llength $bd_file] != 1} {
+    error "The saved project must contain the GUI Block Design: $bd_source"
 }
-set debug_wrapper [file normalize src/ariane_kr260_debug.sv]
-if {[llength [get_files -quiet $debug_wrapper]] == 0} {
-    add_files -fileset sources_1 -norecurse $debug_wrapper
+puts "KR260_DEBUG_BD_SOURCE=$bd_source"
+open_bd_design $bd_file
+validate_bd_design
+generate_target all $bd_file
+set bd_wrapper [make_wrapper -files $bd_file -top -import]
+if {[llength $bd_wrapper] == 0 || ![file exists [lindex $bd_wrapper 0]]} {
+    error "Could not generate BRAM Block Design wrapper"
 }
-
-# ariane_kr260 is a top in the minimal project but a child in this project.
-# Declare the macro-only headers explicitly so its AXI/RVFI typedef macros do
-# not depend on incidental source ordering when the hierarchy changes.
-set global_macro_headers [list \
-    [file normalize ../../core/include/rvfi_types.svh] \
-    [file normalize ../../vendor/pulp-platform/axi/include/axi/assign.svh] \
-    [file normalize ../../vendor/pulp-platform/axi/include/axi/typedef.svh] \
-]
-foreach header $global_macro_headers {
-    if {[llength [get_files -quiet $header]] == 0} {
-        add_files -fileset sources_1 -norecurse $header
-    }
-}
-set_property file_type {Verilog Header} [get_files $global_macro_headers]
-set_property is_global_include 1 [get_files $global_macro_headers]
-
-source scripts/create_kr260_debug_ips.tcl
 
 set_property top ariane_kr260_debug [current_fileset]
 update_compile_order -fileset sources_1
-add_files -fileset constrs_1 -norecurse constraints/kr260.xdc
 
 synth_design -rtl -name kr260_debug_rtl
 report_compile_order -used_in synthesis \
@@ -104,6 +93,7 @@ if {[llength $unexpected_blackboxes] != 0} {
 }
 
 set ila_cells [get_cells -quiet i_kr260_axi_ila]
+set vio_cells [get_cells -quiet i_kr260_reset_vio]
 set debug_file [open [file join $report_dir debug_core_instances.rpt] w]
 puts $debug_file "ILA hierarchy cells: [llength $ila_cells]"
 foreach cell $ila_cells {

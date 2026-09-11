@@ -24,10 +24,11 @@ set_property include_dirs [list \
 ] [current_fileset]
 
 source scripts/add_sources.tcl
-if {[info exists ::env(KR260_MEMORY_TEST_BOOTROM)] &&
-    $::env(KR260_MEMORY_TEST_BOOTROM) eq "1"} {
-    source scripts/select_kr260_memory_test_bootrom.tcl
+set kr260_addr_pkg [file normalize src/kr260_addr_pkg.sv]
+if {[llength [get_files -quiet $kr260_addr_pkg]] == 0} {
+    add_files -fileset sources_1 -norecurse $kr260_addr_pkg
 }
+source scripts/select_kr260_memory_test_bootrom.tcl
 
 set global_macro_headers [list \
     [file normalize ../../core/include/rvfi_types.svh] \

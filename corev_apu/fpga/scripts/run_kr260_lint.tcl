@@ -28,10 +28,7 @@ set include_dirs [list \
 set_property include_dirs $include_dirs [current_fileset]
 
 source scripts/add_sources.tcl
-if {[info exists ::env(KR260_MEMORY_TEST_BOOTROM)] &&
-    $::env(KR260_MEMORY_TEST_BOOTROM) eq "1"} {
-    source scripts/select_kr260_memory_test_bootrom.tcl
-}
+source scripts/select_kr260_memory_test_bootrom.tcl
 set_property top ariane_kr260 [current_fileset]
 update_compile_order -fileset sources_1
 
