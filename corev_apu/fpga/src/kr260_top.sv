@@ -1,14 +1,14 @@
 // Copyright 2026 FaMAF-CVA6-Project contributors.
 // SPDX-License-Identifier: SHL-0.51
 //
-// Debug-only KR260 wrapper.  The minimal ariane_kr260 top remains independent
-// of Vivado debug IP.
+// KR260 board-level integration wrapper.  The ariane_kr260 system remains
+// independent of Vivado debug IP.
 
-module ariane_kr260_debug (
-    input logic clk_i
-);
+module kr260_top;
+  import kr260_addr_pkg::*;
 
   logic pl_clk;
+  logic ps_reset_n;
 
   logic soft_reset;
   logic mem_rst_n;
@@ -24,7 +24,7 @@ module ariane_kr260_debug (
   logic [7:0]  m_debug_commit_op;
   logic [3:0]  m_debug_lsu_fu;
 
-  // CVA6 memory AXI interface; observed by the ILA and connected to BRAM.
+  // CVA6 memory AXI interface; observed by the ILA before DDR address translation.
   logic [4:0]  m_axi_mem_awid;
   logic [63:0] m_axi_mem_awaddr;
   logic [7:0]  m_axi_mem_awlen;
@@ -68,14 +68,16 @@ module ariane_kr260_debug (
   logic        m_axi_mem_rlast;
   logic        m_axi_mem_rvalid;
   logic        m_axi_mem_rready;
+  logic [5:0]  ps_bid;
+  logic [5:0]  ps_rid;
 
   // VIO requests system reset; mem_rst_n is its synchronized system output.
-  // Keep the debug clock running while the core and memory controller reset.
-  assign pl_clk = clk_i;
+  // The PS must hold pl_resetn0 low until DDR/PL initialization is complete.
+  // VIO resets the CVA6 system, not PS DDR. Only reset after AXI is idle.
 
   ariane_kr260 i_ariane_kr260 (
       .clk_i               ( pl_clk ),
-      .rst_ni              ( ~soft_reset ),
+      .rst_ni              ( ps_reset_n & ~soft_reset ),
       .mem_rst_no          ( mem_rst_n ),
       // The CVA6 JTAG DTM is not exposed by this wrapper.  Keep it in reset;
       // the Xilinx ILA/VIO remain accessible through the FPGA JTAG chain.
@@ -141,15 +143,17 @@ module ariane_kr260_debug (
       .debug_lsu_fu_o            ( m_debug_lsu_fu )
   );
 
+  assign m_axi_mem_bid = ps_bid[4:0];
+  assign m_axi_mem_rid = ps_rid[4:0];
 
-  ariane_kr260_ps_bd_wrapper i_ps_ddr (
-      .s_axi_aclk_0       ( clk_i ),
-      .s_axi_aresetn      ( mem_rst_n ),
-      .S_AXI_CVA6_awid   ( m_axi_mem_awid ),
-      .S_AXI_CVA6_bid    ( m_axi_mem_bid  ),
-      .S_AXI_CVA6_arid   ( m_axi_mem_arid ),
-      .S_AXI_CVA6_rid    ( m_axi_mem_rid  ),
-      .S_AXI_CVA6_awaddr  ( m_axi_mem_awaddr[12:0] ),
+  kr260_ps_ddr_bd_wrapper i_ps_ddr (
+      .pl_clk0 ( pl_clk ),
+      .pl_resetn0       ( ps_reset_n ),
+      .S_AXI_CVA6_awid   ( {1'b0, m_axi_mem_awid} ),
+      .S_AXI_CVA6_bid    ( ps_bid  ),
+      .S_AXI_CVA6_arid   ( {1'b0, m_axi_mem_arid} ),
+      .S_AXI_CVA6_rid    ( ps_rid  ),
+      .S_AXI_CVA6_awaddr  ( ps_ddr_address(m_axi_mem_awaddr) ),
       .S_AXI_CVA6_awlen   ( m_axi_mem_awlen ),
       .S_AXI_CVA6_awsize  ( m_axi_mem_awsize ),
       .S_AXI_CVA6_awburst ( m_axi_mem_awburst ),
@@ -166,7 +170,7 @@ module ariane_kr260_debug (
       .S_AXI_CVA6_bresp   ( m_axi_mem_bresp ),
       .S_AXI_CVA6_bvalid  ( m_axi_mem_bvalid ),
       .S_AXI_CVA6_bready  ( m_axi_mem_bready ),
-      .S_AXI_CVA6_araddr  ( m_axi_mem_araddr[12:0] ),
+      .S_AXI_CVA6_araddr  ( ps_ddr_address(m_axi_mem_araddr) ),
       .S_AXI_CVA6_arlen   ( m_axi_mem_arlen ),
       .S_AXI_CVA6_arsize  ( m_axi_mem_arsize ),
       .S_AXI_CVA6_arburst ( m_axi_mem_arburst ),
@@ -179,8 +183,13 @@ module ariane_kr260_debug (
       .S_AXI_CVA6_rresp   ( m_axi_mem_rresp ),
       .S_AXI_CVA6_rlast   ( m_axi_mem_rlast ),
       .S_AXI_CVA6_rvalid  ( m_axi_mem_rvalid ),
-      .S_AXI_CVA6_rready  ( m_axi_mem_rready )
+      .S_AXI_CVA6_rready  ( m_axi_mem_rready ),
+      .S_AXI_CVA6_awqos  ( m_axi_mem_awqos ),
+      .S_AXI_CVA6_arqos  ( m_axi_mem_arqos ),
+      .S_AXI_CVA6_awuser ( 1'b0 ),
+      .S_AXI_CVA6_aruser ( 1'b0 )
   );
+
   // Control groups keep the capture compact while preserving the AXI channel
   // boundaries.  Bit mappings are documented in docs/kr260_ila_vio.md.
   logic [12:0] ar_control;
@@ -260,4 +269,22 @@ module ariane_kr260_debug (
       .probe_out0 ( soft_reset )
   );
 
+  // synthesis translate_off
+  initial begin
+    assert (ariane_soc::DRAMBase == CVA6_DDR_BASE);
+    assert (ariane_soc::DRAMLength == CVA6_DDR_SIZE);
+  end
+  always @(posedge pl_clk) begin
+    if (mem_rst_n) begin
+      if (m_axi_mem_awvalid) begin
+        assert (m_axi_mem_awaddr >= CVA6_DDR_BASE && m_axi_mem_awaddr < CVA6_DDR_END);
+        assert (m_axi_mem_awatop == 0); // AMOs must be consumed before the PS.
+      end
+      if (m_axi_mem_arvalid)
+        assert (m_axi_mem_araddr >= CVA6_DDR_BASE && m_axi_mem_araddr < CVA6_DDR_END);
+      if (m_axi_mem_bvalid) assert (ps_bid[5] == 0);
+      if (m_axi_mem_rvalid) assert (ps_rid[5] == 0);
+    end
+  end
+  // synthesis translate_on
 endmodule

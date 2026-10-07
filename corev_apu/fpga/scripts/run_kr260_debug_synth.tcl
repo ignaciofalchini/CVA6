@@ -12,7 +12,7 @@ set fpga_dir [file normalize [file join [file dirname [info script]] ..]]
 set project_dir [file join $fpga_dir $project]
 set project_file [file join $project_dir ${project}.xpr]
 set bd_source [file join $project_dir ${project}.srcs sources_1 bd \
-    ariane_kr260_ps_bd ariane_kr260_ps_bd.bd]
+    kr260_ps_ddr_bd kr260_ps_ddr_bd.bd]
 foreach required_file [list $project_file $bd_source] {
     if {![file isfile $required_file]} {
         error "Missing saved GUI project file: $required_file; no backup will be used"
@@ -27,24 +27,7 @@ file mkdir $report_dir
 set_param general.maxThreads 1
 open_project $project_file
 
-# Preserve the saved source set, IP settings, constraints and run strategies.
-# Never recreate this directory with create_project -force: it contains the
-# canonical BD edited by the user in Vivado.
-set bd_file [get_files -quiet $bd_source]
-if {[llength $bd_file] != 1} {
-    error "The saved project must contain the GUI Block Design: $bd_source"
-}
-puts "KR260_DEBUG_BD_SOURCE=$bd_source"
-open_bd_design $bd_file
-validate_bd_design
-generate_target all $bd_file
-set bd_wrapper [make_wrapper -files $bd_file -top -import]
-if {[llength $bd_wrapper] == 0 || ![file exists [lindex $bd_wrapper 0]]} {
-    error "Could not generate BRAM Block Design wrapper"
-}
-
-set_property top ariane_kr260_debug [current_fileset]
-update_compile_order -fileset sources_1
+source [file join $fpga_dir scripts prepare_kr260_ddr.tcl]
 
 synth_design -rtl -name kr260_debug_rtl
 report_compile_order -used_in synthesis \

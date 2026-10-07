@@ -82,6 +82,12 @@ module ariane_kr260 (
   );
     config_pkg::cva6_user_cfg_t cfg = CVA6UserCfg;
     cfg.RVZiCond = bit'(0);
+`ifdef KR260_MEMORY_TEST_BOOTROM
+    // Bring-up reads must reach DDR, rather than pass from cached store data.
+    cfg.NrCachedRegionRules = unsigned'(0);
+    cfg.CachedRegionAddrBase = '0;
+    cfg.CachedRegionLength = '0;
+`endif
     cfg.NrNonIdempotentRules = unsigned'(1);
     cfg.NonIdempotentAddrBase = 1024'({64'b0});
     cfg.NonIdempotentLength = 1024'({ariane_soc::DRAMBase});

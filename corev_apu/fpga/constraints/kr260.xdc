@@ -1,4 +1,3 @@
-# 25 MHz external clock
-create_clock -period 40.000 -name clk [get_ports clk_i]
-set_property PACKAGE_PIN C3 [get_ports clk_i]
-set_property IOSTANDARD LVCMOS18 [get_ports clk_i]
+# Clock is supplied by the PS pl_clk0; there is no external PL clock port.
+# The PS IP generated XDC defines its frequency. Verify report_clocks and
+# check_timing after RTL elaboration/synthesis; do not duplicate create_clock.

@@ -62,7 +62,7 @@ set_property -dict [list \
     CONFIG.C_PROBE_IN0_WIDTH {2} \
     CONFIG.C_NUM_PROBE_OUT {1} \
     CONFIG.C_PROBE_OUT0_WIDTH {1} \
-    CONFIG.C_PROBE_OUT0_INIT_VAL {0x1} \
+    CONFIG.C_PROBE_OUT0_INIT_VAL {0x0} \
 ] $vio_ip
 
 foreach ip [list $ila_ip $vio_ip] {
