@@ -52,9 +52,9 @@ Los workers lanzados como servicios de usuario pueden continuar después del log
 |---|---|---|
 | Matriz de síntesis e implementación | [timing_matrix.py](../../corev_apu/fpga/scripts/timing_matrix.py) | Interfaz general; ver guía y configuración de la campaña concreta |
 | Barrido de clocks | [timing_sweep_service.py](../../corev_apu/fpga/scripts/timing_sweep_service.py) | Interfaz histórica; no asumir equivalencia con el flujo físico posterior |
-| Noche física V3 | [start_night_v3.sh](../../../timing-preparation/focused_physical_20261021/night_run_20261021/start_night_v3.sh) | Ventana vencida el 22/10 a las 08:01:18 |
-| Día pasivo | [start_day.sh](../../../timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh) | Ventana vencida el 22/10 a las 21:00 |
-| Colector histórico de evidencia | [collector_provenance.json](../../../timing-evidence/20261018/collector_provenance.json) | Cubre piloto y búsqueda 100–300; no toda la campaña posterior |
+| Noche física V3 | [start_night_v3.sh](../../../archivo/timing-preparation/focused_physical_20261021/night_run_20261021/start_night_v3.sh) | Ventana vencida el 22/10 a las 08:01:18 |
+| Día pasivo | [start_day.sh](../../../archivo/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh) | Ventana vencida el 22/10 a las 21:00 |
+| Colector histórico de evidencia | [collector_provenance.json](../../../archivo/timing-evidence/20261018/collector_provenance.json) | Cubre piloto y búsqueda 100–300; no toda la campaña posterior |
 
 Las recetas exactas, servicios, `guard`, límites, pausa y reanudación se registran en [auditoría operativa](auditorias/operacion.json), los directorios de campaña y las guías [timing_matrix.md](../timing_matrix.md) / [timing_sweep.md](../timing_sweep.md). Son instrucciones con fecha: revisar valores actuales antes de ejecutar un comando de arranque. En particular, `--check` puede aprobar la estructura de una campaña aunque su ventana haya vencido; no certifica que esté lista para arrancar.
 

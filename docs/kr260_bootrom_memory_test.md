@@ -112,7 +112,7 @@ cd corev_apu/fpga
 KR260_MEMORY_TEST_BOOTROM=1 \
 XILINX_PART=xck26-sfvc784-2LV-c \
 XILINX_BOARD=xilinx.com:kr260_som:part0:2.0 \
-KR260_LINT_REPORT_DIR="$PWD/../../reports/kr260_next_steps/bootrom" \
+KR260_LINT_REPORT_DIR="$PWD/../../documentos/reports/kr260_next_steps/bootrom" \
 vivado -mode batch -source scripts/run_kr260_lint.tcl
 ```
 

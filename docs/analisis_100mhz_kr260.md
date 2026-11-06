@@ -74,7 +74,7 @@ A 90,9 MHz el flujo estándar dejó −0,065 ns y una pasada de
 
 Runs separados `synth_2`/`impl_2`, constraint set `constrs_exp100` (10 ns sólo
 para análisis; el PS sigue a 90,9 MHz). Archivos en
-`timing-preparation/exp100_retiming_20261022/`.
+`archivo/timing-preparation/exp100_retiming_20261022/`.
 
 | Síntesis | Resultado del retiming |
 |---|---|
@@ -245,10 +245,10 @@ Cada corrida completa lleva ~2 h; cada cambio de RTL requiere simulación previa
 
 ## Fuentes de los datos
 
-- Campaña a 100 MHz: `timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/`
+- Campaña a 100 MHz: `archivo/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/`
   (`all_failing_setup.tsv`, `critical_setup.rpt`) y `diagnostic_census_20261021/INFORME_ACTUAL.txt`.
-- Cierre a 90,9 MHz: `timing-preparation/pl0_91mhz_20261022/` y el paquete congelado.
+- Cierre a 90,9 MHz: `archivo/timing-preparation/pl0_91mhz_20261022/` y el paquete congelado.
 - Retiming en VC707: `logs/vc707_fpga_run2_20260729-014100.log` (Synth 8-5816).
-- Retiming en KR260: `timing-preparation/exp100_retiming_20261022/` (`exp100*.log`,
+- Retiming en KR260: `archivo/timing-preparation/exp100_retiming_20261022/` (`exp100*.log`,
   `synth_estimate/families.txt`) y el log de `synth_2` del proyecto.
 - PLLs del PS: `.xci` de `kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0`.

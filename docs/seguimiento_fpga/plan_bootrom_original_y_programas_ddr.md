@@ -1,10 +1,68 @@
 # Plan: restaurar la BootROM normal y ejecutar programas desde DDR
 
-Fecha: 29/10/2026. **Sólo documentación: no se aplicó ningún cambio de este plan.** Se conserva el CVA6 existente, los paquetes de 25/90,9 MHz y el resultado de timing. La automatización operativa nueva verifica/prepara el arranque de la prueba actual; no implementa ni ejecuta este cambio de BootROM ni la carga de programas nuevos.
+Fecha: 29/10/2026; actualizado el 6/11/2026. **El análisis original era sólo documentación; ver abajo las decisiones del 6 de noviembre y lo aplicado.** Se conserva el CVA6 existente, los paquetes de 25/90,9 MHz y el resultado de timing. La automatización operativa nueva verifica/prepara el arranque de la prueba actual; no implementa ni ejecuta este cambio de BootROM ni la carga de programas nuevos.
 
 ## Resultado buscado
 
 Separar la prueba de DDR que está en ROM de los programas que queremos ejecutar: ROM de arranque identificada, programa RISC-V cargado en la DDR del PS a una dirección accesible para CVA6, reset liberado sólo después de verificar la carga, y resultado observable. Sin modificar el pipeline, ISA ni RTL interno del procesador. Cualquier cambio futuro queda en firmware, integración de plataforma, selección de ROM, cargador ARM y scripts; aquí se describen sin aplicarlos.
+
+## Decisiones tomadas el 6 de noviembre de 2026
+
+Estas decisiones tienen prioridad sobre las secciones siguientes, que conservan el análisis del 29 de octubre.
+
+| Tema | Decisión |
+|---|---|
+| ROM | Opción B: ROM mínima `corev_apu/bootrom/bootrom.sv`, que salta a `0x80000000`. No es una restauración de `bootrom_64` |
+| Cachés del primer bitstream | **Apagadas**, igual que en el cierre actual. Cambia la ROM y no la configuración de cachés |
+| Cachés del segundo bitstream | Encendidas, para medir rendimiento |
+| Frecuencia | 100 MHz. Si no cierra timing o no funciona en placa, 90,9 MHz |
+| Cómo cargar el programa | **Por JTAG**, sin recompilar nada por cada programa. La app ARM queda como alternativa |
+
+**Orden de trabajo** (reemplaza el paso 1 del orden de ejecución futuro):
+1. Probar en placa el paquete de 100 MHz que ya existe, con la ROM de test. Si falla, correr la referencia de 25 MHz para separar un problema del flujo de uno de ese paquete.
+2. Implementar el diseño nuevo con cachés apagadas a 100 MHz.
+3. Probarlo en placa con la prueba de memoria adaptada.
+4. Implementar el diseño con cachés encendidas y medir.
+
+**Cambio de orden el 6 de noviembre:** se probó primero el diseño nuevo en la DDR (paso 3), y el paso 1 quedó como plan B, sin ejecutar.
+
+**Criterio:** tocar lo mínimo respecto del proyecto original. Solo los tres registros de la FPU quedan distintos a propósito.
+
+**Cambios respecto del plan original:**
+- **Cachés:** como siguen apagadas, el bloque de `ariane_kr260.sv` y `KR260_MEMORY_TEST_BOOTROM` se quedan, con el mismo nombre. El bitstream con cachés encendidas borra los dos.
+- **VIO:** no se toca. Hay que evitar usarlo con un programa cargado, o recargar el programa después.
+
+**Aplicado el 6 de noviembre** en la rama `feature/kr260-programas-ddr`: ROM en `ariane_kr260.sv` y en el `.xpr`, scripts de selección y programa en `corev_apu/fpga/software/kr260_ps_boot/programas/`. La implementación corre en `Automatizacion-FPU-100MHz/implementacion_ddr/`; ver `README-DDR.md` en esa carpeta de campaña.
+
+**Resultado de la implementación (6 de noviembre, 02:25): cerró a 100 MHz en el primer intento**, con cachés apagadas y la ROM mínima. WNS/TNS 0,000/0,000 ns y WHS +0,006 ns, con 0 de 96.944 endpoints de setup fallando y 88.690 redes ruteadas sin errores. Se usó implementación incremental desde el DCP de CAST3, que reutilizó el 98,13 % de las celdas; después del ruteo estaba en −0,019 ns y lo cerró la pasada `Explore`. **El margen sigue siendo nulo.** El paquete está en `implementacion_ddr/paquete_ddr_100mhz/`.
+
+**Resultado en placa (6 de noviembre): la prueba de memoria dio PASS en dos corridas manuales.** Ver el [registro de la prueba](actualizacion_20261106_prueba_placa_ddr.md).
+
+### Carga del programa por JTAG
+
+Con esta decisión no hace falta `kr260_load.c` ni cambiar `main.c`. Lo hace `xsdb`, siguiendo la secuencia que `cva6 ensayo` ya usa para preparar la placa:
+
+1. **Preparar:** programar el bitstream y correr el FSBL, con el CVA6 retenido en reset. `check_prepared` ya comprueba reloj, reset, PL, DDR y ancho de HP0.
+2. **Limpiar el buzón:** `mwr` en `0x83FFFF000`, cuatro palabras de 64 bits.
+3. **Cargar:** `dow -data programa.bin 0x800000000`. Rechazar la imagen si alcanza el buzón.
+4. **Verificar:** releer la imagen con `mrd -bin -file` y comparar con el `.bin`.
+5. **Liberar:** `mwr 0xff0a002c 0x7fff8000`, la misma escritura que hoy hace `kr260_boot.c`.
+6. **Esperar:** leer `0x83FFFF000` hasta que valga 1, -1 o -2, con un tiempo límite y sin reiniciar el CVA6.
+
+**Riesgo a comprobar en la primera prueba:** HP0 no es coherente con el ARM. Si lo escrito por JTAG quedara en la caché del A53, el CVA6 no lo vería y la relectura podría dar bien igual. La preparación reinicia el A53 antes de cargar, lo que debería dejar su caché apagada, pero no se probó en placa. La comprobación real es el ILA: las lecturas del CVA6 en `0x80000000` tienen que traer las instrucciones del programa. Si no, se usa la app ARM, que apaga esa caché de forma explícita.
+
+**Resultado de ese riesgo (6 de noviembre):** en las dos corridas, el ILA muestra que las lecturas del CVA6 en `0x80000000` traen `00000297` y `15828293`, las instrucciones que cargó el ARM. No hizo falta la app ARM.
+
+Esta secuencia se ejecutó a mano desde `xsdb` el 6 de noviembre. También está en el comando `cva6 programa`, cuyas pruebas simulan la placa. Ese comando todavía no se ejecutó con hardware.
+
+### Consecuencia sobre el timing
+
+El cierre a 100 MHz y su paquete corresponden a la ROM de test. Cambiar la ROM cambia el diseño, así que no se puede reutilizar ese checkpoint.
+
+- Hace falta una síntesis e implementación nuevas, con su propio bitstream, XSA y FSBL. Cada corrida tarda cerca de 1,5 horas.
+- El cierre anterior tuvo margen 0,000 ns y otra implementación del mismo RTL dio −0,208 ns, así que el diseño nuevo puede no cerrar a 100 MHz. Las cachés encendidas no se implementaron nunca en esta placa.
+- Volver a 90,9 MHz también requiere su propia implementación a 11 ns y un FSBL con IOPLL/11. El paquete del 22 de octubre tiene otro RTL y la ROM de test.
+- Los scripts de esas corridas están en `Automatizacion-FPU-100MHz/`, fuera del repositorio.
 
 ## Lo que encontramos realmente
 
@@ -51,6 +109,191 @@ Traducción: `addr_PS = 0x800000000 + (addr_CVA6 - 0x80000000)`.
 No confundir el número de dígitos: son dos espacios de direcciones distintos. El mailbox histórico a 16 KiB puede solaparse con el programa; no reservarlo por costumbre sin revisar el mapa real. Elegir la reserva definitiva junto con el linker y la pila. Mantener el GiB reservado frente a firmware/OS/DMA del PS; el segmento del BD no reserva memoria por sí solo.
 
 Si el cargador admite ELF, deberá validar arquitectura/clase/endian, PT_LOAD, relación entre direcciones físicas y virtuales, `filesz <= memsz`, tamaños reales de archivo, límites y solapamientos; cargar bytes y poner a cero BSS. Comprobar que el entry esté en un segmento ejecutable. Para BIN, exigir base, tamaño y entry explícitos: no inferirlos del nombre. Estos son requisitos del cargador futuro, no funciones implementadas ahora.
+
+## Script de linker del programa RISC-V
+
+Agregado el 6 de noviembre de 2026, para la opción B con la ROM mínima `corev_apu/bootrom/bootrom.sv`. Esa ROM salta siempre a `0x80000000`, así que `_start` tiene que quedar exactamente en esa dirección.
+
+```
+ENTRY(_start)
+SECTIONS
+{
+    . = 0x80000000;
+    .text.init : { KEEP(*(.text.init)) }
+    .text      : { *(.text*) }
+    .rodata    : { *(.rodata*) *(.srodata*) }
+    .data      : { *(.data*) *(.sdata*) }
+    .bss (NOLOAD) : { __bss_start = .; *(.sbss*) *(.bss*) *(COMMON); __bss_end = .; }
+    /DISCARD/ : { *(.note*) *(.comment) *(.riscv.attributes) *(.eh_frame*) }
+}
+```
+
+- **`/DISCARD/` es obligatorio.** Sin esa línea, el compilador de Vitis agrega `.note.gnu.build-id` y el linker la deja en `0x80000000`. `_start` queda en `0x80000030` y el procesador intenta ejecutar datos que no son código.
+- **`.sdata` y `.sbss`:** el compilador pone ahí variables chicas. Están incluidas para que `_start` limpie toda la zona entre `__bss_start` y `__bss_end`.
+- **Compilación:** usar `-mcmodel=medany`. Sin esa opción, el enlace falla porque `0x80000000` queda fuera de alcance.
+- **Comprobación:** antes de cargar un programa, confirmar que `_start` esté en `0x80000000` con `riscv64-unknown-elf-nm programa.elf`.
+
+Se probó en QEMU (`virt`, con la memoria en `0x80000000`): sin `/DISCARD/` da instrucción ilegal en `0x80000000`, y con esa línea `_start` queda en esa dirección. Todavía no se ejecutó en el CVA6.
+
+## Cómo leer el resultado del programa
+
+Agregado el 6 de noviembre de 2026. El CVA6 no tiene UART en esta integración, así que el programa informa su resultado escribiendo en la DDR, y el PS lo lee.
+
+| Vista CVA6 | Vista PS/A53 | Contenido |
+|---|---|---|
+| `0xBFFFF000` | `0x83FFFF000` | 0 en curso, 1 PASS, -1 fallo de memoria, -2 excepción |
+| `0xBFFFF008` | `0x83FFFF008` | Dirección del fallo (`mepc` si hubo excepción) |
+| `0xBFFFF010` | `0x83FFFF010` | Valor esperado (`mcause` si hubo excepción) |
+| `0xBFFFF018` | `0x83FFFF018` | Valor leído (`mtval` si hubo excepción) |
+
+Este formato es el de la prueba actual, con el agregado de la excepción. La dirección es una propuesta. `0x80004000` queda descartada porque un programa de más de 16 KiB la pisaría.
+
+- **Programa:** escribe el resultado al terminar y ejecuta `fence iorw, iorw` antes y después de escribir el estado.
+- **Cargador del PS:** limita el tamaño para no alcanzar el buzón y lo limpia antes de liberar el reset. Después espera el resultado con un tiempo límite. Si vence, informa TIMEOUT y no reinicia el CVA6.
+- **`cva6 programa`:** lee esta dirección. `cva6 ensayo` sigue esperando el PASS de la ROM de test en `0x800004000`.
+
+## Primer programa: la prueba de memoria en DDR
+
+El primer programa propuesto es una adaptación de `memory_test.S`, que ya se ejecutó en placa desde la ROM y da un PASS claro. **No se puede cargar sin cambios:** escribe patrones desde `0x80000000`, donde quedaría su propio código, y se borra a sí misma. Se comprobó en QEMU: la primera instrucción terminó sobrescrita con `0xd5aa55aa`.
+
+`memory_test.S` queda sin cambios, como referencia de la ROM de test. La versión nueva es `corev_apu/fpga/software/kr260_ps_boot/programas/memory_test_ddr.S`.
+
+| Qué | Prueba en la ROM | Prueba en DDR |
+|---|---|---|
+| Código | `0x00010000` | `0x80000000` |
+| Zona densa de 16 KiB | `0x80000000` a `0x80004000` | `0x80100000` a `0x80104000` |
+| Sondas dispersas | `0x80000000` más cada desplazamiento | `0x80100000` más los mismos desplazamientos |
+| Sonda final | `0xBFFFFFF8` | `0xBFFFFFF8`, sin cambios |
+| Buzón | `0x80004000` | `0xBFFFF000` |
+| Excepciones | Sin tratamiento | `mtvec` propio; informa -2 en el buzón |
+
+```asm
+.section .text.init
+.option norvc
+.align 3
+.globl _start
+_start:
+  la t0, trap
+  csrw mtvec, t0
+  li s0, 0x80100000          // inicio de la zona de prueba
+  li s5, 0x80104000          // fin de la zona densa (16 KiB)
+  li s1, 0xBFFFF000          // buzon
+  sd zero, 0(s1)
+  sd zero, 8(s1)
+  sd zero, 16(s1)
+  sd zero, 24(s1)
+  fence iorw, iorw
+  li s2, 0x55aa55aa55aa55aa
+  li s3, 2
+write_pass:
+  mv t0, s0
+write_loop:
+  xor t1, t0, s2
+  sd t1, 0(t0)
+  addi t0, t0, 8
+  bne t0, s5, write_loop
+  fence iorw, iorw
+  mv t0, s0
+read_loop:
+  xor t1, t0, s2
+  ld t2, 0(t0)
+  bne t1, t2, test_fail
+  addi t0, t0, 8
+  bne t0, s5, read_loop
+  not s2, s2
+  addi s3, s3, -1
+  bnez s3, write_pass
+  // Primero se escriben todas las sondas, para detectar direcciones repetidas.
+  mv t0, s0
+  jal ra, write_probe
+  li s4, 0x2000
+sparse_write:
+  add t0, s0, s4
+  jal ra, write_probe
+  slli s4, s4, 1
+  li t3, 0x40000000
+  bltu s4, t3, sparse_write
+  li t0, 0xbffffff8
+  jal ra, write_probe
+  fence iorw, iorw
+  mv t0, s0
+  jal ra, read_probe
+  li s4, 0x2000
+sparse_read:
+  add t0, s0, s4
+  jal ra, read_probe
+  slli s4, s4, 1
+  li t3, 0x40000000
+  bltu s4, t3, sparse_read
+  li t0, 0xbffffff8
+  jal ra, read_probe
+  fence iorw, iorw
+  li t1, 1
+  sd t1, 0(s1)
+  fence iorw, iorw
+test_pass:
+  j test_pass
+write_probe:
+  xor t1, t0, s2
+  sd t1, 0(t0)
+  ret
+read_probe:
+  xor t1, t0, s2
+  ld t2, 0(t0)
+  bne t1, t2, test_fail
+  ret
+test_fail:
+  sd t0, 8(s1)
+  sd t1, 16(s1)
+  sd t2, 24(s1)
+  fence iorw, iorw
+  li t3, -1
+  sd t3, 0(s1)
+  fence iorw, iorw
+fail_halt:
+  j fail_halt
+.align 2
+trap:
+  li s1, 0xBFFFF000
+  csrr t0, mepc
+  csrr t1, mcause
+  csrr t2, mtval
+  sd t0, 8(s1)
+  sd t1, 16(s1)
+  sd t2, 24(s1)
+  fence iorw, iorw
+  li t3, -2
+  sd t3, 0(s1)
+  fence iorw, iorw
+trap_halt:
+  j trap_halt
+```
+
+Se compila con el script de linker de este plan y las opciones que ya usa la ROM de test. Ocupa 404 bytes, muy por debajo del inicio de la zona de prueba.
+
+```bash
+riscv64-unknown-elf-gcc -static -nostdlib -nostartfiles -march=rv64im_zicsr -mabi=lp64 -mcmodel=medany -mexplicit-relocs -T programa.ld memory_test_ddr.S -o memory_test_ddr.elf
+```
+
+```bash
+riscv64-unknown-elf-objcopy -O binary memory_test_ddr.elf memory_test_ddr.bin
+```
+
+**Probado en QEMU**, cargando el `.bin` en `0x80000000` con 1 GiB de memoria:
+
+| Caso | Buzón | Terminó en |
+|---|---|---|
+| Normal | 1 | `test_pass`, con el código intacto |
+| Fallo inyectado en la comparación | -1, dirección `0x80100000`, esperado y leído correctos | `fail_halt` |
+| Instrucción ilegal inyectada | -2, `mepc` `0x8000000C`, `mcause` 2 | `trap_halt` |
+
+QEMU comprueba la lógica del programa, no el CVA6, HP0 ni la DDR real.
+
+**Criterio en placa:** el ILA ve el PC en `0x80000000` y el buzón termina en 1. Además, las lecturas de `0x80000000` en adelante tienen que aparecer en AXI, porque desde la ROM nunca se ejecutó código en DDR. **Se cumplió el 6 de noviembre.**
+
+**Límites de esta prueba:**
+- El primer MiB no se prueba con patrones. Lo cubre la verificación del cargador, que relee la imagen antes de liberar el reset, y solo en los bytes que ocupa el programa.
+- Con cachés encendidas, las lecturas pueden salir de la caché y no probar la DDR. Por eso conviene correrla primero con las cachés apagadas.
 
 ## Orden de ejecución futuro
 

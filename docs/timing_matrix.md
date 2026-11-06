@@ -28,7 +28,7 @@ al final de la lista. `matrix_summary.csv` conserva todos los intentos ejecutado
 
 El piloto original continúa sin interrupción. Se inició el servicio
 `cva6-timing-a1e958c4166b.service`, con salida en
-`/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz`, para esperar
+`/home/nachofalchi/data/fpga-work/archivo/timing-matrix/search_100_300mhz`, para esperar
 su finalización y reutilizar sus fuentes congeladas, síntesis y reportes.
 No inicia un segundo Vivado mientras espera. Si el piloto falla por un problema
 de ejecución, se detiene para revisarlo. Si termina con timing negativo, intenta
@@ -192,7 +192,7 @@ copias/checkpoints, por lo que hay que prever espacio para fuentes, runs y etapa
 
 Actualización de ejecución del 18/10/2026: se inició el piloto a 100 MHz, con
 síntesis e implementación `current`, en
-`/home/nachofalchi/data/fpga-work/timing-matrix/pilot_100mhz`.
+`/home/nachofalchi/data/fpga-work/archivo/timing-matrix/pilot_100mhz`.
 Servicio: `cva6-timing-3cfce9f4dc89.service`. La matriz completa se deja para
 después de validar ese piloto. Consultar `state.json`, el servicio y los reportes
 para saber el estado actual; este registro de inicio no implica timing cerrado.

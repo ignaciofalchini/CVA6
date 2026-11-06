@@ -51,13 +51,13 @@ Que una síntesis termine no implica cierre de timing. Sus retardos de intercone
 
 El análisis del mejor resultado histórico identifica grupos independientes de CAST, PMP y FMA cerca de −0,53 a −0,55 ns, además de caché, MMU y operandos. Mejorar sólo SATP o un subconjunto FMA reduce violaciones sin corregir necesariamente el peor camino de CAST/PMP. En los caminos críticos examinados, el ruteo representa una parte importante del retardo; las intervenciones locales pueden redistribuir el problema hacia otra conexión.
 
-El censo histórico cubrió los 1716 endpoints negativos de su checkpoint, un peor camino por endpoint; no todos los caminos combinatorios posibles del CPU. Ver [censo y conclusiones](../../../timing-preparation/diagnostic_census_20261021/INFORME_ACTUAL.txt). Los nombres/bit de SATP cambiaron entre netlists: las réplicas antiguas de un bit no equivalen a optimizar el origen crítico de una netlist nueva.
+El censo histórico cubrió los 1716 endpoints negativos de su checkpoint, un peor camino por endpoint; no todos los caminos combinatorios posibles del CPU. Ver [censo y conclusiones](../../../archivo/timing-preparation/diagnostic_census_20261021/INFORME_ACTUAL.txt). Los nombres/bit de SATP cambiaron entre netlists: las réplicas antiguas de un bit no equivalen a optimizar el origen crítico de una netlist nueva.
 
 ## Los 75 endpoints del JTAG
 
 Los reportes finales enumeran 75 pines excluidos por clock constante, todos dentro de `i_ariane_kr260/i_dmi_jtag/i_dmi_cdc/`. El conjunto coincide con el gold SATP009 y no representa 75 violaciones de setup. El DMI-JTAG propio del CVA6 está inactivo; el reloj BSCAN/`INTERNAL_TCK` del debug hub es distinto y aparece analizado a 20 MHz. No se agregaron excepciones para ocultar fallos.
 
-Ver [check_timing final](../../../timing-preparation/pl0_91mhz_20261022/reports_aggressive/check_timing.rpt) y [auditoría reciente](auditorias/reciente.json). Si se habilitara ese JTAG, cambia el alcance y debe revisarse su restricción; el diagnóstico actual corresponde a la integración documentada.
+Ver [check_timing final](../../../archivo/timing-preparation/pl0_91mhz_20261022/reports_aggressive/check_timing.rpt) y [auditoría reciente](auditorias/reciente.json). Si se habilitara ese JTAG, cambia el alcance y debe revisarse su restricción; el diagnóstico actual corresponde a la integración documentada.
 
 ## Investigación externa
 

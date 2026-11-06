@@ -1,10 +1,10 @@
 # Historial de las pruebas de timing
 
-La tabla de métricas y recetas a 100 MHz está en [evaluaciones_100mhz.csv](evaluaciones_100mhz.csv): 48 registros históricos y tres implementaciones finales del 4 de noviembre. La [entrada CAST2/CAST3](actualizacion_20261104_cast.md) reúne la comparación por etapa y la [entrada del 5 de noviembre](actualizacion_20261105_paquete_100mhz.md) los resultados finales posteriores. Los registros de síntesis, otras frecuencias, intentos rechazados, interrupciones y comprobaciones se conservan por separado en [la auditoría histórica](auditorias/historico.json).
+La tabla de métricas y recetas a 100 MHz está en [evaluaciones_100mhz.csv](evaluaciones_100mhz.csv): 48 registros históricos, tres implementaciones finales del 4 de noviembre y una del 6 de noviembre. La [entrada CAST2/CAST3](actualizacion_20261104_cast.md) reúne la comparación por etapa y la [entrada del 5 de noviembre](actualizacion_20261105_paquete_100mhz.md) los resultados finales posteriores. Los registros de síntesis, otras frecuencias, intentos rechazados, interrupciones y comprobaciones se conservan por separado en [la auditoría histórica](auditorias/historico.json).
 
 ## Cobertura y forma de contar
 
-La revisión identificó **36 carpetas de resultados generales completados a 100 MHz**, más **5 candidatos físicos diurnos y 7 nocturnos** de la etapa focalizada. El corte histórico contiene esos 48 registros con métricas; la actualización del 4 de noviembre añade las dos variantes finales a 100 MHz, y la implementación nueva con el PS en IOPLL/10 lleva el total a 51. Las recargas de comprobación, importaciones y copias del mismo resultado no se presentan como optimizaciones nuevas. Un resultado con timing negativo es utilizable para comparar y sigue siendo un fallo de cierre.
+La revisión identificó **36 carpetas de resultados generales completados a 100 MHz**, más **5 candidatos físicos diurnos y 7 nocturnos** de la etapa focalizada. El corte histórico contiene esos 48 registros con métricas; la actualización del 4 de noviembre añade las dos variantes finales a 100 MHz, la implementación nueva con el PS en IOPLL/10 lleva el total a 51, y la de la ROM mínima del 6 de noviembre a 52. Las recargas de comprobación, importaciones y copias del mismo resultado no se presentan como optimizaciones nuevas. Un resultado con timing negativo es utilizable para comparar y sigue siendo un fallo de cierre.
 
 No es un conteo de todas las opciones posibles de Vivado ni de toda la historia oral del proyecto. Las primeras mediciones mencionadas a 150 y 300 MHz no se reconstruyen numéricamente sin un artefacto identificable; las listas de clocks planificadas no prueban que esos ensayos hayan terminado. La revisión local sí encontró un resultado final a **125 MHz**, Defaults/current, WNS **−3,139 ns**, TNS **−32642,748 ns** y WHS **+0,002 ns**, además de un intento Carry/125 interrumpido. Sus fuentes están en el JSON histórico.
 
@@ -68,7 +68,7 @@ El `skipped` heredado del estado menciona ASID8/10; es texto histórico y no des
 
 | Artefacto | SHA256 registrado o verificado |
 |---|---|
-| [SATP009 final.dcp](../../../timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp) | `169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce` |
+| [SATP009 final.dcp](../../../archivo/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp) | `169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce` |
 | [DCP cerrado91MHz](../../corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top_91mhz_closed.dcp) | `26e20f4b961718b5e12b8e0e676db6b5268a6831e3c3a4985ba7fe63bbe13df4` |
 
 
@@ -89,3 +89,15 @@ La prueba posterior de CAST3 a 120 MHz se lanzó a las 15:23 con recursos limita
 La implementación nueva con el PS en IOPLL/10 empezó a las 19:19 y terminó a las 20:52 sin cierre, incluso con `AggressiveExplore`. No se adoptó. El [paquete de 100 MHz](actualizacion_20261105_paquete_100mhz.md) salió del checkpoint de CAST3 que cerró, y la [comparación de implementaciones](comparacion_implementaciones_100mhz_20261104.md) explica la diferencia.
 
 Ver [registro completo y fuentes](actualizacion_20261104_cast.md). Los resultados de octubre describen otras netlists y el alcance anterior sin cambios de RTL. Se conservan como antecedentes; el nuevo cierre no debe presentarse como otra receta física sobre el mismo checkpoint histórico.
+
+## Prueba en placa del 6 de noviembre
+
+Este diseño cerró timing esa madrugada, con incremental desde CAST3: WNS/TNS 0,000/0,000 ns y WHS +0,006 ns.
+
+| Corrida | Secuencia | Resultado |
+|---|---|---|
+| Intento previo | FSBL, FPGA y FSBL otra vez, con un FSBL cortado | El FSBL se colgó en el entrenamiento de la DDR (`80C000FF`) y no se soltó el CVA6 |
+| Primera | FSBL, FPGA y FSBL otra vez, sin cortar y con Vivado desconectado hasta terminar | PASS |
+| Segunda | FPGA y un solo FSBL | PASS |
+
+Ver [registro de la prueba](actualizacion_20261106_prueba_placa_ddr.md).

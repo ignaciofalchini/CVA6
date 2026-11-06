@@ -2,13 +2,17 @@
 
 Actualizada el 6 de noviembre de 2026; los resultados de timing tienen corte el 5 de noviembre a las 23:50, hora de Córdoba. Este es el punto de entrada para el proyecto FPGA, las campañas de timing y su recuperación. Los informes originales conservan su fecha y alcance; el estado vigente se resume aquí.
 
-**Resultado vigente:** CAST3 cerró STA a **100 MHz** el 4 de noviembre a las 14:50, con **WNS/TNS y WHS/THS 0,000/0,000 ns**, cero endpoints negativos y margen prácticamente nulo al redondeo. De ese checkpoint salió el [paquete de 100 MHz](actualizacion_20261105_paquete_100mhz.md), con bitstream, XSA y FSBL a 99,999 MHz, **todavía sin ejecutar en placa**. CAST2 quedó en WNS −0,239 ns y TNS −109,091 ns. **Una implementación nueva de CAST3 con el PS en IOPLL/10 terminó en WNS −0,208 ns y CAST3 a 120 MHz en −1,806 ns; ninguna cerró.** La [comparación fechada](actualizacion_20261104_cast.md) identifica etapas, fuentes y alcance funcional hasta su corte, y la [comparación de implementaciones](comparacion_implementaciones_100mhz_20261104.md) explica por qué dos corridas de CAST3 dieron distinto.
+**Resultado en placa:** el 6 de noviembre, el CVA6 con CAST3, la ROM mínima y las cachés apagadas **ejecutó un programa desde la DDR con el reloj configurado a 100 MHz, y la prueba de memoria dio PASS** en dos corridas manuales desde `xsdb`. El arranque se vio en el ILA y el resultado, en el buzón. No ejercita la FPU ni las cachés. Ver el [registro de la prueba](actualizacion_20261106_prueba_placa_ddr.md).
 
-El paquete del 22 de octubre conserva el cierre a **90,908180 MHz configurados en el PS**, análisis a 11 ns, WNS +0,001 ns y WHS +0,004 ns. El cierre de CAST3 y la prueba de 120 MHz conservan el clock físico del PS de unos 90,9 MHz en sus proyectos; el reloj de 100 MHz lo aplica el FSBL del paquete nuevo. El último estado documentado como validado en hardware sigue siendo 25 MHz.
+**Resultado vigente de timing:** CAST3 cerró STA a **100 MHz** el 4 de noviembre a las 14:50, con **WNS/TNS y WHS/THS 0,000/0,000 ns**, cero endpoints negativos y margen prácticamente nulo al redondeo. De ese checkpoint salió el [paquete de 100 MHz](actualizacion_20261105_paquete_100mhz.md), con bitstream, XSA y FSBL a 99,999 MHz, **todavía sin ejecutar en placa**. CAST2 quedó en WNS −0,239 ns y TNS −109,091 ns. **Una implementación nueva de CAST3 con el PS en IOPLL/10 terminó en WNS −0,208 ns y CAST3 a 120 MHz en −1,806 ns; ninguna cerró.** La [comparación fechada](actualizacion_20261104_cast.md) identifica etapas, fuentes y alcance funcional hasta su corte, y la [comparación de implementaciones](comparacion_implementaciones_100mhz_20261104.md) explica por qué dos corridas de CAST3 dieron distinto.
+
+El paquete del 22 de octubre conserva el cierre a **90,908180 MHz configurados en el PS**, análisis a 11 ns, WNS +0,001 ns y WHS +0,004 ns. El cierre de CAST3 y la prueba de 120 MHz conservan el clock físico del PS de unos 90,9 MHz en sus proyectos; el reloj de 100 MHz lo aplica el FSBL del paquete nuevo. Lo último validado en hardware es la prueba de memoria del paquete con ROM mínima a 100 MHz; antes de eso, 25 MHz.
 
 **Preparación para placa:** el FSBL91 se compiló con **PASS de software** desde el XSA cerrado, IOPLL/11 y el parche de reset, en `build_20261029_1831`: [manifiesto](../../../operacion/cva6_ops/fsbl91/build_20261029_1831/fsbl91_manifest.json) y [ELF](../../../operacion/cva6_ops/fsbl91/build_20261029_1831/kr260_fsbl_91mhz_patched.elf). Los scripts JTAG/captura están preparados en la [guía de automatización](../../../automatizacion/README.md); falta ejecutarlos con la placa. El [plan de BootROM original y programas DDR](plan_bootrom_original_y_programas_ddr.md) describe trabajo futuro y no modifica el CPU ni la ROM actual.
 
 El FSBL de 100 MHz también tiene **PASS de compilación** y `cva6 ensayo --frecuencia 100` ya usa ese paquete. Ni ese flujo ni el de 90,9 MHz se ejecutaron todavía con la placa.
+
+**Programas desde la DDR:** el 6 de noviembre cerró timing a 100 MHz un diseño con la ROM mínima y las cachés apagadas (WNS 0,000 ns, WHS +0,006 ns), con incremental desde CAST3. Su paquete está en `Automatizacion-FPU-100MHz/implementacion_ddr/paquete_ddr_100mhz/`, y su `LEEME.md` explica la prueba paso a paso desde `xsdb`. `cva6 programa` todavía no corrió con la placa y su captura del ILA tiene errores por corregir. Ver el [plan](plan_bootrom_original_y_programas_ddr.md). Estos cambios están en la rama `feature/kr260-programas-ddr`, subida a `origin` el 6 de noviembre.
 
 ## Estado del repositorio
 
@@ -30,6 +34,8 @@ El repositorio no reproduce por sí solo el cierre: otra implementación del mis
 
 Entrar al [repositorio](../..), al [proyecto Vivado](../../corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr), a los [archivos de placa](../../corev_apu/fpga/software/kr260_ps_boot), a la [entrega](../../../entregas/reunion_profesor_20261030) o a la [automatización](../../../automatizacion). Se retiró el menú de accesos directos. Los dos logs citados por documentación volvieron como archivos reales a su ubicación original en el HOME; los otros 18 permanecen archivados.
 
+El 6 de noviembre, el material viejo y las campañas `timing-*` de la raíz de `fpga-work` pasaron a [archivo](../../../archivo/README.md), y los documentos sueltos a [documentos](../../../documentos/README.md), sin borrar datos. Los documentos históricos, los JSON y las copias con hash siguen nombrando sus rutas anteriores. `Automatizacion-FPU-100MHz` sigue en `Documents/ChatGPT/Tesis/` hasta probar en placa.
+
 ## Reunión del 30 de octubre de 2026
 
 [Resumen para la reunión](reunion_20261030/RESUMEN_REUNION.md), [PDF y evidencia para compartir](../../../entregas/reunion_profesor_20261030/README_ENTREGA.md) y [respaldo local verificable](../../../backups/reunion_20261030/README_RECUPERACION.md).
@@ -38,7 +44,7 @@ El corte documental comprimido de las 00:13 del 29/10 se conserva sin cambios. L
 
 ## Respaldo externo verificado
 
-El respaldo esencial se copió el 29/10 a OpenClawd y pasó verificación SHA256 de los 50 archivos. [Recibo y ubicación](../../../RESPALDO_EXTERNO_20261029.md). Los archivos para la placa no entraron en esa copia; [guía para trabajar con Gonza](../../../PARA_PLACA_CON_GONZA_20261030.md).
+El respaldo esencial se copió el 29/10 a OpenClawd y pasó verificación SHA256 de los 50 archivos. [Recibo y ubicación](../../../documentos/RESPALDO_EXTERNO_20261029.md). Los archivos para la placa no entraron en esa copia; [guía para trabajar con Gonza](../../../documentos/PARA_PLACA_CON_GONZA_20261030.md).
 
 El 6 de noviembre se copiaron a OpenClawd el paquete de 100 MHz, el DCP y los reportes de CAST3 que cerró, los paquetes de 25 y 90,9 MHz, la automatización y la documentación: **4.254 archivos y 351,6 MB verificados con SHA256**, en `/home/nacho/backups/CVA6/auto_20261106T033015Z_d3bd1baa7567`. [Recibo](../../../operacion/cva6_ops/respaldo/20261106_003013_100mhz/backup_receipt.json). Los scripts de `Automatizacion-FPU-100MHz/` y la implementación sin cierre siguen solo en esta computadora.
 
@@ -46,7 +52,8 @@ El 6 de noviembre se copiaron a OpenClawd el paquete de 100 MHz, el DCP y los re
 
 | Consulta | Documento |
 |---|---|
-| Paquete de 100 MHz, prueba en placa y resultado final de 120 MHz | [Registro del 5 de noviembre](actualizacion_20261105_paquete_100mhz.md) |
+| Prueba en placa del programa en la DDR a 100 MHz, y lo aprendido del FSBL | [Registro del 6 de noviembre](actualizacion_20261106_prueba_placa_ddr.md) |
+| Paquete de 100 MHz con ROM de test y resultado final de 120 MHz | [Registro del 5 de noviembre](actualizacion_20261105_paquete_100mhz.md) |
 | Por qué dos implementaciones de CAST3 a 100 MHz dieron distinto | [Comparación de implementaciones](comparacion_implementaciones_100mhz_20261104.md) |
 | Pruebas CAST2/CAST3 a 100 MHz e inicio de 120 MHz | [Registro del 4 de noviembre](actualizacion_20261104_cast.md) |
 | Qué se consiguió, qué significa y qué falta | [Estado y resultados](estado_y_resultados.md) |
@@ -58,7 +65,7 @@ El 6 de noviembre se copiaron a OpenClawd el paquete de 100 MHz, el DCP y los re
 
 ## Datos y conservación
 
-- [Resultados principales en CSV](resultados_clave.csv), [51 evaluaciones a 100 MHz](evaluaciones_100mhz.csv) y [registro de decisiones](decisiones.csv).
+- [Resultados principales en CSV](resultados_clave.csv), [52 evaluaciones a 100 MHz](evaluaciones_100mhz.csv) y [registro de decisiones](decisiones.csv).
 - [Fuentes documentales con SHA256](fuentes_documentales.json) y [inventario de archivos del trabajo](inventario_archivos.jsonl.gz).
 - [Copia comprimida de documentación y evidencia compacta](archivo_documental_20261029.tar.gz); [alcance y exclusiones](alcance_archivo.json).
 - [Auditorías de fuentes](auditorias) y [verificación de esta consolidación](validacion.json).
@@ -70,7 +77,7 @@ Los reportes completos, censos, DCP, bitstreams y demás artefactos grandes sigu
 
 ## Alcance vigente
 
-El alcance histórico hasta el 29 de octubre conservaba RTL, parámetros y microarquitectura. La campaña del 4 de noviembre incorpora el cambio de registros de CAST del viernes y la variante `LAT_CONV=3` autorizada por el usuario, con reparto 1/1/1 y un ciclo adicional de conversión. Ese alcance específico no habilita otros cambios en PMP, TLB, cachés o pipeline del procesador. El objetivo inmediato es probar en placa el paquete de 100 MHz y conservar el cierre STA de CAST3 como referencia.
+El alcance histórico hasta el 29 de octubre conservaba RTL, parámetros y microarquitectura. La campaña del 4 de noviembre incorpora el cambio de registros de CAST del viernes y la variante `LAT_CONV=3` autorizada por el usuario, con reparto 1/1/1 y un ciclo adicional de conversión. Ese alcance específico no habilita otros cambios en PMP, TLB, cachés o pipeline del procesador. El cierre STA de CAST3 se conserva como referencia. Los próximos objetivos están en [Estado y resultados](estado_y_resultados.md).
 
 La revisión operativa del 29 de octubre y las ventanas de campañas anteriores son registros históricos. Al corte actual no hay campañas activas. Las guías de la [prueba de 120 MHz](/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/README-120MHz.md) y de la [implementación con el reloj real](/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/README-100MHz-real.md) quedan como referencia.
 

@@ -1,7 +1,7 @@
 # Evidencias para presentar las pruebas de timing
 
 Carpeta de consulta:
-`/home/nachofalchi/data/fpga-work/timing-evidence/20261018/`
+`/home/nachofalchi/data/fpga-work/archivo/timing-evidence/20261018/`
 
 - `RESUMEN.txt`: explicación breve de los archivos y resultados disponibles.
 - `timing_results.csv`: métricas finales por frecuencia, síntesis e implementación.
@@ -60,7 +60,7 @@ Se analizó la netlist enlazada guardada, con clock de 10 ns, usando
 Se ejecutó como servicio de baja prioridad `cva6-synth-timing-evidence.service`.
 
 Origen de los reportes:
-`/home/nachofalchi/data/fpga-work/timing-matrix/pilot_100mhz/recovery/synthesis_reconstructed/`
+`/home/nachofalchi/data/fpga-work/archivo/timing-matrix/pilot_100mhz/recovery/synthesis_reconstructed/`
 
 `provenance.json` identifica el checkpoint, su hash y el carácter reconstruido.
 Se guardaron clocks, resumen min/max, 20 caminos críticos de setup, 20 de hold,

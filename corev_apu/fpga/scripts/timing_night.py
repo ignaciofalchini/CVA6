@@ -21,7 +21,7 @@ def main():
     p.add_argument('--seed',type=Path,required=True)
     a=p.parse_args();root=a.output.resolve();seed=a.seed.resolve();root.mkdir(parents=True,exist_ok=True)
     lock=(root/'.night.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
-    frozen=Path('/home/nachofalchi/data/fpga-work/timing-matrix/pilot_100mhz/source_snapshot')
+    frozen=Path('/home/nachofalchi/data/fpga-work/archivo/timing-matrix/pilot_100mhz/source_snapshot')
     sm=json.loads((seed/'matrix_manifest.json').read_text())
     if inventory(frozen)!=sm['files']:raise RuntimeError('Frozen HDL source inventory mismatch')
     code=root/'code';code.mkdir(exist_ok=True)

@@ -15,7 +15,7 @@ Estos puntos evitan interpretar un documento antiguo como estado actual. Se cons
 | Inventario actual de los 75 pines pendiente en JSON de las 12:41 | Los reportes finales posteriores sí enumeran el conjunto, idéntico al gold009; todos pertenecen al DMI-JTAG inactivo |
 | “JTAG deshabilitado” equivale a todo el debug apagado | El DMI-JTAG del CPU está inactivo; BSCAN/ILA/VIO es otra infraestructura y su reloj TCK sí se analiza |
 | Un bitstream de `impl_1` representa el cierre 91 MHz | `impl_1` quedó en −0,065 ns. El paquete cerrado usa el DCP posterior AggressiveExplore y su propio BIT/LTX/XSA |
-| El archivo continuo cubre todas las pruebas | El colector de `timing-evidence/20261018` estaba configurado para piloto y búsqueda inicial; no toda la etapa física posterior |
+| El archivo continuo cubre todas las pruebas | El colector de `archivo/timing-evidence/20261018` estaba configurado para piloto y búsqueda inicial; no toda la etapa física posterior |
 | Un resultado aceptado es el ganador | En FMA010 el análisis fue válido y no se adoptó por una ligera regresión en la media global fija |
 | La noche terminó al agotar nueve horas | Terminó antes por agotar la cola/cupos de composiciones de esa versión. No demuestra que todas las composiciones posibles fueran probadas |
 | Documentación antigua de BRAM o DDR baja describe el sistema actual | Son variantes anteriores. La integración posterior usa la ventana alta DDR del PS y el paquete cerrado identifica su configuración |
@@ -38,6 +38,17 @@ La investigación exhaustiva de frecuencia dejó un recolector y estimaciones in
 | El reloj físico quedó configurado a 100 o 120 MHz | Son objetivos de STA en estas copias; la configuración física del PS y la validación en placa quedan pendientes. |
 
 Ver [entrada completa con reportes y alcance](actualizacion_20261104_cast.md). Los inventarios, archivos comprimidos y hashes del 29 de octubre conservan ese corte; los cambios del 4 de noviembre tienen evidencia y manifiesto nuevos.
+
+## Aclaraciones del 6 de noviembre
+
+| Lectura que necesita contexto | Estado confirmado |
+|---|---|
+| Lo último validado en hardware es 25 MHz | Era cierto hasta el 6 de noviembre. Ese día, la prueba de memoria del paquete con ROM mínima dio PASS con el reloj configurado a 100 MHz |
+| El FSBL se corre dos veces porque programar la FPGA afecta la conexión con el PS | El FSBL quita el aislamiento entre el PS y el PL solo si la FPGA ya está programada. Programando la FPGA primero, alcanza con una sola corrida |
+| Si los registros de reloj, DDR y reset dan bien, el FSBL terminó | No: esos registros ya dan bien antes de que termine. Hay que comprobar que `stop` frene en `0xfffc85f0` |
+| Ya se validó la FPU a 100 MHz en placa | No: la prueba de memoria no usa instrucciones de punto flotante |
+
+Ver [registro de la prueba](actualizacion_20261106_prueba_placa_ddr.md).
 
 ## Aclaraciones del 5 de noviembre
 
