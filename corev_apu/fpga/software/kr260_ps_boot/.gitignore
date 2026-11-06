@@ -1,0 +1,9 @@
+/build/
+/workspace/
+/hardware/
+__pycache__/
+/retest_*/hsi_source/
+/known_good_*/*.bit
+/known_good_*/*.ltx
+/known_good_*/*.elf
+/retest_*/*.elf
