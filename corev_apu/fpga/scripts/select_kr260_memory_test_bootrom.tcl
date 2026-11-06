@@ -1,11 +1,8 @@
-# Add the generated KR260 memory-test ROM to a Vivado project.
-# ariane_kr260 instantiates this ROM unconditionally.
+# Agrega al proyecto la ROM minima de CVA6, que salta a 0x80000000.
+# ariane_kr260 instancia esta ROM incondicionalmente.
 
-set test_rom [file normalize src/bootrom/kr260_memory_test/bootrom_kr260_memory_test.sv]
-if {![file exists $test_rom]} {
-    error "Generate the test ROM first: make -C src/bootrom/kr260_memory_test all"
-}
-
-if {[llength [get_files -quiet $test_rom]] == 0} {
-    add_files -fileset sources_1 -norecurse $test_rom
+set boot_rom [file normalize [file join [file dirname [info script]] .. .. bootrom bootrom.sv]]
+if {![file exists $boot_rom]} { error "Falta corev_apu/bootrom/bootrom.sv" }
+if {[llength [get_files -quiet $boot_rom]] == 0} {
+    add_files -fileset sources_1 -norecurse $boot_rom
 }

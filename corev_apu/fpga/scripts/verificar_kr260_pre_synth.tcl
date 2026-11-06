@@ -12,7 +12,7 @@ proc verificar_kr260 {} {
         kr260_top.sv
         ariane_kr260.sv
         kr260_addr_pkg.sv
-        bootrom_kr260_memory_test.sv
+        bootrom.sv
         kr260_ps_ddr_bd.bd
         kr260_ps_ddr_bd_wrapper.v
     } {

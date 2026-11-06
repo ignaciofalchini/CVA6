@@ -460,7 +460,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../src/bootrom/kr260_memory_test/bootrom_kr260_memory_test.sv">
+      <File Path="$PPRDIR/../../bootrom/bootrom.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

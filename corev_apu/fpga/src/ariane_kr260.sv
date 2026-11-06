@@ -430,7 +430,7 @@ module ariane_kr260 (
       .data_i ( rom_rdata )
   );
 
-  bootrom_kr260_memory_test i_bootrom (
+  bootrom i_bootrom (
       .clk_i   ( clk_i ),
       .req_i   ( rom_req ),
       .addr_i  ( rom_addr ),
