@@ -22,7 +22,7 @@ Al 6 de noviembre, CAST3 y el reloj de 100 MHz ya están en commits de la rama `
 
 La documentación se versiona en el commit siguiente, y desde entonces git registra sus cambios; los hashes del 5 de noviembre conservan ese corte.
 
-Quedan fuera de git, a propósito, `reports/`, los binarios de los paquetes de `kr260_ps_boot`, los `archivo_documental_*.tar.gz` y `corev_apu/ariane_kr260_ps_bd_backup.tcl`. También quedan fuera `automatizacion/` y `Automatizacion-FPU-100MHz/`, donde están el DCP cerrado y el paquete de 100 MHz.
+Quedan fuera de git, a propósito, `reports/`, los binarios de los paquetes de `kr260_ps_boot`, los `archivo_documental_*.tar.gz` y `corev_apu/ariane_kr260_ps_bd_backup.tcl`. También quedan fuera `automatizacion/` y `Automatizacion-FPU-100MHz/`, donde están el DCP cerrado y el paquete de 100 MHz; estos dos y la automatización tienen copia en el [respaldo externo](#respaldo-externo-verificado).
 
 El repositorio no reproduce por sí solo el cierre: otra implementación del mismo RTL dio WNS −0,208 ns, y la referencia sigue siendo el DCP cerrado. En un clon nuevo, el wrapper del BD no existe porque se genera; se crea con `corev_apu/fpga/scripts/prepare_kr260_ddr.tcl`. En un clon se comprobó que el proyecto abre sin fuentes faltantes, con PL0 a 100 MHz, y que genera el mismo `psu_init.c` del paquete. No se completó ni elaboración ni síntesis desde un clon.
 
@@ -38,7 +38,9 @@ El corte documental comprimido de las 00:13 del 29/10 se conserva sin cambios. L
 
 ## Respaldo externo verificado
 
-El respaldo esencial se copió el 29/10 a OpenClawd y pasó verificación SHA256 de los 50 archivos. [Recibo y ubicación](../../../RESPALDO_EXTERNO_20261029.md). Los archivos para la placa siguen locales; [guía para trabajar con Gonza](../../../PARA_PLACA_CON_GONZA_20261030.md).
+El respaldo esencial se copió el 29/10 a OpenClawd y pasó verificación SHA256 de los 50 archivos. [Recibo y ubicación](../../../RESPALDO_EXTERNO_20261029.md). Los archivos para la placa no entraron en esa copia; [guía para trabajar con Gonza](../../../PARA_PLACA_CON_GONZA_20261030.md).
+
+El 6 de noviembre se copiaron a OpenClawd el paquete de 100 MHz, el DCP y los reportes de CAST3 que cerró, los paquetes de 25 y 90,9 MHz, la automatización y la documentación: **4.254 archivos y 351,6 MB verificados con SHA256**, en `/home/nacho/backups/CVA6/auto_20261106T033015Z_d3bd1baa7567`. [Recibo](../../../operacion/cva6_ops/respaldo/20261106_003013_100mhz/backup_receipt.json). Los scripts de `Automatizacion-FPU-100MHz/` y la implementación sin cierre siguen solo en esta computadora.
 
 ## Guía de lectura
 
@@ -64,7 +66,7 @@ El respaldo esencial se copió el 29/10 a OpenClawd y pasó verificación SHA256
 - [Evidencia de métricas del 4 de noviembre](auditorias/timings_20261104.json), [hashes de los archivos actualizados](SHA256SUMS_20261104.txt) y [archivo documental nuevo](archivo_documental_20261104_cast.tar.gz).
 - [Evidencia del 5 de noviembre](auditorias/timings_20261105.json), [sus hashes](SHA256SUMS_20261105.txt) y [su archivo documental](archivo_documental_20261105_100mhz.tar.gz).
 
-Los reportes completos, censos, DCP, bitstreams y demás artefactos grandes siguen en sus ubicaciones originales, identificados por el inventario y los manifiestos de cada campaña. La copia comprimida preserva documentación, scripts y evidencia de tamaño acotado; no contiene todos los productos de Vivado. El respaldo esencial seleccionado ya tiene una copia externa verificada en OpenClawd; los resultados y archivos para la placa permanecen locales. El inventario documental anterior conserva su fecha de corte.
+Los reportes completos, censos, DCP, bitstreams y demás artefactos grandes siguen en sus ubicaciones originales, identificados por el inventario y los manifiestos de cada campaña. La copia comprimida preserva documentación, scripts y evidencia de tamaño acotado; no contiene todos los productos de Vivado. El respaldo esencial y los archivos para la placa tienen copia externa verificada en OpenClawd. El inventario documental anterior conserva su fecha de corte.
 
 ## Alcance vigente
 

@@ -62,4 +62,4 @@ Reemplazan las filas anteriores sobre 120 MHz y sobre el reloj físico.
 |---|---|
 | El repositorio conserva `LAT_CONV=2`, el BD a 90,9 MHz y `fp_cvt.opLat = 2` | Era el estado de los registros anteriores. Los commits `9c333f3fe` y `793c70103` pasan a `LAT_CONV=3`, IOPLL/10 y `opLat = 3`. |
 | Implementar desde el repositorio reproduce el cierre a 100 MHz | No está garantizado: otra implementación del mismo RTL dio WNS −0,208 ns. La referencia sigue siendo el DCP cerrado, que no está en git. |
-| El paquete de 100 MHz y el DCP cerrado están en GitHub | La rama solo tiene fuentes y documentación. Esos archivos están solo en esta computadora. |
+| El paquete de 100 MHz y el DCP cerrado están en GitHub | La rama solo tiene fuentes y documentación. Esos archivos tienen copia en el respaldo externo de OpenClawd. |

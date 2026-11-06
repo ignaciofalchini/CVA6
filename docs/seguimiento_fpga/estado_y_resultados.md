@@ -92,5 +92,4 @@ La estimación de síntesis reportó slack global/PMP −0,145 ns, CAST/FPU +0,0
 
 1. Repetir la referencia de 25 MHz y correr `cva6 ensayo --frecuencia 100 --con-ila --ejecutar`; registrar PASS/FAIL e ILA.
 2. Ampliar las comprobaciones funcionales con el procesador completo, contemplando el ciclo adicional de conversión y la corrección de extensión de signo.
-3. Respaldar el paquete de 100 MHz y el DCP cerrado, que están solo en esta computadora. CAST3 y el reloj de 100 MHz ya están en `origin`; ver [estado del repositorio](README.md#estado-del-repositorio).
-4. Usar los caminos finales de la prueba de 120 MHz si se busca otra optimización. La discusión sobre 150 MHz fue conceptual y no produjo una corrida.
+3. Usar los caminos finales de la prueba de 120 MHz si se busca otra optimización. La discusión sobre 150 MHz fue conceptual y no produjo una corrida.
