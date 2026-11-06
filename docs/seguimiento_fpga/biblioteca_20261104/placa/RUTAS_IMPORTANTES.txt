@@ -1,0 +1,38 @@
+Base
+/home/nachofalchi/data/fpga-work
+
+Repositorio
+/home/nachofalchi/data/fpga-work/cva6-equipo
+
+Proyecto Vivado
+/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr
+
+Paquete 90.9 MHz
+/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22
+
+Referencia25
+/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18
+
+FSBL91
+/home/nachofalchi/data/fpga-work/operacion/cva6_ops/fsbl91/build_20261029_1831/kr260_fsbl_91mhz_patched.elf
+
+Documentacion
+/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga
+
+Plan BootROM/DDR
+/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/plan_bootrom_original_y_programas_ddr.md
+
+Auditoria BootROM
+/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/auditorias/bootrom_y_carga_ddr_20261029.json
+
+Evaluaciones100
+/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/evaluaciones_100mhz.csv
+
+Automatizacion
+/home/nachofalchi/data/fpga-work/automatizacion/README.md
+
+Resultados nuevos
+/home/nachofalchi/data/fpga-work/operacion/cva6_ops
+
+Entrega
+/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030

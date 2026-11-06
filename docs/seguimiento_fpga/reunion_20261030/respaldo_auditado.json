@@ -1,0 +1,2463 @@
+{
+  "captured_at": "2026-10-29T15:45:38.130507-03:00",
+  "scope": "read-only meeting preservation/recovery audit; no copies of large artifacts or service launches",
+  "packages": {
+    "known_good_2026-09-18": {
+      "manifest": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/SHA256SUMS.txt",
+      "manifest_sha256": "4dd68b697134c55a06cdf3552cef9827444765009dc616d97a021c3a5626ecbd",
+      "checked": 18,
+      "mismatches": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/SHA256SUMS.txt",
+          "expected": "a651a9eb5ce2847eabb429614a748be7bfbecbb45c4266454f1bae5108952dbb",
+          "actual": "4dd68b697134c55a06cdf3552cef9827444765009dc616d97a021c3a5626ecbd",
+          "match": false,
+          "bytes": 1540,
+          "self_entry": true
+        }
+      ],
+      "files": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/README.md",
+          "expected": "58bc69786e2b0748ee1336461dda689638efb3699a6c6200bb5e2a483a4297f8",
+          "actual": "58bc69786e2b0748ee1336461dda689638efb3699a6c6200bb5e2a483a4297f8",
+          "match": true,
+          "bytes": 3567,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/SHA256SUMS.txt",
+          "expected": "a651a9eb5ce2847eabb429614a748be7bfbecbb45c4266454f1bae5108952dbb",
+          "actual": "4dd68b697134c55a06cdf3552cef9827444765009dc616d97a021c3a5626ecbd",
+          "match": false,
+          "bytes": 1540,
+          "self_entry": true
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/git_head.txt",
+          "expected": "b6d2a56203a5f2e5c8d51417329ed535f29ed169a70d1f171a6fb358478aa926",
+          "actual": "b6d2a56203a5f2e5c8d51417329ed535f29ed169a70d1f171a6fb358478aa926",
+          "match": true,
+          "bytes": 72,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/git_status.txt",
+          "expected": "23e4003c2e7a00dd7ffcf028203130122b31923358f2c92f2fb2eeed01c59e56",
+          "actual": "23e4003c2e7a00dd7ffcf028203130122b31923358f2c92f2fb2eeed01c59e56",
+          "match": true,
+          "bytes": 1607,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/ila_cva6_ddr.csv",
+          "expected": "f2c540a35ed324f806799f1926bbb2598b6d2119bee7f8e0f56dc75f742d7686",
+          "actual": "f2c540a35ed324f806799f1926bbb2598b6d2119bee7f8e0f56dc75f742d7686",
+          "match": true,
+          "bytes": 369052,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/ila_cva6_ddr_summary.txt",
+          "expected": "393fea80d68e6c31017642df8e6385993810ea0396dfad1c25d5d417886293fa",
+          "actual": "393fea80d68e6c31017642df8e6385993810ea0396dfad1c25d5d417886293fa",
+          "match": true,
+          "bytes": 332,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_app_jtag.elf",
+          "expected": "b8e6394ad4ea64c0cb745410a9dfcb6e21799be443ddbcefe48c7e0e01a6ac76",
+          "actual": "b8e6394ad4ea64c0cb745410a9dfcb6e21799be443ddbcefe48c7e0e01a6ac76",
+          "match": true,
+          "bytes": 175800,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_app_src.tar.gz",
+          "expected": "18cb2a55d043cf2091dffd3be766848715fc1510e2a0bebd120f8f77cf2bd72f",
+          "actual": "18cb2a55d043cf2091dffd3be766848715fc1510e2a0bebd120f8f77cf2bd72f",
+          "match": true,
+          "bytes": 5163,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_fsbl_patched.elf",
+          "expected": "093bf4061a51a7e49830969510a1769332f337163c706efe617595e93d812d50",
+          "actual": "093bf4061a51a7e49830969510a1769332f337163c706efe617595e93d812d50",
+          "match": true,
+          "bytes": 403392,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_fsbl_patched_src.tar.gz",
+          "expected": "a974916c34facf1f6f35cc8f9e44d40696f80dbf15366bc0520d550f0c2059fb",
+          "actual": "a974916c34facf1f6f35cc8f9e44d40696f80dbf15366bc0520d550f0c2059fb",
+          "match": true,
+          "bytes": 386186,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_ila_capture.tcl",
+          "expected": "4bd7bf00f4381e846a3b3b6d918909875cc64811db858fe0a153cd6142670225",
+          "actual": "4bd7bf00f4381e846a3b3b6d918909875cc64811db858fe0a153cd6142670225",
+          "match": true,
+          "bytes": 878,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_jtag_boot.xsdb",
+          "expected": "9dfb208f748a5635ec2309fdf2e8533510e6048c80169e5c984fd60e60d5d9e5",
+          "actual": "9dfb208f748a5635ec2309fdf2e8533510e6048c80169e5c984fd60e60d5d9e5",
+          "match": true,
+          "bytes": 109,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_jtag_run.xsdb",
+          "expected": "70b1e3e2ce1d9f82a79e433232eb3219446d03064d9c7ee8506ca6ab3ac74523",
+          "actual": "70b1e3e2ce1d9f82a79e433232eb3219446d03064d9c7ee8506ca6ab3ac74523",
+          "match": true,
+          "bytes": 1045,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_top.bit",
+          "expected": "0a83948938b061c288c1bdf01dddfa30d7dc5d66632da9b452fa22fba0f35231",
+          "actual": "0a83948938b061c288c1bdf01dddfa30d7dc5d66632da9b452fa22fba0f35231",
+          "match": true,
+          "bytes": 7797900,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_top.ltx",
+          "expected": "f3cf424e01bd86214f9772231949ee3c82d21aba16d34cc850d3e24d1296f323",
+          "actual": "f3cf424e01bd86214f9772231949ee3c82d21aba16d34cc850d3e24d1296f323",
+          "match": true,
+          "bytes": 120593,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/model_vs_hardware.txt",
+          "expected": "22d9db22d3ac0f49c27f5309c680895b86f1bcc35f4264a817ff842d044cd7a5",
+          "actual": "22d9db22d3ac0f49c27f5309c680895b86f1bcc35f4264a817ff842d044cd7a5",
+          "match": true,
+          "bytes": 877,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/pass_output.txt",
+          "expected": "5670bbe9bbc9b5ac12b277fbc05a82c937bd06ceadcbd4a6568f389b8ca17398",
+          "actual": "5670bbe9bbc9b5ac12b277fbc05a82c937bd06ceadcbd4a6568f389b8ca17398",
+          "match": true,
+          "bytes": 890,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/working_tree_tracked_changes.patch",
+          "expected": "4457867b59b146a316185010a40c1fbc51c0121c295d282d28f819c1584a8719",
+          "actual": "4457867b59b146a316185010a40c1fbc51c0121c295d282d28f819c1584a8719",
+          "match": true,
+          "bytes": 35033,
+          "self_entry": false
+        }
+      ],
+      "all_regular_files": [
+        {
+          "relative": "model_vs_hardware.txt",
+          "bytes": 877
+        },
+        {
+          "relative": "kr260_fsbl_patched.elf",
+          "bytes": 403392
+        },
+        {
+          "relative": "working_tree_tracked_changes.patch",
+          "bytes": 35033
+        },
+        {
+          "relative": "kr260_fsbl_patched_src.tar.gz",
+          "bytes": 386186
+        },
+        {
+          "relative": "pass_output.txt",
+          "bytes": 890
+        },
+        {
+          "relative": "SHA256SUMS.txt",
+          "bytes": 1540
+        },
+        {
+          "relative": "kr260_jtag_run.xsdb",
+          "bytes": 1045
+        },
+        {
+          "relative": "kr260_ila_capture.tcl",
+          "bytes": 878
+        },
+        {
+          "relative": "ila_cva6_ddr.csv",
+          "bytes": 369052
+        },
+        {
+          "relative": "git_status.txt",
+          "bytes": 1607
+        },
+        {
+          "relative": "ila_cva6_ddr_summary.txt",
+          "bytes": 332
+        },
+        {
+          "relative": "kr260_jtag_boot.xsdb",
+          "bytes": 109
+        },
+        {
+          "relative": "git_head.txt",
+          "bytes": 72
+        },
+        {
+          "relative": "kr260_top.ltx",
+          "bytes": 120593
+        },
+        {
+          "relative": "kr260_app_src.tar.gz",
+          "bytes": 5163
+        },
+        {
+          "relative": "README.md",
+          "bytes": 3567
+        },
+        {
+          "relative": "kr260_top.bit",
+          "bytes": 7797900
+        },
+        {
+          "relative": "kr260_app_jtag.elf",
+          "bytes": 175800
+        }
+      ],
+      "total_bytes": 9304036
+    },
+    "timing_closed_91mhz_2026-10-22": {
+      "manifest": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/SHA256SUMS.txt",
+      "manifest_sha256": "527370f9d98f0f2fbaeffb8562921e43e92f336e884d373ba956660d0a8b4348",
+      "checked": 29,
+      "mismatches": [],
+      "files": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_cva6_91mhz.xsa",
+          "expected": "32d7120d45fae40ae3c2fdf2203aadce7265eb8faa34606b4876363500be45e3",
+          "actual": "32d7120d45fae40ae3c2fdf2203aadce7265eb8faa34606b4876363500be45e3",
+          "match": true,
+          "bytes": 3614860,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top_91mhz_closed.dcp",
+          "expected": "26e20f4b961718b5e12b8e0e676db6b5268a6831e3c3a4985ba7fe63bbe13df4",
+          "actual": "26e20f4b961718b5e12b8e0e676db6b5268a6831e3c3a4985ba7fe63bbe13df4",
+          "match": true,
+          "bytes": 47934008,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top.bit",
+          "expected": "e18d3b07051917161761c8d258e0e223a0b817156f6acda67cbc60b518f14497",
+          "actual": "e18d3b07051917161761c8d258e0e223a0b817156f6acda67cbc60b518f14497",
+          "match": true,
+          "bytes": 7797900,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top.ltx",
+          "expected": "6885c7877b4cf9567aaaef4f9e15821f6a06ca23b4752a1d04caf6c1f085334c",
+          "actual": "6885c7877b4cf9567aaaef4f9e15821f6a06ca23b4752a1d04caf6c1f085334c",
+          "match": true,
+          "bytes": 120593,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/project_state/ariane_kr260_debug.xpr",
+          "expected": "c582eea872ca7cd78a0cee81ab7921e63507cb9b9644ce4be2de3ebadcc3dd83",
+          "actual": "c582eea872ca7cd78a0cee81ab7921e63507cb9b9644ce4be2de3ebadcc3dd83",
+          "match": true,
+          "bytes": 112532,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/project_state/git_head.txt",
+          "expected": "a92f364393c23a8b42b86c2c91e096f29410179c1fe486a1c4fbd9ad1852bc74",
+          "actual": "a92f364393c23a8b42b86c2c91e096f29410179c1fe486a1c4fbd9ad1852bc74",
+          "match": true,
+          "bytes": 72,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/project_state/git_status.txt",
+          "expected": "2dfc019a04fee014242f4f9fe1e229caa0f9506097dd798008236eae5af9d1c2",
+          "actual": "2dfc019a04fee014242f4f9fe1e229caa0f9506097dd798008236eae5af9d1c2",
+          "match": true,
+          "bytes": 1670,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/project_state/kr260_ps_ddr_bd.bd",
+          "expected": "cc72d7417d91d9aa26b4b16b48e305a0c78589d361a38bbc947ca1ad4984b306",
+          "actual": "cc72d7417d91d9aa26b4b16b48e305a0c78589d361a38bbc947ca1ad4984b306",
+          "match": true,
+          "bytes": 50707,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/project_state/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0.xci",
+          "expected": "c7ebd06f5ac7f6698eca4f960356bea244dbe3791e68f998f52c2f2a0226b320",
+          "actual": "c7ebd06f5ac7f6698eca4f960356bea244dbe3791e68f998f52c2f2a0226b320",
+          "match": true,
+          "bytes": 243232,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/project_state/working_tree.patch",
+          "expected": "a75378cf0256daf173aa4ce42266232bddae89020063b2ef11ecfddb8716317e",
+          "actual": "a75378cf0256daf173aa4ce42266232bddae89020063b2ef11ecfddb8716317e",
+          "match": true,
+          "bytes": 22906,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "expected": "25f6f87d6e6f3c90aac042431af0a9350861fd0f09fe16324bc23831c5d41ea3",
+          "actual": "25f6f87d6e6f3c90aac042431af0a9350861fd0f09fe16324bc23831c5d41ea3",
+          "match": true,
+          "bytes": 3423,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/bus_skew.rpt",
+          "expected": "fdc7b565d2b7823eb75a1615a1bc3110e86eb51b9725388464acf346fc0fcde1",
+          "actual": "fdc7b565d2b7823eb75a1615a1bc3110e86eb51b9725388464acf346fc0fcde1",
+          "match": true,
+          "bytes": 69197,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/check_timing.rpt",
+          "expected": "76dc5a8f05d147b86dd6e1ae53394b95d35c14ee70d74bbb003a3995884385fd",
+          "actual": "76dc5a8f05d147b86dd6e1ae53394b95d35c14ee70d74bbb003a3995884385fd",
+          "match": true,
+          "bytes": 9227,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/clocks.rpt",
+          "expected": "cefd2441d74e03e4dd67523c81dd3eb208f5c0f229ae761d87fcd4b82407ad3b",
+          "actual": "cefd2441d74e03e4dd67523c81dd3eb208f5c0f229ae761d87fcd4b82407ad3b",
+          "match": true,
+          "bytes": 2079,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/critical_hold.rpt",
+          "expected": "ed188cb4f607ff879778cf338e31aa6e1c89c28714980cee02f40cbdfe26eac2",
+          "actual": "ed188cb4f607ff879778cf338e31aa6e1c89c28714980cee02f40cbdfe26eac2",
+          "match": true,
+          "bytes": 120233,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/critical_setup.rpt",
+          "expected": "e7b63ca3c62151692825ffd542b151be2cf0aed7dcb722d3803f0a5ebd5680ef",
+          "actual": "e7b63ca3c62151692825ffd542b151be2cf0aed7dcb722d3803f0a5ebd5680ef",
+          "match": true,
+          "bytes": 1593953,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/drc.rpt",
+          "expected": "ada67fb45a65a250f1a1ade88d470de8e277c2f295eb034ca08426402fa0abd0",
+          "actual": "ada67fb45a65a250f1a1ade88d470de8e277c2f295eb034ca08426402fa0abd0",
+          "match": true,
+          "bytes": 119300,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/methodology.rpt",
+          "expected": "301e16dfe4318c511f7ad96ac900676794a5c708fb4d9a2f53a7bd621269e05b",
+          "actual": "301e16dfe4318c511f7ad96ac900676794a5c708fb4d9a2f53a7bd621269e05b",
+          "match": true,
+          "bytes": 29524,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/pulse_width.rpt",
+          "expected": "2f20c347efa7dcf62fb3bbf0200d5ded8ea9c9ae42b84d5c75c6e86090d13423",
+          "actual": "2f20c347efa7dcf62fb3bbf0200d5ded8ea9c9ae42b84d5c75c6e86090d13423",
+          "match": true,
+          "bytes": 3212,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/route_status.rpt",
+          "expected": "c2e5bd0e628975326833115e46e2d9528d20e6ac6564b4434139feb5d9f3ec14",
+          "actual": "c2e5bd0e628975326833115e46e2d9528d20e6ac6564b4434139feb5d9f3ec14",
+          "match": true,
+          "bytes": 651,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/summary.txt",
+          "expected": "804de0e6bce12aa4b8a4380967eee365e1eecff788c866afa67e9f3320b2f6d1",
+          "actual": "804de0e6bce12aa4b8a4380967eee365e1eecff788c866afa67e9f3320b2f6d1",
+          "match": true,
+          "bytes": 95,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/timing_summary.rpt",
+          "expected": "98fb763a9dbf72f285e9b2262ab0d6fa4f041f2fcff1a989c4493cf1df009d6f",
+          "actual": "98fb763a9dbf72f285e9b2262ab0d6fa4f041f2fcff1a989c4493cf1df009d6f",
+          "match": true,
+          "bytes": 1718063,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/scripts/aggressive_physopt.log",
+          "expected": "6a1c43fd5f09592e810a991efee5d60363be47f18e430dd4b1daa45959b195c9",
+          "actual": "6a1c43fd5f09592e810a991efee5d60363be47f18e430dd4b1daa45959b195c9",
+          "match": true,
+          "bytes": 78896,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/scripts/aggressive_physopt.tcl",
+          "expected": "848f17c14f4072344f75e986ca967e5feb465135144939c4fe9568639e854c0a",
+          "actual": "848f17c14f4072344f75e986ca967e5feb465135144939c4fe9568639e854c0a",
+          "match": true,
+          "bytes": 2992,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/scripts/run_impl_91mhz.tcl",
+          "expected": "8112e01042f4824feb590bab91a3dce812de677a6661de0f614161be9d04737d",
+          "actual": "8112e01042f4824feb590bab91a3dce812de677a6661de0f614161be9d04737d",
+          "match": true,
+          "bytes": 3195,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/scripts/run_impl.log",
+          "expected": "d4f773ea2845aa144512bfb43b2620b47f7986106ee0893896efa344e845b36f",
+          "actual": "d4f773ea2845aa144512bfb43b2620b47f7986106ee0893896efa344e845b36f",
+          "match": true,
+          "bytes": 2282173,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/scripts/set_pl0_91mhz.tcl",
+          "expected": "89d623b5d79e2dfd8ac752da65e919281b979b8534a8e37874cf59859bfd4bb6",
+          "actual": "89d623b5d79e2dfd8ac752da65e919281b979b8534a8e37874cf59859bfd4bb6",
+          "match": true,
+          "bytes": 2113,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/scripts/xsa_from_checkpoint_final.log",
+          "expected": "3cbdc30ec2195c38fbcb6700037dae56170aa50240ca134aadb96ba9ce2341d4",
+          "actual": "3cbdc30ec2195c38fbcb6700037dae56170aa50240ca134aadb96ba9ce2341d4",
+          "match": true,
+          "bytes": 9004,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/scripts/xsa_from_checkpoint.tcl",
+          "expected": "74cda265c0d902433620483d5d159b031e38219234f5dc00d2c09e03342412b6",
+          "actual": "74cda265c0d902433620483d5d159b031e38219234f5dc00d2c09e03342412b6",
+          "match": true,
+          "bytes": 635,
+          "self_entry": false
+        }
+      ],
+      "all_regular_files": [
+        {
+          "relative": "kr260_cva6_91mhz.xsa",
+          "bytes": 3614860
+        },
+        {
+          "relative": "SHA256SUMS.txt",
+          "bytes": 2731
+        },
+        {
+          "relative": "kr260_top_91mhz_closed.dcp",
+          "bytes": 47934008
+        },
+        {
+          "relative": "kr260_top.ltx",
+          "bytes": 120593
+        },
+        {
+          "relative": "README.md",
+          "bytes": 3423
+        },
+        {
+          "relative": "kr260_top.bit",
+          "bytes": 7797900
+        },
+        {
+          "relative": "project_state/working_tree.patch",
+          "bytes": 22906
+        },
+        {
+          "relative": "project_state/ariane_kr260_debug.xpr",
+          "bytes": 112532
+        },
+        {
+          "relative": "project_state/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0.xci",
+          "bytes": 243232
+        },
+        {
+          "relative": "project_state/git_status.txt",
+          "bytes": 1670
+        },
+        {
+          "relative": "project_state/git_head.txt",
+          "bytes": 72
+        },
+        {
+          "relative": "project_state/kr260_ps_ddr_bd.bd",
+          "bytes": 50707
+        },
+        {
+          "relative": "scripts/run_impl_91mhz.tcl",
+          "bytes": 3195
+        },
+        {
+          "relative": "scripts/aggressive_physopt.log",
+          "bytes": 78896
+        },
+        {
+          "relative": "scripts/aggressive_physopt.tcl",
+          "bytes": 2992
+        },
+        {
+          "relative": "scripts/xsa_from_checkpoint.tcl",
+          "bytes": 635
+        },
+        {
+          "relative": "scripts/xsa_from_checkpoint_final.log",
+          "bytes": 9004
+        },
+        {
+          "relative": "scripts/set_pl0_91mhz.tcl",
+          "bytes": 2113
+        },
+        {
+          "relative": "scripts/run_impl.log",
+          "bytes": 2282173
+        },
+        {
+          "relative": "reports/clocks.rpt",
+          "bytes": 2079
+        },
+        {
+          "relative": "reports/drc.rpt",
+          "bytes": 119300
+        },
+        {
+          "relative": "reports/check_timing.rpt",
+          "bytes": 9227
+        },
+        {
+          "relative": "reports/route_status.rpt",
+          "bytes": 651
+        },
+        {
+          "relative": "reports/timing_summary.rpt",
+          "bytes": 1718063
+        },
+        {
+          "relative": "reports/critical_setup.rpt",
+          "bytes": 1593953
+        },
+        {
+          "relative": "reports/summary.txt",
+          "bytes": 95
+        },
+        {
+          "relative": "reports/critical_hold.rpt",
+          "bytes": 120233
+        },
+        {
+          "relative": "reports/bus_skew.rpt",
+          "bytes": 69197
+        },
+        {
+          "relative": "reports/methodology.rpt",
+          "bytes": 29524
+        },
+        {
+          "relative": "reports/pulse_width.rpt",
+          "bytes": 3212
+        }
+      ],
+      "total_bytes": 65949176
+    },
+    "pre_91mhz_20261022": {
+      "manifest": "/home/nachofalchi/data/fpga-work/backups/pre_91mhz_20261022/SHA256SUMS.txt",
+      "manifest_sha256": "eea040ae71ff54e273d950ec6f5ed6f466a8ccfb8353b479fb9420cef14d1b0e",
+      "checked": 6,
+      "mismatches": [],
+      "files": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/backups/pre_91mhz_20261022/ariane_kr260_debug.xpr",
+          "expected": "a35f16ee5a6c071c840df2f98bd9b0300cb8482d365772c07ed7544acd6f43e4",
+          "actual": "a35f16ee5a6c071c840df2f98bd9b0300cb8482d365772c07ed7544acd6f43e4",
+          "match": true,
+          "bytes": 112985,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/backups/pre_91mhz_20261022/git_head.txt",
+          "expected": "c814b366cde2987d666875fb21aaca234807d703cc1d4d2dd3cffbffeca5a7c8",
+          "actual": "c814b366cde2987d666875fb21aaca234807d703cc1d4d2dd3cffbffeca5a7c8",
+          "match": true,
+          "bytes": 41,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/backups/pre_91mhz_20261022/git_status.txt",
+          "expected": "2dfc019a04fee014242f4f9fe1e229caa0f9506097dd798008236eae5af9d1c2",
+          "actual": "2dfc019a04fee014242f4f9fe1e229caa0f9506097dd798008236eae5af9d1c2",
+          "match": true,
+          "bytes": 1670,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/backups/pre_91mhz_20261022/kr260_ps_ddr_bd.bd",
+          "expected": "2097bb63e91b7c08d0551eae48ea7c41487cd2879cfebd0c71550cbc4140a469",
+          "actual": "2097bb63e91b7c08d0551eae48ea7c41487cd2879cfebd0c71550cbc4140a469",
+          "match": true,
+          "bytes": 50707,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/backups/pre_91mhz_20261022/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0.xci",
+          "expected": "61aadec3e519c3c6552f937a86e311f44113c28168e4fe2681c3d9afd8f4529f",
+          "actual": "61aadec3e519c3c6552f937a86e311f44113c28168e4fe2681c3d9afd8f4529f",
+          "match": true,
+          "bytes": 243234,
+          "self_entry": false
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/backups/pre_91mhz_20261022/working_tree.patch",
+          "expected": "a5c300f03fa7c45d00aef142aef3a42cc53b839f9471cf7effef04e8a9f8ddb4",
+          "actual": "a5c300f03fa7c45d00aef142aef3a42cc53b839f9471cf7effef04e8a9f8ddb4",
+          "match": true,
+          "bytes": 25140,
+          "self_entry": false
+        }
+      ]
+    }
+  },
+  "sources": {
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/README.md": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/README.md",
+      "exists": true,
+      "bytes": 3330,
+      "sha256": "c6193e900e262a927f9b8c9c8836a7d2a8c1a4878f107eae2c92105819b775ed",
+      "mtime": "2026-10-29T00:13:16.167969-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/estado_y_resultados.md": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/estado_y_resultados.md",
+      "exists": true,
+      "bytes": 7133,
+      "sha256": "b5c0ec7e95535cd453cb48cfd2e4af0338500588489b9e8f105367783d3f3ef4",
+      "mtime": "2026-10-29T00:13:16.167969-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/operacion_y_recuperacion.md": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/operacion_y_recuperacion.md",
+      "exists": true,
+      "bytes": 7060,
+      "sha256": "a72116e0e93c3d22825f967eb13cff3dcd2565b13a568b7e22c9eafb432ab55c",
+      "mtime": "2026-10-29T00:13:16.167969-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/mapa_documental.md": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/mapa_documental.md",
+      "exists": true,
+      "bytes": 6433,
+      "sha256": "842f58e3642715515b0ac4baf097e3fdb709d12ea140f50d42bb64f05f273f63",
+      "mtime": "2026-10-29T00:11:51.764906-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/alcance_archivo.json": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/alcance_archivo.json",
+      "exists": true,
+      "bytes": 1952,
+      "sha256": "f7821879206aeaa9a2eb22c68115dad62267e4cb86d694d460377c2b0f3a9a98",
+      "mtime": "2026-10-29T00:14:47.939145-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/validacion.json": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/validacion.json",
+      "exists": true,
+      "bytes": 3508,
+      "sha256": "665b1bf6730a497cb4718e4dd458e2793736cf42bbee7822ecac20e9457e9682",
+      "mtime": "2026-10-29T00:14:49.238121-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/SHA256SUMS.txt": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/SHA256SUMS.txt",
+      "exists": true,
+      "bytes": 1710,
+      "sha256": "2350f56ee258a85c2adc98ba56ed9d8654e25d2ece4b768421de4663003de7bf",
+      "mtime": "2026-10-29T00:15:24.983480-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/README.md": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/README.md",
+      "exists": true,
+      "bytes": 3567,
+      "sha256": "58bc69786e2b0748ee1336461dda689638efb3699a6c6200bb5e2a483a4297f8",
+      "mtime": "2026-09-18T11:45:22.258432-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+      "exists": true,
+      "bytes": 3423,
+      "sha256": "25f6f87d6e6f3c90aac042431af0a9350861fd0f09fe16324bc23831c5d41ea3",
+      "mtime": "2026-10-22T13:40:49.386844-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_ddr_integration.md": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_ddr_integration.md",
+      "exists": true,
+      "bytes": 5335,
+      "sha256": "a18e078832557a23765b887de28b1828103bf7adef0f72a1da19c97890bd424a",
+      "mtime": "2026-09-17T18:24:05.502605-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/scripts/patch_fsbl.py": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/scripts/patch_fsbl.py",
+      "exists": true,
+      "bytes": 2905,
+      "sha256": "df18fe2b1670288a4c5066340cbfdbb40aba05697eea85d48b71e3e5693f894a",
+      "mtime": "2026-09-18T09:58:03.413457-03:00",
+      "device": 66309
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/scripts/export_hardware.tcl": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/scripts/export_hardware.tcl",
+      "exists": true,
+      "bytes": 639,
+      "sha256": "a5e2fda69ed36a4f1f1e8dbf6e888c7a5ee2a755dcaed250fa0bb8a401b37b46",
+      "mtime": "2026-09-18T09:14:05.974566-03:00",
+      "device": 66309
+    }
+  },
+  "backup_inventory": [
+    {
+      "path": "/home/nachofalchi/backups/CVA6_KR260_25MHz_20261015_191414.tar.zst",
+      "exists": true,
+      "bytes": 459178391,
+      "mtime": "2026-10-15T19:14:28.333869-03:00",
+      "device": 66309,
+      "full_hash_checked_in_this_audit": false,
+      "checksum_sidecar": "/home/nachofalchi/backups/CVA6_KR260_25MHz_20261015_191414.tar.zst.sha256",
+      "sidecar_sha256": "19829f0a79e654ab8c22da17d3b6f8b1f83408c1951bea5a58e4e9db8b15d08b",
+      "expected_archive_sha256_from_sidecar": "068388462ebb4a72c6070bda5aa93c0c5bd7c1890aad3113d0766f1eb7e2142a",
+      "sidecar_read": true,
+      "archive_full_content_revalidation": false
+    },
+    {
+      "path": "/home/nachofalchi/backups/cva6-kr260_precommit_2026-10-07_18-11.tar.gz",
+      "exists": true,
+      "bytes": 1698541121,
+      "mtime": "2026-10-07T18:13:09.378098-03:00",
+      "device": 66309,
+      "full_hash_checked_in_this_audit": false,
+      "checksum_sidecar": "/home/nachofalchi/backups/cva6-kr260_precommit_2026-10-07_18-11.tar.gz.sha256",
+      "sidecar_sha256": "174e2d4ec489741b07869cfe147c1f889b4282e65c3b446f23c508d9566d8961",
+      "expected_archive_sha256_from_sidecar": "f3d43b5b546075198c03369fc66818e78434fd67b3cda707c3b01eb8686d8529",
+      "sidecar_read": true,
+      "archive_full_content_revalidation": false
+    },
+    {
+      "path": "/home/nachofalchi/backups/cva6-kr260_2026-09-11_11-15-55/cva6-equipo_completo.tar.gz",
+      "exists": true,
+      "bytes": 1408686469,
+      "mtime": "2026-09-11T11:17:57.711649-03:00",
+      "device": 66309,
+      "full_hash_checked_in_this_audit": false,
+      "checksum_sidecar": "/home/nachofalchi/backups/cva6-kr260_2026-09-11_11-15-55/SHA256SUMS",
+      "sidecar_sha256": "e9c119899558e6e6f20ab724ed8573c6cff1119ef28ca08597ae3b8cbaedce14",
+      "expected_archive_sha256_from_sidecar": "f6741834451dd785da10be4cbb7e36d694d20dc1de404d064fd8ed29194e3a04",
+      "sidecar_read": true,
+      "archive_full_content_revalidation": false
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo.tar.xz",
+      "exists": true,
+      "bytes": 19722240,
+      "mtime": "2026-09-11T13:06:53.836099-03:00",
+      "device": 66309,
+      "full_hash_checked_in_this_audit": false
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/ariane_kr260_debug_11-9_working.xpr.zip",
+      "exists": true,
+      "bytes": 379064173,
+      "mtime": "2026-09-11T11:15:38.719650-03:00",
+      "device": 66309,
+      "full_hash_checked_in_this_audit": false
+    }
+  ],
+  "project": {
+    "xpr": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr",
+    "xpr_sha256": "7825d59cfb4c5f2fce1e2c3c692d6d0bf8f9ee05fb2cf9547e44091724ed9d7c",
+    "options": [
+      {
+        "Name": "Part",
+        "Val": "xck26-sfvc784-2LV-c"
+      },
+      {
+        "Name": "BoardPart",
+        "Val": "xilinx.com:kr260_som:part0:2.0"
+      },
+      {
+        "Name": "TopModule",
+        "Val": "kr260_top"
+      },
+      {
+        "Name": "TopModule",
+        "Val": "apb_uart"
+      },
+      {
+        "Name": "TopModule",
+        "Val": "kr260_axi_ila"
+      },
+      {
+        "Name": "TopModule",
+        "Val": "kr260_reset_vio"
+      },
+      {
+        "Name": "TopModule",
+        "Val": "kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0"
+      }
+    ],
+    "runs": [
+      {
+        "Id": "synth_1",
+        "Type": "Ft3:Synth",
+        "SrcSet": "sources_1",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "constrs_1",
+        "Description": "Vivado Synthesis Defaults",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "State": "current",
+        "Dir": "$PRUNDIR/synth_1",
+        "IncludeInArchive": "true",
+        "IsChild": "false",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/synth_1",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/synth_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "kr260_axi_ila_synth_1",
+        "Type": "Ft3:Synth",
+        "SrcSet": "kr260_axi_ila",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "kr260_axi_ila",
+        "Description": "Vivado Synthesis Defaults",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "Dir": "$PRUNDIR/kr260_axi_ila_synth_1",
+        "IncludeInArchive": "true",
+        "IsChild": "false",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/kr260_axi_ila_synth_1",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/kr260_axi_ila_synth_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "kr260_reset_vio_synth_1",
+        "Type": "Ft3:Synth",
+        "SrcSet": "kr260_reset_vio",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "kr260_reset_vio",
+        "Description": "Vivado Synthesis Defaults",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "Dir": "$PRUNDIR/kr260_reset_vio_synth_1",
+        "IncludeInArchive": "true",
+        "IsChild": "false",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/kr260_reset_vio_synth_1",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/kr260_reset_vio_synth_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0_synth_1",
+        "Type": "Ft3:Synth",
+        "SrcSet": "kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0",
+        "Description": "Vivado Synthesis Defaults",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "Dir": "$PRUNDIR/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0_synth_1",
+        "IncludeInArchive": "true",
+        "IsChild": "false",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0_synth_1",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0_synth_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "synth_1_copy_1",
+        "Type": "Ft3:Synth",
+        "SrcSet": "sources_1",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "constrs_1",
+        "Description": "Vivado Synthesis Defaults",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "IncludeInArchive": "true",
+        "IsChild": "false",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/synth_1/synth_1_copy_1",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/synth_1_copy_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "synth_2",
+        "Type": "Ft3:Synth",
+        "SrcSet": "sources_1",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "constrs_exp100",
+        "Description": "Vivado Synthesis Defaults",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "Dir": "$PRUNDIR/synth_2",
+        "IncludeInArchive": "true",
+        "IsChild": "false",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/synth_2",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/synth_2",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "impl_1",
+        "Type": "Ft2:EntireDesign",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "constrs_1",
+        "Description": "Similar to Performance_ExplorePostRoutePhysOpt, but enables logic optimization step (opt_design) with the ExploreWithRemap directive.",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "State": "current",
+        "Dir": "$PRUNDIR/impl_1",
+        "SynthRun": "synth_1",
+        "IncludeInArchive": "true",
+        "IsChild": "false",
+        "GenFullBitstream": "true",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/impl_1",
+        "LaunchOptions": "-jobs 2 ",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/impl_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "kr260_axi_ila_impl_1",
+        "Type": "Ft2:EntireDesign",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "kr260_axi_ila",
+        "Description": "Default settings for Implementation.",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "SynthRun": "kr260_axi_ila_synth_1",
+        "IncludeInArchive": "false",
+        "IsChild": "false",
+        "GenFullBitstream": "true",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/kr260_axi_ila_impl_1",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/kr260_axi_ila_impl_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "kr260_reset_vio_impl_1",
+        "Type": "Ft2:EntireDesign",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "kr260_reset_vio",
+        "Description": "Default settings for Implementation.",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "SynthRun": "kr260_reset_vio_synth_1",
+        "IncludeInArchive": "false",
+        "IsChild": "false",
+        "GenFullBitstream": "true",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/kr260_reset_vio_impl_1",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/kr260_reset_vio_impl_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0_impl_1",
+        "Type": "Ft2:EntireDesign",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0",
+        "Description": "Default settings for Implementation.",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "SynthRun": "kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0_synth_1",
+        "IncludeInArchive": "false",
+        "IsChild": "false",
+        "GenFullBitstream": "true",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0_impl_1",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0_impl_1",
+        "ParallelReportGen": "true"
+      },
+      {
+        "Id": "impl_2",
+        "Type": "Ft2:EntireDesign",
+        "Part": "xck26-sfvc784-2LV-c",
+        "ConstrsSet": "constrs_exp100",
+        "Description": "Similar to Performance_ExplorePostRoutePhysOpt, but enables logic optimization step (opt_design) with the ExploreWithRemap directive.",
+        "AutoIncrementalCheckpoint": "false",
+        "WriteIncrSynthDcp": "false",
+        "SynthRun": "synth_2",
+        "IncludeInArchive": "true",
+        "IsChild": "false",
+        "GenFullBitstream": "true",
+        "AutoIncrementalDir": "$PSRCDIR/utils_1/imports/impl_2",
+        "LaunchOptions": "-jobs 2 ",
+        "AutoRQSDir": "$PSRCDIR/utils_1/imports/impl_2",
+        "ParallelReportGen": "true"
+      }
+    ],
+    "correct_top": "kr260_top",
+    "part": "xck26-sfvc784-2LV-c",
+    "boardpart": "xilinx.com:kr260_som:part0:2.0",
+    "working_project_caveat": "The working XPR includes synth_2/impl_2 experiments and its impl_1 result is not the final timing-closed bitstream. Preserve it as editable project configuration, not as a substitute for the frozen91MHz package.",
+    "baseline_configuration": "cv64a6_imafdc_sv39 as described in central documentation; do not change CPU RTL/parameters/microarchitecture for the meeting.",
+    "primary_BD": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/kr260_ps_ddr_bd.bd",
+    "reference_counts": {
+      "sources_1": 306,
+      "constrs_1": 1
+    },
+    "source_restore_requirements": [
+      "Keep repository-relative core/vendor/common/config/corev_apu sources, headers and include directories; main XPR and kr260.xdc.",
+      "Keep BD/XCI configuration for PS DDR, ILA/VIO and referenced IP. Recreate generated output products and the managed wrapper using Vivado2026.1 with KR260 board/device support.",
+      "Preserve source BootROM image, assembly/linker/Makefile and generated SV together; the XPR selects the exact active variant.",
+      "Regenerate .gen/.runs/.cache/.ip_user_files/.Xil rather than requiring them in the compact source backup. Do not trust saved Complete flags if the DCP is absent.",
+      "Installing Vivado/HSI2026.1, board files, license and AArch64 compiler is an external environment requirement, not supplied by Git or a BIT/XSA archive."
+    ]
+  },
+  "xsa_contents": {
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/hardware/kr260_cva6.xsa": {
+      "sha256": "0ecc2f28eec11807851d1cf456d047e5c33bebce26f9cf311e05cb0fd37d9061",
+      "bytes": 2951131,
+      "members": [
+        {
+          "name": "kr260_cva6.bit",
+          "bytes": 7797900,
+          "crc": 2080996666
+        },
+        {
+          "name": "kr260_ps_ddr_bd.hwh",
+          "bytes": 155736,
+          "crc": 3798343300
+        },
+        {
+          "name": "xsa.xml",
+          "bytes": 1288,
+          "crc": 829971721
+        },
+        {
+          "name": "xsa.json",
+          "bytes": 2855,
+          "crc": 772728968
+        },
+        {
+          "name": "sysdef.xml",
+          "bytes": 930,
+          "crc": 2336320914
+        },
+        {
+          "name": "kr260_board.png",
+          "bytes": 520906,
+          "crc": 3096746084
+        },
+        {
+          "name": "kr260_ps_ddr_bd.bda",
+          "bytes": 8543,
+          "crc": 3929355123
+        }
+      ]
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_cva6_91mhz.xsa": {
+      "sha256": "32d7120d45fae40ae3c2fdf2203aadce7265eb8faa34606b4876363500be45e3",
+      "bytes": 3614860,
+      "members": [
+        {
+          "name": "kr260_ps_ddr_bd.hwh",
+          "bytes": 155739,
+          "crc": 834402380
+        },
+        {
+          "name": "psu_init.h",
+          "bytes": 1397422,
+          "crc": 949884124
+        },
+        {
+          "name": "psu_init.tcl",
+          "bytes": 725542,
+          "crc": 1071250479
+        },
+        {
+          "name": "kr260_cva6_91mhz.bit",
+          "bytes": 7797900,
+          "crc": 3670430282
+        },
+        {
+          "name": "psu_init_gpl.h",
+          "bytes": 1398026,
+          "crc": 3885833705
+        },
+        {
+          "name": "psu_init.c",
+          "bytes": 799319,
+          "crc": 2005252484
+        },
+        {
+          "name": "xsa.xml",
+          "bytes": 1268,
+          "crc": 1819151746
+        },
+        {
+          "name": "xsa.json",
+          "bytes": 2827,
+          "crc": 2494261761
+        },
+        {
+          "name": "psu_init_gpl.c",
+          "bytes": 799701,
+          "crc": 2138806114
+        },
+        {
+          "name": "sysdef.xml",
+          "bytes": 1592,
+          "crc": 3923139577
+        },
+        {
+          "name": "kr260_board.png",
+          "bytes": 520906,
+          "crc": 3096746084
+        },
+        {
+          "name": "kr260_ps_ddr_bd.bda",
+          "bytes": 8543,
+          "crc": 3929355123
+        },
+        {
+          "name": "psu_init.html",
+          "bytes": 49140,
+          "crc": 3449576800
+        }
+      ]
+    }
+  },
+  "git": {
+    "head": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "rc": 0,
+      "stdout": "df6b05123b268768c0f9db50b0efc1e2fc2d3b3c\n",
+      "stderr": ""
+    },
+    "branch": {
+      "command": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "rc": 0,
+      "stdout": "feature/kr260-ddr4-integration\n",
+      "stderr": ""
+    },
+    "status": {
+      "command": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "rc": 0,
+      "stdout": " M .gitignore\n M corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/ip/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0.xci\n M corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/kr260_ps_ddr_bd.bd\n M corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr\n M docs/kr260_ila_vio.md\n?? corev_apu/ariane_kr260_ps_bd_backup.tcl\n?? corev_apu/fpga/scripts/archive_timing_results.py\n?? corev_apu/fpga/scripts/codex_run_synth.tcl\n?? corev_apu/fpga/scripts/launch_project_gui.tcl\n?? corev_apu/fpga/scripts/prepare_timing_sweep.tcl\n?? corev_apu/fpga/scripts/report_synthesis_checkpoint.tcl\n?? corev_apu/fpga/scripts/setup_project_only.tcl\n?? corev_apu/fpga/scripts/timing_matrix.py\n?? corev_apu/fpga/scripts/timing_matrix_project.tcl\n?? corev_apu/fpga/scripts/timing_night.py\n?? corev_apu/fpga/scripts/timing_sweep.py\n?? corev_apu/fpga/scripts/timing_sweep.tcl\n?? corev_apu/fpga/scripts/timing_sweep_service.py\n?? corev_apu/fpga/scripts/verificar_kr260_pre_synth.tcl\n?? corev_apu/fpga/software/\n?? corev_apu/fpga/tests/\n?? docs/README.md\n?? docs/analisis_100mhz_kr260.md\n?? docs/kr260_ddr_integration.md\n?? docs/seguimiento_fpga/\n?? docs/timing_evidence.md\n?? docs/timing_matrix.md\n?? docs/timing_sweep.md\n?? reports/codex_overnight/\n?? reports/kr260_audit_20260910.md\n?? reports/kr260_ddr_pre_synth/\n?? reports/kr260_lint/\n?? reports/kr260_next_steps/bootrom/\n?? reports/kr260_next_steps/debug/\n?? reports/kr260_next_steps/lint/\n?? reports/kr260_next_steps/memory/\n?? reports/kr260_next_steps/system_synth/\n?? reports/kr260_port/MEMORY_INTERFACE_REVIEW.md\n?? reports/kr260_port/attempt_2/\n?? reports/timing_matrix_preflight/\n?? reports/timing_sweep_preflight/\n",
+      "stderr": ""
+    },
+    "tracked_diff_stat": {
+      "command": [
+        "git",
+        "diff",
+        "--stat"
+      ],
+      "rc": 0,
+      "stdout": " .gitignore                                         |   4 +-\n .../kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0.xci        |  18 +--\n .../bd/kr260_ps_ddr_bd/kr260_ps_ddr_bd.bd          |  10 +-\n .../fpga/ariane_kr260_debug/ariane_kr260_debug.xpr | 139 ++++++++++++++++++++-\n docs/kr260_ila_vio.md                              |   7 +-\n 5 files changed, 157 insertions(+), 21 deletions(-)\n",
+      "stderr": ""
+    },
+    "tracked_modified_paths": {
+      "command": [
+        "git",
+        "diff",
+        "--name-only"
+      ],
+      "rc": 0,
+      "stdout": ".gitignore\ncorev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/ip/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0.xci\ncorev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/kr260_ps_ddr_bd.bd\ncorev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr\ndocs/kr260_ila_vio.md\n",
+      "stderr": ""
+    },
+    "staged_paths": {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "submodules": {
+      "command": [
+        "git",
+        "submodule",
+        "status"
+      ],
+      "rc": 0,
+      "stdout": " 699bbdaa8994c33b1a0c70c816ce12c712839cf0 viewers/CVA6Flow (heads/main)\n 60dfbb57c11d09f2f6b688e71067714ca528c597 viewers/MinorFlow (heads/main)\n",
+      "stderr": ""
+    },
+    "object_storage": {
+      "command": [
+        "git",
+        "count-objects",
+        "-v"
+      ],
+      "rc": 0,
+      "stdout": "count: 243\nsize: 1092\nin-pack: 65787\npacks: 1\nsize-pack: 270154\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0\n",
+      "stderr": ""
+    },
+    "cpu_core_config_vendor_diff": {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "--",
+        "core",
+        "config",
+        "vendor"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "interpretation": [
+      "HEADdf6b05123... and branchfeature/kr260-ddr4-integration do not describe current working tree by themselves.",
+      "Five tracked modifications existed before the documentation consolidation; XPR/BD/XCI clock/run configuration plus .gitignore and docs/kr260_ila_vio.md must be preserved.",
+      "No staged paths at audit time; no tracked diff under core/config/vendor at audit time. This is a Git observation, not whole-design functional validation.",
+      "Untracked files include current timing scripts, tests, software packages and central documentation; a git bundle or commit HEAD alone will omit them.",
+      "Main repo git bundle does not contain submodule object databases; preserve pinned commits and add separate submodule bundles for a fully offline repository recovery.",
+      "Current Git object pack is274794612bytes, ~262MiB; tracked working-tree regular files total484897530bytes, so source/history rescue need not copy generated Vivado/toolchain gigabytes."
+    ]
+  },
+  "xsa_pairing": {
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/hardware/kr260_cva6.xsa": {
+      "role": "25MHz known-good platform",
+      "sha256": "0ecc2f28eec11807851d1cf456d047e5c33bebce26f9cf311e05cb0fd37d9061",
+      "bytes": 2951131,
+      "pl0_parameters": [
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ",
+          "VALUE": "24.999750"
+        },
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0",
+          "VALUE": "40"
+        },
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1",
+          "VALUE": "1"
+        },
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ",
+          "VALUE": "25"
+        },
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__SRCSEL",
+          "VALUE": "IOPLL"
+        }
+      ],
+      "embedded_bit_sha256": {
+        "kr260_cva6.bit": "0a83948938b061c288c1bdf01dddfa30d7dc5d66632da9b452fa22fba0f35231"
+      }
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_cva6_91mhz.xsa": {
+      "role": "90.908180MHz closed platform",
+      "sha256": "32d7120d45fae40ae3c2fdf2203aadce7265eb8faa34606b4876363500be45e3",
+      "bytes": 3614860,
+      "pl0_parameters": [
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ",
+          "VALUE": "90.908180"
+        },
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0",
+          "VALUE": "11"
+        },
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1",
+          "VALUE": "1"
+        },
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ",
+          "VALUE": "90.909"
+        },
+        {
+          "NAME": "PSU__CRL_APB__PL0_REF_CTRL__SRCSEL",
+          "VALUE": "IOPLL"
+        }
+      ],
+      "embedded_bit_sha256": {
+        "kr260_cva6_91mhz.bit": "78fba2e14ca19ef007cc55840fd1da57d4ce862f93a3ec3ea8eadd1a376459f0"
+      },
+      "configuration_stream_check": {
+        "external_sync_offset": 288,
+        "embedded_sync_offset": 288,
+        "identical_from_sync_through_EOF": true,
+        "external_and_embedded_full_file_hashes_differ": true,
+        "configuration_stream_sha256": "93b224d652f13d527fb6f32f67c9b3c73fcc5e92f67e2a64c7d7876009629769",
+        "interpretation": "Headers differ as documented; exact configuration byte stream from the syncword to EOF matches. Full package manifest remains the integrity authority."
+      }
+    },
+    "25mhz_pairing_confirmed": {
+      "hardware_bit_sha256": "0a83948938b061c288c1bdf01dddfa30d7dc5d66632da9b452fa22fba0f35231",
+      "known_good_bit_sha256": "0a83948938b061c288c1bdf01dddfa30d7dc5d66632da9b452fa22fba0f35231",
+      "embedded_XSA_bit_same": true,
+      "note": "hardware/kr260_cva6.xsa is not inside the known_good directory; include it separately in essential restore materials."
+    }
+  },
+  "best100_preserve": {
+    "selection": {
+      "applied_steps": [
+        {
+          "family": "SATP",
+          "algorithm": "restruct",
+          "eco_candidate": null,
+          "job_id": "009_restruct_SATP"
+        }
+      ],
+      "validated": true,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+      "sha256": "169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce",
+      "metrics": {
+        "wns": -0.553,
+        "tns": -322.607,
+        "whs": 0.003,
+        "failing_endpoints": 1285
+      },
+      "means": {
+        "all_count": 96433,
+        "all_mean": 5.281735101054618,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.2110305767894371,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.207,
+        "negative_count": 1285,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "provenance": "009_restruct_SATP",
+      "proof_files": {
+        "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/analysis/result.json": "28f47f36ee4ffe1cc3eb9f3bf5f257533451b779f8418ebe96a058ed7316fb8b",
+        "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/fixed_means.json": "ac9f34ad1bb1692755fbc04eb66b4a192139a117b10c5b3079ca019d8cf61148"
+      }
+    },
+    "checkpoint_actual": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+      "exists": true,
+      "bytes": 48566170,
+      "sha256": "169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce",
+      "mtime": "2026-10-22T02:44:50.669016-03:00",
+      "device": 66309
+    },
+    "final_signoff": {
+      "job": {
+        "helpers": {
+          "semantic": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/code/v2/semantic_night_v2.py",
+          "verifier": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/code/v2/verify_night_v2.py",
+          "analyzer": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/code/v2/analyzer_night_v2.py",
+          "average_checker": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/checker.py"
+        },
+        "id": "999_noop_CAST",
+        "parent": {
+          "applied_steps": [
+            {
+              "family": "SATP",
+              "algorithm": "restruct",
+              "eco_candidate": null,
+              "job_id": "009_restruct_SATP"
+            }
+          ],
+          "validated": true,
+          "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+          "sha256": "169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce",
+          "metrics": {
+            "wns": -0.553,
+            "tns": -322.607,
+            "whs": 0.003,
+            "failing_endpoints": 1285
+          },
+          "means": {
+            "all_count": 96433,
+            "all_mean": 5.281735101054618,
+            "initial_failing_count": 1439,
+            "initial_failing_mean": -0.2110305767894371,
+            "initial_failing_p01": -0.535,
+            "initial_failing_p05": -0.5,
+            "initial_failing_median": -0.207,
+            "negative_count": 1285,
+            "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+          },
+          "provenance": "009_restruct_SATP",
+          "proof_files": {
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/analysis/result.json": "28f47f36ee4ffe1cc3eb9f3bf5f257533451b779f8418ebe96a058ed7316fb8b",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/fixed_means.json": "ac9f34ad1bb1692755fbc04eb66b4a192139a117b10c5b3079ca019d8cf61148"
+          }
+        },
+        "spec": {
+          "algorithm": "noop",
+          "family": "CAST",
+          "minutes": 75,
+          "reason": "Independent fresh session final checkpoint signoff"
+        },
+        "record": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST",
+        "output": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST",
+        "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/job_target.tcl",
+        "target": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/job_target.json",
+        "key": "122717cfda0d54bd67f4b35bc123f9a50d8c1f6959414d667d58452f5b4f59ec",
+        "status": "prepared",
+        "input_hashes": {
+          "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/job_target.tcl": "e10b2710f4967fb47b986c57b0ce8228cf0691b3b3ad0e2b2ea92290291d8c07",
+          "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/job_target.json": "81bbe8685d27ccc817ad2c41f61510ab2572dd428cee9280b79f4d982294de52",
+          "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp": "169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce"
+        },
+        "kind": "signoff",
+        "process": {
+          "returncode": 0,
+          "reason": null,
+          "elapsed_seconds": 1572.193749666214,
+          "ended": 1792650702.7851298,
+          "identity": {
+            "pid": 325411,
+            "pgid": 325411,
+            "start_ticks": 9737865,
+            "deadline": 1792653630.5840847,
+            "kind": "signoff",
+            "command": [
+              "/home/nachofalchi/data/fpga-work/Xilinx/2026.1/Vivado/bin/vivado",
+              "-mode",
+              "batch",
+              "-nojournal",
+              "-notrace",
+              "-log",
+              "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/vivado.log",
+              "-source",
+              "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/code/v3/trial_night_v3.tcl",
+              "-tclargs",
+              "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+              "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/job_target.tcl",
+              "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST"
+            ],
+            "record": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST",
+            "controller_pid": 316825,
+            "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/cva6-night-20261021.service"
+          }
+        }
+      },
+      "outcome": {
+        "valid": true,
+        "analysis": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/analysis/result.json",
+        "result": {
+          "run": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST",
+          "analysis_valid": true,
+          "timing_closed": false,
+          "errors": [],
+          "warnings": [],
+          "state": {
+            "original_ffs": 33878,
+            "after_ffs": 33878,
+            "verified_satp_clones": [],
+            "other_state_primitives": 1670,
+            "independent_snapshot_audit_passed": true,
+            "scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof."
+          },
+          "verified_after_focus_launch_pins": [
+            "i_ariane_kr260/i_ariane/i_cva6/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/gen_inside_pipeline[0].mid_pipe_op_mod_q_reg[1]/C"
+          ],
+          "comparisons": {
+            "focus_setup": {
+              "before": {
+                "endpoints": 300,
+                "worst_slack_ns": -0.553,
+                "sum_negative_slacks_ns": -95.017,
+                "failing_endpoints": 300
+              },
+              "after": {
+                "endpoints": 300,
+                "worst_slack_ns": -0.553,
+                "sum_negative_slacks_ns": -95.017,
+                "failing_endpoints": 300
+              },
+              "same_endpoint_set": true,
+              "common_endpoints": 300,
+              "missing_after_count": 0,
+              "new_after_count": 0,
+              "missing_after_examples": [],
+              "new_after_examples": [],
+              "source_changed_count": 0,
+              "source_changed_examples": [],
+              "improved_endpoints": 0,
+              "regressed_endpoints": 0,
+              "unchanged_endpoints": 300,
+              "same_source_pairs": 300,
+              "same_source_improved": 0,
+              "same_source_regressed": 0,
+              "delta_worst_slack_ns": 0.0,
+              "delta_sum_negative_slacks_ns": 0.0,
+              "delta_population_is_controlled": true,
+              "notes": [
+                "Positive slack delta improves timing; negative delta worsens timing.",
+                "Changed worst-path source is flagged; it is an endpoint-worst comparison, not the same physical launch path."
+              ],
+              "report_object_crosschecks": {
+                "before": {
+                  "endpoint_count": 300,
+                  "all_slacks_match_within_ns": 0.001000001,
+                  "strict_source_match": true,
+                  "different_equal_or_near_tied_sources": [],
+                  "source_mismatch_count": 0
+                },
+                "after": {
+                  "endpoint_count": 300,
+                  "all_slacks_match_within_ns": 0.001000001,
+                  "strict_source_match": true,
+                  "different_equal_or_near_tied_sources": [],
+                  "source_mismatch_count": 0
+                }
+              }
+            },
+            "focus_hold": {
+              "before": {
+                "endpoints": 300,
+                "worst_slack_ns": 0.762,
+                "sum_negative_slacks_ns": 0,
+                "failing_endpoints": 0
+              },
+              "after": {
+                "endpoints": 300,
+                "worst_slack_ns": 0.762,
+                "sum_negative_slacks_ns": 0,
+                "failing_endpoints": 0
+              },
+              "same_endpoint_set": true,
+              "common_endpoints": 300,
+              "missing_after_count": 0,
+              "new_after_count": 0,
+              "missing_after_examples": [],
+              "new_after_examples": [],
+              "source_changed_count": 0,
+              "source_changed_examples": [],
+              "improved_endpoints": 0,
+              "regressed_endpoints": 0,
+              "unchanged_endpoints": 300,
+              "same_source_pairs": 300,
+              "same_source_improved": 0,
+              "same_source_regressed": 0,
+              "delta_worst_slack_ns": 0.0,
+              "delta_sum_negative_slacks_ns": 0,
+              "delta_population_is_controlled": true,
+              "notes": [
+                "Positive slack delta improves timing; negative delta worsens timing.",
+                "Changed worst-path source is flagged; it is an endpoint-worst comparison, not the same physical launch path."
+              ],
+              "report_object_crosschecks": {
+                "before": {
+                  "endpoint_count": 300,
+                  "all_slacks_match_within_ns": 0.001000001,
+                  "strict_source_match": true,
+                  "different_equal_or_near_tied_sources": [],
+                  "source_mismatch_count": 0
+                },
+                "after": {
+                  "endpoint_count": 300,
+                  "all_slacks_match_within_ns": 0.001000001,
+                  "strict_source_match": true,
+                  "different_equal_or_near_tied_sources": [],
+                  "source_mismatch_count": 0
+                }
+              }
+            },
+            "cohort_setup": {
+              "before": {
+                "endpoints": 300,
+                "worst_slack_ns": -0.553,
+                "sum_negative_slacks_ns": -95.017,
+                "failing_endpoints": 300
+              },
+              "after": {
+                "endpoints": 300,
+                "worst_slack_ns": -0.553,
+                "sum_negative_slacks_ns": -95.017,
+                "failing_endpoints": 300
+              },
+              "same_endpoint_set": true,
+              "common_endpoints": 300,
+              "missing_after_count": 0,
+              "new_after_count": 0,
+              "missing_after_examples": [],
+              "new_after_examples": [],
+              "source_changed_count": 0,
+              "source_changed_examples": [],
+              "improved_endpoints": 0,
+              "regressed_endpoints": 0,
+              "unchanged_endpoints": 300,
+              "same_source_pairs": 300,
+              "same_source_improved": 0,
+              "same_source_regressed": 0,
+              "delta_worst_slack_ns": 0.0,
+              "delta_sum_negative_slacks_ns": 0.0,
+              "delta_population_is_controlled": true,
+              "notes": [
+                "Positive slack delta improves timing; negative delta worsens timing.",
+                "Changed worst-path source is flagged; it is an endpoint-worst comparison, not the same physical launch path."
+              ],
+              "report_object_crosschecks": {
+                "before": {
+                  "endpoint_count": 300,
+                  "all_slacks_match_within_ns": 0.001000001,
+                  "strict_source_match": true,
+                  "different_equal_or_near_tied_sources": [],
+                  "source_mismatch_count": 0
+                },
+                "after": {
+                  "endpoint_count": 300,
+                  "all_slacks_match_within_ns": 0.001000001,
+                  "strict_source_match": true,
+                  "different_equal_or_near_tied_sources": [],
+                  "source_mismatch_count": 0
+                }
+              }
+            },
+            "cohort_hold": {
+              "before": {
+                "endpoints": 300,
+                "worst_slack_ns": 0.024,
+                "sum_negative_slacks_ns": 0,
+                "failing_endpoints": 0
+              },
+              "after": {
+                "endpoints": 300,
+                "worst_slack_ns": 0.024,
+                "sum_negative_slacks_ns": 0,
+                "failing_endpoints": 0
+              },
+              "same_endpoint_set": true,
+              "common_endpoints": 300,
+              "missing_after_count": 0,
+              "new_after_count": 0,
+              "missing_after_examples": [],
+              "new_after_examples": [],
+              "source_changed_count": 0,
+              "source_changed_examples": [],
+              "improved_endpoints": 0,
+              "regressed_endpoints": 0,
+              "unchanged_endpoints": 300,
+              "same_source_pairs": 300,
+              "same_source_improved": 0,
+              "same_source_regressed": 0,
+              "delta_worst_slack_ns": 0.0,
+              "delta_sum_negative_slacks_ns": 0,
+              "delta_population_is_controlled": true,
+              "notes": [
+                "Positive slack delta improves timing; negative delta worsens timing.",
+                "Changed worst-path source is flagged; it is an endpoint-worst comparison, not the same physical launch path."
+              ],
+              "report_object_crosschecks": {
+                "before": {
+                  "endpoint_count": 300,
+                  "all_slacks_match_within_ns": 0.001000001,
+                  "strict_source_match": true,
+                  "different_equal_or_near_tied_sources": [],
+                  "source_mismatch_count": 0
+                },
+                "after": {
+                  "endpoint_count": 300,
+                  "all_slacks_match_within_ns": 0.001000001,
+                  "strict_source_match": true,
+                  "different_equal_or_near_tied_sources": [],
+                  "source_mismatch_count": 0
+                }
+              }
+            }
+          },
+          "independent_constraint_proofs": {
+            "live_sdc": {
+              "valid": true,
+              "original_commands_exactly_equal": 23787,
+              "ordered_original_commands_exactly_equal": 119,
+              "automatic_disable_timing": {
+                "order_insensitive": true,
+                "count": 23668,
+                "scoped_exact_multiset_equal": true,
+                "input_provenance": {
+                  "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+                  "sha256": "169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce",
+                  "original_input_set_disable_timing_commands": 0
+                }
+              },
+              "before_group_serialization": {
+                "group_name": "CVA6_FOCUS_CAST_OPMOD1",
+                "group_commands": 0,
+                "comparison_mode": "temporary_current",
+                "exclusive_helper_names": [
+                  "_xlnx_shared_i1",
+                  "_xlnx_shared_i2"
+                ],
+                "helper_pin_count": 0,
+                "authorized_prior_group_operations_preserved": {
+                  "CVA6_FOCUS_SATP_ASID10": {
+                    "named": 1,
+                    "default": 1
+                  },
+                  "CVA6_FOCUS_OPERAND_A21": {
+                    "named": 1,
+                    "default": 1
+                  },
+                  "CVA6_FOCUS_FMA1_OPERAND57": {
+                    "named": 1,
+                    "default": 1
+                  },
+                  "CVA6_NIGHT_SATP_ASID15": {
+                    "named": 1,
+                    "default": 1
+                  }
+                },
+                "registry_sha256": "cf8a2bda572473b1851f5249e8d2a89b6dfa20e114c18c27715b8d44fd3692a3"
+              },
+              "after_group_serialization": {
+                "group_name": "CVA6_FOCUS_CAST_OPMOD1",
+                "group_commands": 2,
+                "comparison_mode": "temporary_current",
+                "exclusive_helper_names": [
+                  "_xlnx_shared_i1",
+                  "_xlnx_shared_i2",
+                  "_xlnx_shared_i3"
+                ],
+                "helper_pin_count": 300,
+                "authorized_prior_group_operations_preserved": {
+                  "CVA6_FOCUS_SATP_ASID10": {
+                    "named": 1,
+                    "default": 1
+                  },
+                  "CVA6_FOCUS_OPERAND_A21": {
+                    "named": 1,
+                    "default": 1
+                  },
+                  "CVA6_FOCUS_FMA1_OPERAND57": {
+                    "named": 1,
+                    "default": 1
+                  },
+                  "CVA6_NIGHT_SATP_ASID15": {
+                    "named": 1,
+                    "default": 1
+                  }
+                },
+                "registry_sha256": "cf8a2bda572473b1851f5249e8d2a89b6dfa20e114c18c27715b8d44fd3692a3"
+              },
+              "sha256": {
+                "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_timing.xdc": "3a5e102e76a4bc12f7e53bed8eaaaa6ad8c9a598e662ee49fedb7d9eb59cb13a",
+                "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_timing.xdc": "bb7e69911394d66e1a531bf2c3b863df95ec244af9dc4c10918fbaea686d60bc"
+              },
+              "scope": "Only this job group and its exact-cohort, exclusively referenced helper definitions are excluded. Other groups and original commands remain ordered and exact."
+            },
+            "embedded_constraints": {
+              "valid": true,
+              "original_timing_commands": 108,
+              "original_variables": 1,
+              "diffs": {
+                "timing": {
+                  "removed": [],
+                  "added": []
+                },
+                "variables": {
+                  "removed": [],
+                  "added": []
+                }
+              },
+              "debug_coverage_before": [
+                [
+                  50.0,
+                  "- 4 cells 4 cells 4 100.00 33.33"
+                ],
+                [
+                  10.0,
+                  "- 4 cells 4 cells 4 100.00 33.33"
+                ],
+                [
+                  10.0,
+                  "- 4 cells 4 cells 4 100.00 33.33"
+                ],
+                [
+                  50.0,
+                  "- 4 cells 4 cells 4 100.00 33.33"
+                ]
+              ],
+              "debug_coverage_after": [
+                [
+                  50.0,
+                  "- 4 cells 4 cells 4 100.00 33.33"
+                ],
+                [
+                  10.0,
+                  "- 4 cells 4 cells 4 100.00 33.33"
+                ],
+                [
+                  10.0,
+                  "- 4 cells 4 cells 4 100.00 33.33"
+                ],
+                [
+                  50.0,
+                  "- 4 cells 4 cells 4 100.00 33.33"
+                ]
+              ],
+              "input_sha256": {
+                "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp": "169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce",
+                "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/final.dcp": "247b02b1cb280f92f793dd18b72153023f8fb8947bd91deab2fa22ebd40053a7",
+                "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/exceptions_coverage.rpt": "0945c3686ed5ec1184b145b8889288fc60f1a6beab581d5b6f85711b886c3025",
+                "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/exceptions_coverage.rpt": "c92088aa05706399f00b72d48cc5a3730ea84013d450c2c82b7ece17860c0c95"
+              }
+            },
+            "independently_recomputed": true
+          },
+          "group_and_constraints": {
+            "grouped_endpoints": 300,
+            "restored_endpoints": 300,
+            "ordinary_clock_group_restored": true,
+            "original_sdc_commands_exact_after_proved_group_metadata_removal": true,
+            "engine_invariants_present": true
+          },
+          "physical": {
+            "before_count": 115339,
+            "after_count": 115339,
+            "added_count": 0,
+            "removed_count": 0,
+            "changed_existing_fields": {
+              "ref": 0,
+              "loc": 0,
+              "bel": 0,
+              "init": 0,
+              "phys_opt_modified": 0
+            },
+            "added_examples": [],
+            "removed_examples": [],
+            "changed_primitive_rows": 0,
+            "limit": "LOC/BEL/INIT/PHYS_OPT_MODIFIED changes are observable evidence; unchanged fields cannot prove identical routing. LUT INIT changes alone are not functional inequivalence."
+          },
+          "global": {
+            "before": {
+              "wns_ns": -0.553,
+              "tns_ns": -322.607,
+              "failing_setup_endpoints": 1285.0,
+              "total_setup_endpoints": 96433.0,
+              "whs_ns": 0.003,
+              "ths_ns": 0.0,
+              "failing_hold_endpoints": 0.0,
+              "total_hold_endpoints": 96417.0,
+              "wpws_ns": 3.5,
+              "tpws_ns": 0.0,
+              "failing_pulse_endpoints": 0.0,
+              "total_pulse_endpoints": 35283.0
+            },
+            "after": {
+              "wns_ns": -0.553,
+              "tns_ns": -322.607,
+              "failing_setup_endpoints": 1285.0,
+              "total_setup_endpoints": 96433.0,
+              "whs_ns": 0.003,
+              "ths_ns": 0.0,
+              "failing_hold_endpoints": 0.0,
+              "total_hold_endpoints": 96417.0,
+              "wpws_ns": 3.5,
+              "tpws_ns": 0.0,
+              "failing_pulse_endpoints": 0.0,
+              "total_pulse_endpoints": 35283.0
+            },
+            "deltas_after_minus_before": {
+              "wns_ns": 0.0,
+              "tns_ns": 0.0,
+              "failing_setup_endpoints": 0.0,
+              "total_setup_endpoints": 0.0,
+              "whs_ns": 0.0,
+              "ths_ns": 0.0,
+              "failing_hold_endpoints": 0.0,
+              "total_hold_endpoints": 0.0,
+              "wpws_ns": 0.0,
+              "tpws_ns": 0.0,
+              "failing_pulse_endpoints": 0.0,
+              "total_pulse_endpoints": 0.0
+            },
+            "endpoints_no_longer_failing": 0,
+            "new_failing_endpoints": 0,
+            "validations": [
+              {
+                "status": "timing_failed",
+                "errors": [
+                  "negative_wns",
+                  "negative_tns",
+                  "timing_signoff_phrase_missing"
+                ],
+                "review": [
+                  "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+                  "methodology_warning_new_or_increased:XDCB-5=10"
+                ],
+                "metrics": {
+                  "wns": -0.553,
+                  "tns": -322.607,
+                  "whs": 0.003,
+                  "ths": 0.0,
+                  "wpws": 3.5,
+                  "tpws": 0.0,
+                  "bus_skew_min": 9.391
+                },
+                "constraint_counts": {
+                  "no_clock": 0,
+                  "constant_clock": 0,
+                  "pulse_width_clock": 0,
+                  "unconstrained_internal_endpoints": 75,
+                  "no_input_delay": 0,
+                  "no_output_delay": 0,
+                  "multiple_clock": 0,
+                  "generated_clocks": 0,
+                  "loops": 0,
+                  "partial_input_delay": 0,
+                  "partial_output_delay": 0,
+                  "latch_loops": 0
+                }
+              },
+              {
+                "status": "timing_failed",
+                "errors": [
+                  "negative_wns",
+                  "negative_tns",
+                  "timing_signoff_phrase_missing"
+                ],
+                "review": [
+                  "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+                  "methodology_warning_new_or_increased:XDCB-5=12"
+                ],
+                "metrics": {
+                  "wns": -0.553,
+                  "tns": -322.607,
+                  "whs": 0.003,
+                  "ths": 0.0,
+                  "wpws": 3.5,
+                  "tpws": 0.0,
+                  "bus_skew_min": 9.391
+                },
+                "constraint_counts": {
+                  "no_clock": 0,
+                  "constant_clock": 0,
+                  "pulse_width_clock": 0,
+                  "unconstrained_internal_endpoints": 75,
+                  "no_input_delay": 0,
+                  "no_output_delay": 0,
+                  "multiple_clock": 0,
+                  "generated_clocks": 0,
+                  "loops": 0,
+                  "partial_input_delay": 0,
+                  "partial_output_delay": 0,
+                  "latch_loops": 0
+                }
+              }
+            ]
+          },
+          "measurable_global_improvement_without_signoff_regression": false,
+          "no_measurable_timing_change": true,
+          "no_observed_physical_design_change": true,
+          "no_observed_change": true,
+          "no_observed_change_limit": "Unchanged snapshots/timing do not prove identical PIP routing; do not repeat an ineffective trial.",
+          "metrics": {
+            "wns": -0.553,
+            "tns": -322.607,
+            "whs": 0.003,
+            "failing_endpoints": 1285
+          },
+          "accepted": false,
+          "requires_result_review_before_adoption": true,
+          "input_sha256": {
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_state.tsv.control_nets.tsv": "6807717777ade4ed2f124cf79fc5e575a9a7498c26e860af888de6be565567a1",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/state_audit.txt": "55a4da3a6894c6adda89d8cae93504d2388179ae66ed265d0517385fd79e46c1",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/global_metrics.tsv": "992823d35048cc58eda87609201efdcd0c072dab475af6fb5055d9521f827613",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_primitives.tsv.physopt_annotation_raw.tsv": "d6a34cff108d6546cc351af3fd3108b98ab3c2226b4cc2f08003d9a3c4c165f8",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_state.tsv.satp_and_clones.tsv": "9b0edd4b312324d44478256211edc4337ea4b7338063dc5293e92fc1169c9329",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_state.tsv.other_state.tsv.control_pins.tsv": "53eab338cc72ca1fff8d3bbdfa15d4d7edd19de2a498cd9492f792c0a714f9df",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/algorithm_result.tsv": "70d0432c721820086efd0740c143257d1be8c4e340c353422d5e4c1f6a3cffea",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/restored_setup.tsv": "e98d8fea42934e88dd7e15ccc224e34215891f82c3db90efcea6bb53821c3fec",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/clocks.rpt": "a91a4693a1ade989c19ca3c2637bf9b793bfa15ef2b480e0b55b2f5b3a589ce9",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_state.tsv.control_nets.tsv": "6807717777ade4ed2f124cf79fc5e575a9a7498c26e860af888de6be565567a1",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/engine_complete.txt": "48eadae771f13eec363f7e7dbb51e6ba8490effce97614d49a74930b57b0011e",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_state.tsv": "55d54d73394f71914e7254315415532a77721317edf1257b2317eb4655c838e6",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_timing.xdc": "bb7e69911394d66e1a531bf2c3b863df95ec244af9dc4c10918fbaea686d60bc",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/drc.rpt": "a771291ca43b3ae77dc87cc21c04d675e01b7c25fdc69cfb96b452003f9b3688",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/iphys_export_status.txt": "83643ba1534ddd061d2c397fb9fe9c4bfea80fddebafff0cbfd08a1004f17b61",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/check_timing.rpt": "bd5b07261c5fe792b7fd31977c77fc7311dd813dae6bf51b2f55331e3a3c512b",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_state.tsv.satp_and_clones.tsv": "9b0edd4b312324d44478256211edc4337ea4b7338063dc5293e92fc1169c9329",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/final.dcp.ok": "9149a1639fd729ca74b4353844d37528182883bc3b68bda8c864cd7064dd1043",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/route_status.rpt": "47ec388aa842b9248e554945e097ff62cc132c693accbccec0089b5be65220d0",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/timing_summary.rpt": "f62f9376c06cee7a6f8dda6a467b461b22260bdc7bdbaa16834f98544a6b1c72",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/grouped_setup.tsv": "9801bbe35684611b064bf45edbb0a9ad7251c77c236391d1ac2108b46dc41ab2",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/all_failing_setup.tsv": "0e2f9d883643cbfcfde292b649b601d2bf210d411b44305ff80bac0d3a857283",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/design_analysis.rpt": "9a45b6bca3ccd4d0fdeb6d63e5265390f0c56dda2880f64d446ac57df5be6569",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/clock_interaction.rpt": "2e2fe3c8f9cd5b14cd6707906e090849c2f27bb6599c1a1768d4155ad732bdf0",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/critical_setup.rpt": "c587c82d05a8794d05bf0a9e630c1bd5628857560d4b83276b2c39f9a4df7490",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/UNVERIFIED_CANDIDATE.txt": "4e6565944bb10bb9b18b44f836adeb9d7aef6a98555a929a7de7c1a2411bb586",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_state.tsv.other_state.tsv": "1da735a644127addd5981f0162d23a1af52a40e21dc26965ac0c6d0fdacb8d8b",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/exceptions_coverage.rpt": "c92088aa05706399f00b72d48cc5a3730ea84013d450c2c82b7ece17860c0c95",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_state.tsv": "55d54d73394f71914e7254315415532a77721317edf1257b2317eb4655c838e6",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/exceptions_ignored.rpt": "8962fb6cb59e906156573e44e372b7efdb2b860966e5a7c561be72239b635779",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_state.tsv.other_state.tsv": "1da735a644127addd5981f0162d23a1af52a40e21dc26965ac0c6d0fdacb8d8b",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_primitives.tsv": "52e5ebb9b3a8d9ada8207e27541dd9596bed0cc9b60e21d644e47242408420fe",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/critical_hold.rpt": "dc2bae8c4674f41af7ca940b58028b41498ca94874f6f8972282a9a6bfc22a6d",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/bus_skew.rpt": "a0bee8cb655e287c53e57da68516bcb7db1fb4a99e57ba1daebfb04e49faab34",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_primitives.tsv": "52e5ebb9b3a8d9ada8207e27541dd9596bed0cc9b60e21d644e47242408420fe",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/utilization.rpt": "8751c3cec32dd089199f4078756cdbb9c5a65710e28053ee692492fa82677a61",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_timing.xdc": "3a5e102e76a4bc12f7e53bed8eaaaa6ad8c9a598e662ee49fedb7d9eb59cb13a",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/methodology.rpt": "1740c15732eea2fec2d813cbcf9ab72339392cb2abc558659a2ab6b74fba5c43",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/high_fanout.rpt": "6b87f8c481a997c17b67dc5183f0702679384c98cf322325a678a0556ddc4585",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/invariants_passed.txt": "2d7e844a4777620fa8dbced346bbdcc09fe1cd4f8dd6215349c07059c158df15",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/before_primitives.tsv.physopt_annotation_raw.tsv": "d6a34cff108d6546cc351af3fd3108b98ab3c2226b4cc2f08003d9a3c4c165f8",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/after_state.tsv.other_state.tsv.control_pins.tsv": "53eab338cc72ca1fff8d3bbdfa15d4d7edd19de2a498cd9492f792c0a714f9df",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/target_after/focus_setup.tsv": "e98d8fea42934e88dd7e15ccc224e34215891f82c3db90efcea6bb53821c3fec",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/target_after/cohort_setup.rpt": "1849e5b51829942b726931962301a6dec5939771d1e2a68a9cbe76fd2261a7af",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/target_after/focus_hold.rpt": "6ea992446bf2f85db21924bb723bec2f264281f03468d647511643315946e278",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/target_after/cohort_hold.rpt": "16406cc55a69b82b4d821cce6b48947fb8ebf6627d829977ccf336c7e95de09e",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/target_after/focus_setup.rpt": "3ee3da7d33aa0f1af27b600b9d8c735d68f7104dcc24a5ef14163daefffb3cba",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/target_after/cohort_setup.tsv": "e98d8fea42934e88dd7e15ccc224e34215891f82c3db90efcea6bb53821c3fec",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/target_after/cohort_hold.tsv": "340d3057e0f0b441a686f0d7a13efe4f9255fd5e07ae75c02b9f112dae4a6504",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/target_after/focus_hold.tsv": "230d47111f83a2a2572164d3cc2ee077dad0edf4232abdf50dd54bb5b2d09f31",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/global_metrics.tsv": "992823d35048cc58eda87609201efdcd0c072dab475af6fb5055d9521f827613",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/clocks.rpt": "8af06d1f9b980991da08f4c95ca6ed54f6bbeee8b433d7eb90a031f7f63ba4ba",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/focus_setup.tsv": "e98d8fea42934e88dd7e15ccc224e34215891f82c3db90efcea6bb53821c3fec",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/drc.rpt": "17047ac9f1f1a603b2908b9f414b6c82b2f690901b2622f457c720c24391e094",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/check_timing.rpt": "8899fa5a12861b047fa144ee254026b55ba3e5e5936b9eaf9aed645e234356b8",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/route_status.rpt": "47ec388aa842b9248e554945e097ff62cc132c693accbccec0089b5be65220d0",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/timing_summary.rpt": "6b85eb3137464524427d790d93c452fa73b92467a7ee66acc2134afbac49f2f3",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/all_failing_setup.tsv": "0e2f9d883643cbfcfde292b649b601d2bf210d411b44305ff80bac0d3a857283",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/design_analysis.rpt": "54b2f7b21ada5d052013c9580fb8cc5538c5a33ec6b55255c988dd45c5716d72",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/cohort_setup.rpt": "346656a55f8c720d621deca6fc3eab1f14acffaf0465c23eed946ba0184287dd",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/clock_interaction.rpt": "0e01644afd636e687ba019c198a8544222435f7ea1a19ac8b9c113354933c482",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/critical_setup.rpt": "e844d68b0d79427684522febfcbf1f8c169d95798be4f2fa721a270ace94bb50",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/focus_hold.rpt": "248f6b6d2bec2e7327c37e9cf7e97c0711688fceb448505c79156f19feac9fcc",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/cohort_hold.rpt": "c0368ccae92d6b02962ff5c308c6db2d3e201c9d2e1606a48c6c39491f3d829e",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/exceptions_coverage.rpt": "0945c3686ed5ec1184b145b8889288fc60f1a6beab581d5b6f85711b886c3025",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/focus_setup.rpt": "7c4262bf23a1005960fb81ab634be703a18b14d22633ba01b461d1695a579504",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/exceptions_ignored.rpt": "38b0e91e6746c0161fd790af7ae3f8125b6dafb343dd9f0ec17ec46d49786764",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/cohort_setup.tsv": "e98d8fea42934e88dd7e15ccc224e34215891f82c3db90efcea6bb53821c3fec",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/critical_hold.rpt": "ab412a2d22c38793b8389fa2d9d73a64b9137937efb3713b9e4bdaa8d2f1d8d1",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/cohort_hold.tsv": "340d3057e0f0b441a686f0d7a13efe4f9255fd5e07ae75c02b9f112dae4a6504",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/bus_skew.rpt": "29f92397b5d8da8954218eef1b52691ae957b8eab0d4102a8f7e4b8cbf49158e",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/utilization.rpt": "2cc4d2918fd378cff2ccdaa932f944a9436014e7d587c7a1bc4d16b5acafa8be",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/focus_hold.tsv": "230d47111f83a2a2572164d3cc2ee077dad0edf4232abdf50dd54bb5b2d09f31",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/methodology.rpt": "28870276215c699bd954a0c12fc63c1896dcd43195f7094708a875556ec676cf",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/baseline/high_fanout.rpt": "1bbba3239568c47d8f252aebe3357ab9b584d237a538ede2d94b752ac47588e2",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/average_metrics/final/endpoints.tsv": "26c8a1c89522391668e952f15e8cf821779f4efa25923ea1535561e11c21b37b",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/average_metrics/baseline/endpoints.tsv": "26c8a1c89522391668e952f15e8cf821779f4efa25923ea1535561e11c21b37b",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/job_target.json": "81bbe8685d27ccc817ad2c41f61510ab2572dd428cee9280b79f4d982294de52",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/semantic_constraint_proof.json": "6930ee05c81c454525c31578f4d037656c44cab7c137cc73bc98e2b9d15ec89e",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/code/v2/semantic_night_v2.py": "60db3e2711469ba23bb8a00e896a732ee00efb5be9526305f869dff4026a280e"
+          }
+        },
+        "means": {
+          "all_count": 96433,
+          "all_mean": 5.281735101054618,
+          "initial_failing_count": 1439,
+          "initial_failing_mean": -0.2110305767894371,
+          "initial_failing_p01": -0.535,
+          "initial_failing_p05": -0.5,
+          "initial_failing_median": -0.207,
+          "negative_count": 1285,
+          "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+        },
+        "before_means": {
+          "all_count": 96433,
+          "all_mean": 5.281735101054618,
+          "initial_failing_count": 1439,
+          "initial_failing_mean": -0.2110305767894371,
+          "initial_failing_p01": -0.535,
+          "initial_failing_p05": -0.5,
+          "initial_failing_median": -0.207,
+          "negative_count": 1285,
+          "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+        },
+        "adopted": false,
+        "candidate": {
+          "applied_steps": [
+            {
+              "family": "SATP",
+              "algorithm": "restruct",
+              "eco_candidate": null,
+              "job_id": "009_restruct_SATP"
+            }
+          ],
+          "validated": true,
+          "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/999_noop_CAST/final.dcp",
+          "sha256": "247b02b1cb280f92f793dd18b72153023f8fb8947bd91deab2fa22ebd40053a7",
+          "metrics": {
+            "wns": -0.553,
+            "tns": -322.607,
+            "whs": 0.003,
+            "failing_endpoints": 1285
+          },
+          "means": {
+            "all_count": 96433,
+            "all_mean": 5.281735101054618,
+            "initial_failing_count": 1439,
+            "initial_failing_mean": -0.2110305767894371,
+            "initial_failing_p01": -0.535,
+            "initial_failing_p05": -0.5,
+            "initial_failing_median": -0.207,
+            "negative_count": 1285,
+            "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+          },
+          "provenance": "999_noop_CAST",
+          "proof_files": {
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/analysis/result.json": "27fd67be31633fed5aa8463b6afea6ec8e770f21f2bce882eb81ccfd34573680",
+            "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/fixed_means.json": "07e5bc0086f6f681b96414c36d4bb4a46b99f190d9cad6c5f53b27d86af70d03"
+          }
+        }
+      }
+    },
+    "historical_gold": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/final.dcp",
+      "exists": true,
+      "bytes": 48278569,
+      "sha256": "8aeb2a53adc0eaf63eb16aaf076f1192c40684a25fce1a16689f3b2aa249423e",
+      "mtime": "2026-10-19T14:34:04.473577-03:00",
+      "device": 66309
+    },
+    "caveat": "Preserve exact DCP+matching analyses/reports/means/recipes and referenced parents if independently recomputing historical proof chains. Selected DCP+summary backup is not a claim that the full dependency graph is archived."
+  },
+  "meeting_packet_proposal": {
+    "purpose": "Readable evidence for professor; not a runnable project or full disaster backup",
+    "files": [
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/README.md",
+        "exists": true,
+        "bytes": 3330,
+        "sha256": "c6193e900e262a927f9b8c9c8836a7d2a8c1a4878f107eae2c92105819b775ed",
+        "mtime": "2026-10-29T00:13:16.167969-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/estado_y_resultados.md",
+        "exists": true,
+        "bytes": 7133,
+        "sha256": "b5c0ec7e95535cd453cb48cfd2e4af0338500588489b9e8f105367783d3f3ef4",
+        "mtime": "2026-10-29T00:13:16.167969-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/historial_pruebas.md",
+        "exists": true,
+        "bytes": 7783,
+        "sha256": "747726c5573f8145bcc8e60e4da3e3066d39220cb9c2efd6617e97259892c8d4",
+        "mtime": "2026-10-29T00:13:16.166969-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/metodologia_y_decisiones.md",
+        "exists": true,
+        "bytes": 5834,
+        "sha256": "0d5b7d90d0ca17aa056c4996e278e2cfe9d957c9141974a4b2df891c15b76ee8",
+        "mtime": "2026-10-29T00:11:51.762906-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/aclaraciones_documentales.md",
+        "exists": true,
+        "bytes": 4087,
+        "sha256": "0347c7e3764c5e538c64bc332e5b85d579ee9cd5c5cd90c1c8eb0ef7a43df224",
+        "mtime": "2026-10-29T00:11:51.764906-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/resultados_clave.csv",
+        "exists": true,
+        "bytes": 1872,
+        "sha256": "b0f88406335cca8597abf453184f545461631ac26472e1422145245405903baa",
+        "mtime": "2026-10-29T00:11:51.764906-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/evaluaciones_100mhz.csv",
+        "exists": true,
+        "bytes": 33951,
+        "sha256": "8e32300d1f6e13d302ee4dbc4b25d6fc63806672134e5f458ceb0990918352e2",
+        "mtime": "2026-10-29T00:13:16.166969-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/decisiones.csv",
+        "exists": true,
+        "bytes": 1023,
+        "sha256": "f6c7b06e77c5ef356776866816180c989cd44c8ece600c6205e0ed8538aab6b7",
+        "mtime": "2026-10-29T00:11:51.765906-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+        "exists": true,
+        "bytes": 3423,
+        "sha256": "25f6f87d6e6f3c90aac042431af0a9350861fd0f09fe16324bc23831c5d41ea3",
+        "mtime": "2026-10-22T13:40:49.386844-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/SHA256SUMS.txt",
+        "exists": true,
+        "bytes": 2731,
+        "sha256": "527370f9d98f0f2fbaeffb8562921e43e92f336e884d373ba956660d0a8b4348",
+        "mtime": "2026-10-22T13:40:49.592844-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/summary.txt",
+        "exists": true,
+        "bytes": 95,
+        "sha256": "804de0e6bce12aa4b8a4380967eee365e1eecff788c866afa67e9f3320b2f6d1",
+        "mtime": "2026-10-22T13:21:36.376767-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/timing_summary.rpt",
+        "exists": true,
+        "bytes": 1718063,
+        "sha256": "98fb763a9dbf72f285e9b2262ab0d6fa4f041f2fcff1a989c4493cf1df009d6f",
+        "mtime": "2026-10-22T13:20:59.803941-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/clocks.rpt",
+        "exists": true,
+        "bytes": 2079,
+        "sha256": "cefd2441d74e03e4dd67523c81dd3eb208f5c0f229ae761d87fcd4b82407ad3b",
+        "mtime": "2026-10-22T13:21:01.881930-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/check_timing.rpt",
+        "exists": true,
+        "bytes": 9227,
+        "sha256": "76dc5a8f05d147b86dd6e1ae53394b95d35c14ee70d74bbb003a3995884385fd",
+        "mtime": "2026-10-22T13:21:02.674927-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/route_status.rpt",
+        "exists": true,
+        "bytes": 651,
+        "sha256": "c2e5bd0e628975326833115e46e2d9528d20e6ac6564b4434139feb5d9f3ec14",
+        "mtime": "2026-10-22T13:21:08.729897-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/drc.rpt",
+        "exists": true,
+        "bytes": 119300,
+        "sha256": "ada67fb45a65a250f1a1ade88d470de8e277c2f295eb034ca08426402fa0abd0",
+        "mtime": "2026-10-22T13:21:13.779872-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/bus_skew.rpt",
+        "exists": true,
+        "bytes": 69197,
+        "sha256": "fdc7b565d2b7823eb75a1615a1bc3110e86eb51b9725388464acf346fc0fcde1",
+        "mtime": "2026-10-22T13:21:35.367772-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/pulse_width.rpt",
+        "exists": true,
+        "bytes": 3212,
+        "sha256": "2f20c347efa7dcf62fb3bbf0200d5ded8ea9c9ae42b84d5c75c6e86090d13423",
+        "mtime": "2026-10-22T13:21:36.375767-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/summary.json",
+        "exists": true,
+        "bytes": 49970,
+        "sha256": "8ff913c04dd911cfedd1cd8f4bb79890603ff08ab356e7121e5a281123234e16",
+        "mtime": "2026-10-22T03:31:54.284173-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/analysis/result.json",
+        "exists": true,
+        "bytes": 40395,
+        "sha256": "28f47f36ee4ffe1cc3eb9f3bf5f257533451b779f8418ebe96a058ed7316fb8b",
+        "mtime": "2026-10-22T02:47:42.422044-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/fixed_means.json",
+        "exists": true,
+        "bytes": 805,
+        "sha256": "ac9f34ad1bb1692755fbc04eb66b4a192139a117b10c5b3079ca019d8cf61148",
+        "mtime": "2026-10-22T02:47:49.659083-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/pass_output.txt",
+        "exists": true,
+        "bytes": 890,
+        "sha256": "5670bbe9bbc9b5ac12b277fbc05a82c937bd06ceadcbd4a6568f389b8ca17398",
+        "mtime": "2026-09-18T11:45:36.307369-03:00",
+        "device": 66309
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/ila_cva6_ddr_summary.txt",
+        "exists": true,
+        "bytes": 332,
+        "sha256": "393fea80d68e6c31017642df8e6385993810ea0396dfad1c25d5d417886293fa",
+        "mtime": "2026-09-18T11:45:01.112536-03:00",
+        "device": 66309
+      }
+    ],
+    "raw_bytes": 2085383,
+    "optional_appendix": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/archivo_documental_20261029.tar.gz",
+      "exists": true,
+      "bytes": 16085591,
+      "sha256": "8af685deaf660f35a0e3d98a5a89fb8235c0f0291c80986812c3d2669c090f89",
+      "mtime": "2026-10-29T00:13:23.664810-03:00",
+      "device": 66309
+    },
+    "optional_appendix_scope": "16.1MB existing archive; documentation/scripts/compact evidence with index and3659 content objects; excludes big binaries, full endpoint dumps and many generated sources. No need to copy allruns/toolchains for a meeting.",
+    "presentation_claims": [
+      "90.908180MHz: saved post-route STA meets setup+hold; margin1ps;91MHz board validation still pending.",
+      "25MHz: last documented board PASS, limited DDR/BootROM/ILA scope.",
+      "100MHz: no closure; adopted SATP009WNS-0.553ns,TNS-322.607ns,1285negative endpoints.",
+      "Keep estimates, synthesis reports, post-route signoff and actual hardware execution separate.",
+      "Use latest central clarifications when showing the older Timing_CVA6_KR260.pdf; absolute impossibility claims are not supported."
+    ],
+    "excluded_by_default": [
+      "BIT/LTX/XSA/DCP binaries unless a hardware demo/technical transfer is specifically needed",
+      "Entire .runs/.gen caches, Xilinx installation and AArch64 toolchain",
+      "Gigabyte historical backups or all full path reports"
+    ],
+    "suggested_packaging": "Keep selected human-readable docs/CSV/2.09MB report evidence in a small dated meeting folder, plus the existing16.09MB documentation archive as an optional appendix. Do not duplicate BIT/XSA/DCP binaries in the professor packet unless demonstration/transfer is needed. A separate essential backup preserves those binaries."
+  },
+  "essential_backup_proposal": {
+    "purpose": "Recover committed source, current uncommitted work and essential hardware/timing outputs without copying every generated GB",
+    "components": [
+      {
+        "component": "Main repository Git bundle --all",
+        "source": "/home/nachofalchi/data/fpga-work/cva6-equipo",
+        "expected_scale": "Existing object pack~274.8MB; actual bundle must be measured. Main bundle excludes submodule objects and all working-tree changes."
+      },
+      {
+        "component": "Tracked workingtree/index state",
+        "source": "All five modified tracked files; git status, git diff HEAD --binary, git diff --cached --binary, optional git diff --binary",
+        "requirements": "Keep exact current file contents/modes/symlinks. There are no staged changes now. If staged changes appear, restore index from cached patch separately; diffHEAD alone cannot recover staging boundaries."
+      },
+      {
+        "component": "All relevant untracked nonignored sources/docs/scripts/tests/software",
+        "source": "/home/nachofalchi/data/fpga-work/cva6-equipo",
+        "requirements": "Record exact names and SHA. Avoid relying on git status collapsed directory names; retain actual files. Exclude ignored build/toolchain caches only with explicit scope record."
+      },
+      {
+        "component": "Complete frozen closed91MHz directory",
+        "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22",
+        "bytes": 65949176,
+        "verification": "29/29 manifest rows passed now;30files including manifest"
+      },
+      {
+        "component": "Complete frozen known_good25MHz directory",
+        "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18",
+        "bytes": 9304036,
+        "verification": "17artifact hashes pass; historical manifest self-entry mismatches itself. Preserve original and add a separate new export manifest, not a silent edit."
+      },
+      {
+        "component": "Matching known-good25MHz XSA",
+        "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/hardware/kr260_cva6.xsa",
+        "bytes": 2951131,
+        "verification": "HWH24.999750MHz/IOPLLdiv40, embedded BIT exactly matches known_good BIT"
+      },
+      {
+        "component": "SATP009100MHz adopted DCP + selected analysis/signoff/report evidence and original gold",
+        "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021",
+        "requirements": "Deduplicate overlapping paths; keep parent/gold pointers and explicit partial-coverage caveat if not archiving the complete original proof dependency graph."
+      },
+      {
+        "component": "Central documentation/research/CSV/archive + operational/recipe manifests",
+        "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga",
+        "requirements": "Original dated packages and new export scope/SHA index; no rewriting old frozen files."
+      },
+      {
+        "component": "Submodule identities/optional offline bundles",
+        "source": "viewers/CVA6Flow@699bbdaa... and viewers/MinorFlow@60dfbb57...",
+        "requirements": "Pinned identities should be recorded; separate bundles needed for completely offline Git recovery. Viewers are not a prerequisite to program the KR260."
+      }
+    ],
+    "software_for91mhz_pending": [
+      "Generate FSBL from the91MHz XSA with HSI, apply existing patch_fsbl.py reset-hold policy, then adapt a copy of the known-good JTAGrun script to exact91MHz BIT+new FSBL. No new FSBL or board run was done in this audit.",
+      "Do not reuse a25MHz FSBL initialization and claim it programs91MHz correctly. Keep BIT/LTX/XSA and new software matched.",
+      "Known-good flow requires FSBL after PL programming for clock/debug operation; EMIO95 reset release and memory STATUS read are part of the documented hardware check."
+    ],
+    "restore_verification": [
+      "Verify new archive SHA and every selected member against a new export manifest after writing and again on destination.",
+      "Verify bundle with git bundle verify, then fetch into an isolated temporary bare repository and run fsck connectivity. This tests Git object completeness, not Vivado portability.",
+      "For future full restoration, restore HEAD, tracked file overlay/index state, untracked files and optional submodules into a NEW destination. Never extract over the working project.",
+      "Open/regenerate/rebuild only with the intended Vivado2026.1/board/part/clock source; clean install reproduction and91MHz hardware validation remain separate pending tasks."
+    ],
+    "scope_limit": "A selective essential rescue is not a full image of every historical synthesis/run. Full forensic dependency restoration may require additional referenced snapshots/parents. Backup creation was not performed by this read-only agent.",
+    "root_implementation_feedback": {
+      "selection_gap_fixed_by_addition": "Add the25MHz hardware/kr260_cva6.xsa explicitly, because it is outside the known_good25directory.",
+      "staged_state": "Current index has no staged changes. For exact future staged recovery preserve diff--cached and track contents/index independently; main bundle+diffHEAD does not encode staging boundaries by itself.",
+      "submodule_gap": "Main Git bundle excludes viewer submodule objects. Keep pinned refs; separate bundles are required only for fully offline source history recovery.",
+      "verification_scope": "Verify member SHA, Gitbundle/referenced objects and restore capability separately; none of those checks proves Vivado build or board correctness."
+    }
+  },
+  "external_backup_gap": {
+    "same_filesystem_confirmed": "/home/nachofalchi/backups and /home/nachofalchi/data/fpga-work both resolve to /dev/nvme0n1p5,ext4,/; st_dev66309.",
+    "external_media_observed": "lsblk showed only one physical nvme0n1 and its partitions, no mounted USB/external drive. A separate partition on the same NVMe does not protect against physical disk failure.",
+    "not_performed": "No upload, push, external copy or hardware programming was performed. No remote/external backup destination was chosen or verified.",
+    "remaining_steps": [
+      "Choose an independent external drive or authorized remote destination with enough free space.",
+      "Transfer the finalized compact meeting packet and essential backup while retaining originals.",
+      "Verify destination SHA files/content and test at least archive listing/extraction plus Git connectivity there.",
+      "Record date, destination identity, final scope, manifest digest, verification result and one restoration test."
+    ]
+  },
+  "warnings": [
+    "Current working project configuration and dirty/untracked work are not represented by HEAD alone; no commit/push was created in this audit.",
+    "The historical known_good25MHz manifest contains an invalid self-hash entry. All17nonself artifact hashes pass. Do not label BIT/ELF corrupted; do not silently edit the frozen manifest.",
+    "Working impl_1 BIT is pre-AggressiveExplore negative timing. Only use the frozen closed91MHz BIT+LTX+XSA package for that result.",
+    "91MHz closure is STA evidence with1ps setup margin, not a board PASS. Fresh matching FSBL and hardware validation are still pending.",
+    "Candidate50/candidate91 and the original impl_1 are historical/intermediate; filename91 alone does not identify timing-closed artifacts.",
+    "Existing September/October backups are on the same physical disk and predate later timing/documentation work; large archive hashes were inventoried from sidecars but not rehashed or fully extracted now.",
+    "Bare Git connectivity verification does not test checkout completeness of ignored/generated Vivado products, IP regeneration, license/tool availability or hardware behavior.",
+    "All operations in this agent task were read-only on originals, with output only under/tmp. No service, CPU, clock/configuration or package was changed."
+  ],
+  "completed_at": "2026-10-29T15:49:56.476976-03:00",
+  "no_original_files_modified": true,
+  "no_service_or_hardware_actions": true,
+  "no_large_backups_copied": true
+}

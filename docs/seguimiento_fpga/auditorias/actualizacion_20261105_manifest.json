@@ -1,0 +1,61 @@
+{
+  "cutoff": "2026-11-05T23:50:00-03:00",
+  "updated_documents": {
+    "docs/README.md": "59f4c2952889170fc93ed95a5638ca54dde4ced2fe56352a9a02bd6639ac83b5",
+    "docs/seguimiento_fpga/README.md": "0690f910fb7ab45df947875871bf28d0a352b907c32a6b769598f67a4f790ef3",
+    "docs/seguimiento_fpga/aclaraciones_documentales.md": "1f6d5f666879cb927f549d431258254b22dac12a82ae6a6d1e44d1e1a8bf4a29",
+    "docs/seguimiento_fpga/decisiones.csv": "6d3a3ba26acc6941f2fad038a3981a537f452c56d5e1812b6bc8ef0dcb17de79",
+    "docs/seguimiento_fpga/estado_y_resultados.md": "a245061924c3f594c2cfdca128024e964754e8d9dfc68196d0fd7b11094f6232",
+    "docs/seguimiento_fpga/evaluaciones_100mhz.csv": "995846b7a5629ac2e0aa2754f6ae62cb80e05bad84258ab32a981c98ebee6984",
+    "docs/seguimiento_fpga/historial_pruebas.md": "20726c41c6592c91f1da0560e044c3b82efd568e5930bedbc7cfe7d37325226f",
+    "docs/seguimiento_fpga/indice_documentacion.md": "d1bf69f1d306e2fa500a375be6bee36d035eeab50ded21b842033503a7e91514",
+    "docs/seguimiento_fpga/mapa_documental.md": "bddb02e4e4a893e665d2d42dd9ffe4add30032a9df43dbf068030a8ee984ad4e",
+    "docs/seguimiento_fpga/metodologia_y_decisiones.md": "b3512df6f570034693d162d1582e9b3f091b438891188ec6181a9e2a4a2b26d5",
+    "docs/seguimiento_fpga/operacion_y_recuperacion.md": "1d26308bf066eb91942a29db39c0074201576ae8cc2e080fc5013456de446005",
+    "docs/seguimiento_fpga/resultados_clave.csv": "f3d26744854d83ec32d1d84d388944b6bbfd62a42a165c50ebdfb3300780a3b4"
+  },
+  "new_documents": {
+    "docs/seguimiento_fpga/actualizacion_20261105_paquete_100mhz.md": "318f60f80bb94e10e5769e7c4679a4b46695746d496dc8aafa3aad57e54564e4",
+    "docs/seguimiento_fpga/comparacion_implementaciones_100mhz_20261104.md": "0d05b1fbcff9928ee634145514e5fdafae65eb2dec784f351207947b3a00d2e4",
+    "docs/seguimiento_fpga/auditorias/timings_20261105.json": "329cf2223f987d6a1bc2504356299d0879d97fdab8c300ebee0c8c764d607b9b"
+  },
+  "external_documents": {
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/README.md": "819d51d9542f8541c6efb53a86fb09e2a249db99a4867796c1bd29754f1d2c78",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/README-120MHz.md": "0bb4b0e5b71baeb2e7d84c2862b339a99c5818187ff3cbb0f6677e95d7c9250c",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/README-100MHz-real.md": "6bf47d8070f5113204e1ac0ac5fd1fb1600b5b39e7c7aef825733763860e6cc8",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/paquete_100mhz_desde_cast3/LEEME.md": "15d200a0c3086e3a1355f1d9b4706369f0439e80df90083e4bbc96384cdcb871",
+    "/home/nachofalchi/data/fpga-work/automatizacion/README.md": "4ee29e698aba13088ed300364b204b5e0a43298cf8fa68aa0588c71dad571562",
+    "/home/nachofalchi/data/fpga-work/automatizacion/cva6_ops/templates_board/README.txt": "90ee8a13ac1aeaf36ce7b6a5c99bfc868db0be577c2c9f210cd9da2388f4b414"
+  },
+  "source_reports": {
+    "cast3_100_real_clock_final": {
+      "path": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/implementacion_100MHz_reloj_real/cast3/reports/timing_summary.rpt",
+      "sha256": "a511757a4766c55895a7b02ca58517820fe3def428f51897c3447415f8c4d22c"
+    },
+    "cast3_120_final": {
+      "path": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/prueba_120MHz_20261104_baja_carga/cast3/reports/timing_summary.rpt",
+      "sha256": "8373ff7493b967ba42001127695dadc42021f7b49d1be1e796b69ed6dfce2c2b"
+    }
+  },
+  "baseline_preserved": {
+    "docs/README.md": "46888c57e51c1bdf9124581c65ac6f43d5d5ec7d5aa65d6bea415b2a482fb100",
+    "docs/seguimiento_fpga/README.md": "2ac3550f9cb36dad4db1e2b018e180dfb40100b2dbee8d0c0a6634f0e3e4783c",
+    "docs/seguimiento_fpga/aclaraciones_documentales.md": "3c610d54578228bd031dfca379200044d45d527dc9d7f1bc57b84145311a8577",
+    "docs/seguimiento_fpga/decisiones.csv": "462eb505adf32768c16ccfc8125a177ed461c15ba139c3b6b401e82add7fd6cd",
+    "docs/seguimiento_fpga/estado_y_resultados.md": "1b835a8cb113cb25c745b5546a5be0aba0ad6133ac6c689823683af4a0b1b62d",
+    "docs/seguimiento_fpga/evaluaciones_100mhz.csv": "a093f5e1741f172ade64d2efdcbb8c1b60091a3ecd737f4882fdee2a40bdabca",
+    "docs/seguimiento_fpga/historial_pruebas.md": "16c8033008d0cb50e25d8200c815cc4424f0240c37e3528253ac38244b187769",
+    "docs/seguimiento_fpga/mapa_documental.md": "b6dcae485a665fd464458860b3c44b946547f75c52c857d3252e1916705bb004",
+    "docs/seguimiento_fpga/metodologia_y_decisiones.md": "148e2f8d6e97d6bbf69a13227fa2cc56160c3be03251e3d6bba575bac85b99e9",
+    "docs/seguimiento_fpga/operacion_y_recuperacion.md": "06d96064a2ccd4d8b29c564a9a47a8cb0d874de43e9d89b53cf3feebd61606d6",
+    "docs/seguimiento_fpga/resultados_clave.csv": "dcd59137c93df9281399007e24e83ed9cdd998a7ed1f2c87550d1e115d5810ce"
+  },
+  "preserved_without_changes": [
+    "docs/seguimiento_fpga/actualizacion_20261104_cast.md",
+    "docs/seguimiento_fpga/SHA256SUMS_20261104.txt",
+    "docs/seguimiento_fpga/archivo_documental_20261104_cast.tar.gz",
+    "docs/seguimiento_fpga/auditorias/timings_20261104.json"
+  ],
+  "archive_scope": "Updated documentation, CSV, evidence JSON, package hash list, FSBL manifest and three final timing summaries. No DCP, BIT, XSA or ELF.",
+  "archive_format": "documentos/<repo-relative-path>, evidencia/<name>, manifest.json"
+}

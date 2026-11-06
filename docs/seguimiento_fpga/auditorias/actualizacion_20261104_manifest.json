@@ -1,0 +1,44 @@
+{
+  "cutoff": "2026-11-04T16:53:58.759291-03:00",
+  "updated_documents": {
+    "docs/README.md": "46888c57e51c1bdf9124581c65ac6f43d5d5ec7d5aa65d6bea415b2a482fb100",
+    "docs/seguimiento_fpga/README.md": "2ac3550f9cb36dad4db1e2b018e180dfb40100b2dbee8d0c0a6634f0e3e4783c",
+    "docs/seguimiento_fpga/estado_y_resultados.md": "1b835a8cb113cb25c745b5546a5be0aba0ad6133ac6c689823683af4a0b1b62d",
+    "docs/seguimiento_fpga/historial_pruebas.md": "16c8033008d0cb50e25d8200c815cc4424f0240c37e3528253ac38244b187769",
+    "docs/seguimiento_fpga/metodologia_y_decisiones.md": "148e2f8d6e97d6bbf69a13227fa2cc56160c3be03251e3d6bba575bac85b99e9",
+    "docs/seguimiento_fpga/operacion_y_recuperacion.md": "06d96064a2ccd4d8b29c564a9a47a8cb0d874de43e9d89b53cf3feebd61606d6",
+    "docs/seguimiento_fpga/aclaraciones_documentales.md": "3c610d54578228bd031dfca379200044d45d527dc9d7f1bc57b84145311a8577",
+    "docs/seguimiento_fpga/mapa_documental.md": "b6dcae485a665fd464458860b3c44b946547f75c52c857d3252e1916705bb004",
+    "docs/seguimiento_fpga/actualizacion_20261104_cast.md": "c5556e0923f07631aefee41c22e3baf39c1cf6058509d9113131dcc7b8e258c1",
+    "docs/seguimiento_fpga/auditorias/timings_20261104.json": "7718e23709bb29224848e60ca46845a231f9c940de27d9f3841cba6af9f104f5",
+    "docs/seguimiento_fpga/resultados_clave.csv": "dcd59137c93df9281399007e24e83ed9cdd998a7ed1f2c87550d1e115d5810ce",
+    "docs/seguimiento_fpga/evaluaciones_100mhz.csv": "a093f5e1741f172ade64d2efdcbb8c1b60091a3ecd737f4882fdee2a40bdabca",
+    "docs/seguimiento_fpga/decisiones.csv": "462eb505adf32768c16ccfc8125a177ed461c15ba139c3b6b401e82add7fd6cd"
+  },
+  "source_reports": {
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast2/reports/post_synthesis/timing_summary.rpt": "06f1d2c46e3f51e605a978c854944f92a855dfaba4f5b6c25dd163413514f267",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/campana_preparada/cast2/source/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.runs/fpu100_impl/kr260_top_timing_summary_routed.rpt": "50033c81fd456728f1ef04c32addf905efaf8bf9a6f444de6e912e56a75cfc6b",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast2/reports/timing_summary.rpt": "a4b5cebd59fb4462901eadc5e2ed9ef9be63a7d5c34ac4fb93014b0abcf64e68",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast3/reports/post_synthesis/timing_summary.rpt": "256edce1e7f3208eb4e0a794159b8d78298d7ed9cd98043507fbb875ac4235e2",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast3/reports/routed_before_final/timing_summary.rpt": "88a6daabbaeaeabfa928ed2d31ff46e381799d038a2b420dad68ee10ba19be26",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast3/reports/timing_summary.rpt": "aa465cc82d78c5e8855bb3e224c51ce86ae347f1655ca84e7a5e76adac2739c2",
+    "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/prueba_120MHz_20261104_baja_carga/cast3/reports/post_synthesis/timing_summary.rpt": "7fe1cc0138c8ea04a100f757e37dd55534a4eff7dc8bea8e5b5c1b0880953636"
+  },
+  "baseline_preserved": {
+    "docs/README.md": "157234624d58eb723fef8c49003dd3787363a3416b13ad05ca2507fe55aded3f",
+    "docs/seguimiento_fpga/README.md": "4d7f471a2a57619f5fd52b1098f02594b54add1d55a3bc5a44294cb155b4326a",
+    "docs/seguimiento_fpga/estado_y_resultados.md": "72ec61dd29b19654e3efd41bb95c433b4ee344617e669578b8d48961f0893feb",
+    "docs/seguimiento_fpga/historial_pruebas.md": "747726c5573f8145bcc8e60e4da3e3066d39220cb9c2efd6617e97259892c8d4",
+    "docs/seguimiento_fpga/metodologia_y_decisiones.md": "0d5b7d90d0ca17aa056c4996e278e2cfe9d957c9141974a4b2df891c15b76ee8",
+    "docs/seguimiento_fpga/operacion_y_recuperacion.md": "ba9b0a61827cdacc7984095a2055620431b3811cbe66b69bf2778e8cf4879720",
+    "docs/seguimiento_fpga/aclaraciones_documentales.md": "0347c7e3764c5e538c64bc332e5b85d579ee9cd5c5cd90c1c8eb0ef7a43df224",
+    "docs/seguimiento_fpga/mapa_documental.md": "842f58e3642715515b0ac4baf097e3fdb709d12ea140f50d42bb64f05f273f63",
+    "docs/seguimiento_fpga/actualizacion_20261104_cast.md": null,
+    "docs/seguimiento_fpga/auditorias/timings_20261104.json": null,
+    "docs/seguimiento_fpga/resultados_clave.csv": "b0f88406335cca8597abf453184f545461631ac26472e1422145245405903baa",
+    "docs/seguimiento_fpga/evaluaciones_100mhz.csv": "8e32300d1f6e13d302ee4dbc4b25d6fc63806672134e5f458ceb0990918352e2",
+    "docs/seguimiento_fpga/decisiones.csv": "f6c7b06e77c5ef356776866816180c989cd44c8ece600c6205e0ed8538aab6b7"
+  },
+  "archive_scope": "Updated documentation, CSV and seven timing summaries. No full RTL snapshots, DCP, BIT or XSA.",
+  "archive_format": "documentos/<repo-relative-path>, evidencia/<stage>.rpt, manifest.json"
+}

@@ -1,0 +1,1419 @@
+{
+  "audit_local_time": "2026-10-29T00:05:39.385645-03:00",
+  "scope": "read-only; no service/process mutation or implementation launch",
+  "sources": {
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_sweep.md": {
+      "sha256": "b1cf4b0e0ceec4086e40f224c908a72275e0fcf0aaab7fcc2d7c5b1c4a968b13",
+      "size_bytes": 10397,
+      "line_count": 193,
+      "mtime_local": "2026-10-18T13:48:14.965730-03:00",
+      "role": "Stage-level runner recovery, fixed linked synthesis, logout/reboot semantics",
+      "classification": "generic reusable guide; campaign details historical"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_matrix.md": {
+      "sha256": "d8f0acdd7b2a87150bb20dc98c47364a9c8efc4edb4de187aa76f4b37092543e",
+      "size_bytes": 12686,
+      "line_count": 231,
+      "mtime_local": "2026-10-18T15:31:15.821848-03:00",
+      "role": "Frequency/synthesis/implementation matrix, progressive policy, strict signoff",
+      "classification": "generic reusable guide; pilot/search active claims historical"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_evidence.md": {
+      "sha256": "8b52f8eb19d8144b93e3affcc07e424e2f01f43becd9bcd127cda28848b4f704",
+      "size_bytes": 5523,
+      "line_count": 99,
+      "mtime_local": "2026-10-18T18:02:15.074634-03:00",
+      "role": "Append-only content-addressed archive, early pilot/search reports",
+      "classification": "historical 2026-10-18/19 scope; service not active now"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_versionado_y_recuperacion.md": {
+      "sha256": "9a337b1c1a2823bdfda8a78237771939facd6c7e8ccab4aa499a95b3b7cd7271",
+      "size_bytes": 4207,
+      "line_count": 39,
+      "mtime_local": "2026-09-11T11:24:39.656244-03:00",
+      "role": "Git restoration and September11 KR260 BRAM project backup",
+      "classification": "historical hardware/build snapshot; not current 100MHz signoff"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep_service.py": {
+      "sha256": "d9392d84cc60936b0a50343c12bef104cad1cd51a759bc12d56ec59c97296e43",
+      "size_bytes": 5311,
+      "line_count": 101,
+      "mtime_local": "2026-10-18T23:32:30.317191-03:00",
+      "role": "Generic start/status/stop/resume using launch.json and frozen code",
+      "classification": "reusable generic utility; does not resume focused physical campaigns"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep.py": {
+      "sha256": "1d455b8d0c5fe7344c50d65fda11635c9a89c4c2c0c58d6af4238b8273517fdd",
+      "size_bytes": 11853,
+      "line_count": 235,
+      "mtime_local": "2026-10-18T13:32:13.052720-03:00",
+      "role": "Fixed linked checkpoint and per-frequency committed-stage coordinator",
+      "classification": "reusable generic utility; no process launched in audit"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep.tcl": {
+      "sha256": "c757394ed40d874d181be7b166d7e26d0da34325d09689106637f7a09ad47cff",
+      "size_bytes": 4614,
+      "line_count": 107,
+      "mtime_local": "2026-10-18T23:31:13.692705-03:00",
+      "role": "Checkpoint commit markers and stage fallback",
+      "classification": "reusable generic utility"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_matrix.py": {
+      "sha256": "5d19ed91aef1f623980ad4c0ced282c11118a0d4b975e4401bead9bf72354950",
+      "size_bytes": 20291,
+      "line_count": 370,
+      "mtime_local": "2026-10-18T13:56:22.016553-03:00",
+      "role": "Frozen project snapshot and per-synthesis-frequency strategy search",
+      "classification": "reusable generic utility; not the latest focused campaign"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_night.py": {
+      "sha256": "294a24f29ae289b3f43c6e6cd23d53b7f7e184e911656f818d211dd53f7e3e44",
+      "size_bytes": 9827,
+      "line_count": 131,
+      "mtime_local": "2026-10-18T23:32:13.503085-03:00",
+      "role": "Older broad night matrix with seed reuse",
+      "classification": "historical campaign utility"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/archive_timing_results.py": {
+      "sha256": "de4bfa6cd72bebd0ef73f1fba471380add4e9751859266de6e886568df8c70dd",
+      "size_bytes": 8775,
+      "line_count": 178,
+      "mtime_local": "2026-10-18T17:58:58.518533-03:00",
+      "role": "Append-only SHA256 objects archive; writes output when executed",
+      "classification": "reusable archiver, NOT a read-only status tool"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/CURRENT_STATUS.txt": {
+      "sha256": "22833686570f1cb7089efb43b3ffa9b1693d684947687e8afdd85bfc768a69d3",
+      "size_bytes": 1331,
+      "line_count": 21,
+      "mtime_local": "2026-10-22T10:01:18.037401-03:00",
+      "role": "Last human-maintained status snapshot",
+      "classification": "STALE: October22 before current boot"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/README.txt": {
+      "sha256": "9eedca6107d23ab6aa00e115571d8bf4522a360feeb516219eb4bcb070984310",
+      "size_bytes": 1321,
+      "line_count": 25,
+      "mtime_local": "2026-10-22T09:27:37.350442-03:00",
+      "role": "Latest passive campaign resource/plan explanation",
+      "classification": "historical latest interface, absolute window expired"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh": {
+      "sha256": "3b924dd0bbcb3ced5fa11e2846e900e0cf94d898cd7dc3e81273a6daec0c5444",
+      "size_bytes": 3619,
+      "line_count": 77,
+      "mtime_local": "2026-10-22T09:23:08.297109-03:00",
+      "role": "--check/--status read-only; --start/--resume/--stop mutate runtime/PAUSE",
+      "classification": "latest passive control interface; cannot resume expired window"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/guard_day.py": {
+      "sha256": "8a643664407e8fd8397df41bb7be9b08841af5d7e7cb19ea3d37804484d5e325",
+      "size_bytes": 18965,
+      "line_count": 419,
+      "mtime_local": "2026-10-22T09:26:05.657520-03:00",
+      "role": "Shared cgroup ownership, memory/disk/pressure controls and absolute deadline",
+      "classification": "frozen historical operation; no changes permitted"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/controller_day.py": {
+      "sha256": "7e784eb22e9bd460226892ec7e4d718704d8a78729dcd76ea6a373cbc015463a",
+      "size_bytes": 16274,
+      "line_count": 264,
+      "mtime_local": "2026-10-22T09:30:22.655684-03:00",
+      "role": "Two justified pending combinations and final signoff",
+      "classification": "frozen historical operation; no repeated incomplete physical work blindly"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/window.json": {
+      "sha256": "9d5b85f6c02982e0e4738364a010b4ea84e6883ef4f8f411b1738657cb99d127",
+      "size_bytes": 687,
+      "line_count": 13,
+      "mtime_local": "2026-10-22T09:23:37.153567-03:00",
+      "role": "Absolute search/deadline window",
+      "classification": "EXPIRED 2026-10-22"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/state.json": {
+      "sha256": "dc4618e893009b4417a8600e4b36b6eff66feb970bbcf8254424316afcc98539",
+      "size_bytes": 10013,
+      "line_count": 199,
+      "mtime_local": "2026-10-22T09:58:27.654701-03:00",
+      "role": "Persisted last state with zero valid daytime results",
+      "classification": "STALE waiting_resources; not proof of active worker"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/summary.json": {
+      "sha256": "a4da44dca474b78816d73df91b26e7c978f83d336e0f6eda516f92884f18a1e2",
+      "size_bytes": 4186,
+      "line_count": 96,
+      "mtime_local": "2026-10-22T09:58:27.658702-03:00",
+      "role": "Last passive campaign summary and best pointers",
+      "classification": "persisted evidence, not live status"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/guard_interruption.json": {
+      "sha256": "5fb592d70099c8631bd64b4262081855f3755aadde4ea33ce60f4c6f272c9511",
+      "size_bytes": 2433,
+      "line_count": 53,
+      "mtime_local": "2026-10-22T09:39:06.523393-03:00",
+      "role": "RAM-critical interruption record",
+      "classification": "historical resource stop, not timing failure"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_recovery_20261022/wait_for_memory.py": {
+      "sha256": "74e48cb3c1597a346d80faca0301a0f8dd499b1abd0c5023f534467f48b177ad",
+      "size_bytes": 5687,
+      "line_count": 76,
+      "mtime_local": "2026-10-22T09:59:33.322584-03:00",
+      "role": "One-shot memory-based retry, no looped launches; --execute mutates campaign",
+      "classification": "historical retry with expired latest-start deadline"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_recovery_20261022/waiter_state.json": {
+      "sha256": "753c7c275ebf2ca6387dd10f703897411822aa383469820f58e34de08907d3f8",
+      "size_bytes": 384,
+      "line_count": 16,
+      "mtime_local": "2026-10-22T10:42:28.256184-03:00",
+      "role": "Last retry wait snapshot",
+      "classification": "STALE: predates current host boot"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/README_v3.txt": {
+      "sha256": "1afd5e2f9bb1a3d0c963a870ab2edf5208cfe4c809fc5eea0e9167ab9af92db4",
+      "size_bytes": 2014,
+      "line_count": 19,
+      "mtime_local": "2026-10-22T00:54:13.213808-03:00",
+      "role": "V3 fixes and operational commands",
+      "classification": "historical latest night version, completed and expired"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/start_night_v3.sh": {
+      "sha256": "a3689eb2740ddcc1d48ffd7c4f24d594d16404f274e0f7f5a2d74c1d2e56b883",
+      "size_bytes": 3598,
+      "line_count": 77,
+      "mtime_local": "2026-10-22T00:48:19.546353-03:00",
+      "role": "Night V3 status/pause/resume interface",
+      "classification": "historical current version; V1/V2 superseded"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/window.json": {
+      "sha256": "74f13cb507d9100a759e768032dd237253f7e0150548ba680ae1d64a429b1906",
+      "size_bytes": 512,
+      "line_count": 12,
+      "mtime_local": "2026-10-21T23:04:12.809345-03:00",
+      "role": "Original overnight absolute window",
+      "classification": "EXPIRED 2026-10-22 08:01:18"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/summary.json": {
+      "sha256": "8ff913c04dd911cfedd1cd8f4bb79890603ff08ab356e7121e5a281123234e16",
+      "size_bytes": 49970,
+      "line_count": 844,
+      "mtime_local": "2026-10-22T03:31:54.284173-03:00",
+      "role": "Overnight complete summary and distinct best definitions",
+      "classification": "historical evidence; root results audit should validate best pointers"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/start.sh": {
+      "sha256": "b3c75e83670289ccee43c2db08c3303a33ec6c1076d3946085c04c967574c584",
+      "size_bytes": 445,
+      "line_count": 5,
+      "mtime_local": "2026-10-21T17:40:45.019551-03:00",
+      "role": "Oct21 boosted continuation service entry point",
+      "classification": "historical one-shot handoff; not a general restart command"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/controller.py": {
+      "sha256": "c01469b785195a49c137fdaa1718df47e35aa4de930b77ba1ab6ac6107643689",
+      "size_bytes": 6165,
+      "line_count": 109,
+      "mtime_local": "2026-10-21T17:40:07.973903-03:00",
+      "role": "Reviewed-boundary handoff, remaining groups, one replacement replay",
+      "classification": "historical Oct21 campaign; replay ended review-required"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/handoff.json": {
+      "sha256": "2b26e2b3b278b44cfd93c15f13f3cc98ec050228af69ac021ac0fed02f675bd4",
+      "size_bytes": 26554,
+      "line_count": 149,
+      "mtime_local": "2026-10-21T17:50:46.974036-03:00",
+      "role": "Actual old-controller boundary transfer provenance",
+      "classification": "immutable historical execution evidence"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/state.json": {
+      "sha256": "90cc9614be8682ee33ef041c8e89e734a3d5131f0afe4a6aa512ca578c9e9b8e",
+      "size_bytes": 1006,
+      "line_count": 5,
+      "mtime_local": "2026-10-21T19:25:02.497138-03:00",
+      "role": "Last boosted controller failure/review state",
+      "classification": "historical review-required result; do not rerun blindly"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_continuation_20261021/start.sh": {
+      "sha256": "24a18fc11f2136af35c507d8590222712c817d2969eaa56d55fd42755cc72352",
+      "size_bytes": 380,
+      "line_count": 4,
+      "mtime_local": "2026-10-21T17:06:45.107730-03:00",
+      "role": "Older passive continuation entry point",
+      "classification": "superseded by actual boosted handoff"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/start_v2.sh": {
+      "sha256": "e2bcd8be2920cea33ff9c41adce104b722bcfb8270bb219633723fd20028b5f7",
+      "size_bytes": 393,
+      "line_count": 4,
+      "mtime_local": "2026-10-21T15:29:55.392205-03:00",
+      "role": "Original focused group queue",
+      "classification": "historical; do not launch alongside other controllers"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/replay_preplacement_20261021/start_passive_v3.sh": {
+      "sha256": "8d5e546b8f66f6750df59a3546542f5b513661adb07b5253b5597e7a3a2b967a",
+      "size_bytes": 462,
+      "line_count": 8,
+      "mtime_local": "2026-10-21T17:21:02.907395-03:00",
+      "role": "Passive full replacement dispatcher for preplacement002",
+      "classification": "historical one-shot output already exists; not safe automatic repeat"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/README.txt": {
+      "sha256": "8d68849e2f65fa09c4fb5f44dde11e77fc3a815907d95bbec3a4f227320e22ce",
+      "size_bytes": 2791,
+      "line_count": 36,
+      "mtime_local": "2026-10-21T15:40:55.758767-03:00",
+      "role": "Verified cold text hardlink dedup and reversal",
+      "classification": "historical external maintenance; not currently running"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/watcher.py": {
+      "sha256": "1a77860cffdab83e67f4e52fc4c5b56c24b8afb93e1c77d51bca383a5b4a9d1a",
+      "size_bytes": 15043,
+      "line_count": 343,
+      "mtime_local": "2026-10-21T15:35:42.769802-03:00",
+      "role": "Only independently proved completed inactive outputs eligible; default writes external plan",
+      "classification": "maintenance utility; default not strictly read-only"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/config.json": {
+      "sha256": "cb132af5f91f9c4f85b99eb5d331da4a004125811915f173fd00a31d88e37014",
+      "size_bytes": 385,
+      "line_count": 9,
+      "mtime_local": "2026-10-21T15:33:47.764534-03:00",
+      "role": "Exact two campaign roots and cold SATP source",
+      "classification": "scope excludes later night/passive results"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/archive_cold_logs.py": {
+      "sha256": "82209c17c1223ff9e9358ef7408a109772479f9398100519f76dfc474f3636a7",
+      "size_bytes": 3937,
+      "line_count": 51,
+      "mtime_local": "2026-10-21T15:44:56.964700-03:00",
+      "role": "One-off gzip tar archive with round-trip SHA then removal",
+      "classification": "MUTATING AT TOP LEVEL: do not run/import as a query"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/README.txt": {
+      "sha256": "54fce4dd1f76fa3f3492520e8ca5ebbc12dd91644688208a71ef516fd8370160",
+      "size_bytes": 1310,
+      "line_count": 14,
+      "mtime_local": "2026-10-21T18:21:34.377711-03:00",
+      "role": "Compression/dedup historical operation and recovery commands",
+      "classification": "historical archive inventory"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/restore_reports.py": {
+      "sha256": "38daa1fa97f44611668c5b664499ab07d0b313de0d2355298bc1f7ce59933357",
+      "size_bytes": 4016,
+      "line_count": 63,
+      "mtime_local": "2026-10-21T18:21:34.377711-03:00",
+      "role": "SHA checked gzip restore, default prints plan; --execute mutates",
+      "classification": "reusable restoration utility with2.5GiB free reserve"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_maintenance_20261021/README.txt": {
+      "sha256": "10aef7c47329060051718c23496800d0dbf1fef5a975fde481fc36ef2dbbdef7",
+      "size_bytes": 3751,
+      "line_count": 53,
+      "mtime_local": "2026-10-21T17:02:20.967656-03:00",
+      "role": "Strict scoped disposable HTTP cache policy",
+      "classification": "historical; fixed Oct21 cutoff expired"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_maintenance_20261021/maintain.py": {
+      "sha256": "cf02806d26b1627d51b008b5d5b01489e1eb46b8a7ee9dcef8b7e698877e8583",
+      "size_bytes": 18007,
+      "line_count": 409,
+      "mtime_local": "2026-10-21T17:02:20.527656-03:00",
+      "role": "HTTP cache deletion only execute/watch; excludes user/browser state",
+      "classification": "historical maintenance; do not restart as routine"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-evidence/20261018/collector_provenance.json": {
+      "sha256": "dc0042f16fc03ebd6f9a23326314c27dffe56fa44f6fd95b9514a0b660abe5be",
+      "size_bytes": 720,
+      "line_count": 15,
+      "mtime_local": "2026-10-18T18:01:00.092483-03:00",
+      "role": "Archive input roots and frozen collector hashes",
+      "classification": "covers only pilot_100mhz and search_100_300mhz"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-evidence/20261018/archive_state.json": {
+      "sha256": "f54346395f17732ea6d1c55c254d6519e8c76f74e976720375cc09bc6d9bd800",
+      "size_bytes": 113,
+      "line_count": 6,
+      "mtime_local": "2026-10-19T10:28:36.885405-03:00",
+      "role": "Last archive pass",
+      "classification": "last updated2026-10-19 10:28:36-03"
+    }
+  },
+  "host": {
+    "cva6_units": {
+      "command": [
+        "systemctl",
+        "--user",
+        "list-units",
+        "--all",
+        "--no-pager",
+        "--plain",
+        "--no-legend",
+        "cva6*"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "cva6_unit_files": {
+      "command": [
+        "systemctl",
+        "--user",
+        "list-unit-files",
+        "--no-pager",
+        "--no-legend",
+        "cva6*"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    "linger": {
+      "command": [
+        "loginctl",
+        "show-user",
+        "nachofalchi",
+        "-pLinger"
+      ],
+      "rc": 0,
+      "stdout": "Linger=yes\n",
+      "stderr": ""
+    },
+    "uptime": {
+      "command": [
+        "uptime",
+        "-p"
+      ],
+      "rc": 0,
+      "stdout": "up 6 days, 9 hours, 24 minutes\n",
+      "stderr": ""
+    },
+    "memory": {
+      "command": [
+        "free",
+        "-b"
+      ],
+      "rc": 0,
+      "stdout": "               total        used        free      shared  buff/cache   available\nMem:     12077449216  7100817408  1407926272   627838976  4531785728  4976631808\nSwap:    12884893696  2975686656  9909207040\n",
+      "stderr": ""
+    },
+    "clock": {
+      "command": [
+        "date",
+        "--iso-8601=seconds"
+      ],
+      "rc": 0,
+      "stdout": "2026-10-29T00:05:39-03:00\n",
+      "stderr": ""
+    },
+    "disk": {
+      "total": 200030756864,
+      "used": 187501891584,
+      "free": 2320617472,
+      "free_GiB": 2.161243438720703
+    },
+    "memory_psi": "some avg10=0.00 avg60=0.00 avg300=0.00 total=363547624\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=264743447\n",
+    "meminfo": {
+      "MemTotal": "11794384 kB",
+      "MemAvailable": "4859992 kB",
+      "SwapTotal": "12582904 kB",
+      "SwapFree": "9676960 kB"
+    },
+    "timing_processes": [],
+    "snapshot_refreshed_local": "2026-10-29T00:09:21.849941-03:00",
+    "boot_local": "2026-10-22T14:41:26-03:00",
+    "current_boot_id": "d1ebda7a-a213-4676-8c9e-6a99a9e8f5cf",
+    "known_unit_properties": {
+      "cva6-passive-20261022.service": {
+        "rc": 0,
+        "MainPID": "0",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      },
+      "cva6-passive-memory-wait-20261022.service": {
+        "rc": 0,
+        "MainPID": "0",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      },
+      "cva6-night-20261021.service": {
+        "rc": 0,
+        "MainPID": "0",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      },
+      "cva6-day-boost-continuation.service": {
+        "rc": 0,
+        "MainPID": "0",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      },
+      "cva6-day-continuation.service": {
+        "rc": 0,
+        "MainPID": "0",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      },
+      "cva6-timing-evidence.service": {
+        "rc": 0,
+        "MainPID": "0",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      },
+      "cva6-cold-text-dedup-20261021.service": {
+        "rc": 0,
+        "MainPID": "0",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      },
+      "cva6-http-cache-maintenance-20261021.service": {
+        "rc": 0,
+        "MainPID": "0",
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      }
+    },
+    "pause_markers": [],
+    "interpretation": [
+      "No active or loaded cva6 units found at audit time.",
+      "No actual Vivado or timing coordinator/archiver process detected.",
+      "Linger=yes remains enabled; it does not restart transient services after reboot.",
+      "Current boot is October22 14:41:26; CURRENT_STATUS and latest waiter state predate that boot.",
+      "Available disk is about2.17GiB, below3GiB startup/boundary and3.5GiB retry requirements; also below2.5GiB restore/older guard reserve."
+    ],
+    "cva6_timer_query": {
+      "command": "systemctl --user list-timers --all --no-pager --no-legend 'cva6*'",
+      "expected_scope": "Only currently known user timers with cva6 names; no claim about unrelated external schedulers"
+    },
+    "timer_queries_are_read_only": true
+  },
+  "focus_inventory": {
+    "operands_recovery_20261021": {
+      "files": [
+        "README.md",
+        "analyzer_v1.py",
+        "check_ce_evidence_v1.py",
+        "freeze.py",
+        "guard.py",
+        "package_manifest.json",
+        "prepare.py",
+        "start.sh",
+        "state.json",
+        "test_ce_logic_v1.py",
+        "test_local_v4.py",
+        "test_recovery.py"
+      ]
+    },
+    "group_trial": {
+      "files": [
+        "README.txt",
+        "attestation.json",
+        "guard.py",
+        "guard_v2.py",
+        "guard_v3.py",
+        "guard_v4.py",
+        "job_manifest.json",
+        "job_manifest_v2.json",
+        "job_manifest_v3.json",
+        "job_manifest_v4.json",
+        "preparation_attestation.json",
+        "prepare.py",
+        "state.json",
+        "state_satp_group003.json",
+        "state_satp_group004.json",
+        "target.json",
+        "test_trial.py",
+        "test_trial_v2.py",
+        "test_trial_v3.py",
+        "test_trial_v4.py"
+      ]
+    },
+    "passive_recovery_20261022": {
+      "files": [
+        "before_recovery_guard_interruption.json",
+        "before_recovery_guard_state.json",
+        "before_recovery_state.json",
+        "before_recovery_summary.json",
+        "test_wait_for_memory.py",
+        "wait_for_memory.py",
+        "waiter_state.json",
+        "watcher_manifest.json"
+      ]
+    },
+    "recovery_review_002": {
+      "files": [
+        "state.json"
+      ]
+    },
+    "day_continuation_20261021": {
+      "files": [
+        "README.txt",
+        "common.py",
+        "controller.py",
+        "import_recovery.py",
+        "manifest.json",
+        "prepare.py",
+        "recovery_import.json",
+        "runtime_profile.py",
+        "start.sh",
+        "state.json",
+        "test_continuation.py",
+        "test_passive_guard.py",
+        "test_runtime_profile.py"
+      ]
+    },
+    "analysis_code": {
+      "files": [
+        "README.txt",
+        "analyze.py",
+        "analyzer_recovery.py",
+        "analyzer_recovery_v3.py",
+        "recovery_review_runner.py",
+        "recovery_review_runner_v2.py",
+        "recovery_review_runner_v3.py",
+        "retry_recovery003_csv.py",
+        "start_recovery_review.sh",
+        "start_recovery_review_v2.sh",
+        "start_recovery_review_v3.sh",
+        "test_analyze.py",
+        "test_analyzer_recovery.py",
+        "test_recovery_review_runner.py",
+        "test_recovery_review_runner_v2.py"
+      ]
+    },
+    "night_plan_20261021": {
+      "files": [
+        "PLAN_NOCHE.txt",
+        "algorithm_research.txt",
+        "eco_physical_review.json",
+        "eco_physical_review.txt",
+        "plan.json",
+        "resource_duration_audit.json",
+        "review_manifest.json"
+      ]
+    },
+    "constraint_serialization_v2_20261021": {
+      "files": [
+        "analyzer_replacement_v2.py",
+        "analyzer_v2.py",
+        "authorization_registry.json",
+        "semantic_v2.py",
+        "test_serialization_v2.py",
+        "verify_v2.py"
+      ]
+    },
+    "operands_recovery_20261021_v5": {
+      "files": [
+        "README.md",
+        "freeze.py",
+        "guard.py",
+        "package_manifest.json",
+        "prepare.py",
+        "start.sh",
+        "state.json",
+        "test_recovery.py"
+      ]
+    },
+    "passive_day_20261022": {
+      "files": [
+        "README.txt",
+        "best_balanced.json",
+        "best_wns.json",
+        "controller_day.py",
+        "freeze_day.py",
+        "guard_day.py",
+        "guard_interruption.json",
+        "guard_state.json",
+        "launch_record.json",
+        "manifest.json",
+        "plan.json",
+        "start_day.sh",
+        "state.json",
+        "summary.json",
+        "test_controller_day.py",
+        "test_guard_day.py",
+        "window.json"
+      ]
+    },
+    "satp004_recovery": {
+      "files": [
+        "README.txt",
+        "RECOVERY_V2_NOTES.txt",
+        "RECOVERY_V3_NOTES.txt",
+        "attestation.json",
+        "attestation_signoff002.json",
+        "attestation_signoff003.json",
+        "check_constraints_v2.py",
+        "check_constraints_v3.py",
+        "forensic_constraint_proof.json",
+        "guard.py",
+        "guard_v2.py",
+        "guard_v3.py",
+        "job_manifest.json",
+        "job_manifest_v2.json",
+        "job_manifest_v3.json",
+        "preparation_attestation.json",
+        "recovery_inputs.json",
+        "semantic_constraints.py",
+        "semantic_constraints_v3.py",
+        "state.json",
+        "state_signoff002.json",
+        "state_signoff003.json",
+        "target.json",
+        "test_guard.py",
+        "test_guard_v2.py",
+        "test_guard_v3.py",
+        "test_python_isolation.py",
+        "test_python_isolation_v3.py",
+        "test_recovery.py",
+        "verify_saved_candidate.py",
+        "verify_saved_candidate_v3.py"
+      ]
+    },
+    "analyses": {
+      "files": []
+    },
+    "ce_replica_probe_20261021_v2": {
+      "files": [
+        "attestation.json",
+        "guard.py",
+        "inputs.json",
+        "source_manifest.json",
+        "state.json",
+        "verify.py"
+      ]
+    },
+    "ce_replica_probe_20261021_v4": {
+      "files": [
+        "attestation.json",
+        "guard.py",
+        "inputs.json",
+        "proof.json",
+        "proof_preliminary.json",
+        "source_manifest.json",
+        "state.json",
+        "verify.py"
+      ]
+    },
+    "replay_preplacement_20261021": {
+      "files": [
+        "README.txt",
+        "README_V2.txt",
+        "README_passive_v3.md",
+        "analyzer.py",
+        "analyzer_v2.py",
+        "best_v2.json",
+        "clockInfo.txt",
+        "dispatch.py",
+        "dispatch_passive_v3.py",
+        "dispatch_v2.py",
+        "freeze_passive_v3.py",
+        "guard.py",
+        "guard_passive_v3.py",
+        "guard_state_v2.json",
+        "guard_v2.py",
+        "package_manifest.json",
+        "package_manifest_passive_v3.json",
+        "package_manifest_v2.json",
+        "select_history.py",
+        "start.sh",
+        "start_passive_v3.sh",
+        "start_v2.sh",
+        "state.json",
+        "state_v2.json",
+        "test_dispatch.py",
+        "test_dispatch_v2.py",
+        "test_guard_lifecycle.py",
+        "test_guard_lifecycle_v2.py",
+        "test_passive_v3.py",
+        "test_preparation.py",
+        "test_preparation_v2.py",
+        "test_select_history.py",
+        "test_v2_isolation.py"
+      ]
+    },
+    "ce_replica_probe_20261021_v3": {
+      "files": [
+        "attestation.json",
+        "guard.py",
+        "inputs.json",
+        "source_manifest.json",
+        "state.json",
+        "verify.py"
+      ]
+    },
+    "integrity_extension": {
+      "files": [
+        "README.txt",
+        "check_constraints.py",
+        "test_check_constraints.py"
+      ]
+    },
+    "recovery_review_003": {
+      "files": [
+        "state.json",
+        "summary.json"
+      ]
+    },
+    "day_groups_20261021": {
+      "files": [
+        "README.txt",
+        "analyzer.py",
+        "best.json",
+        "best_v2.json",
+        "campaign_state_v2.json",
+        "guard.py",
+        "guard_passive_v3.py",
+        "guard_v2.py",
+        "helpers_v2.json",
+        "initial_satp_validated.json",
+        "policy_manifest.json",
+        "policy_manifest_v2.json",
+        "prepare.py",
+        "prepare_v2.py",
+        "queue.py",
+        "queue_passive_v3.py",
+        "queue_v2.py",
+        "semantic_constraints.py",
+        "start.sh",
+        "start_v2.sh",
+        "state.json",
+        "state_v2.json",
+        "test_queue.py",
+        "test_v2.py",
+        "verify_candidate.py"
+      ]
+    },
+    "recovery_review_001": {
+      "files": [
+        "state.json"
+      ]
+    },
+    "ce_replica_probe_20261021_v1": {
+      "files": [
+        "attestation.json",
+        "guard.py",
+        "inputs.json",
+        "source_manifest.json",
+        "state.json",
+        "verify.py"
+      ]
+    },
+    "probe": {
+      "files": [
+        "README.txt",
+        "attestation.json",
+        "guard.py",
+        "job_manifest.json",
+        "provenance.json",
+        "state.json",
+        "target.json"
+      ]
+    },
+    "operands_recovery_20261021_v4": {
+      "files": [
+        "README.md",
+        "freeze.py",
+        "guard.py",
+        "package_manifest.json",
+        "prepare.py",
+        "start.sh",
+        "state.json",
+        "test_recovery.py"
+      ]
+    },
+    "status_history": {
+      "files": [
+        "CURRENT_STATUS.pre_memory_wait_20261022.txt",
+        "CURRENT_STATUS.pre_morning_20261022.txt",
+        "CURRENT_STATUS.pre_passive_20261022.txt",
+        "CURRENT_STATUS_20261021_173324_557770.txt",
+        "CURRENT_STATUS_20261021_174746_513393.txt",
+        "CURRENT_STATUS_20261021_182237_272544.txt",
+        "CURRENT_STATUS_20261021_215905_117202.txt",
+        "before_night_1792636932.txt",
+        "snapshot_20261021_184602.json"
+      ]
+    },
+    "__pycache__": {
+      "files": []
+    },
+    "night_run_20261021": {
+      "files": [
+        "README.txt",
+        "README_v3.txt",
+        "RESULTADOS.txt",
+        "best_balanced.json",
+        "best_wns.json",
+        "controller.py",
+        "controller_v2.py",
+        "controller_v3.py",
+        "freeze.py",
+        "freeze_v2.py",
+        "freeze_v3.py",
+        "guard_night.py",
+        "guard_state.json",
+        "handoff_v3.json",
+        "handoff_v3_snapshot_1792641091996006652.json",
+        "launch_validation.json",
+        "manifest.json",
+        "manifest_v2.json",
+        "manifest_v3.json",
+        "morning_review_20261022.txt",
+        "preflight_result.json",
+        "repair_v3_prelaunch.json",
+        "resume_v3_record.json",
+        "start_night.sh",
+        "start_night_v2.sh",
+        "start_night_v3.sh",
+        "state.json",
+        "summary.json",
+        "test_controller.py",
+        "test_controller_v2.py",
+        "test_controller_v3.py",
+        "version_transition.json",
+        "watcher_v3.py",
+        "watcher_v3_state.json",
+        "window.json"
+      ]
+    },
+    "comparative_research_20261021": {
+      "files": [
+        "CONCLUSIONES.txt",
+        "evidence.json"
+      ]
+    },
+    "day_boost_20261021": {
+      "files": [
+        "README.txt",
+        "checker.py",
+        "common.py",
+        "controller.py",
+        "guard_boost.py",
+        "handoff.json",
+        "handoff.py",
+        "manifest.json",
+        "prepare.py",
+        "queue_boost.py",
+        "replay_dispatch_boost.py",
+        "replay_dispatch_started.json",
+        "replay_guard_boost.py",
+        "runtime_profile.py",
+        "start.sh",
+        "state.json",
+        "test_average_metrics.py",
+        "test_boost.py"
+      ]
+    }
+  },
+  "useful_entry_points": [
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_sweep.md",
+      "role": "Stage-level runner recovery, fixed linked synthesis, logout/reboot semantics",
+      "classification": "generic reusable guide; campaign details historical"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_matrix.md",
+      "role": "Frequency/synthesis/implementation matrix, progressive policy, strict signoff",
+      "classification": "generic reusable guide; pilot/search active claims historical"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_evidence.md",
+      "role": "Append-only content-addressed archive, early pilot/search reports",
+      "classification": "historical 2026-10-18/19 scope; service not active now"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_versionado_y_recuperacion.md",
+      "role": "Git restoration and September11 KR260 BRAM project backup",
+      "classification": "historical hardware/build snapshot; not current 100MHz signoff"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep_service.py",
+      "role": "Generic start/status/stop/resume using launch.json and frozen code",
+      "classification": "reusable generic utility; does not resume focused physical campaigns"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep.py",
+      "role": "Fixed linked checkpoint and per-frequency committed-stage coordinator",
+      "classification": "reusable generic utility; no process launched in audit"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep.tcl",
+      "role": "Checkpoint commit markers and stage fallback",
+      "classification": "reusable generic utility"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_matrix.py",
+      "role": "Frozen project snapshot and per-synthesis-frequency strategy search",
+      "classification": "reusable generic utility; not the latest focused campaign"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_night.py",
+      "role": "Older broad night matrix with seed reuse",
+      "classification": "historical campaign utility"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/archive_timing_results.py",
+      "role": "Append-only SHA256 objects archive; writes output when executed",
+      "classification": "reusable archiver, NOT a read-only status tool"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/CURRENT_STATUS.txt",
+      "role": "Last human-maintained status snapshot",
+      "classification": "STALE: October22 before current boot"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/README.txt",
+      "role": "Latest passive campaign resource/plan explanation",
+      "classification": "historical latest interface, absolute window expired"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh",
+      "role": "--check/--status read-only; --start/--resume/--stop mutate runtime/PAUSE",
+      "classification": "latest passive control interface; cannot resume expired window"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/guard_day.py",
+      "role": "Shared cgroup ownership, memory/disk/pressure controls and absolute deadline",
+      "classification": "frozen historical operation; no changes permitted"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/controller_day.py",
+      "role": "Two justified pending combinations and final signoff",
+      "classification": "frozen historical operation; no repeated incomplete physical work blindly"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/window.json",
+      "role": "Absolute search/deadline window",
+      "classification": "EXPIRED 2026-10-22"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/state.json",
+      "role": "Persisted last state with zero valid daytime results",
+      "classification": "STALE waiting_resources; not proof of active worker"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/summary.json",
+      "role": "Last passive campaign summary and best pointers",
+      "classification": "persisted evidence, not live status"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/guard_interruption.json",
+      "role": "RAM-critical interruption record",
+      "classification": "historical resource stop, not timing failure"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_recovery_20261022/wait_for_memory.py",
+      "role": "One-shot memory-based retry, no looped launches; --execute mutates campaign",
+      "classification": "historical retry with expired latest-start deadline"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_recovery_20261022/waiter_state.json",
+      "role": "Last retry wait snapshot",
+      "classification": "STALE: predates current host boot"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/README_v3.txt",
+      "role": "V3 fixes and operational commands",
+      "classification": "historical latest night version, completed and expired"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/start_night_v3.sh",
+      "role": "Night V3 status/pause/resume interface",
+      "classification": "historical current version; V1/V2 superseded"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/window.json",
+      "role": "Original overnight absolute window",
+      "classification": "EXPIRED 2026-10-22 08:01:18"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/summary.json",
+      "role": "Overnight complete summary and distinct best definitions",
+      "classification": "historical evidence; root results audit should validate best pointers"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/start.sh",
+      "role": "Oct21 boosted continuation service entry point",
+      "classification": "historical one-shot handoff; not a general restart command"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/controller.py",
+      "role": "Reviewed-boundary handoff, remaining groups, one replacement replay",
+      "classification": "historical Oct21 campaign; replay ended review-required"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/handoff.json",
+      "role": "Actual old-controller boundary transfer provenance",
+      "classification": "immutable historical execution evidence"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_boost_20261021/state.json",
+      "role": "Last boosted controller failure/review state",
+      "classification": "historical review-required result; do not rerun blindly"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_continuation_20261021/start.sh",
+      "role": "Older passive continuation entry point",
+      "classification": "superseded by actual boosted handoff"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/start_v2.sh",
+      "role": "Original focused group queue",
+      "classification": "historical; do not launch alongside other controllers"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/replay_preplacement_20261021/start_passive_v3.sh",
+      "role": "Passive full replacement dispatcher for preplacement002",
+      "classification": "historical one-shot output already exists; not safe automatic repeat"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/README.txt",
+      "role": "Verified cold text hardlink dedup and reversal",
+      "classification": "historical external maintenance; not currently running"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/watcher.py",
+      "role": "Only independently proved completed inactive outputs eligible; default writes external plan",
+      "classification": "maintenance utility; default not strictly read-only"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/config.json",
+      "role": "Exact two campaign roots and cold SATP source",
+      "classification": "scope excludes later night/passive results"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/archive_cold_logs.py",
+      "role": "One-off gzip tar archive with round-trip SHA then removal",
+      "classification": "MUTATING AT TOP LEVEL: do not run/import as a query"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/README.txt",
+      "role": "Compression/dedup historical operation and recovery commands",
+      "classification": "historical archive inventory"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/restore_reports.py",
+      "role": "SHA checked gzip restore, default prints plan; --execute mutates",
+      "classification": "reusable restoration utility with2.5GiB free reserve"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_maintenance_20261021/README.txt",
+      "role": "Strict scoped disposable HTTP cache policy",
+      "classification": "historical; fixed Oct21 cutoff expired"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_maintenance_20261021/maintain.py",
+      "role": "HTTP cache deletion only execute/watch; excludes user/browser state",
+      "classification": "historical maintenance; do not restart as routine"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-evidence/20261018/collector_provenance.json",
+      "role": "Archive input roots and frozen collector hashes",
+      "classification": "covers only pilot_100mhz and search_100_300mhz"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-evidence/20261018/archive_state.json",
+      "role": "Last archive pass",
+      "classification": "last updated2026-10-19 10:28:36-03"
+    }
+  ],
+  "windows": [
+    {
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/window.json",
+      "start_local": "2026-10-21T23:01:18-03:00",
+      "search_deadline_local": "2026-10-22T06:31:18-03:00",
+      "hard_deadline_local": "2026-10-22T08:01:18-03:00",
+      "expired_at_audit": true,
+      "must_not_reset": true
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/window.json",
+      "start_local": "2026-10-22T09:23:37.154172-03:00",
+      "search_deadline_local": "2026-10-22T19:00:00-03:00",
+      "hard_deadline_local": "2026-10-22T21:00:00-03:00",
+      "expired_at_audit": true,
+      "must_not_reset": true
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_recovery_20261022/wait_for_memory.py",
+      "latest_retry_start_local": "2026-10-22T17:00:00-03:00",
+      "expired_at_audit": true,
+      "requirements": {
+        "MemAvailable_GiB": 7.5,
+        "stable_seconds": 60,
+        "swap_free_GiB": 2,
+        "disk_free_GiB": 3.5,
+        "host_memory_full_avg10_below": 0.5
+      },
+      "one_shot_only": true
+    }
+  ],
+  "resource_profiles": {
+    "passive_day_20261022": {
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh",
+      "CPUQuota": "100% (one logicalCPU equivalent, out of8logical)",
+      "Tcl_threads": 2,
+      "Nice": 15,
+      "IO": "idle",
+      "MemoryHigh_GiB": 4,
+      "MemoryMax_GiB": 5,
+      "MemorySwapMax_GiB": 1,
+      "startup_available_RAM_GiB": 4,
+      "startup_free_disk_GiB": 3,
+      "hard_RAM_floor_GiB": 2,
+      "hard_disk_floor_GiB": 2,
+      "safe_boundary_RAM_floor_GiB": 3,
+      "safe_boundary_disk_floor_GiB": 3,
+      "throttle_to_CPUQuota": "50% when availableRAM<4GiB",
+      "recovery_hysteresis_seconds": 30,
+      "explicit_pause_marker": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/PAUSE"
+    },
+    "night_V3_and_day_boost": {
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/start_night_v3.sh",
+      "CPUQuota": "400%",
+      "Tcl_threads": 4,
+      "Nice": 5,
+      "IO": "best-effort",
+      "MemoryHigh_GiB": 4,
+      "MemoryMax_GiB": 6,
+      "MemorySwapMax_GiB": 3,
+      "historical_only": true
+    }
+  },
+  "safe_query_commands": [
+    {
+      "command": "systemctl --user list-units --all --no-pager 'cva6*'",
+      "purpose": "Live inventory; authoritative over stale state.json"
+    },
+    {
+      "command": "systemctl --user show cva6-passive-20261022.service -pLoadState -pActiveState -pSubState -pMainPID -pInvocationID",
+      "purpose": "Specific current unit status; not-found is expected after reboot"
+    },
+    {
+      "command": "loginctl show-user nachofalchi -p Linger",
+      "purpose": "Verify logout persistence prerequisite without changing it"
+    },
+    {
+      "command": "free -h",
+      "purpose": "RAM/swap snapshot"
+    },
+    {
+      "command": "df -h /home/nachofalchi/data/fpga-work",
+      "purpose": "Actual filesystem free space"
+    },
+    {
+      "command": "bash /home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh --status",
+      "purpose": "Read persisted passive window/guard/state and live service"
+    },
+    {
+      "command": "bash /home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh --check",
+      "purpose": "Pure structural window/controller-path check; success DOES NOT mean the absolute window has not expired, nor that all manifest/resource checks pass"
+    },
+    {
+      "command": "bash /home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/start_night_v3.sh --status",
+      "purpose": "Read historical night status; does not resume"
+    },
+    {
+      "command": "python3 -B /home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep_service.py status --output /home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz",
+      "purpose": "Read the older matrix status only; not a current focused-campaign status"
+    },
+    {
+      "command": "journalctl --user -u cva6-passive-20261022.service --no-pager -n80",
+      "purpose": "Read service logs if journal retention has them; absence is not proof campaign never ran"
+    },
+    {
+      "command": "python3 -B /home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_recovery_20261022/wait_for_memory.py",
+      "purpose": "No --execute: prints resources/requirements only; no retry"
+    },
+    {
+      "command": "python3 -B /home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/restore_reports.py",
+      "purpose": "No --execute: verify gzip/original digests and print restore plan; no restoration; may read many compressed files"
+    },
+    {
+      "command": "gzip -dc /absolute/path/to/report.rpt.gz",
+      "purpose": "View a compressed text report without restoring/deleting it; substitute an actual indexed file"
+    }
+  ],
+  "mutating_controls_NOT_executed": [
+    {
+      "command": "bash /home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh --stop",
+      "effect": "Writes explicit PAUSE and stops only the passive campaign service; current unit absent, stop may return nonzero though PAUSE persists"
+    },
+    {
+      "command": "bash /home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh --resume",
+      "effect": "Within valid original window only: clears PAUSE, starts original guarded campaign; TODAY rejected because original absolute deadline expired"
+    },
+    {
+      "command": "bash /home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/start_night_v3.sh --stop",
+      "effect": "Writes night PAUSE and stops original night unit"
+    },
+    {
+      "command": "bash /home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/start_night_v3.sh --resume",
+      "effect": "Historical V3 resume preserves original window; TODAY deadline expired"
+    },
+    {
+      "command": "python3 -B /home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep_service.py stop --output <EXACT_ORIGINAL_OUTPUT>",
+      "effect": "Stops generic sweep/matrix unit derived from SHA of output path; does not write focused PAUSE"
+    },
+    {
+      "command": "python3 -B /home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep_service.py resume --output <EXACT_ORIGINAL_OUTPUT>",
+      "effect": "Generic sweep/matrix only: uses original launch.json and frozen inputs/code, not the focused campaign; do not substitute new clocks/strategies"
+    },
+    {
+      "command": "python3 -B /home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/restore_reports.py --execute --path /absolute/original/report.rpt",
+      "effect": "Restores only after compressed and uncompressed SHA checks, requires2.5GiB reserve plus output; do not execute at current low disk space"
+    }
+  ],
+  "recovery_procedure": {
+    "after_logout": [
+      "Query units/processes and persisted job identities first. If the correct service is active, leave it running; never duplicate it.",
+      "Linger=yes user services and the night/day sleep inhibitor are designed to survive logout; this audit did not perform a logout endurance test.",
+      "Do not equate a saved waiting_resources/running string with a live service."
+    ],
+    "after_reboot_or_power_loss": [
+      "Transient systemd-run user services have no persistent enabled start unit here and Restart=no; no automatic restart is expected. Current boot postdates saved waiter/current status.",
+      "Preserve logs, .partial, unverified candidates, prior manifests and all .ok markers. Never present interrupted physical work as a completed or timing-failed strategy.",
+      "Generic sweep/matrix resume validates fixed checkpoint/source/code SHA and recovers latest valid .dcp+.ok stage; the interrupted Vivado command must run again from a committed prior stage.",
+      "Focused physical campaigns require their own immutable plan/manifest/absolute window and state audit; generic timing_sweep_service.py cannot resume them.",
+      "All October21/22 windows have expired. Retaking now requires a separate explicitly authorized fresh window/package based on validated best evidence and preserved pending work. Do not edit old deadlines/manifests to make resume pass."
+    ],
+    "integrity": [
+      "CPU RTL/parameters/state/latency must remain within the user-authorized unmodified CPU scope; keep exact clock/constraint/debug coverage and protected-gold hashes.",
+      "A timing report with negative setup slack is valid measurement but not closure; hold alone does not close100MHz.",
+      "Fresh validation checks setup/hold/pulse, full routing, DRC, constraints, fixed endpoint scope, source/FF/state identity and no new FF/retiming where campaign policy requires."
+    ]
+  },
+  "storage_and_backups": {
+    "free_disk_now_GiB": 2.161243438720703,
+    "can_start_latest_historical_campaign_under_its_guards_now": false,
+    "policies": [
+      "Preserve checkpoint parents/gold, source snapshots, manifests, independent analyses, launch/job records and report provenance. No blanket rm of experiments or raw .partial while a worker owns them.",
+      "Cold text dedup permits only inactive independently reviewed completed jobs, exact SHA/content/perms, only >=1MiB .rpt/.tsv/.xdc in allowed subdirectories. It preserves all paths/content via shared inode; do not edit shared snapshots in place.",
+      "Cold report compression was one-off, round-trip gzip SHA verified before removing raw originals; raw-required analyzers may need restoration first. Do not assume .gz is a missing experiment.",
+      "Default watcher.py planning writes external audit files; archive_cold_logs.py mutates at top level and must never be imported/executed merely to inspect status.",
+      "Do not lower disk reserves to force a run. Current2.17GiB is below normal3GiB startup and3.5GiB retry limits. Restore also needs2.5GiB+uncompressed output."
+    ],
+    "historical_compressed_report_count": 212,
+    "compression_index": "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/compressed_reports.jsonl",
+    "compression_index_rows": 424,
+    "compression_restore_tool": "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/restore_reports.py",
+    "cold_log_archives": {
+      "base": "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021",
+      "manifest_and_marker": "cold_logs_verified_*/manifest.json and each run/ARCHIVED_EXECUTION_LOGS.txt",
+      "verification": "Archive tar member SHA/size round-trip checked before deleting original cold log/resource text",
+      "restore": "Extract only exact recorded members to a safe staging area, verify SHA, then restore explicit paths; avoid overwriting existing different files"
+    },
+    "automatic_maintenance_currently_running": false,
+    "chrome_cache_cleanup": "Historical exact Default/Profile3 Cache/Cache_Data HTTP-only disposable entries, >=15min, not open, no symlinks/hardlinks, perpass256MiB max; excludes CodeCache/ServiceWorker/IndexedDB/cookies/history/profiles. Fixed2026-10-21 cutoff expired; no deletion executed in this audit.",
+    "content_addressed_evidence_archive": {
+      "root": "/home/nachofalchi/data/fpga-work/timing-evidence/20261018",
+      "sources": [
+        "/home/nachofalchi/data/fpga-work/timing-matrix/pilot_100mhz",
+        "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz"
+      ],
+      "last_state": {
+        "updated_at": "2026-10-19T10:28:36-0300",
+        "captured_versions": 0,
+        "tracked_paths": 6204,
+        "errors": []
+      },
+      "current_service": "not-found/inactive",
+      "scope_warning": "Only original pilot+search are configured; newer focused/night/passive campaigns are NOT automatically proven covered. Same filesystem, not disk-failure backup.",
+      "recover": "Look up exact source path/version SHA in index.json; copy objects/<sha> to a NEW restore destination and verify SHA; do not overwrite a differing original."
+    },
+    "documented_september_backup": {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_versionado_y_recuperacion.md",
+      "archive_name": "cva6-kr260_2026-09-11_11-15-55/cva6-equipo_completo.tar.gz",
+      "documented_bytes": 1408686469,
+      "documented_sha256": "f6741834451dd785da10be4cbb7e36d694d20dc1de404d064fd8ed29194e3a04",
+      "audit_verification": "Documented claim only; archive location/existence/full hash not revalidated in this audit. It predates October timing campaign and is not its backup.",
+      "external_copy": "Document recommends preserving outside working disk; no current external backup destination was established or verified."
+    },
+    "git": "Version RTL/constraints/scripts/docs/XPR/BD/XCI exact source configuration; .runs/.gen/.cache/DCP/BIT/LTX/log captures and full archives are not included by Git. Restoring Git alone requires IP regeneration and full synthesis/implementation, not reusing absent run-complete flags."
+  },
+  "warnings": [
+    {
+      "severity": "critical_for_restart",
+      "message": "No CVA6 user service/timer or actual timing process is currently present. October22 waiting_resources snapshots are stale; all saved focus windows expired. No persistent cva6 unit files were found; unrelated scheduling mechanisms were not audited."
+    },
+    {
+      "severity": "critical_for_restart",
+      "message": "Current diskfree2.17GiB violates startup/retry/restore reserves. Resolve storage with evidence-preserving plan before any new trial."
+    },
+    {
+      "severity": "source_recency",
+      "message": "CURRENT_STATUS.txt dateOct22 10:01 and waiter_stateOct22 10:42 predate currentbootOct22 14:41. Do not copy active-service claims into today status."
+    },
+    {
+      "severity": "operator_semantics",
+      "message": "start_day.sh --check only validates/prints window/controller presence and may exit0 on an expired window; it is not readiness certification."
+    },
+    {
+      "severity": "operator_semantics",
+      "message": "Do not use generic timing_sweep_service resume or old day_groups/replay starts to retake the focused physical suite; each campaign owns separate state, locks, scopes and outputs."
+    },
+    {
+      "severity": "backup_coverage",
+      "message": "The evidence collector is inactive and its provenance covers only two original matrix runs, with last passOct19; it is not a comprehensive later-campaign backup and not an external backup."
+    },
+    {
+      "severity": "archive_counts",
+      "message": "compressed_reports.jsonl has424rows describing212unique removals/stages, not424compressed experiments/reports."
+    },
+    {
+      "severity": "historical_result",
+      "message": "September WNS+11.854 and earlier estimates are historical artifacts for a different saved configuration; they do not prove current100MHz implementation timing."
+    },
+    {
+      "severity": "scope_alert",
+      "message": "A separate timing-preparation/exp100_retiming_20261022 directory exists outside assigned focused audit scope. Its name is an inventory observation only; no behavior/result/authorization inferred here. Keep it separate from unmodified/no-retiming campaign conclusions."
+    }
+  ],
+  "source_line_hints": {
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/timing_sweep_service.py": {
+      "status_branch": 30,
+      "stop_branch": 42,
+      "linger_requirement": 52,
+      "resume_frozen_runner": 84
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/start_day.sh": {
+      "status": "--status case",
+      "explicit_pause": "--stop writes PAUSE then systemctl stop",
+      "expired_window": "PY_BUDGET checks existing deadline before clearing PAUSE",
+      "profile": "MemoryHigh4G/MemoryMax5G/Swap1G CPU100 Nice15 IOidle; sleep inhibitor"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/guard_day.py": {
+      "check_is_structural_only": "main --check return precedes expiry/runtime/manifest enforcement",
+      "disk_controls": "critical_stop_reason2GiB; boundary3GiB; startup3GiB",
+      "memory_controls": "hard2GiB; throttle4GiB; boundary3GiB; pressure conditional"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_recovery_20261022/wait_for_memory.py": {
+      "read_only_query": "without --execute prints requirements/resources only",
+      "ready": "available7.5GiB,swap2GiB,disk3.5GiB,PSI<.5; stable60s",
+      "expired_retry": "admitted before every launch, latest searchdeadline-7200"
+    },
+    "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/restore_reports.py": {
+      "dry_plan": "without --execute verifies and prints; no restore",
+      "reserve": "free must be>=2.5GiB+restored file size",
+      "hash": "archive hash before, streamed restored hash, committed hash after"
+    },
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/scripts/archive_timing_results.py": {
+      "keep": "excludes .Xil/__pycache__/.git/*.cache/.partial",
+      "save_file": "content addressed SHA object, keeps prior versions",
+      "coverage": "CLI --run list determines roots; never assume later directories covered"
+    }
+  },
+  "audit_completed_local": "2026-10-29T00:09:21.911674-03:00",
+  "no_original_files_modified": true,
+  "no_runs_launched": true,
+  "no_services_or_processes_mutated": true
+}

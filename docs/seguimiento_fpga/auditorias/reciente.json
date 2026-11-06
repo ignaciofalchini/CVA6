@@ -1,0 +1,1136 @@
+{
+  "schema_version": 1,
+  "audit_date_local": "2026-10-29",
+  "purpose": "Fragmento factual de evidencias recientes para consolidación documental CVA6/KR260",
+  "method": {
+    "read_only_originals": true,
+    "no_vivado_services_tests_or_builds_launched": true,
+    "only_written_artifact": "/tmp/cva6_doc_recent_audit.json",
+    "host_reads_require_escalated": true,
+    "external_sources_not_revalidated": true,
+    "pdf_text_and_metadata_read_after_skill": "/home/nachofalchi/.codex/plugins/cache/openai-primary-runtime/pdf/26.630.12135/skills/pdf/SKILL.md",
+    "pdf_visual_layout_not_audited": true
+  },
+  "inventory": [
+    {
+      "root": "/home/nachofalchi/data/fpga-work/reports",
+      "count": 4,
+      "files": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/reports/Frecuencia del CVA6 en FPGA.md",
+          "bytes": 29298,
+          "mtime_local": "2026-10-27T15:15:32.604064-03:00",
+          "tipo": ".md"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/reports/kr260_next_steps/lint/compile_order.rpt",
+          "bytes": 230347,
+          "mtime_local": "2026-08-13T10:07:01.711918-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/reports/kr260_next_steps/lint/kr260_xvlog.prj",
+          "bytes": 26281,
+          "mtime_local": "2026-08-13T10:05:59.817498-03:00",
+          "tipo": ".prj"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/reports/kr260_next_steps/lint/rtl_blackboxes.rpt",
+          "bytes": 209,
+          "mtime_local": "2026-08-13T10:07:01.935919-03:00",
+          "tipo": ".rpt"
+        }
+      ]
+    },
+    {
+      "root": "/home/nachofalchi/data/fpga-work/research_notes",
+      "count": 6,
+      "files": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/cva6_ports_zynq_kria.md",
+          "bytes": 14140,
+          "mtime_local": "2026-10-28T10:32:32.541507-03:00",
+          "tipo": ".md"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/otros_nucleos_kria.md",
+          "bytes": 26867,
+          "mtime_local": "2026-10-28T10:13:21.813780-03:00",
+          "tipo": ".md"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/caminos_criticos_y_tecnicas.md",
+          "bytes": 42593,
+          "mtime_local": "2026-10-27T15:02:51.935891-03:00",
+          "tipo": ".md"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/k26_y_comparativa.md",
+          "bytes": 33307,
+          "mtime_local": "2026-10-27T15:03:34.779035-03:00",
+          "tipo": ".md"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/oficial_cva6_fpga.md",
+          "bytes": 45590,
+          "mtime_local": "2026-10-27T15:07:28.054605-03:00",
+          "tipo": ".md"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/ports_y_papers.md",
+          "bytes": 49945,
+          "mtime_local": "2026-10-27T15:09:00.709753-03:00",
+          "tipo": ".md"
+        }
+      ]
+    },
+    {
+      "root": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022",
+      "count": 44,
+      "files": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/aggressive_physopt.dcp",
+          "bytes": 47934008,
+          "mtime_local": "2026-10-22T13:20:55.635962-03:00",
+          "tipo": ".dcp"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/aggressive_physopt.log",
+          "bytes": 78896,
+          "mtime_local": "2026-10-22T13:22:52.372458-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/aggressive_physopt.tcl",
+          "bytes": 2992,
+          "mtime_local": "2026-10-22T13:29:47.469631-03:00",
+          "tipo": ".tcl"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/collect_fixed.tcl",
+          "bytes": 12565,
+          "mtime_local": "2026-10-22T12:41:29.184826-03:00",
+          "tipo": ".tcl"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/estimate_from_reports.py",
+          "bytes": 3478,
+          "mtime_local": "2026-10-22T12:37:25.882015-03:00",
+          "tipo": ".py"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/investigacion.txt",
+          "bytes": 2418,
+          "mtime_local": "2026-10-22T12:35:51.552939-03:00",
+          "tipo": ".txt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/ps_clock_candidates.csv",
+          "bytes": 431,
+          "mtime_local": "2026-10-22T12:35:51.552939-03:00",
+          "tipo": ".csv"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/ps_clock_candidates.json",
+          "bytes": 2519,
+          "mtime_local": "2026-10-22T12:35:51.552939-03:00",
+          "tipo": ".json"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/routed_initial_estimate.json",
+          "bytes": 4794,
+          "mtime_local": "2026-10-22T12:37:26.158007-03:00",
+          "tipo": ".json"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/sources.json",
+          "bytes": 961,
+          "mtime_local": "2026-10-22T12:35:51.552939-03:00",
+          "tipo": ".json"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/test_estimate_from_reports.py",
+          "bytes": 1374,
+          "mtime_local": "2026-10-22T12:37:25.882015-03:00",
+          "tipo": ".py"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/unconstrained_review.json",
+          "bytes": 11077,
+          "mtime_local": "2026-10-22T12:41:15.045051-03:00",
+          "tipo": ".json"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/bus_skew.rpt",
+          "bytes": 69184,
+          "mtime_local": "2026-10-22T12:54:07.399329-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/check_timing.rpt",
+          "bytes": 9194,
+          "mtime_local": "2026-10-22T12:53:40.921331-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/clock_interaction.rpt",
+          "bytes": 3313,
+          "mtime_local": "2026-10-22T12:53:40.246331-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/clocks.rpt",
+          "bytes": 2068,
+          "mtime_local": "2026-10-22T12:53:19.690338-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/critical_hold.rpt",
+          "bytes": 122174,
+          "mtime_local": "2026-10-22T12:53:39.525331-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/critical_setup.rpt",
+          "bytes": 1633664,
+          "mtime_local": "2026-10-22T12:53:39.021332-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/drc.rpt",
+          "bytes": 119289,
+          "mtime_local": "2026-10-22T12:53:50.029330-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/methodology.rpt",
+          "bytes": 29499,
+          "mtime_local": "2026-10-22T12:54:02.360329-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/route_status.rpt",
+          "bytes": 651,
+          "mtime_local": "2026-10-22T12:53:45.357330-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/summary.txt",
+          "bytes": 98,
+          "mtime_local": "2026-10-22T12:54:09.193329-03:00",
+          "tipo": ".txt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/timing_summary.rpt",
+          "bytes": 1670382,
+          "mtime_local": "2026-10-22T12:53:38.060332-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/utilization.rpt",
+          "bytes": 12937,
+          "mtime_local": "2026-10-22T12:54:03.342329-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/bus_skew.rpt",
+          "bytes": 69197,
+          "mtime_local": "2026-10-22T13:21:35.367772-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/check_timing.rpt",
+          "bytes": 9227,
+          "mtime_local": "2026-10-22T13:21:02.674927-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/clocks.rpt",
+          "bytes": 2079,
+          "mtime_local": "2026-10-22T13:21:01.881930-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/critical_hold.rpt",
+          "bytes": 120233,
+          "mtime_local": "2026-10-22T13:21:01.759931-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/critical_setup.rpt",
+          "bytes": 1593953,
+          "mtime_local": "2026-10-22T13:21:01.079934-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/drc.rpt",
+          "bytes": 119300,
+          "mtime_local": "2026-10-22T13:21:13.779872-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/methodology.rpt",
+          "bytes": 29524,
+          "mtime_local": "2026-10-22T13:21:29.931797-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/pulse_width.rpt",
+          "bytes": 3212,
+          "mtime_local": "2026-10-22T13:21:36.375767-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/route_status.rpt",
+          "bytes": 651,
+          "mtime_local": "2026-10-22T13:21:08.729897-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/summary.txt",
+          "bytes": 95,
+          "mtime_local": "2026-10-22T13:21:36.376767-03:00",
+          "tipo": ".txt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/timing_summary.rpt",
+          "bytes": 1718063,
+          "mtime_local": "2026-10-22T13:20:59.803941-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/run_impl.log",
+          "bytes": 2282173,
+          "mtime_local": "2026-10-22T12:54:11.379329-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/run_impl_91mhz.tcl",
+          "bytes": 3195,
+          "mtime_local": "2026-10-22T10:46:08.007636-03:00",
+          "tipo": ".tcl"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/run_impl_interrupted_1110.log",
+          "bytes": 789193,
+          "mtime_local": "2026-10-22T11:10:19.350167-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/set_pl0.log",
+          "bytes": 8573,
+          "mtime_local": "2026-10-22T10:45:25.955564-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/set_pl0.stdout",
+          "bytes": 7885,
+          "mtime_local": "2026-10-22T10:45:25.955564-03:00",
+          "tipo": ".stdout"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/set_pl0_91mhz.tcl",
+          "bytes": 2113,
+          "mtime_local": "2026-10-22T10:44:23.263444-03:00",
+          "tipo": ".tcl"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/xsa_from_checkpoint.log",
+          "bytes": 8951,
+          "mtime_local": "2026-10-22T13:26:50.260839-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/xsa_from_checkpoint.tcl",
+          "bytes": 635,
+          "mtime_local": "2026-10-22T13:24:19.391176-03:00",
+          "tipo": ".tcl"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/xsa_from_checkpoint_final.log",
+          "bytes": 9004,
+          "mtime_local": "2026-10-22T13:29:37.024639-03:00",
+          "tipo": ".log"
+        }
+      ]
+    },
+    {
+      "root": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022",
+      "count": 19,
+      "files": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/backup_before/SHA256_before.txt",
+          "bytes": 385,
+          "mtime_local": "2026-10-22T14:22:50.685878-03:00",
+          "tipo": ".txt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/backup_before/ariane_kr260_debug.xpr",
+          "bytes": 112532,
+          "mtime_local": "2026-10-22T13:20:38.726048-03:00",
+          "tipo": ".xpr"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/dry_run.log",
+          "bytes": 6587,
+          "mtime_local": "2026-10-22T14:23:57.367749-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/dry_run2.log",
+          "bytes": 8401,
+          "mtime_local": "2026-10-22T15:44:24.327144-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log",
+          "bytes": 838684,
+          "mtime_local": "2026-10-22T16:15:42.335856-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_2proc_cortada_1537.log",
+          "bytes": 2482268,
+          "mtime_local": "2026-10-22T15:35:37.092470-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_impl.xdc",
+          "bytes": 376,
+          "mtime_local": "2026-10-22T14:23:16.026827-03:00",
+          "tipo": ".xdc"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_incremental_1543.log",
+          "bytes": 689662,
+          "mtime_local": "2026-10-22T15:43:22.305077-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_interrupted_1440.log",
+          "bytes": 795362,
+          "mtime_local": "2026-10-22T14:40:14.493973-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_oom_1503.log",
+          "bytes": 1055060,
+          "mtime_local": "2026-10-22T15:02:52.833258-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_reset_fallido_1538.log",
+          "bytes": 7654,
+          "mtime_local": "2026-10-22T15:38:48.804747-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_retiming.tcl",
+          "bytes": 7999,
+          "mtime_local": "2026-10-22T15:44:13.741133-03:00",
+          "tipo": ".tcl"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_synth.xdc",
+          "bytes": 343,
+          "mtime_local": "2026-10-22T14:23:15.970827-03:00",
+          "tipo": ".xdc"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/stale_markers_1540/.stop.rst",
+          "bytes": 0,
+          "mtime_local": "2026-10-22T15:38:36.681731-03:00",
+          "tipo": ".rst"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/stale_markers_1540/.vivado.begin.rst",
+          "bytes": 204,
+          "mtime_local": "2026-10-22T15:34:03.651314-03:00",
+          "tipo": ".rst"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/synth_estimate/families.txt",
+          "bytes": 938,
+          "mtime_local": "2026-10-22T16:18:58.014264-03:00",
+          "tipo": ".txt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/synth_estimate/timing_summary.rpt",
+          "bytes": 337389,
+          "mtime_local": "2026-10-22T16:18:49.360126-03:00",
+          "tipo": ".rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/synth_estimate.log",
+          "bytes": 6745,
+          "mtime_local": "2026-10-22T16:18:58.019264-03:00",
+          "tipo": ".log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/synth_estimate.tcl",
+          "bytes": 1816,
+          "mtime_local": "2026-10-22T16:16:37.323879-03:00",
+          "tipo": ".tcl"
+        }
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+      "bytes": 12773,
+      "mtime_local": "2026-10-22T16:36:55.225015-03:00"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+      "bytes": 461547,
+      "mtime_local": "2026-10-25T16:04:45.831884-03:00"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+      "bytes": 3423,
+      "mtime_local": "2026-10-22T13:40:49.386844-03:00"
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/SHA256SUMS.txt",
+      "bytes": 2731,
+      "mtime_local": "2026-10-22T13:40:49.592844-03:00"
+    }
+  ],
+  "facts": [
+    {
+      "id": "STA91_final",
+      "hallazgo": "El reporte final del22/10 13:20:59 declara que cumple todas las restricciones de timing especificadas por el usuario a11ns (90,909MHz en STA).",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/timing_summary.rpt",
+          "line": 223
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/summary.txt",
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "period_ns": 11.0,
+        "sta_frequency_mhz": 90.909,
+        "wns_ns": 0.001,
+        "tns_ns": 0.0,
+        "failing_setup_endpoints": 0,
+        "setup_endpoints": 96451,
+        "whs_ns": 0.004,
+        "ths_ns": 0.0,
+        "failing_hold_endpoints": 0,
+        "hold_endpoints": 96435,
+        "wpws_ns": 4.0,
+        "tpws_ns": 0.0,
+        "failing_pulse_endpoints": 0,
+        "pulse_endpoints": 35286
+      },
+      "alcance": "STA post-route; no prueba funcional ni en placa."
+    },
+    {
+      "id": "STA91_secuencia",
+      "hallazgo": "El flujo estándar dejó WNS−0,065/TNS−4,311ns con147endpoints; la pasada posterior AggressiveExplore generó el checkpoint separado con WNS+0,001ns.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/summary.txt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/timing_summary.rpt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/aggressive_physopt.tcl"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/summary.txt"
+        }
+      ]
+    },
+    {
+      "id": "ruteo91",
+      "hallazgo": "El reporte final enumera88.351nets ruteables, todas totalmente ruteadas, y0nets con errores de ruteo.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/route_status.rpt"
+        }
+      ],
+      "metrics": {
+        "routable_nets": 88351,
+        "fully_routed_nets": 88351,
+        "routing_error_nets": 0
+      }
+    },
+    {
+      "id": "DRC91",
+      "hallazgo": "La tabla DRC final contiene sólo severidad Warning: DPIP-2(53),DPOP-3(13),DPOP-4(17),DPOR-2(102),PDCN-1569(3),RTSTAT-10(1). El README del paquete declara0errores y0critical warnings.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/drc.rpt",
+          "line": 29
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 34
+        }
+      ],
+      "alcance": "Conservar advertencias; no describir el resultado como cero warnings."
+    },
+    {
+      "id": "pines_excluidos75_resueltos",
+      "hallazgo": "Los reportes check_timing finales normal y aggressive enumeran75pines únicos, todos dentro de i_dmi_jtag, e informan0pines ordinarios sin restricción máxima. Se comparó además el reporte primario009_restruct_SATP/check_timing.rpt con el check_timing del paquete congelado: ambos contienen exactamente los mismos75pines.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports/check_timing.rpt",
+          "line": 47
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/check_timing.rpt",
+          "line": 47
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/unconstrained_review.json"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/check_timing.rpt"
+        }
+      ],
+      "comparison": {
+        "reported_count": 75,
+        "unique_count": 75,
+        "all_under_i_dmi_jtag": true,
+        "exact_set_equal_to_saved_gold009": true,
+        "ordinary_unconstrained_max_pins": 0,
+        "compared_to_primary_gold009_report": true
+      },
+      "alcance": "Es una exclusión por constant clock; no son75fallos de setup ni el reloj BSCAN del debug hub."
+    },
+    {
+      "id": "dos_relojes_reportados",
+      "hallazgo": "El dominio del CVA6 clk_pl_0 tiene11ns; el INTERNAL_TCK del dbg_hub separado tiene50ns/20MHz en el mismo reporte.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/timing_summary.rpt",
+          "line": 236
+        }
+      ]
+    },
+    {
+      "id": "clock_fisico91_documentado",
+      "hallazgo": "El README del paquete fija PS PL0=IOPLL/11=90,908180MHz y puertos del BD FREQ_HZ=90908180; el análisis STA usa11,000ns/90,909MHz redondeados.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 21
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 24
+        }
+      ],
+      "alcance": "Valor físico de configuración declarado por paquete; no medición con instrumental."
+    },
+    {
+      "id": "paquete91_vs_impl1",
+      "hallazgo": "El paquete timing_closed_91mhz_2026-10-22 se documenta congelado con bit/ltx/xsa/dcp/reportes/scripts/SHA. Advierte que el impl_1 del proyecto conserva el resultado anterior WNS−0,065ns y no debe usarse su bitstream para placa.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 55
+        }
+      ],
+      "alcance": "Se verificaron por lectura las29entradas del manifiesto SHA256SUMS:65.946.445bytes, todos los hashes correctos, sin faltantes. No se repitió la comparación interna del payload de bitstream dentro del XSA."
+    },
+    {
+      "id": "XSA_export_correcto_documentado",
+      "hallazgo": "El README y el script separan la exportación desde aggressive_physopt.dcp porque write_hw_platform -include_bit en modo proyecto podía empaquetar el bitstream previo de impl_1. El README afirma igualdad del payload de configuración del bitstream empaquetado.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/xsa_from_checkpoint.tcl"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/xsa_from_checkpoint_final.log"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 61
+        }
+      ],
+      "alcance": "Afirmación de verificación histórica del paquete, no revalidada bit a bit en esta auditoría."
+    },
+    {
+      "id": "validacion_hardware_documentada",
+      "hallazgo": "README del paquete y PDF25/10 dicen explícitamente que90,9MHz aún no se probó en hardware y que el último estado validado en placa es25MHz known_good_2026-09-18.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 3
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 1
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 8
+        }
+      ],
+      "alcance": "Estado según documentos citados. No se buscaron todos los logs de placa fuera del alcance de esta tarea."
+    },
+    {
+      "id": "proximo_paso_hardware_declarado",
+      "hallazgo": "El paquete enumera como pendiente generar FSBL desde su XSA con patch_fsbl.py/reset hold, usar su bitstream y comprobar STATUS0=0x800004000:00000001.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 65
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 8
+        }
+      ],
+      "alcance": "Prueba pendiente documentada; no ejecutada ni autorizada como parte de esta consolidación."
+    },
+    {
+      "id": "sintesis_retiming100_terminada",
+      "hallazgo": "El intento final synth_2 terminó22/10 16:15:42 con0errores de síntesis,0critical warnings y300warnings. Log:retiming processes=1 forward=-11 backward=-11 incremental=0.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log",
+          "line": 3454
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log",
+          "line": 3484
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log",
+          "line": 3498
+        }
+      ]
+    },
+    {
+      "id": "retiming_por_modulo0",
+      "hallazgo": "Se contaron50mensajes Numbers of forward move/backward move en exp100.log; los50informan0/0. El log también enumera registros no movibles por multiple clocks detected en distintos módulos.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log"
+        }
+      ],
+      "analysis": {
+        "per_module_records": 50,
+        "all_zero": true,
+        "max_forward": 0,
+        "max_backward": 0
+      },
+      "alcance": "No sumar los conteos jerárquicos de registros bloqueados; no deducir una causa única del retiming0."
+    },
+    {
+      "id": "impl100_final_no_lanzada",
+      "hallazgo": "El intento final aborta explícitamente antes de implementación por no haber movimiento de retiming; no hay un STAGE impl start real en exp100.log. Un intento anterior de2procesos sí inició impl a15:33:49 según exp100_2proc_cortada_1537.log.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log",
+          "line": 3507
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_2proc_cortada_1537.log",
+          "line": 9527
+        }
+      ],
+      "alcance": "No afirmar que nunca se lanzó implementación en ninguno de los intentos; el último sí se detuvo antes."
+    },
+    {
+      "id": "sintesis100_estimacion",
+      "hallazgo": "families.txt del checkpoint de síntesis informa global/PMP−0,145ns, CAST/FPU+0,053ns, operandos+0,301ns,SATP+2,651ns y FMA sin celdas. Son métricas de síntesis, sin ruteo final.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/synth_estimate/families.txt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/synth_estimate/timing_summary.rpt"
+        }
+      ],
+      "alcance": "No equivalen a cierre post-route ni prueba de ausencia de caminos FMA."
+    },
+    {
+      "id": "alcance_script_retiming",
+      "hallazgo": "El Tcl define runs separados synth_2/impl_2 y constraint set constrs_exp100, activa GLOBAL_RETIMING on, desactiva incremental y fuerza10ns sólo para análisis. Declara no cambiar BD ni generar bitstream. El script no contiene ediciones de RTL del CPU.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_retiming.tcl",
+          "line": 1
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_synth.xdc"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_impl.xdc"
+        }
+      ],
+      "alcance": "Configuración de Vivado observada; no demuestra equivalencia funcional ni autoriza nuevas modificaciones."
+    },
+    {
+      "id": "backup_limitado_retiming",
+      "hallazgo": "SHA256_before.txt contiene hashes de XPR y BD. No es un inventario completo de los archivos RTL del CVA6.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/backup_before/SHA256_before.txt"
+        }
+      ]
+    },
+    {
+      "id": "mejor100_citado",
+      "hallazgo": "El análisis22/10 y el PDF25/10 citan009_restruct_SATP como mejor checkpoint100MHz:WNS−0,553ns y1285endpoints fallando; el PDF declara TNS≈−322,6ns.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 8
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 22
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 3
+        }
+      ],
+      "alcance": "Aquí se verificó que los documentos lo dicen; la auditoría primaria de ese directorio histórico no forma parte de estas rutas recientes."
+    },
+    {
+      "id": "investigacion27_28",
+      "hallazgo": "Las cuatro notas Frecuencia del CVA6 en FPGA son investigación fechada27/10; las dos notas CVA6 en Kria y Zynq UltraScale+ agregan investigación28/10. Son fuentes de contexto/comparación, no nuevas corridas locales.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/oficial_cva6_fpga.md",
+          "line": 3
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/ports_y_papers.md",
+          "line": 3
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/cva6_ports_zynq_kria.md",
+          "line": 3
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/otros_nucleos_kria.md",
+          "line": 3
+        }
+      ],
+      "alcance": "No se validaron enlaces externos en esta auditoría; respetar etiquetas target/reported/routed/synthesis/claim/inference de cada nota."
+    }
+  ],
+  "latest_confirmed_in_scope": {
+    "implementation_evidence": "2026-10-22T13:20:59-03:00 AggressiveExplore91MHz STA+0,001ns setup/+0,004hold; packageforhardwarepending",
+    "last100MHz_experiment": "2026-10-22T16:15:42-03:00 synth_2complete, retiming0, ultimo intento no implementado",
+    "latest_documentary_updates": "2026-10-28 notascomparativas; no constituyen nueva corrida ni prueba enplaca",
+    "no_new_implementation_artifact_after_22_in_the_two_scanned_implementation_roots": true
+  },
+  "contradictions_and_open_documentation_points": [
+    {
+      "id": "header_retiming_obsoleto",
+      "hallazgo": "El título Retiming en síntesis(no probado en la KR260) contradice el resultado del experimento22/10 incorporado más abajo en el mismo archivo.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 59
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 73
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 83
+        }
+      ],
+      "accion_documental": "Conservar historia y marcarlo probado:0FF movidos; no dejar no probado como estado vigente."
+    },
+    {
+      "id": "audit75_obsoleto",
+      "hallazgo": "frequency_audit/unconstrained_review.json dice PENDING_CURRENT_EXACT_PIN_INVENTORY; los check_timing finales posteriores sí proveen el inventario completo de75pines coincidente con gold009.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/unconstrained_review.json"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/check_timing.rpt",
+          "line": 47
+        }
+      ],
+      "accion_documental": "Citar reporte final como autoridad; mantener JSON antiguo identificado como etapa previa."
+    },
+    {
+      "id": "estimacion88MHz_no_final",
+      "hallazgo": "routed_initial_estimate.json calcula Fmax≈88,183MHz desde WNS−0,340ns en etapa routed_before_postroute_optimization; no contradice el cierre posterior91MHz de otro estado físico.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/frequency_audit/routed_initial_estimate.json"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/timing_summary.rpt",
+          "line": 225
+        }
+      ],
+      "accion_documental": "Etiquetar etapa y fecha al comparar métricas."
+    },
+    {
+      "id": "imposibilidad100_no_demostrada",
+      "hallazgo": "El PDF usa no es posible llegar a100MHz/superar90,9requiere cambiarCPU; el propio PDF también enumera MMCM de wrapper93–94MHz estimados como trabajo futuro. El análisis llama no probado al eje MMCM/raíz de reloj y otras variantes.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 1
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 8
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 108
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 237
+        }
+      ],
+      "accion_documental": "Separar resultado medido(no se obtuvo cierre100) de inferencia o recomendación; no convertirlo en prueba universal de imposibilidad."
+    },
+    {
+      "id": "causa_retiming_no_unica",
+      "hallazgo": "El análisis atribuye retiming0 a retardos estimados favorables de la FPU; el log además reporta FF no movibles por multiple clocks detected. La evidencia confirma0movimientos, no una única causa.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 85
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 96
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log"
+        }
+      ],
+      "accion_documental": "Mantener ambas observaciones y causalidad pendiente; no afirmar que otra receta es imposible por este ensayo."
+    },
+    {
+      "id": "alcance_CPU_propuestas_no_aprobadas",
+      "hallazgo": "El análisis y la síntesis27/10 proponen precálculoPMP, cambiosLAT_CONV/LAT_COMP_FP64, TLB/asociatividad yFpgaEn. Son propuestas; no son prueba de implementación ni permiso del usuario para cambiarCVA6.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 170
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 194
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 210
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 215
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/reports/Frecuencia del CVA6 en FPGA.md",
+          "line": 82
+        }
+      ],
+      "accion_documental": "Catalogar como fuera de alcance bajo la restricción vigente de no modificarCPU; no ejecutar ni dar por autorizadas."
+    },
+    {
+      "id": "KRIA_FPU_comparativa28",
+      "hallazgo": "otros_nucleos_kria.md dice no haber encontradoCVA6conFPUenKria ajeno; cva6_ports_zynq_kria.md fila5 del mismo día sí lista target KR26060MHz con configuraciónFPUon. La fila5 aclara que no hay WNS ni LinuxKR260 demostrado.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/otros_nucleos_kria.md",
+          "line": 234
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/cva6_ports_zynq_kria.md",
+          "line": 17
+        }
+      ],
+      "accion_documental": "Precisar si el vacío es configuración publicada, cierreSTA o ejecuciónhardware; no mezclar categorías."
+    },
+    {
+      "id": "Fmax94_8_es_estimacion",
+      "hallazgo": "El valor≈94,8MHz se calcula desde100MHz/WNS−0,553ns de otro checkpoint. No es una frecuencia validada en placa ni un barrido que demuestreFmax del paquete91MHz.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+          "line": 8
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/reports/Frecuencia del CVA6 en FPGA.md",
+          "line": 3
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/k26_y_comparativa.md",
+          "line": 3
+        }
+      ],
+      "accion_documental": "Llamarlo estimación de periodo/slack del checkpoint100; conservar91MHz como cierre físico observado."
+    },
+    {
+      "id": "BD150_historico_no_paquete91",
+      "hallazgo": "La síntesis27/10 advierte deBDs históricos que pedían150MHz y constraints de análisis100MHz. El paquete91MHz documenta PL0corregido aIOPLL/11y exportación desde elDCPcerrado.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/reports/Frecuencia del CVA6 en FPGA.md",
+          "line": 70
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 19
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 52
+        }
+      ],
+      "accion_documental": "No presentar como fallo pendiente del paquete cerrado lo que pertenece a snapshots históricos100MHz."
+    },
+    {
+      "id": "hardware_y_STA_distintos",
+      "hallazgo": "La presencia de bitstream/XSA y timingcerrado no prueba90,9MHz enplaca. Los documentos revisados todavía señalan25MHz como hardwareknown-good.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "line": 3
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 1
+        }
+      ],
+      "accion_documental": "Mantener columnas separadas de STA, artefacto empaquetado y validación funcional en placa."
+    }
+  ],
+  "cpu_scope": {
+    "user_constraint": "No modificar el procesador CVA6; no inferir autorización de propuestas en documentos.",
+    "observed_configuration_change": "GLOBAL_RETIMING on yconstraint10ns en runs de Vivado separados.",
+    "documented_cpu_change_claim": "PDFdice ningún cambiofuncional, salvocommitd166aa84equequita3unread; no se auditó historialgit/RTLcompleto en esta subtarea.",
+    "no_new_RTL_or_core_configuration_change_was_made_by_this_audit": true,
+    "full_current_CPU_equivalence_or_hash_inventory_not_verified_here": true
+  },
+  "open_points": [
+    {
+      "punto": "Validación91MHz enhardware yFSBL/parche reset",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "punto": "Verificar cualquier evidencia de placa posterior al25/10 fuera de estasrutas antes de decir que25MHz sigue siendo último estado actual.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+          "page": 1
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md"
+        }
+      ]
+    },
+    {
+      "punto": "Si se reutiliza la comparación externa, revalidar enlaces y conservarconfiguraciónFPU/RV32vsRV64/FPGA/speedgrade/tipo de métrica.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/cva6_ports_zynq_kria.md"
+        }
+      ]
+    },
+    {
+      "punto": "Manifiesto del paquete verificado29/29. La comparación interna del payloadXSA y la equivalencia/estado actual completo delCPU no se realizaron en esta subtarea.",
+      "fuentes": [
+        {
+          "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/SHA256SUMS.txt"
+        },
+        {
+          "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/backup_before/SHA256_before.txt"
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/timing_summary.rpt": "98fb763a9dbf72f285e9b2262ab0d6fa4f041f2fcff1a989c4493cf1df009d6f",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/check_timing.rpt": "76dc5a8f05d147b86dd6e1ae53394b95d35c14ee70d74bbb003a3995884385fd",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/route_status.rpt": "c2e5bd0e628975326833115e46e2d9528d20e6ac6564b4434139feb5d9f3ec14",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/drc.rpt": "ada67fb45a65a250f1a1ade88d470de8e277c2f295eb034ca08426402fa0abd0",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/pl0_91mhz_20261022/reports_aggressive/summary.txt": "804de0e6bce12aa4b8a4380967eee365e1eecff788c866afa67e9f3320b2f6d1",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log": "1b29c91fcae4f2384ab73a7b2ccc3d2c015f236e2ba2dfa34fbfc377802e2710",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100_retiming.tcl": "33defec46f27579e22d2aa0d9450199a5d30f0e435ac969f1de1f7b1bf44b37e",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/synth_estimate/families.txt": "eee487daac5a557d61406a635252f4f1d525e4f89af7a39507cb8e7f65c3c50e",
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md": "eded773566047d76d5b06470b85b10a5a50f197a5ff5a56da87dda79657cd57a",
+    "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf": "2cd543eec9d2aa33fafabd02319f1bf70599d28f35ea236ebd948daf9bbde28c",
+    "/home/nachofalchi/data/fpga-work/reports/Frecuencia del CVA6 en FPGA.md": "ea2266b87f97dd42f2eca2bb7337330052a77bbb4e85f4846b03884239b4364e",
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md": "25f6f87d6e6f3c90aac042431af0a9350861fd0f09fe16324bc23831c5d41ea3"
+  },
+  "frozen_91MHz_package_verification": {
+    "package": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22",
+    "manifest": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/SHA256SUMS.txt",
+    "manifest_sha256": "527370f9d98f0f2fbaeffb8562921e43e92f336e884d373ba956660d0a8b4348",
+    "manifest_rows": 29,
+    "total_logical_bytes_checked": 65946445,
+    "valid": true,
+    "errors": [],
+    "mismatches": [],
+    "dcps": [
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top_91mhz_closed.dcp",
+        "expected_sha256": "26e20f4b961718b5e12b8e0e676db6b5268a6831e3c3a4985ba7fe63bbe13df4",
+        "bytes": 47934008,
+        "actual_sha256": "26e20f4b961718b5e12b8e0e676db6b5268a6831e3c3a4985ba7fe63bbe13df4"
+      }
+    ],
+    "signoff_sources": {
+      "timing_summary.rpt": {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/timing_summary.rpt",
+        "sha256": "98fb763a9dbf72f285e9b2262ab0d6fa4f041f2fcff1a989c4493cf1df009d6f"
+      },
+      "drc.rpt": {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/drc.rpt",
+        "sha256": "ada67fb45a65a250f1a1ade88d470de8e277c2f295eb034ca08426402fa0abd0"
+      },
+      "route_status.rpt": {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/route_status.rpt",
+        "sha256": "c2e5bd0e628975326833115e46e2d9528d20e6ac6564b4434139feb5d9f3ec14"
+      },
+      "pulse_width.rpt": {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/pulse_width.rpt",
+        "sha256": "2f20c347efa7dcf62fb3bbf0200d5ded8ea9c9ae42b84d5c75c6e86090d13423"
+      },
+      "bus_skew.rpt": {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/bus_skew.rpt",
+        "sha256": "fdc7b565d2b7823eb75a1615a1bc3110e86eb51b9725388464acf346fc0fcde1"
+      },
+      "check_timing.rpt": {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/check_timing.rpt",
+        "sha256": "76dc5a8f05d147b86dd6e1ae53394b95d35c14ee70d74bbb003a3995884385fd"
+      }
+    },
+    "same75_primary_comparison": {
+      "historical_primary_report": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/check_timing.rpt",
+      "historical_unique_pins": 75,
+      "frozen_final_unique_pins": 75,
+      "exact_set_equal": true,
+      "all_in_DMI_JTAG": true,
+      "historical_sha256": "a7dfb5f979b92cb45f311c76c97b68944abc06be78fc841b1768a1e0f69ac2ce"
+    }
+  }
+}

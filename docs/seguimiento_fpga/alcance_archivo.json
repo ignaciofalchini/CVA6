@@ -1,0 +1,63 @@
+{
+  "captured_at": "2026-10-29T00:13:16.249197-03:00",
+  "workspace": "/home/nachofalchi/data/fpga-work",
+  "scopes": [
+    "timing-matrix",
+    "timing-audit",
+    "timing-evidence",
+    "timing-preparation",
+    "reports",
+    "research_notes",
+    "backups",
+    "cva6-equipo/docs",
+    "cva6-equipo/reports",
+    "cva6-equipo/corev_apu/fpga/scripts",
+    "cva6-equipo/corev_apu/fpga/tests",
+    "cva6-equipo/corev_apu/fpga/software/kr260_ps_boot",
+    "cva6-equipo/corev_apu/fpga/ariane_kr260_debug"
+  ],
+  "pruned_directory_names": [
+    ".Xil",
+    ".cache",
+    ".gen",
+    ".git",
+    ".hw",
+    ".ip_user_files",
+    "__pycache__",
+    "bsp",
+    "hsi_source",
+    "node_modules",
+    "toolchain"
+  ],
+  "inventory_files": 33602,
+  "archived_source_paths": 4977,
+  "unique_objects": 3659,
+  "source_bytes_in_snapshot": 215300635,
+  "unique_bytes_in_snapshot": 148450709,
+  "per_scope": {
+    "workspace_root": 6,
+    "backups": 7,
+    "cva6-equipo/corev_apu/fpga/ariane_kr260_debug": 601,
+    "cva6-equipo/corev_apu/fpga/scripts": 33,
+    "cva6-equipo/corev_apu/fpga/software/kr260_ps_boot": 175,
+    "cva6-equipo/corev_apu/fpga/tests": 8,
+    "cva6-equipo/docs": 13,
+    "cva6-equipo/reports": 2222,
+    "reports": 4,
+    "research_notes": 6,
+    "timing-audit": 236,
+    "timing-evidence": 2444,
+    "timing-matrix": 16626,
+    "timing-preparation": 11221
+  },
+  "limits": {
+    "document_max_bytes": 2097152,
+    "report_log_tsv_max_bytes": 524288
+  },
+  "limitations": [
+    "Inventory covers the listed work scopes, not the entire computer.",
+    "Large checkpoints, bitstreams, full endpoint censuses and existing content objects remain at original paths. Metadata without SHA does not verify their content.",
+    "Sources and generated builds in frozen copies are indexed only; immutable campaign manifests remain the source of RTL provenance.",
+    "This documentation archive is on the same disk and is not an external backup."
+  ]
+}

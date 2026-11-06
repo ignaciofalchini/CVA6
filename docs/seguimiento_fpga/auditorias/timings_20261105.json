@@ -1,0 +1,226 @@
+{
+  "recorded_at": "2026-11-05T23:50:00-03:00",
+  "rows": [
+    {
+      "id": "cast3_100_real_clock_final",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/implementacion_100MHz_reloj_real/cast3/reports/timing_summary.rpt",
+      "sha256": "a511757a4766c55895a7b02ca58517820fe3def428f51897c3447415f8c4d22c",
+      "status": "complete_without_closure",
+      "finished_at": "2026-11-04T20:52:24.217390-03:00",
+      "metrics": {
+        "wns_ns": -0.208,
+        "tns_ns": -90.293,
+        "setup_failing_endpoints": 1014,
+        "setup_total_endpoints": 96693,
+        "whs_ns": 0.0,
+        "ths_ns": 0.0,
+        "hold_failing_endpoints": 0,
+        "hold_total_endpoints": 96677,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0,
+        "pulse_total_endpoints": 35371,
+        "constraint_counts": {
+          "no_clock": 0,
+          "constant_clock": 0,
+          "pulse_width_clock": 0,
+          "unconstrained_internal_endpoints": 75,
+          "no_input_delay": 0,
+          "no_output_delay": 0,
+          "multiple_clock": 0,
+          "generated_clocks": 0,
+          "loops": 0,
+          "partial_input_delay": 0,
+          "partial_output_delay": 0,
+          "latch_loops": 0
+        },
+        "constant_clock_pin_count": 75,
+        "routable_nets": 88388,
+        "fully_routed_nets": 88388,
+        "routing_errors": 0,
+        "drc_checks": 189,
+        "methodology_checks": 63,
+        "bus_skew_min_slack_ns": 9.389,
+        "bus_skew_constraints": 4,
+        "reported_period_ns": 10.0
+      },
+      "vivado_returncode": 0,
+      "final_checkpoint": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/implementacion_100MHz_reloj_real/cast3/reports/final.dcp",
+      "final_checkpoint_sha256": "763e415142ecdd28a1b127b76b2bb35c1d562c07e3eb2b2b992ec2ed3a79b646",
+      "pl0": {
+        "before_mhz": 90.90818,
+        "actual_mhz": 99.999001,
+        "source": "IOPLL",
+        "divisor0": 10,
+        "divisor1": 1
+      }
+    },
+    {
+      "id": "cast3_120_final",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/prueba_120MHz_20261104_baja_carga/cast3/reports/timing_summary.rpt",
+      "sha256": "8373ff7493b967ba42001127695dadc42021f7b49d1be1e796b69ed6dfce2c2b",
+      "status": "complete_without_closure",
+      "finished_at": "2026-11-04T19:19:58.987653-03:00",
+      "metrics": {
+        "wns_ns": -1.806,
+        "tns_ns": -10882.976,
+        "setup_failing_endpoints": 18654,
+        "setup_total_endpoints": 96670,
+        "whs_ns": 0.003,
+        "ths_ns": 0.0,
+        "hold_failing_endpoints": 0,
+        "hold_total_endpoints": 96654,
+        "wpws_ns": 2.666,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0,
+        "pulse_total_endpoints": 35361,
+        "constraint_counts": {
+          "no_clock": 0,
+          "constant_clock": 0,
+          "pulse_width_clock": 0,
+          "unconstrained_internal_endpoints": 75,
+          "no_input_delay": 0,
+          "no_output_delay": 0,
+          "multiple_clock": 0,
+          "generated_clocks": 0,
+          "loops": 0,
+          "partial_input_delay": 0,
+          "partial_output_delay": 0,
+          "latch_loops": 0
+        },
+        "constant_clock_pin_count": 75,
+        "routable_nets": 88173,
+        "fully_routed_nets": 88173,
+        "routing_errors": 0,
+        "drc_checks": 189,
+        "methodology_checks": 1065,
+        "bus_skew_min_slack_ns": 7.655,
+        "bus_skew_constraints": 4,
+        "reported_period_ns": 8.333
+      },
+      "vivado_returncode": 0,
+      "final_checkpoint": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/prueba_120MHz_20261104_baja_carga/cast3/reports/final.dcp",
+      "final_checkpoint_sha256": "b99e338f9fa4e09caa79198e348d01150cb25c98ab5a3e2e9d56c885aaeea7ad"
+    }
+  ],
+  "stage_comparison_ns": {
+    "note": "WNS/TNS; closed run versus new implementation with PS IOPLL/10",
+    "synthesis": {
+      "closed": [
+        -0.421,
+        -36.999
+      ],
+      "new": [
+        -0.415,
+        -35.386
+      ]
+    },
+    "after_placement": {
+      "closed": [
+        -0.302,
+        -65.538
+      ],
+      "new": [
+        -0.987,
+        -1061.998
+      ]
+    },
+    "before_route": {
+      "closed": [
+        0.007,
+        0.0
+      ],
+      "new": [
+        -0.417,
+        -208.362
+      ]
+    },
+    "after_route": {
+      "closed": [
+        -0.101,
+        -14.427
+      ],
+      "new": [
+        -0.58,
+        -510.834
+      ]
+    },
+    "final": {
+      "closed": [
+        0.0,
+        0.0
+      ],
+      "new": [
+        -0.208,
+        -90.293
+      ]
+    }
+  },
+  "package": {
+    "path": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/paquete_100mhz_desde_cast3",
+    "files": {
+      "kr260_cva6_100mhz.xsa": "9585a450f4e89032bdac8886361bfc2cdc4c6bd91ffa4e5a3d7d06a7dbbbe00f",
+      "kr260_fsbl_100mhz_patched.elf": "721713089fe100b5149ca7d0f978ed21b31d0e56b8d59fbbfe946a71a01f477e",
+      "kr260_top.bit": "e74c691b451616b7c20f15b5c80ea89ef266e5211d8ba2a16e004a073e7521e7",
+      "kr260_top.ltx": "f12e1966ba028d72c9f7f97d5f2be905b19fee1161cbae928561238a0538be75",
+      "kr260_top_100mhz_closed.dcp": "4c7dadcac240b21a39a95c4d05d8b75e30ec60f06724ed731e8895a94025edae"
+    },
+    "closed_checkpoint_source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast3/reports/final.dcp",
+    "closed_checkpoint_sha256": "4c7dadcac240b21a39a95c4d05d8b75e30ec60f06724ed731e8895a94025edae",
+    "reopened_timing": {
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "setup_failing_endpoints": 0.0,
+      "setup_total_endpoints": 96648.0,
+      "whs_ns": 0.0,
+      "ths_ns": 0.0,
+      "hold_failing_endpoints": 0.0,
+      "hold_total_endpoints": 96632.0
+    },
+    "reopened_report_sha256": "c6fbea64a7ea8803c80c759913b7d236ce97bd64eaace1a5d9868c671c752922",
+    "route_status_sha256": "6810cc5a08b046a9fbd7fee6f0f7e9543bbc8e21b62e020ce8a931d381287d62",
+    "fsbl_manifest": {
+      "status": "PASS",
+      "stage": "fsbl_build",
+      "build_only": true,
+      "hardware_validated": false,
+      "reset_hold_verified": true,
+      "xsa_sha256": "9585a450f4e89032bdac8886361bfc2cdc4c6bd91ffa4e5a3d7d06a7dbbbe00f",
+      "fsbl_elf_sha256": "721713089fe100b5149ca7d0f978ed21b31d0e56b8d59fbbfe946a71a01f477e",
+      "elf_bytes": 404400,
+      "entry_hex": "0xfffc0000",
+      "pl0": {
+        "source": "IOPLL",
+        "divisor0": 10,
+        "divisor1": 1,
+        "frequency_mhz": 99.999001
+      },
+      "reference_fsbl91": "/home/nachofalchi/data/fpga-work/operacion/cva6_ops/fsbl91/build_20261029_1831/kr260_fsbl_91mhz_patched.elf",
+      "source_lines_changed_from_91": 6,
+      "instructions_changed_from_91": 2,
+      "build_date_bytes_changed_from_91": 10
+    },
+    "hardware_validated": false
+  },
+  "automation": {
+    "path": "/home/nachofalchi/data/fpga-work/automatizacion",
+    "board_ops_sha256": "a92ff41da03a5c299907f5418c302258b100fce715e2bddd8aab70b6a0353d55",
+    "session_ops_sha256": "cb4f8e34b80379b12b4543e14fee0486f27f654230e00f20e091c8a51a2c2ac1",
+    "cli_sha256": "5cb72e8fa0f578cf0724bd34cd5af776fb2fceec4752a919d606486634d856a6",
+    "offline_tests": {
+      "total": 76,
+      "failed": 0,
+      "note": "Placa simulada; sin hardware"
+    },
+    "plans_without_blockers": [
+      25,
+      91,
+      100
+    ]
+  },
+  "cast_source": {
+    "path": "core/cvfpu/src/fpnew_cast_multi.sv",
+    "sha256": "a617728ffbc2f957c90d766365d6da3f6210dadeffd87d23242239118b8b3be2",
+    "committed": false
+  }
+}

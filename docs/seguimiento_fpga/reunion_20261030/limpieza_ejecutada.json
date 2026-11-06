@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-29T15:50:27.240291-03:00",
+  "status": "complete",
+  "action": "delete_only_allowlisted_regenerable_cache_directories",
+  "deleted_directories": [
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.runs/synth_1/.Xil",
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.cache",
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/xilinx/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.runs/xlnx_mig_7_ddr3_synth_1/.Xil",
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/.Xil"
+  ],
+  "deleted_regular_files": 649,
+  "reclaimed_allocated_estimate_bytes": 462381056,
+  "disk_free_after": 3321716736,
+  "diagnostic_text_files_preserved": 134,
+  "diagnostic_archive_bytes": 335964,
+  "protected_sha256": {
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp": "169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/final.dcp": "8aeb2a53adc0eaf63eb16aaf076f1192c40684a25fce1a16689f3b2aa249423e",
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top_91mhz_closed.dcp": "26e20f4b961718b5e12b8e0e676db6b5268a6831e3c3a4985ba7fe63bbe13df4",
+    "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_top.bit": "0a83948938b061c288c1bdf01dddfa30d7dc5d66632da9b452fa22fba0f35231"
+  },
+  "tests_and_results_deleted": false,
+  "limitations": "Cache deletion removes internal recovery scratch/IP cache; future rebuilds can regenerate it. Unique experiment results, source/config files and final checkpoints remain in place."
+}

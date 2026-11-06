@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-30",
+  "hardware_executed": false,
+  "visual_review": "26 p\u00e1ginas renderizadas e inspeccionadas; secuencia operativa y ap\u00e9ndices revisados.",
+  "source_sha256": {
+    "/home/nachofalchi/data/fpga-work/automatizacion/cva6_ops/templates_board/board_run.tcl": "8bb7c9ca2e354adf73ab27abce450d306f01a57ec08725c410a20885f0c4805f",
+    "/home/nachofalchi/data/fpga-work/automatizacion/cva6_ops/templates_board/ila_capture.tcl": "bc02f8d2cf7c7b2883646280563d35616b92f954cf1376b3da3678c1b0ee97cd",
+    "/home/nachofalchi/data/fpga-work/automatizacion/config.json": "293feb085cf0bc6e43bbee791ab7ddecdbe30ef6944608551b3f54fb9a96f78f",
+    "/home/nachofalchi/data/fpga-work/automatizacion/cva6_ops/board_ops.py": "6fd153bc46a0b7f27155b0e53dafcf69bea7d7a4ae3ebc89ce91b845d026672f"
+  },
+  "pages": 26,
+  "bash_syntax_blocks": 7,
+  "tcl_complete_blocks": 7,
+  "paths_checked": 13,
+  "presentation": "redise\u00f1o visual; contenido t\u00e9cnico conservado",
+  "structure": "12 pasos secuenciales + 11 ap\u00e9ndices; cada paso con consola, acci\u00f3n, salida esperada y criterio de parada",
+  "profile_paths_checked": {
+    "25": "SELECTED=/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18",
+    "91": "SELECTED=/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22"
+  }
+}

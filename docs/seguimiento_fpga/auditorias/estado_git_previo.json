@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-29T00:06:40.892810-03:00",
+  "head": "df6b05123b268768c0f9db50b0efc1e2fc2d3b3c",
+  "branch": "feature/kr260-ddr4-integration",
+  "status": " M .gitignore\n M corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/ip/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0.xci\n M corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/kr260_ps_ddr_bd.bd\n M corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr\n M docs/kr260_ila_vio.md\n?? corev_apu/ariane_kr260_ps_bd_backup.tcl\n?? corev_apu/fpga/scripts/archive_timing_results.py\n?? corev_apu/fpga/scripts/codex_run_synth.tcl\n?? corev_apu/fpga/scripts/launch_project_gui.tcl\n?? corev_apu/fpga/scripts/prepare_timing_sweep.tcl\n?? corev_apu/fpga/scripts/report_synthesis_checkpoint.tcl\n?? corev_apu/fpga/scripts/setup_project_only.tcl\n?? corev_apu/fpga/scripts/timing_matrix.py\n?? corev_apu/fpga/scripts/timing_matrix_project.tcl\n?? corev_apu/fpga/scripts/timing_night.py\n?? corev_apu/fpga/scripts/timing_sweep.py\n?? corev_apu/fpga/scripts/timing_sweep.tcl\n?? corev_apu/fpga/scripts/timing_sweep_service.py\n?? corev_apu/fpga/scripts/verificar_kr260_pre_synth.tcl\n?? corev_apu/fpga/software/\n?? corev_apu/fpga/tests/\n?? docs/analisis_100mhz_kr260.md\n?? docs/kr260_ddr_integration.md\n?? docs/timing_evidence.md\n?? docs/timing_matrix.md\n?? docs/timing_sweep.md\n?? reports/codex_overnight/\n?? reports/kr260_audit_20260910.md\n?? reports/kr260_ddr_pre_synth/\n?? reports/kr260_lint/\n?? reports/kr260_next_steps/bootrom/\n?? reports/kr260_next_steps/debug/\n?? reports/kr260_next_steps/lint/\n?? reports/kr260_next_steps/memory/\n?? reports/kr260_next_steps/system_synth/\n?? reports/kr260_port/MEMORY_INTERFACE_REVIEW.md\n?? reports/kr260_port/attempt_2/\n?? reports/timing_matrix_preflight/\n?? reports/timing_sweep_preflight/\n",
+  "tracked_modified_before": {
+    ".gitignore": "1d22a29cdd909f88eb7572c48cdbe6393dd4ccca9ca9d263fa726f88e53bb72e",
+    "corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/ip/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0/kr260_ps_ddr_bd_zynq_ultra_ps_e_0_0.xci": "c7ebd06f5ac7f6698eca4f960356bea244dbe3791e68f998f52c2f2a0226b320",
+    "corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/kr260_ps_ddr_bd/kr260_ps_ddr_bd.bd": "cc72d7417d91d9aa26b4b16b48e305a0c78589d361a38bbc947ca1ad4984b306",
+    "corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr": "7825d59cfb4c5f2fce1e2c3c692d6d0bf8f9ee05fb2cf9547e44091724ed9d7c",
+    "docs/kr260_ila_vio.md": "d8ee36dfba93cd350b5021caf7dc27d14a14e375355440591454451449ca51bf"
+  }
+}

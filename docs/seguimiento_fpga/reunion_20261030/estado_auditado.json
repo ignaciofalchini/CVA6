@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "audit_local_time": "2026-10-29T15:48:23.248601-03:00",
+  "meeting_date": "2026-10-30",
+  "scope": "Lectura de documentos consolidados, reportes y software guardado. Ningún servicio, prueba de CPU, síntesis, implementación, compilación ni acceso a placa fue iniciado. Sólo se escribe esteJSON en/tmp.",
+  "mensaje_principal": "Se consiguió cierre STA a 90,908 MHz sin nuevos cambios del CPU y se conserva un paquete listo. Todavía falta preparar el FSBL de 91 MHz y validar ese paquete en placa. A 100 MHz hubo mejoras medibles, pero no cierre.",
+  "apertura_60_segundos": "El port del CVA6 a la KR260 ya tiene acceso funcional a la DDR del PS comprobado a 25 MHz. En timing logramos 90,908 MHz: setup y hold cumplen en un checkpoint final, con bitstream, plataforma y reportes preservados. La validación en placa de esa frecuencia todavía está pendiente: falta generar el FSBL desde su XSA y actualizar el arranque. Para 100 MHz catalogamos 48 evaluaciones de distintos tipos. La optimización dirigida redujo el TNS y los endpoints que fallan, pero el peor slack sigue en −0,553 ns: no cerramos 100 MHz. El siguiente hito concreto es preparar el arranque y repetir la prueba DDR a 91 MHz, manteniendo intacto el CVA6. Después, cualquier ensayo adicional de 100 MHz debe partir de una hipótesis nueva y de la mejor referencia conservada.",
+  "logros": [
+    {
+      "hecho": "Port funcional del CVA6 hacia DDR alta del PS a través de HP0, con BootROMPASS y escrituras observadas por ILA a 25 MHz.",
+      "fuentes": [
+        "hardware25"
+      ],
+      "limite": "No equivale a validación exhaustiva de ISA, Linux o toda la memoria."
+    },
+    {
+      "hecho": "Cierre de timing a 90,908180 MHz configurados en PS, STA a 11 ns: WNS+0,001 ns/TNS0; WHS+0,004 ns/THS0; WPWS+4 ns;0endpointsviolando setup,hold,pulso.",
+      "fuentes": [
+        "sta91",
+        "paquete91"
+      ]
+    },
+    {
+      "hecho": "88.351de88.351 redes ruteables completamente ruteadas y0errores de ruteo;4 restricciones bus-skewMET.",
+      "fuentes": [
+        "ruteo91",
+        "bus_skew91"
+      ]
+    },
+    {
+      "hecho": "Paquete congeladoBIT/LTX/XSA/DCP y reportes verificable:29/29 hashes correctos en esta lectura.",
+      "fuentes": [
+        "paquete91"
+      ],
+      "verificacion": {
+        "valid": true,
+        "checked_files": 29,
+        "total_bytes": 65946445,
+        "errors": [],
+        "mismatches": [],
+        "manifest_sha256": "527370f9d98f0f2fbaeffb8562921e43e92f336e884d373ba956660d0a8b4348",
+        "DCP": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top_91mhz_closed.dcp",
+        "DCP_sha256": "26e20f4b961718b5e12b8e0e676db6b5268a6831e3c3a4985ba7fe63bbe13df4"
+      }
+    },
+    {
+      "hecho": "100 MHz: la referencia adoptada pasó de TNS−434,730 a −322,607 ns y de 1716 a 1285 endpoints negativos, manteniendo WNS−0,553 ns.",
+      "fuentes": [
+        "csv_clave",
+        "sta100_009",
+        "night_summary"
+      ],
+      "tns_deficit_reduction_pct": 25.791410760702043,
+      "failing_endpoint_reduction": 431,
+      "limite": "Comparación histórica documentada; no todas las etapas son una comparaciónA/B de una única variable."
+    },
+    {
+      "hecho": "Evidencia consolidada:48evaluaciones100 MHz con fuentes; scripts, decisiones, auditorías y manifiestos preservados.",
+      "fuentes": [
+        "resumen",
+        "csv48",
+        "historial"
+      ],
+      "limite": "Incluye optimización post-route y resultados reutilizados; no son48corridas completas ni réplicas independientes."
+    }
+  ],
+  "tabla_para_profesor": [
+    {
+      "frecuencia_mhz": 25,
+      "STA": "No se reaudita aquí como resultado nuevo",
+      "hardware": "PASSdocumentado de BootROMDDR eILA",
+      "estado": "Conocido bueno del 18/09",
+      "fuentes": [
+        "hardware25"
+      ]
+    },
+    {
+      "frecuencia_mhz": 90.90818,
+      "wns_ns": 0.001,
+      "tns_ns": 0,
+      "whs_ns": 0.004,
+      "setup_failing_endpoints": 0,
+      "STA": "Cumple en checkpointAggressiveExplore",
+      "hardware": "Pendiente",
+      "estado": "BIT/LTX/XSA/DCP listo;FSBL de 91 MHz pendiente",
+      "fuentes": [
+        "sta91",
+        "paquete91"
+      ]
+    },
+    {
+      "frecuencia_mhz": 100,
+      "wns_ns": -0.553,
+      "tns_ns": -322.607,
+      "whs_ns": 0.003,
+      "setup_failing_endpoints": 1285,
+      "STA": "No cumple setup",
+      "hardware": "No presentar como validado a 100 MHz",
+      "estado": "SATP009 mejor adoptado",
+      "fuentes": [
+        "sta100_009",
+        "audit100_009",
+        "decision100_009"
+      ]
+    }
+  ],
+  "explicacion_simple_del_limite100": {
+    "texto": "No queda un único cable malo: el mejor resultado adoptado todavía tiene 1285 endpoints de setup negativos, distribuidos en varias familias. Las más críticas del análisis son conversiónFP, PMP yFMA, con déficits del orden de 0,53–0,55 ns. Mejorar solamente una familia puede reducirTNS sin cambiar el peor slack global.",
+    "familias_segun_analisis": [
+      {
+        "familia": "CAST/conversiónFP",
+        "endpoints": 301,
+        "worst_ns": -0.553
+      },
+      {
+        "familia": "PMP",
+        "endpoints": 521,
+        "worst_ns": -0.541
+      },
+      {
+        "familia": "FMA/FPU",
+        "endpoints": 181,
+        "worst_ns": -0.529
+      },
+      {
+        "familia": "Caché",
+        "endpoints": 70,
+        "worst_ns": -0.429
+      },
+      {
+        "familia": "MMU/TLB",
+        "endpoints": 107,
+        "worst_ns": -0.266
+      },
+      {
+        "familia": "Operandos",
+        "endpoints": 105,
+        "worst_ns": -0.24
+      }
+    ],
+    "fuentes": [
+      "analisis100",
+      "sta100_009"
+    ],
+    "limite": "Familias tomadas del análisis documentado, no un nuevo censo de caminos ejecutado para esta reunión."
+  },
+  "cantidad_de_evaluaciones": {
+    "catalogued_rows": 48,
+    "rows_with_negative_wns": 48,
+    "catalogued_100MHz_closures": 0,
+    "counting_breakdown": {
+      "general_completed_100mhz_distinct_run_folders": 36,
+      "general_completed_100mhz_before_day_night": 26,
+      "day_night_completed_100mhz_added": 10,
+      "explicit_extra_synthesis_only_variants": 3,
+      "focused_day_distinct_physical_candidates_with_valid_metrics": 5,
+      "focused_night_reviewed_attempts": 10,
+      "focused_night_valid_candidates": 7,
+      "focused_night_pre_physical_automation_failures": 2,
+      "focused_night_post_physical_integrity_rejections": 1,
+      "focused_night_pre_physical_interruption_records_separate": 2,
+      "focused_night_independent_noop_baseline_signoff_records_separate": 2,
+      "focused_daytime22_new_valid_candidates": 0
+    },
+    "frase_recomendada": "48evaluaciones100 MHz documentadas, de distintos tipos; ninguna cierra setup.",
+    "fuentes": [
+      "csv48",
+      "auditoria_historica"
+    ]
+  },
+  "software_y_arranque_pendiente": {
+    "bit_listo": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top.bit",
+    "xsa_listo": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_cva6_91mhz.xsa",
+    "xsa_clock_parameters": {
+      "PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ": "90.908180",
+      "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0": "11",
+      "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1": "1",
+      "PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ": "90.909",
+      "PSU__CRL_APB__PL0_REF_CTRL__SRCSEL": "IOPLL"
+    },
+    "xsa_has_fsbl_elf": false,
+    "fsbl91_found_in_boot_tree": false,
+    "elf_inventory_current": [
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_fsbl_patched.elf",
+        "mtime_local": "2026-09-18T11:39:11.936893-03:00"
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_app_jtag.elf",
+        "mtime_local": "2026-09-18T11:39:11.937893-03:00"
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/retest_2026-10-07/kr260_fsbl_patched.elf",
+        "mtime_local": "2026-10-07T15:04:14.227718-03:00"
+      },
+      {
+        "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/retest_2026-10-07/hsi_source/executable.elf",
+        "mtime_local": "2026-10-07T15:02:55.592661-03:00"
+      }
+    ],
+    "existing_fsbl_issue": "ElFSBL de retest07/10 usa ps u_init conPL0IOPLL/40:0x01012800, noIOPLL/11. No usarlo para afirmar que el CVA6 corre a 91 MHz.",
+    "faltantes": [
+      "GenerarFSBL desde el XSA de 91 MHz confirmado.",
+      "Aplicar el parche reset-hold conocido depl_resetn0/EMIO95.",
+      "Preparar copias de scriptsJTAG que apunten al BIT cerrado y al FSBL nuevo.",
+      "Probar en placa yguardar el resultado, logs ycaptura ILA."
+    ],
+    "criterio_minimo_documentado": "STATUS0=0x800004000:00000001(PASS), más lectura de estadosDDR y evidenciaILA equivalente al known-good.",
+    "fuentes": [
+      "paquete91",
+      "fsbl_octubre_source",
+      "patch_fsbl",
+      "jtag25_actual",
+      "hardware25"
+    ]
+  },
+  "limites_que_deben_decidir_el_tono": [
+    "El margen91 MHz es1 ps al redondeo: cierre de ese checkpoint, sin holgura; no garantía de que cualquier implementación cierre.",
+    "Se preservan75pinesDMI-JTAG sinmáximo porclock constante; no son75violaciones de setup. BSCAN/ILA/VIO tiene otroclock yno está todo el debug deshabilitado.",
+    "DRCsin errores ni critical warnings no significa cero warnings.",
+    "Las notas comparativas externas distinguen target, síntesis, routedSTA y hardware; no sumar ni comparar configuracionesRV32/RV64/FPU/FPGA distintas como equivalentes.",
+    "No se probó que100 MHz sea imposible: se probó que estas evaluaciones no lo cerraron.",
+    "ElCVA6 no se modifica: los cambiosdePMP, latencia FPU, TLB/caché/parámetros propuestos en textos anteriores quedan fuera del alcance.",
+    "La última síntesis con retiming terminó pero movió0 registros en 50 resúmenes; ese último intento abortó antes de implementación yno añade un cierre100 MHz."
+  ],
+  "que_no_afirmar": [
+    {
+      "no": "Ya corre a 91 MHz en placa.",
+      "si": "CierraSTA a 91 MHz; falta prepararFSBL yvalidarlo en placa.",
+      "fuentes": [
+        "paquete91"
+      ]
+    },
+    {
+      "no": "Cerramos100 MHz o sólo falta hold.",
+      "si": "Hold cumple en el mejor100, pero setup aún fallaWNS−0,553 ns.",
+      "fuentes": [
+        "sta100_009"
+      ]
+    },
+    {
+      "no": "Probamos todas las directivas y100es imposible.",
+      "si": "Hay48 evaluaciones catalogadas, sin enumeración exhaustiva de todo elespacio.",
+      "fuentes": [
+        "metodologia",
+        "csv48",
+        "aclaraciones"
+      ]
+    },
+    {
+      "no": "LaFmax medida es94,76 MHz.",
+      "si": "94,76 MHz es una estimación a partir de periodo/slack de otro checkpoint, no cierre de un nuevo route ni medición en placa.",
+      "fuentes": [
+        "estado"
+      ]
+    },
+    {
+      "no": "ElBIT de impl_1 es el resultado quecerró.",
+      "si": "ElBIT válido está en elpaquete posteriorAggressiveExplore;impl_1 conservaWNS−0,065 ns.",
+      "fuentes": [
+        "paquete91"
+      ]
+    },
+    {
+      "no": "ElTNS menor de FMA010 lo hace elganador adoptado.",
+      "si": "Fue válido pero no adoptado porregresión en la media fija; conservarSATP009 como referencia.",
+      "fuentes": [
+        "decision100_010",
+        "estado"
+      ]
+    },
+    {
+      "no": "Una síntesis que termina significa timing cerrado.",
+      "si": "Síntesis estima; cierre exige reportes finales de implementación ychecks físicos.",
+      "fuentes": [
+        "metodologia",
+        "retiming22"
+      ]
+    },
+    {
+      "no": "Hay backup externo completo de todos losproductos.",
+      "si": "Archivo documental e inventario están en el mismo disco; los artefactos grandes siguen en sus rutas.",
+      "fuentes": [
+        "resumen"
+      ]
+    }
+  ],
+  "siguientes_pasos_priorizados": [
+    {
+      "orden": 1,
+      "paso": "Completar yverificar el arranque de 91 MHz:FSBL desdeXSA de 91 MHz, parche dereset yscripts apuntandoal paquete cerrado.",
+      "estado": "Pendiente; no ejecutado en esta auditoría.",
+      "cambia_CPU": false
+    },
+    {
+      "orden": 2,
+      "paso": "Programar yrepetir laprueba DDR conocida a 91 MHz; guardarPASS/FAIL, estadosPS,frecuencia configurada ycaptura ILA.",
+      "estado": "Requiere una sesión de placa; no ejecutada en esta auditoría.",
+      "cambia_CPU": false
+    },
+    {
+      "orden": 3,
+      "paso": "SiPASS,congelar unnuevo known-good91 consoftware,bit/LTX/XSA,reportes yhashes, manteniendo el known-good de 25 MHz como respaldo.",
+      "estado": "Condicional aresultado real.",
+      "cambia_CPU": false
+    },
+    {
+      "orden": 4,
+      "paso": "Para 100 MHz:definir hipótesis nueva yacotada sobreclock/ubicación/optimizaciónVivado, conservarSATP009 ycomparar conla misma población y restricciones.",
+      "estado": "Plan futuro; no promesa decierre ni permiso decambiarCVA6.",
+      "cambia_CPU": false
+    },
+    {
+      "orden": 5,
+      "paso": "Completar estudio de período mínimo yfrecuencia sólo conreportes finales, separando estimación,STA yhardware.",
+      "estado": "Pendiente documentado.",
+      "cambia_CPU": false
+    }
+  ],
+  "agenda_sugerida_5min": [
+    "1 min:objetivo,configuración yrestricciónCPU.",
+    "1 min:tabla25hardware/91STA/100sin cierre.",
+    "1 min:evidencia de mejoras yporquéTNSno equivale a WNS.",
+    "1 min:BIT listo,FSBL de 91MHz pendiente,criterio de validaciónDDR.",
+    "1 min:acordar prioridad del próximo hito yuna nueva hipótesis100sin repetir recetas."
+  ],
+  "preguntas_razonables_para_la_reunion": [
+    "¿Se acepta como próximo hito validar en placa91 MHz ydejar100 MHz comoobjetivo de optimización sin CPU modificado?",
+    "¿Qué evidencia funcional debeacompañar el PASSDDR:captura ILA,ampliar patrones o repetir ventanas de memoria?",
+    "¿Cuánto tiempo reservar a nuevas hipótesis de 100MHz frente al análisis/documentación del resultado conseguido?"
+  ],
+  "detalles_y_discrepancias_conservados": [
+    {
+      "tema": "TNSagregado vsreporteSTA",
+      "detalle": "global_metrics.tsv de 009suma−322,600 ns yde010−322,037 ns; los reportes timing_summary ylas auditorías independientes reportan−322,607/−322,047 ns. Para la reunión se cita lafilaSTA oficial. No se atribuye aquíuna causa única a la diferencia.",
+      "fuentes": [
+        "sta100_009",
+        "audit100_009",
+        "sta100_010"
+      ]
+    },
+    {
+      "tema": "Síntesisvsruteo",
+      "detalle": "La estimación final de síntesis100fue−0,145 ns; no reemplaza el−0,553post-route de la referencia adoptada.",
+      "fuentes": [
+        "synth_estimate22",
+        "retiming22",
+        "sta100_009"
+      ]
+    }
+  ],
+  "operacion_actual_lectura": {
+    "time_local": "2026-10-29T15:48:23.248601-03:00",
+    "active_cva6_units_observed": 0,
+    "vivado_processes_current_user_observed": 0,
+    "disk_free_bytes_observed": 2864398336,
+    "nota": "Las ventanas anteriores vencieron. Antes de otra campaña revisar nueva ventana y recursos; no se arrancó ningún proceso aquí.",
+    "fuentes": [
+      "operacion"
+    ]
+  },
+  "material_ya_existente_para_mostrar": [
+    {
+      "archivo": "docs/seguimiento_fpga/estado_y_resultados.md",
+      "uso": "Resumen técnico vigente ytabla de métricas."
+    },
+    {
+      "archivo": "docs/seguimiento_fpga/resultados_clave.csv",
+      "uso": "Tabla/gráfico deprogreso con 9 registros principales."
+    },
+    {
+      "archivo": "docs/seguimiento_fpga/evaluaciones_100mhz.csv",
+      "uso": "48 evaluaciones con fuentes, evitando confundirlasconcorridas completas."
+    },
+    {
+      "archivo": "docs/seguimiento_fpga/aclaraciones_documentales.md",
+      "uso": "Afirmaciones antiguas corregidas yalcance de cadaresultado."
+    },
+    {
+      "archivo": "paquete91/reports/timing_summary.rpt yroute_status.rpt",
+      "uso": "Evidencia primaria decierre91 MHz y ruteo."
+    },
+    {
+      "archivo": "known_good_2026-09-18/README.md",
+      "uso": "Evidencia funcional de placa a 25 MHz ycriterioPASS."
+    }
+  ],
+  "fuentes": {
+    "estado": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/estado_y_resultados.md",
+      "role": "Síntesis vigente al29/10",
+      "sha256": "b5c0ec7e95535cd453cb48cfd2e4af0338500588489b9e8f105367783d3f3ef4"
+    },
+    "resumen": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/README.md",
+      "role": "Punto de entrada y alcance vigente",
+      "sha256": "c6193e900e262a927f9b8c9c8836a7d2a8c1a4878f107eae2c92105819b775ed"
+    },
+    "aclaraciones": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/aclaraciones_documentales.md",
+      "role": "Contradicciones históricas ya aclaradas",
+      "sha256": "0347c7e3764c5e538c64bc332e5b85d579ee9cd5c5cd90c1c8eb0ef7a43df224"
+    },
+    "historial": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/historial_pruebas.md",
+      "role": "Historial y criterios de conteo",
+      "sha256": "747726c5573f8145bcc8e60e4da3e3066d39220cb9c2efd6617e97259892c8d4"
+    },
+    "metodologia": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/metodologia_y_decisiones.md",
+      "role": "AlcanceCPU y aceptaciónSTA",
+      "sha256": "0d5b7d90d0ca17aa056c4996e278e2cfe9d957c9141974a4b2df891c15b76ee8"
+    },
+    "operacion": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/operacion_y_recuperacion.md",
+      "role": "Recuperación y recursos",
+      "sha256": "a72116e0e93c3d22825f967eb13cff3dcd2565b13a568b7e22c9eafb432ab55c"
+    },
+    "csv_clave": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/resultados_clave.csv",
+      "role": "Datos pequeños para tabla/gráfico",
+      "sha256": "b0f88406335cca8597abf453184f545461631ac26472e1422145245405903baa"
+    },
+    "csv48": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/evaluaciones_100mhz.csv",
+      "role": "Catálogo48evaluaciones",
+      "sha256": "8e32300d1f6e13d302ee4dbc4b25d6fc63806672134e5f458ceb0990918352e2"
+    },
+    "auditoria_historica": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/auditorias/historico.json",
+      "role": "evidencia local",
+      "sha256": "d7f94a2dec98634efe79fd4eff88d819a47c2948e467f82725a5bcb6eed2a946"
+    },
+    "paquete91": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+      "role": "evidencia local",
+      "line": 3,
+      "sha256": "25f6f87d6e6f3c90aac042431af0a9350861fd0f09fe16324bc23831c5d41ea3"
+    },
+    "sta91": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/timing_summary.rpt",
+      "role": "evidencia local",
+      "line": 219,
+      "sha256": "98fb763a9dbf72f285e9b2262ab0d6fa4f041f2fcff1a989c4493cf1df009d6f"
+    },
+    "ruteo91": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/route_status.rpt",
+      "role": "evidencia local",
+      "sha256": "c2e5bd0e628975326833115e46e2d9528d20e6ac6564b4434139feb5d9f3ec14"
+    },
+    "drc91": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/drc.rpt",
+      "role": "evidencia local",
+      "sha256": "ada67fb45a65a250f1a1ade88d470de8e277c2f295eb034ca08426402fa0abd0"
+    },
+    "same75": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/check_timing.rpt",
+      "role": "evidencia local",
+      "line": 22,
+      "sha256": "76dc5a8f05d147b86dd6e1ae53394b95d35c14ee70d74bbb003a3995884385fd"
+    },
+    "bus_skew91": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/reports/bus_skew.rpt",
+      "role": "evidencia local",
+      "sha256": "fdc7b565d2b7823eb75a1615a1bc3110e86eb51b9725388464acf346fc0fcde1"
+    },
+    "hardware25": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/README.md",
+      "role": "evidencia local",
+      "line": 13,
+      "sha256": "58bc69786e2b0748ee1336461dda689638efb3699a6c6200bb5e2a483a4297f8"
+    },
+    "jtag25_actual": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/kr260_jtag_run.xsdb",
+      "role": "evidencia local",
+      "sha256": "70b1e3e2ce1d9f82a79e433232eb3219446d03064d9c7ee8506ca6ab3ac74523"
+    },
+    "patch_fsbl": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/scripts/patch_fsbl.py",
+      "role": "evidencia local",
+      "sha256": "df18fe2b1670288a4c5066340cbfdbb40aba05697eea85d48b71e3e5693f894a"
+    },
+    "fsbl_octubre_source": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/retest_2026-10-07/hsi_source/psu_init.c",
+      "role": "evidencia local",
+      "line": 1079,
+      "sha256": "cc2e0fbbcb3901707c2da6ee3cb09a9fdac84888b0de60448deed5e5c60e6ffb"
+    },
+    "sta100_009": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/timing_summary.rpt",
+      "role": "evidencia local",
+      "line": 225,
+      "sha256": "f425bade1d290040debc35914f9b7e34e341c6b3e795009aab69b203dd85d924"
+    },
+    "audit100_009": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/analysis/result.json",
+      "role": "evidencia local",
+      "sha256": "28f47f36ee4ffe1cc3eb9f3bf5f257533451b779f8418ebe96a058ed7316fb8b"
+    },
+    "decision100_009": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/decision.json",
+      "role": "evidencia local",
+      "sha256": "e84b94b80c50fa054ce91b32a69629e2264da61ac19d7b5b197e6f145c99e922"
+    },
+    "sta100_010": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/010_restruct_FMA/timing_summary.rpt",
+      "role": "evidencia local",
+      "line": 225,
+      "sha256": "2309cdf86138d20b1b1b66f47e8a2beda5e19bf8c6b93d9c629044db5264c8c3"
+    },
+    "decision100_010": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/010_restruct_FMA/decision.json",
+      "role": "evidencia local",
+      "sha256": "327cf5c12aa5f9d589233396534a3ea8085d1837354603bf7ef46a8643bc9086"
+    },
+    "night_summary": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/summary.json",
+      "role": "evidencia local",
+      "sha256": "8ff913c04dd911cfedd1cd8f4bb79890603ff08ab356e7121e5a281123234e16"
+    },
+    "retiming22": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/exp100.log",
+      "role": "evidencia local",
+      "line": 3484,
+      "sha256": "1b29c91fcae4f2384ab73a7b2ccc3d2c015f236e2ba2dfa34fbfc377802e2710"
+    },
+    "synth_estimate22": {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/exp100_retiming_20261022/synth_estimate/families.txt",
+      "role": "evidencia local",
+      "sha256": "eee487daac5a557d61406a635252f4f1d525e4f89af7a39507cb8e7f65c3c50e"
+    },
+    "analisis100": {
+      "path": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+      "role": "evidencia local",
+      "line": 20,
+      "sha256": "eded773566047d76d5b06470b85b10a5a50f197a5ff5a56da87dda79657cd57a"
+    }
+  }
+}

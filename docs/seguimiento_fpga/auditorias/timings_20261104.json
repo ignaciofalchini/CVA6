@@ -1,0 +1,306 @@
+{
+  "recorded_at": "2026-11-04T16:53:58.759291-03:00",
+  "rows": [
+    {
+      "id": "cast2_100_synthesis",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast2/reports/post_synthesis/timing_summary.rpt",
+      "sha256": "06f1d2c46e3f51e605a978c854944f92a855dfaba4f5b6c25dd163413514f267",
+      "line": 8281,
+      "metrics": {
+        "wns_ns": -0.421,
+        "tns_ns": -36.999,
+        "setup_failing_endpoints": 292.0,
+        "setup_total_endpoints": 89870.0,
+        "whs_ns": -0.033,
+        "ths_ns": -116.945,
+        "hold_failing_endpoints": 8276.0,
+        "hold_total_endpoints": 89870.0,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0.0,
+        "pulse_total_endpoints": 31224.0
+      }
+    },
+    {
+      "id": "cast2_100_routed",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/campana_preparada/cast2/source/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.runs/fpu100_impl/kr260_top_timing_summary_routed.rpt",
+      "sha256": "50033c81fd456728f1ef04c32addf905efaf8bf9a6f444de6e912e56a75cfc6b",
+      "line": 151,
+      "metrics": {
+        "wns_ns": -0.423,
+        "tns_ns": -312.456,
+        "setup_failing_endpoints": 1447.0,
+        "setup_total_endpoints": 96348.0,
+        "whs_ns": 0.01,
+        "ths_ns": 0.0,
+        "hold_failing_endpoints": 0.0,
+        "hold_total_endpoints": 96332.0,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0.0,
+        "pulse_total_endpoints": 35251.0
+      }
+    },
+    {
+      "id": "cast2_100_final",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast2/reports/timing_summary.rpt",
+      "sha256": "a4b5cebd59fb4462901eadc5e2ed9ef9be63a7d5c34ac4fb93014b0abcf64e68",
+      "line": 227,
+      "metrics": {
+        "wns_ns": -0.239,
+        "tns_ns": -109.091,
+        "setup_failing_endpoints": 1030.0,
+        "setup_total_endpoints": 96348.0,
+        "whs_ns": 0.004,
+        "ths_ns": 0.0,
+        "hold_failing_endpoints": 0.0,
+        "hold_total_endpoints": 96332.0,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0.0,
+        "pulse_total_endpoints": 35251.0
+      }
+    },
+    {
+      "id": "cast3_100_synthesis",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast3/reports/post_synthesis/timing_summary.rpt",
+      "sha256": "256edce1e7f3208eb4e0a794159b8d78298d7ed9cd98043507fbb875ac4235e2",
+      "line": 8281,
+      "metrics": {
+        "wns_ns": -0.421,
+        "tns_ns": -36.999,
+        "setup_failing_endpoints": 292.0,
+        "setup_total_endpoints": 90141.0,
+        "whs_ns": -0.033,
+        "ths_ns": -117.834,
+        "hold_failing_endpoints": 8342.0,
+        "hold_total_endpoints": 90141.0,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0.0,
+        "pulse_total_endpoints": 31315.0
+      }
+    },
+    {
+      "id": "cast3_100_routed",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast3/reports/routed_before_final/timing_summary.rpt",
+      "sha256": "88a6daabbaeaeabfa928ed2d31ff46e381799d038a2b420dad68ee10ba19be26",
+      "line": 151,
+      "metrics": {
+        "wns_ns": -0.101,
+        "tns_ns": -14.427,
+        "setup_failing_endpoints": 311.0,
+        "setup_total_endpoints": 96648.0,
+        "whs_ns": 0.007,
+        "ths_ns": 0.0,
+        "hold_failing_endpoints": 0.0,
+        "hold_total_endpoints": 96632.0,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0.0,
+        "pulse_total_endpoints": 35353.0
+      }
+    },
+    {
+      "id": "cast3_100_final",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/recuperacion_20261104/cast3/reports/timing_summary.rpt",
+      "sha256": "aa465cc82d78c5e8855bb3e224c51ce86ae347f1655ca84e7a5e76adac2739c2",
+      "line": 227,
+      "metrics": {
+        "wns_ns": 0.0,
+        "tns_ns": 0.0,
+        "setup_failing_endpoints": 0.0,
+        "setup_total_endpoints": 96648.0,
+        "whs_ns": 0.0,
+        "ths_ns": 0.0,
+        "hold_failing_endpoints": 0.0,
+        "hold_total_endpoints": 96632.0,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0.0,
+        "pulse_total_endpoints": 35353.0
+      }
+    },
+    {
+      "id": "cast3_120_synthesis",
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/prueba_120MHz_20261104_baja_carga/cast3/reports/post_synthesis/timing_summary.rpt",
+      "sha256": "7fe1cc0138c8ea04a100f757e37dd55534a4eff7dc8bea8e5b5c1b0880953636",
+      "line": 8281,
+      "metrics": {
+        "wns_ns": -2.088,
+        "tns_ns": -2059.825,
+        "setup_failing_endpoints": 1845.0,
+        "setup_total_endpoints": 90141.0,
+        "whs_ns": -0.033,
+        "ths_ns": -117.834,
+        "hold_failing_endpoints": 8342.0,
+        "hold_total_endpoints": 90141.0,
+        "wpws_ns": 2.666,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0.0,
+        "pulse_total_endpoints": 31315.0
+      }
+    }
+  ],
+  "validated_final_100": {
+    "2": {
+      "status": "timing_failed",
+      "reasons": [
+        "setup_hold_or_pulse_violation"
+      ],
+      "metrics": {
+        "wns_ns": -0.239,
+        "tns_ns": -109.091,
+        "setup_failing_endpoints": 1030,
+        "setup_total_endpoints": 96348,
+        "whs_ns": 0.004,
+        "ths_ns": 0.0,
+        "hold_failing_endpoints": 0,
+        "hold_total_endpoints": 96332,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0,
+        "pulse_total_endpoints": 35251,
+        "constraint_counts": {
+          "no_clock": 0,
+          "constant_clock": 0,
+          "pulse_width_clock": 0,
+          "unconstrained_internal_endpoints": 75,
+          "no_input_delay": 0,
+          "no_output_delay": 0,
+          "multiple_clock": 0,
+          "generated_clocks": 0,
+          "loops": 0,
+          "partial_input_delay": 0,
+          "partial_output_delay": 0,
+          "latch_loops": 0
+        },
+        "constant_clock_pin_count": 75,
+        "routable_nets": 88058,
+        "fully_routed_nets": 88058,
+        "routing_errors": 0,
+        "drc_checks": 189,
+        "methodology_checks": 65,
+        "bus_skew_min_slack_ns": 9.446,
+        "bus_skew_constraints": 4,
+        "reported_period_ns": 10.0
+      },
+      "fallback_allowed": true,
+      "report_sha256": {
+        "timing_summary": "a4b5cebd59fb4462901eadc5e2ed9ef9be63a7d5c34ac4fb93014b0abcf64e68",
+        "check_timing": "832d32693c4faee89d80972d7dcd0e32a6667560a5267d0744db95f30ff7dbb9",
+        "route_status": "565410c198c0da43c30285ab6a48994b03714c3a2e2d1b85e8da2623ac83cddf",
+        "drc": "dadcfc86387420a856f674a3ec73ccc37830d7280eaa4d4e03e649d6935ff3b1",
+        "methodology": "7eda058290d9499d1109788cc9dff168bae4bfd5592e55beac19fd15f5597980",
+        "bus_skew": "29f34149434c1b71cd8d82885c856642ec4bc1d38d79224e92705a76cd018246",
+        "clocks": "560d357396ea485776fb05fdd8dab35a900bc4f1748311da94847ed2c9936700"
+      }
+    },
+    "3": {
+      "status": "timing_passed",
+      "reasons": [],
+      "metrics": {
+        "wns_ns": 0.0,
+        "tns_ns": 0.0,
+        "setup_failing_endpoints": 0,
+        "setup_total_endpoints": 96648,
+        "whs_ns": 0.0,
+        "ths_ns": 0.0,
+        "hold_failing_endpoints": 0,
+        "hold_total_endpoints": 96632,
+        "wpws_ns": 3.5,
+        "tpws_ns": 0.0,
+        "pulse_failing_endpoints": 0,
+        "pulse_total_endpoints": 35353,
+        "constraint_counts": {
+          "no_clock": 0,
+          "constant_clock": 0,
+          "pulse_width_clock": 0,
+          "unconstrained_internal_endpoints": 75,
+          "no_input_delay": 0,
+          "no_output_delay": 0,
+          "multiple_clock": 0,
+          "generated_clocks": 0,
+          "loops": 0,
+          "partial_input_delay": 0,
+          "partial_output_delay": 0,
+          "latch_loops": 0
+        },
+        "constant_clock_pin_count": 75,
+        "routable_nets": 88125,
+        "fully_routed_nets": 88125,
+        "routing_errors": 0,
+        "drc_checks": 189,
+        "methodology_checks": 65,
+        "bus_skew_min_slack_ns": 9.478,
+        "bus_skew_constraints": 4,
+        "reported_period_ns": 10.0
+      },
+      "fallback_allowed": false,
+      "report_sha256": {
+        "timing_summary": "aa465cc82d78c5e8855bb3e224c51ce86ae347f1655ca84e7a5e76adac2739c2",
+        "check_timing": "b984a57fdca91c262b048a92973f9d284b4471fd12118e305dba1dae6c4894fe",
+        "route_status": "6810cc5a08b046a9fbd7fee6f0f7e9543bbc8e21b62e020ce8a931d381287d62",
+        "drc": "b8236406cc964a10d1d9b898d9fd9b9affb0ed8c74a261fd46d54ef3c05fd060",
+        "methodology": "d0e2180a63d79a1f6888910c08f29c98d690a41c714dff04a31124075e721d1b",
+        "bus_skew": "538c0af105f47c77c12168ad109cd5c1e359cbb81c979b7826568c0def8f9cb5",
+        "clocks": "14814ddf741cffa8b7ec61b984206483732a440aa89c19af459a812c52c59ff9"
+      }
+    }
+  },
+  "trial_120": {
+    "service": {
+      "unit": "cva6-fpu120-low-da6bd612efe94a7d.service",
+      "launch_method": "systemd user service",
+      "launched_at": "2026-11-04T15:23:11.665130-03:00",
+      "driver_log": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/prueba_120MHz_20261104_baja_carga/driver.log",
+      "sleep_inhibitor_requested": true,
+      "InvocationID": "3bf12e776b684ec090e0fb807b9e7853",
+      "MainPID": "287444",
+      "ActiveState": "active",
+      "ControlGroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/cva6-fpu120-low-da6bd612efe94a7d.service",
+      "CPUQuotaPerSecUSec": "1s",
+      "CPUWeight": "10",
+      "Nice": "15",
+      "IOWeight": "10",
+      "IOSchedulingClass": "3",
+      "MemoryHigh": "4294967296",
+      "MemoryMax": "5368709120",
+      "MemorySwapMax": "5368709120"
+    },
+    "stage": {
+      "execution": "implementation_running",
+      "variant_regs": 3,
+      "message": ""
+    },
+    "final_result_available": false,
+    "resources": {
+      "cpu.max": "100000 100000",
+      "memory.current": "3350269952",
+      "memory.peak": "4295553024",
+      "memory.swap.current": "4823134208",
+      "memory.events": "low 0\nhigh 20012\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    },
+    "log_mtime": "2026-11-04T16:52:18.349645-03:00",
+    "log_tail": [
+      "",
+      "Starting Physical Synthesis Task",
+      "",
+      "Phase 1 Physical Synthesis Initialization",
+      "INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 1 CPUs",
+      "INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.272 | TNS=-12017.177 |",
+      "Phase 1 Physical Synthesis Initialization | Checksum: 13113c148",
+      "",
+      "Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 5362.453 ; gain = 0.000 ; free physical = 485 ; free virtual = 5889",
+      "INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.",
+      "Ending Physical Synthesis Task | Checksum: 265a6df4e",
+      "",
+      "Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 5362.453 ; gain = 0.000 ; free physical = 498 ; free virtual = 5902",
+      "Phase 4.1.1.1 BUFG Insertion | Checksum: 28145b960",
+      "",
+      "Time (s): cpu = 00:24:50 ; elapsed = 00:25:16 . Memory (MB): peak = 5362.453 ; gain = 0.000 ; free physical = 516 ; free virtual = 5917",
+      "",
+      "Phase 4.1.1.2 Post Placement Timing Optimization"
+    ]
+  }
+}

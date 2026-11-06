@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-29T18:31:42.638723-03:00",
+  "scope": "Documentation only; no bootrom/CPU/project edits or DDR loader implementation.",
+  "git_head": "df6b05123b268768c0f9db50b0efc1e2fc2d3b3c",
+  "sha256": {
+    "corev_apu/fpga/src/ariane_kr260.sv": "1f8febe39f8fde3429a2a039ad0816b79caa09dac8246aead0ddd8cd54f7d8a8",
+    "corev_apu/fpga/src/kr260_addr_pkg.sv": "cabc14be65ab4afb721b4e27c54df294acea3adfeab3a92b7f0615e1482c1825",
+    "corev_apu/fpga/src/bootrom/bootrom_64.sv": "044e068f9e0298f498b71117d853fb5d8907464f933aaa9ea360e20b0dfb3e37",
+    "corev_apu/fpga/src/bootrom/src/main.c": "32d53f0479573f71be3309902b9f9596b1a8316598ca9bfcf321e6e71c818535",
+    "corev_apu/fpga/src/bootrom/startup.S": "bb83cf5c14b44c7e2c1effee78b5a660620312e5386b63061e19a6656a263913",
+    "corev_apu/fpga/src/bootrom/Makefile": "69e3b29837e903be46c9e5d9cf0f7eeb2a5627eb32b14a7ea01d1c71548da300",
+    "corev_apu/fpga/src/bootrom/kr260_memory_test/memory_test.S": "364224221c04459c763f40f13a59622364ab7515b9da7d6bf02f54d23d8ed20a",
+    "corev_apu/fpga/scripts/select_kr260_memory_test_bootrom.tcl": "1e8d1363c8c81e21d1980156eca866192009486f92e26d6e864ce40bd8c781e3",
+    "corev_apu/fpga/software/kr260_ps_boot/src/kr260_boot.c": "704da8b03cb6bf4ebc756034c33ac33c57d736a5c2f74ccb9cded91b8ec9c1e0",
+    "corev_apu/fpga/software/kr260_ps_boot/src/main.c": "05e6978e122aa9c2c2b4da22ffc8c66eca2c9adfdd531097bd5dc768d0d19949",
+    "corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr": "7825d59cfb4c5f2fce1e2c3c692d6d0bf8f9ee05fb2cf9547e44091724ed9d7c"
+  }
+}

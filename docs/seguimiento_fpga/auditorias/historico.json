@@ -1,0 +1,2979 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-29",
+  "scope": "Read-only historical audit of stored summaries and selected report headers, through 2026-10-22. No tests, Vivado or services launched. 91MHz and retiming22Oct handled by separate audit.",
+  "counting_rules": [
+    "One legacy result per distinct physical run folder; archived imports and reused results are not new experiments.",
+    "The 26 Oct20 consolidated implementation records plus10 distinct day_night records equal36 documented 100MHz measurements before focused optimization. This includes no-op finishes and inherited checkpoints, so it is not36 full synthesis+route runs or36 independent replicas.",
+    "Focused campaigns use post-route physical optimization of stored checkpoints. Count candidates separately from baseline/signoff reloads, API preflights, pauses, recovery re-audits and failed automation.",
+    "analysis_valid confirms the recorded audit passed; timing_closed=false remains a timing failure. accepted=true in analyzer is not synonymous with controller adopted=true.",
+    "No complete enumeration of Vivado synthesis options or implementation combinations is established by these records."
+  ],
+  "counts": {
+    "general_completed_100mhz_distinct_run_folders": 36,
+    "general_completed_100mhz_before_day_night": 26,
+    "day_night_completed_100mhz_added": 10,
+    "explicit_extra_synthesis_only_variants": 3,
+    "focused_day_distinct_physical_candidates_with_valid_metrics": 5,
+    "focused_night_reviewed_attempts": 10,
+    "focused_night_valid_candidates": 7,
+    "focused_night_pre_physical_automation_failures": 2,
+    "focused_night_post_physical_integrity_rejections": 1,
+    "focused_night_pre_physical_interruption_records_separate": 2,
+    "focused_night_independent_noop_baseline_signoff_records_separate": 2,
+    "focused_daytime22_new_valid_candidates": 0
+  },
+  "general_100mhz_results": [
+    {
+      "id": "additional_postroute_aggressive",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "additional_postroute_aggressive",
+      "stage": "final",
+      "wns_ns": -0.553,
+      "tns_ns": -434.73,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1716,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": 540.1,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/timing_summary.rpt",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/recipes/post_aggressive.tcl"
+    },
+    {
+      "id": "day_clock_only_gold",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "day_clock_only_gold",
+      "stage": "final",
+      "wns_ns": -0.553,
+      "tns_ns": -434.73,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1716,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_clock_only_gold/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_clock_only_gold",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_clock_only_gold/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/passive_day_20261021/recipes/clock_only_gold.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/final.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.553,
+          "tns": -434.73,
+          "whs": 0.003,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -0.553,
+          "tns": -434.73,
+          "whs": 0.003,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_clock_only_gold/timing_summary.rpt.gz",
+      "completed_at": 1792585199.4527583
+    },
+    {
+      "id": "satp_plus_replication11",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "satp_plus_replication11",
+      "stage": "final",
+      "wns_ns": -0.558,
+      "tns_ns": -439.407,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1726,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": 3920.4,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/runs/satp_plus_replication11/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/runs/satp_plus_replication11",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/runs/satp_plus_replication11/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/runs/satp_plus_replication11/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/recipes/replicate11.tcl"
+    },
+    {
+      "id": "satp_only",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "satp_only",
+      "stage": "final",
+      "wns_ns": -0.566,
+      "tns_ns": -597.374,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 2409,
+      "total_setup_endpoints": 96425,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": 4715.5,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz/runs/satp_only/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz/runs/satp_only",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz/runs/satp_only/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz/runs/satp_only/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz/recipes/satp_only.tcl"
+    },
+    {
+      "id": "floorplan_round1_cast_towards_capture",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "floorplan_round1_cast_towards_capture",
+      "stage": "final",
+      "wns_ns": -0.575,
+      "tns_ns": -753.023,
+      "whs_ns": 0.007,
+      "failing_setup_endpoints": 2739,
+      "total_setup_endpoints": 96460,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_towards_capture/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_towards_capture",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_towards_capture/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/generated_recipes/floorplan_round1_cast_towards_capture.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz/optimized.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.575,
+          "tns": -753.023,
+          "whs": 0.007,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.496
+        },
+        "routed": {
+          "wns": -0.575,
+          "tns": -753.023,
+          "whs": 0.007,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.496
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_towards_capture/timing_summary.rpt.gz",
+      "completed_at": 1792564497.4764876
+    },
+    {
+      "id": "day_finish_cast_capture",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "day_finish_cast_capture",
+      "stage": "final",
+      "wns_ns": -0.575,
+      "tns_ns": -753.028,
+      "whs_ns": 0.007,
+      "failing_setup_endpoints": 2739,
+      "total_setup_endpoints": 96460,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_finish_cast_capture/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_finish_cast_capture",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_finish_cast_capture/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/passive_day_20261021/recipes/finish_capture.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_towards_capture/final.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.575,
+          "tns": -753.028,
+          "whs": 0.007,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.496
+        },
+        "routed": {
+          "wns": -0.575,
+          "tns": -753.028,
+          "whs": 0.007,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.496
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_finish_cast_capture/timing_summary.rpt.gz",
+      "completed_at": 1792584716.6605754
+    },
+    {
+      "id": "replication_pre_aggressive",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "replication_pre_aggressive",
+      "stage": "final",
+      "wns_ns": -0.59,
+      "tns_ns": -579.033,
+      "whs_ns": 0.0,
+      "failing_setup_endpoints": 2165,
+      "total_setup_endpoints": 96427,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": 6376.2,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/replication_pre_aggressive/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/replication_pre_aggressive",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/replication_pre_aggressive/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/replication_pre_aggressive/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/recipes/pre_aggressive.tcl"
+    },
+    {
+      "id": "ml_3_postexplore",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "ml_3_postexplore",
+      "stage": "final",
+      "wns_ns": -0.609,
+      "tns_ns": -777.657,
+      "whs_ns": 0.005,
+      "failing_setup_endpoints": 2634,
+      "total_setup_endpoints": 96376,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": 6240.6,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_3_postexplore/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_3_postexplore",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_3_postexplore/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_3_postexplore/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/recipes/ml_3.tcl"
+    },
+    {
+      "id": "route_aware_gold",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "route_aware_gold",
+      "stage": "final",
+      "wns_ns": -0.642,
+      "tns_ns": -665.455,
+      "whs_ns": 0.01,
+      "failing_setup_endpoints": 2204,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/route_aware_gold/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/route_aware_gold",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/route_aware_gold/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/adaptive_review_20261020/recipes/route_aware.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/final.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.642,
+          "tns": -665.455,
+          "whs": 0.01,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -0.642,
+          "tns": -665.455,
+          "whs": 0.01,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/route_aware_gold/timing_summary.rpt.gz",
+      "completed_at": 1792557124.2361648
+    },
+    {
+      "id": "defaults + current",
+      "frequency_mhz": 100,
+      "synthesis": "defaults",
+      "implementation": "current",
+      "stage": "final",
+      "wns_ns": -0.665,
+      "tns_ns": -727.149,
+      "whs_ns": 0.004,
+      "failing_setup_endpoints": 2415,
+      "total_setup_endpoints": 96462,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 4355.7,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz/timing_summary.rpt"
+    },
+    {
+      "id": "ml_1_postexplore",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "ml_1_postexplore",
+      "stage": "final",
+      "wns_ns": -0.685,
+      "tns_ns": -1078.836,
+      "whs_ns": 0.002,
+      "failing_setup_endpoints": 3037,
+      "total_setup_endpoints": 96418,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": 7836.0,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_1_postexplore/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_1_postexplore",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_1_postexplore/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_1_postexplore/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/recipes/ml_1.tcl"
+    },
+    {
+      "id": "Defaults + route Explore (mismo checkpoint pre-route)",
+      "frequency_mhz": 100,
+      "synthesis": "Defaults",
+      "implementation": "route Explore (mismo checkpoint pre-route)",
+      "stage": "final",
+      "wns_ns": -0.702,
+      "tns_ns": -724.031,
+      "whs_ns": 0.005,
+      "failing_setup_endpoints": 2365,
+      "total_setup_endpoints": 96462,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 1665.4,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/directed/defaults_route_explore/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/directed/defaults_route_explore/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/directed/defaults_route_explore/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/directed/defaults_route_explore/100MHz/timing_summary.rpt"
+    },
+    {
+      "id": "current + explore_postroute",
+      "frequency_mhz": 100,
+      "synthesis": "current",
+      "implementation": "explore_postroute",
+      "stage": "final",
+      "wns_ns": -0.721,
+      "tns_ns": -915.896,
+      "whs_ns": 0.001,
+      "failing_setup_endpoints": 2369,
+      "total_setup_endpoints": 97694,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 1643.3,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/explore_postroute/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/explore_postroute/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/explore_postroute/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/explore_postroute/100MHz/timing_summary.rpt"
+    },
+    {
+      "id": "post_place_gold",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "post_place_gold",
+      "stage": "final",
+      "wns_ns": -0.744,
+      "tns_ns": -771.691,
+      "whs_ns": 0.01,
+      "failing_setup_endpoints": 2155,
+      "total_setup_endpoints": 96452,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/post_place_gold/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/post_place_gold",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/post_place_gold/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/adaptive_review_20261020/recipes/post_place.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/runs/satp_plus_replication11/physopt.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.744,
+          "tns": -771.691,
+          "whs": 0.01,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -0.744,
+          "tns": -771.691,
+          "whs": 0.01,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/post_place_gold/timing_summary.rpt.gz",
+      "completed_at": 1792573699.995733
+    },
+    {
+      "id": "alternate + current",
+      "frequency_mhz": 100,
+      "synthesis": "alternate",
+      "implementation": "current",
+      "stage": "final",
+      "wns_ns": -0.783,
+      "tns_ns": -1045.771,
+      "whs_ns": 0.0,
+      "failing_setup_endpoints": 2572,
+      "total_setup_endpoints": 96491,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 4106.5,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/alternate/100MHz/current/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/alternate/100MHz/current/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/alternate/100MHz/current/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/alternate/100MHz/current/100MHz/timing_summary.rpt.gz"
+    },
+    {
+      "id": "carry + current",
+      "frequency_mhz": 100,
+      "synthesis": "carry",
+      "implementation": "current",
+      "stage": "final",
+      "wns_ns": -0.787,
+      "tns_ns": -1249.92,
+      "whs_ns": 0.002,
+      "failing_setup_endpoints": 2929,
+      "total_setup_endpoints": 97504,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 4409.0,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/carry/100MHz/current/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/carry/100MHz/current/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/carry/100MHz/current/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/carry/100MHz/current/100MHz/timing_summary.rpt.gz"
+    },
+    {
+      "id": "local_cast",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "local_cast",
+      "stage": "final",
+      "wns_ns": -0.813,
+      "tns_ns": -861.12,
+      "whs_ns": 0.01,
+      "failing_setup_endpoints": 2423,
+      "total_setup_endpoints": 96451,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_cast/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_cast",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_cast/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_cast/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/recipes/cast.tcl",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.813,
+          "tns": -861.12,
+          "whs": 0.01,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -0.813,
+          "tns": -861.12,
+          "whs": 0.01,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      }
+    },
+    {
+      "id": "predicted_auto1_defaults",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "predicted_auto1_defaults",
+      "stage": "final",
+      "wns_ns": -0.832,
+      "tns_ns": -964.441,
+      "whs_ns": 0.011,
+      "failing_setup_endpoints": 2376,
+      "total_setup_endpoints": 96446,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/predicted_auto1_defaults/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/predicted_auto1_defaults",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/predicted_auto1_defaults/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/adaptive_review_20261020/recipes/auto_1.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz/optimized.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.832,
+          "tns": -964.441,
+          "whs": 0.011,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -0.832,
+          "tns": -964.441,
+          "whs": 0.011,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/predicted_auto1_defaults/timing_summary.rpt.gz",
+      "completed_at": 1792570428.7861295
+    },
+    {
+      "id": "local_fma",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "local_fma",
+      "stage": "final",
+      "wns_ns": -0.877,
+      "tns_ns": -929.646,
+      "whs_ns": 0.013,
+      "failing_setup_endpoints": 2401,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_fma/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_fma",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_fma/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_fma/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/recipes/fma.tcl",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.877,
+          "tns": -929.646,
+          "whs": 0.013,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -0.877,
+          "tns": -929.646,
+          "whs": 0.013,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      }
+    },
+    {
+      "id": "alternate_router_first",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "alternate_router_first",
+      "stage": "final",
+      "wns_ns": -0.894,
+      "tns_ns": -1039.069,
+      "whs_ns": 0.001,
+      "failing_setup_endpoints": 2505,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/alternate_router_first/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/alternate_router_first",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/alternate_router_first/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/alternate_router_first/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/recipes/alternate_router.tcl",
+      "routed_metrics": {
+        "wns": -0.894,
+        "tns": -1039.069,
+        "whs": 0.001,
+        "ths": 0.0,
+        "wpws": 3.5,
+        "tpws": 0.0,
+        "bus_skew_min": 9.391
+      },
+      "final_metrics": {
+        "wns": -0.894,
+        "tns": -1039.069,
+        "whs": 0.001,
+        "ths": 0.0,
+        "wpws": 3.5,
+        "tpws": 0.0,
+        "bus_skew_min": 9.391
+      }
+    },
+    {
+      "id": "defaults + wl_block",
+      "frequency_mhz": 100,
+      "synthesis": "defaults",
+      "implementation": "wl_block",
+      "stage": "final",
+      "wns_ns": -0.901,
+      "tns_ns": -1627.704,
+      "whs_ns": 0.01,
+      "failing_setup_endpoints": 3884,
+      "total_setup_endpoints": 96385,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 3363.2,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/wl_block/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/wl_block/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/wl_block/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/wl_block/100MHz/timing_summary.rpt.gz"
+    },
+    {
+      "id": "spread_low",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "spread_low",
+      "stage": "final",
+      "wns_ns": -0.914,
+      "tns_ns": -1403.439,
+      "whs_ns": 0.001,
+      "failing_setup_endpoints": 3103,
+      "total_setup_endpoints": 96387,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/spread_low/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/spread_low",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/spread_low/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/spread_low/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/recipes/spread_low.tcl",
+      "routed_metrics": {
+        "wns": -0.914,
+        "tns": -1403.439,
+        "whs": 0.001,
+        "ths": 0.0,
+        "wpws": 3.5,
+        "tpws": 0.0,
+        "bus_skew_min": 9.465
+      },
+      "final_metrics": {
+        "wns": -0.914,
+        "tns": -1403.439,
+        "whs": 0.001,
+        "ths": 0.0,
+        "wpws": 3.5,
+        "tpws": 0.0,
+        "bus_skew_min": 9.465
+      }
+    },
+    {
+      "id": "local_control",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "local_control",
+      "stage": "final",
+      "wns_ns": -0.93,
+      "tns_ns": -1071.176,
+      "whs_ns": 0.01,
+      "failing_setup_endpoints": 2482,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_control/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_control",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_control/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_control/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/recipes/control.tcl",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.93,
+          "tns": -1071.176,
+          "whs": 0.01,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -0.93,
+          "tns": -1071.176,
+          "whs": 0.01,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      }
+    },
+    {
+      "id": "defaults + netdelay_high",
+      "frequency_mhz": 100,
+      "synthesis": "defaults",
+      "implementation": "netdelay_high",
+      "stage": "final",
+      "wns_ns": -0.931,
+      "tns_ns": -1761.613,
+      "whs_ns": 0.01,
+      "failing_setup_endpoints": 4183,
+      "total_setup_endpoints": 96372,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 4579.3,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/netdelay_high/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/netdelay_high/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/netdelay_high/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/netdelay_high/100MHz/timing_summary.rpt.gz"
+    },
+    {
+      "id": "defaults_fanout",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "defaults_fanout",
+      "stage": "final",
+      "wns_ns": -0.937,
+      "tns_ns": -1263.582,
+      "whs_ns": 0.011,
+      "failing_setup_endpoints": 2967,
+      "total_setup_endpoints": 96388,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_fanout/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_fanout",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_fanout/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_fanout/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/recipes/fanout.tcl",
+      "stage_metrics": {
+        "final": {
+          "wns": -0.937,
+          "tns": -1263.582,
+          "whs": 0.011,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -0.937,
+          "tns": -1263.582,
+          "whs": 0.011,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      }
+    },
+    {
+      "id": "defaults + explore_postroute",
+      "frequency_mhz": 100,
+      "synthesis": "defaults",
+      "implementation": "explore_postroute",
+      "stage": "final",
+      "wns_ns": -1.0,
+      "tns_ns": -1825.879,
+      "whs_ns": 0.002,
+      "failing_setup_endpoints": 4043,
+      "total_setup_endpoints": 96410,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 3403.1,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/explore_postroute/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/explore_postroute/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/explore_postroute/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/explore_postroute/100MHz/timing_summary.rpt.gz"
+    },
+    {
+      "id": "early_block",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "early_block",
+      "stage": "final",
+      "wns_ns": -1.099,
+      "tns_ns": -1909.396,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 3257,
+      "total_setup_endpoints": 96529,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+        "methodology_warning_new_or_increased:TIMING-16=331"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/early_block/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/early_block",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/early_block/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/early_block/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/recipes/early_block.tcl",
+      "routed_metrics": {
+        "wns": -1.099,
+        "tns": -1909.396,
+        "whs": 0.003,
+        "ths": 0.0,
+        "wpws": 3.5,
+        "tpws": 0.0,
+        "bus_skew_min": 9.337
+      },
+      "final_metrics": {
+        "wns": -1.099,
+        "tns": -1909.396,
+        "whs": 0.003,
+        "ths": 0.0,
+        "wpws": 3.5,
+        "tpws": 0.0,
+        "bus_skew_min": 9.337
+      }
+    },
+    {
+      "id": "current + extra_timing",
+      "frequency_mhz": 100,
+      "synthesis": "current",
+      "implementation": "extra_timing",
+      "stage": "final",
+      "wns_ns": -1.112,
+      "tns_ns": -2041.847,
+      "whs_ns": 0.008,
+      "failing_setup_endpoints": 3373,
+      "total_setup_endpoints": 97663,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 3264.8,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/extra_timing/100MHz/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/extra_timing/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/extra_timing/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/extra_timing/100MHz/timing_summary.rpt"
+    },
+    {
+      "id": "ml_2_postexplore",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "ml_2_postexplore",
+      "stage": "final",
+      "wns_ns": -1.152,
+      "tns_ns": -2374.887,
+      "whs_ns": 0.001,
+      "failing_setup_endpoints": 5631,
+      "total_setup_endpoints": 96442,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+        "methodology_warning_new_or_increased:TIMING-16=190"
+      ],
+      "seconds": 7035.8,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_2_postexplore/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_2_postexplore",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_2_postexplore/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_2_postexplore/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/recipes/ml_2.tcl"
+    },
+    {
+      "id": "defaults_refine",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "defaults_refine",
+      "stage": "final",
+      "wns_ns": -1.18,
+      "tns_ns": -1812.682,
+      "whs_ns": 0.001,
+      "failing_setup_endpoints": 3214,
+      "total_setup_endpoints": 96427,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+        "methodology_warning_new_or_increased:TIMING-16=420"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_refine/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_refine",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_refine/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_refine/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/recipes/refine.tcl",
+      "stage_metrics": {
+        "final": {
+          "wns": -1.18,
+          "tns": -1812.682,
+          "whs": 0.001,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -1.18,
+          "tns": -1812.682,
+          "whs": 0.001,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      }
+    },
+    {
+      "id": "no_lc_baseline",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults + NO_LC",
+      "implementation": "baseline SATP recipe",
+      "stage": "final",
+      "wns_ns": -1.201,
+      "tns_ns": -2392.031,
+      "whs_ns": 0.012,
+      "failing_setup_endpoints": 3646,
+      "total_setup_endpoints": 96439,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+        "methodology_warning_new_or_increased:TIMING-16=763"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/no_lc_baseline/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/no_lc_baseline",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/no_lc_baseline/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/recipes/baseline.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_no_lc_100MHz/runs/no_lc/linked_synth.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -1.201,
+          "tns": -2392.031,
+          "whs": 0.012,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 8.609
+        },
+        "routed": {
+          "wns": -1.201,
+          "tns": -2392.031,
+          "whs": 0.012,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 8.609
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/no_lc_baseline/timing_summary.rpt.gz",
+      "completed_at": 1792556298.413743
+    },
+    {
+      "id": "defaults_net_low",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "defaults_net_low",
+      "stage": "final",
+      "wns_ns": -1.242,
+      "tns_ns": -2209.358,
+      "whs_ns": 0.006,
+      "failing_setup_endpoints": 3741,
+      "total_setup_endpoints": 96405,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+        "methodology_warning_new_or_increased:TIMING-16=720"
+      ],
+      "seconds": null,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_net_low/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_net_low",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_net_low/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_net_low/timing_summary.rpt.gz",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/recipes/net_low.tcl",
+      "stage_metrics": {
+        "final": {
+          "wns": -1.242,
+          "tns": -2209.358,
+          "whs": 0.006,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 8.856
+        },
+        "routed": {
+          "wns": -1.242,
+          "tns": -2209.358,
+          "whs": 0.006,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 8.856
+        }
+      }
+    },
+    {
+      "id": "current + current",
+      "frequency_mhz": 100,
+      "synthesis": "current",
+      "implementation": "current",
+      "stage": "final",
+      "wns_ns": -1.294,
+      "tns_ns": -2169.251,
+      "whs_ns": 0.0,
+      "failing_setup_endpoints": 3470,
+      "total_setup_endpoints": 97633,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "complete_timing_failed",
+      "validation_errors": [],
+      "validation_review": [],
+      "seconds": 6456.0,
+      "checkpoint": null,
+      "folder": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/current/100MHz",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/current/100MHz/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/current/100MHz/timing_summary.rpt"
+    },
+    {
+      "id": "floorplan_round1_cast_central",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "floorplan_round1_cast_central",
+      "stage": "final",
+      "wns_ns": -1.718,
+      "tns_ns": -4997.314,
+      "whs_ns": 0.007,
+      "failing_setup_endpoints": 6529,
+      "total_setup_endpoints": 96520,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+        "methodology_warning_new_or_increased:TIMING-16=1000"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_central/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_central",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_central/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/generated_recipes/floorplan_round1_cast_central.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz/optimized.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -1.718,
+          "tns": -4997.314,
+          "whs": 0.007,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.092
+        },
+        "routed": {
+          "wns": -1.718,
+          "tns": -4997.314,
+          "whs": 0.007,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.092
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/floorplan_round1_cast_central/timing_summary.rpt.gz",
+      "completed_at": 1792560206.4683836
+    },
+    {
+      "id": "day_router_default_gold",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "day_router_default_gold",
+      "stage": "final",
+      "wns_ns": -1.749,
+      "tns_ns": -2390.21,
+      "whs_ns": 0.011,
+      "failing_setup_endpoints": 3011,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+        "methodology_warning_new_or_increased:TIMING-16=1000"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_router_default_gold/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_router_default_gold",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_router_default_gold/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/passive_day_20261021/recipes/router_default_gold.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/runs/satp_plus_replication11/physopt.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -1.749,
+          "tns": -2390.21,
+          "whs": 0.011,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        },
+        "routed": {
+          "wns": -1.749,
+          "tns": -2390.21,
+          "whs": 0.011,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.391
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/day_router_default_gold/timing_summary.rpt.gz",
+      "completed_at": 1792587307.9621089
+    },
+    {
+      "id": "no_share_baseline",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults + RESOURCE_SHARING=off",
+      "implementation": "resume placed; baseline recipe",
+      "stage": "final",
+      "wns_ns": -1.853,
+      "tns_ns": -4702.861,
+      "whs_ns": 0.008,
+      "failing_setup_endpoints": 6729,
+      "total_setup_endpoints": 96443,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence",
+        "methodology_warning_new_or_increased:TIMING-16=1000"
+      ],
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/no_share_baseline/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/no_share_baseline",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/no_share_baseline/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/recipes/resume_placed.tcl",
+      "recipe_input": "/home/nachofalchi/data/fpga-work/timing-preparation/no_share_winner_impl/runs/no_share_winner/placed.dcp",
+      "stage_metrics": {
+        "final": {
+          "wns": -1.853,
+          "tns": -4702.861,
+          "whs": 0.008,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.364
+        },
+        "routed": {
+          "wns": -1.853,
+          "tns": -4702.861,
+          "whs": 0.008,
+          "ths": 0.0,
+          "wpws": 3.5,
+          "tpws": 0.0,
+          "bus_skew_min": 9.364
+        }
+      },
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/runs/no_share_baseline/timing_summary.rpt.gz",
+      "completed_at": 1792543988.3928018
+    }
+  ],
+  "synthesis_only_results": [
+    {
+      "id": "no_share",
+      "frequency_mhz": 100,
+      "stage": "synthesis_only_estimated",
+      "wns_estimated_ns": -0.396,
+      "tns_estimated_ns": -29.962,
+      "seconds": 1581.2,
+      "checkpoint_sha256": "f105115ec355cccfc282a5beea6cef48c0f0c81c2e002431d198d1b41444fabc",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_screen_100MHz/runs/no_share",
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_screen_100MHz/results.json",
+      "timing_closure_evidence": false,
+      "note": "A completed synthesis is not routed timing closure; later implementation is a separate record."
+    },
+    {
+      "id": "area_high",
+      "frequency_mhz": 100,
+      "stage": "synthesis_only_estimated",
+      "wns_estimated_ns": -3.547,
+      "tns_estimated_ns": -8325.468,
+      "seconds": 7351.0,
+      "checkpoint_sha256": "045bbcf726f311f7e74dc9812ec168a033c503dd2e3663ba9f0234377b92ea11",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_screen_100MHz/runs/area_high",
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_screen_100MHz/results.json",
+      "timing_closure_evidence": false,
+      "note": "A completed synthesis is not routed timing closure; later implementation is a separate record."
+    },
+    {
+      "id": "no_lc",
+      "frequency_mhz": 100,
+      "stage": "synthesis_only_estimated",
+      "wns_estimated_ns": -0.397,
+      "tns_estimated_ns": -37.697,
+      "seconds": 1195.1,
+      "checkpoint_sha256": "a0e2ebe729fcc89b1a97d5826433a5962e9f10f8924f9e97c1b8caa61f952e2a",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_no_lc_100MHz/runs/no_lc",
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_no_lc_100MHz/results.json",
+      "timing_closure_evidence": false,
+      "note": "A completed synthesis is not routed timing closure; later implementation is a separate record."
+    }
+  ],
+  "other_frequency_records": [
+    {
+      "frequency_mhz": 125.0,
+      "synthesis": "carry",
+      "implementation": "current",
+      "stage": "interrupted_no_final_timing",
+      "execution": "interrupted",
+      "wns_ns": null,
+      "tns_ns": null,
+      "whs_ns": null,
+      "source": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/carry/125MHz/current/125MHz/result.json",
+      "timing_closed": null
+    },
+    {
+      "frequency_mhz": 125.0,
+      "synthesis": "defaults",
+      "implementation": "current",
+      "stage": "routed_final",
+      "execution": "complete",
+      "wns_ns": -3.139,
+      "tns_ns": -32642.748,
+      "whs_ns": 0.002,
+      "source": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/125MHz/current/125MHz/result.json",
+      "timing_closed": false
+    }
+  ],
+  "focused_100mhz_results": [
+    {
+      "id": "SATP004 recovered",
+      "campaign": "focused_day_20261021",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults gold",
+      "implementation": "phys_opt_design -placement_opt -routing_opt -critical_cell_opt -path_groups exact cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -425.824,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1688,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": null,
+      "adopted": null,
+      "measurable_global_improvement": true,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/analyses/satp004_recovery_003_retry1/result.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/satp004_recovery/runs/signoff003",
+      "original_physical_run": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/group_trial/runs/satp_group004",
+      "offline_recovery": null,
+      "scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "state_check": {
+        "original_ffs": 33878,
+        "after_ffs": 33878,
+        "verified_satp_clones": [],
+        "independent_snapshot_audit_passed": true
+      }
+    },
+    {
+      "id": "PMP521",
+      "campaign": "focused_day_20261021",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults gold",
+      "implementation": "phys_opt_design -placement_opt -routing_opt -critical_cell_opt -path_groups exact cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -426.315,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1688,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": false,
+      "adopted": false,
+      "measurable_global_improvement": false,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/constraint_serialization_v2_20261021/audit/pmp521_001/analysis_v2final/result.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/constraint_serialization_v2_20261021/audit/pmp521_001/run_v2final",
+      "original_physical_run": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/pmp521_001",
+      "offline_recovery": {
+        "source_run": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/pmp521_001",
+        "source_candidate": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/pmp521_001/final.partial.dcp",
+        "candidate_sha256": "045ad2307af1a41a34ec3963e6bedbd29c5d66ad09e3d617e74ff92ca4eeaf26",
+        "original_worker_completed": false,
+        "original_evidence_file_count": 76,
+        "scope": "Closed original data and a hardlink to the saved candidate; fresh independent verification only. No implementation or physical optimization rerun."
+      },
+      "scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "state_check": {
+        "original_ffs": 33878,
+        "after_ffs": 33878,
+        "verified_satp_clones": [],
+        "independent_snapshot_audit_passed": true
+      }
+    },
+    {
+      "id": "OPERANDS344",
+      "campaign": "focused_day_20261021",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults gold",
+      "implementation": "phys_opt_design -placement_opt -routing_opt -critical_cell_opt -path_groups exact cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -368.093,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1441,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": true,
+      "adopted": true,
+      "measurable_global_improvement": true,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/operands344_recovery_v5_001_execution_record/analysis/result.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/operands344_recovery_v5_001",
+      "original_physical_run": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/operands344_recovery_v5_001",
+      "offline_recovery": null,
+      "scope": "Original FF identities/configurations and all other controls exact; only two CE drivers accepted after locally proved combinational equivalence against shared original electrical anchors and fresh final-cone comparison. No new FF or retiming.",
+      "state_check": {
+        "original_ffs": 33878,
+        "after_ffs": 33878,
+        "verified_satp_clones": [],
+        "independent_snapshot_audit_passed": true
+      }
+    },
+    {
+      "id": "CAST300",
+      "campaign": "focused_day_20261021",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults gold",
+      "implementation": "phys_opt_design -placement_opt -routing_opt -critical_cell_opt -path_groups exact cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -368.093,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1441,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": false,
+      "adopted": false,
+      "measurable_global_improvement": false,
+      "no_observed_change": true,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/cast300_v2_001_execution_record/analysis/result.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/cast300_v2_001",
+      "original_physical_run": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/cast300_v2_001",
+      "offline_recovery": null,
+      "scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "state_check": {
+        "original_ffs": 33878,
+        "after_ffs": 33878,
+        "verified_satp_clones": [],
+        "independent_snapshot_audit_passed": true
+      }
+    },
+    {
+      "id": "FMA145",
+      "campaign": "focused_day_20261021",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults gold",
+      "implementation": "phys_opt_design -placement_opt -routing_opt -critical_cell_opt -path_groups exact cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -363.606,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1439,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": true,
+      "adopted": true,
+      "measurable_global_improvement": true,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001_execution_record/analysis/result.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001",
+      "original_physical_run": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001",
+      "offline_recovery": null,
+      "scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "state_check": {
+        "original_ffs": 33878,
+        "after_ffs": 33878,
+        "verified_satp_clones": [],
+        "independent_snapshot_audit_passed": true
+      }
+    },
+    {
+      "id": "002_restruct_CAST",
+      "campaign": "focused_night_20261021_22",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults; no new synthesis",
+      "implementation": "phys_opt_design -restruct_opt -path_groups exact CAST cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -363.606,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1439,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": false,
+      "adopted": false,
+      "no_observed_change": true,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/002_restruct_CAST/analysis/result.json",
+      "decision_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/002_restruct_CAST/decision.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/002_restruct_CAST",
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/002_restruct_CAST/final.dcp",
+      "parent_checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001/final.dcp",
+      "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/002_restruct_CAST/job_target.tcl",
+      "spec": {
+        "algorithm": "restruct",
+        "family": "CAST",
+        "minutes": 60,
+        "reason": "Isolate combinational LUT depth reduction"
+      },
+      "fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280514979312061,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.252683808200139,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.502,
+        "initial_failing_median": -0.255,
+        "negative_count": 1439,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "before_fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280514979312061,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.252683808200139,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.502,
+        "initial_failing_median": -0.255,
+        "negative_count": 1439,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "state_scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "seconds": 1064.1408398151398
+    },
+    {
+      "id": "004_pin_CAST",
+      "campaign": "focused_night_20261021_22",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults; no new synthesis",
+      "implementation": "phys_opt_design -critical_pin_opt -path_groups exact CAST cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -363.606,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1439,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": false,
+      "adopted": false,
+      "no_observed_change": true,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/004_pin_CAST/analysis/result.json",
+      "decision_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/004_pin_CAST/decision.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/004_pin_CAST",
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/004_pin_CAST/final.dcp",
+      "parent_checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001/final.dcp",
+      "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/004_pin_CAST/job_target.tcl",
+      "spec": {
+        "algorithm": "pin",
+        "family": "CAST",
+        "minutes": 35,
+        "reason": "Isolate eligible LUT input remapping"
+      },
+      "fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280514979312061,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.252683808200139,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.502,
+        "initial_failing_median": -0.255,
+        "negative_count": 1439,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "before_fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280514979312061,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.252683808200139,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.502,
+        "initial_failing_median": -0.255,
+        "negative_count": 1439,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "state_scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "seconds": 1096.1653056144714
+    },
+    {
+      "id": "006_restruct_FMA",
+      "campaign": "focused_night_20261021_22",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults; no new synthesis",
+      "implementation": "phys_opt_design -restruct_opt -path_groups exact FMA cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -363.046,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1436,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": true,
+      "adopted": false,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/006_restruct_FMA/analysis/result.json",
+      "decision_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/006_restruct_FMA/decision.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/006_restruct_FMA",
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/006_restruct_FMA/final.dcp",
+      "parent_checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001/final.dcp",
+      "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/006_restruct_FMA/job_target.tcl",
+      "spec": {
+        "algorithm": "restruct",
+        "family": "FMA",
+        "minutes": 60,
+        "reason": "Different remaining critical cone with explicit LUT-depth opportunity"
+      },
+      "fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280506019723539,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.2521973592772759,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.501,
+        "initial_failing_median": -0.255,
+        "negative_count": 1436,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "before_fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280514979312061,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.252683808200139,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.502,
+        "initial_failing_median": -0.255,
+        "negative_count": 1439,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "state_scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "seconds": 1044.1472551822662
+    },
+    {
+      "id": "007_restruct_FMA_TNS",
+      "campaign": "focused_night_20261021_22",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults; no new synthesis",
+      "implementation": "phys_opt_design -restruct_opt -path_groups exact FMA_TNS cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -352.106,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1432,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": true,
+      "adopted": true,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/007_restruct_FMA_TNS/analysis/result.json",
+      "decision_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/007_restruct_FMA_TNS/decision.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/007_restruct_FMA_TNS",
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/007_restruct_FMA_TNS/final.dcp",
+      "parent_checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001/final.dcp",
+      "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/007_restruct_FMA_TNS/job_target.tcl",
+      "spec": {
+        "algorithm": "restruct",
+        "family": "FMA_TNS",
+        "minutes": 60,
+        "reason": "Next critical family; extend productive mechanism"
+      },
+      "fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.2806504516088895,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.24456497567755384,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.238,
+        "negative_count": 1432,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "before_fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280514979312061,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.252683808200139,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.502,
+        "initial_failing_median": -0.255,
+        "negative_count": 1439,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "state_scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "seconds": 1060.1577880382538
+    },
+    {
+      "id": "008_restruct_FMA",
+      "campaign": "focused_night_20261021_22",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults; no new synthesis",
+      "implementation": "phys_opt_design -restruct_opt -path_groups exact FMA cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -351.546,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1429,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": true,
+      "adopted": false,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/008_restruct_FMA/analysis/result.json",
+      "decision_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/008_restruct_FMA/decision.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/008_restruct_FMA",
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/008_restruct_FMA/final.dcp",
+      "parent_checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/007_restruct_FMA_TNS/final.dcp",
+      "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/008_restruct_FMA/job_target.tcl",
+      "spec": {
+        "algorithm": "restruct",
+        "family": "FMA",
+        "minutes": 60,
+        "reason": "Compose an independently useful mechanism on the validated improved parent"
+      },
+      "fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280641492020367,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.24407852675469074,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.499,
+        "initial_failing_median": -0.238,
+        "negative_count": 1429,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "before_fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.2806504516088895,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.24456497567755384,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.238,
+        "negative_count": 1432,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "state_scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "seconds": 1050.1623339653015
+    },
+    {
+      "id": "009_restruct_SATP",
+      "campaign": "focused_night_20261021_22",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults; no new synthesis",
+      "implementation": "phys_opt_design -restruct_opt -path_groups exact SATP cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -322.607,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1285,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": true,
+      "adopted": true,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/analysis/result.json",
+      "decision_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/decision.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP",
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+      "parent_checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001/final.dcp",
+      "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/job_target.tcl",
+      "spec": {
+        "algorithm": "restruct",
+        "family": "SATP",
+        "minutes": 60,
+        "reason": "Next critical family; extend productive mechanism"
+      },
+      "fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.281735101054618,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.2110305767894371,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.207,
+        "negative_count": 1285,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "before_fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.280514979312061,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.252683808200139,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.502,
+        "initial_failing_median": -0.255,
+        "negative_count": 1439,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "state_scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "seconds": 1062.1622667312622
+    },
+    {
+      "id": "010_restruct_FMA",
+      "campaign": "focused_night_20261021_22",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults; no new synthesis",
+      "implementation": "phys_opt_design -restruct_opt -path_groups exact FMA cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -322.047,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1282,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": true,
+      "adopted": false,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/010_restruct_FMA/analysis/result.json",
+      "decision_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/010_restruct_FMA/decision.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/010_restruct_FMA",
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/010_restruct_FMA/final.dcp",
+      "parent_checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+      "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/010_restruct_FMA/job_target.tcl",
+      "spec": {
+        "algorithm": "restruct",
+        "family": "FMA",
+        "minutes": 60,
+        "reason": "Compose an independently useful mechanism on the validated improved parent"
+      },
+      "fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.281726141466096,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.21054412786657403,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.207,
+        "negative_count": 1282,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "before_fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.281735101054618,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.2110305767894371,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.207,
+        "negative_count": 1285,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "state_scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "seconds": 1044.1534061431885
+    }
+  ],
+  "focused_night_nonadmissible_attempts": [
+    {
+      "id": "002_pin_CAST",
+      "classification": "automation_failure_before_physical",
+      "not_a_negative_timing_result": true,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/002_pin_CAST/decision.json",
+      "output": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/002_pin_CAST",
+      "reason": "engine_incomplete",
+      "process_returncode": 1
+    },
+    {
+      "id": "003_eco_CAST_cast_i20_x40",
+      "classification": "automation_failure_before_physical",
+      "not_a_negative_timing_result": true,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/003_eco_CAST_cast_i20_x40/decision.json",
+      "output": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/003_eco_CAST_cast_i20_x40",
+      "reason": "engine_incomplete",
+      "process_returncode": 1
+    },
+    {
+      "id": "005_restruct_PMP",
+      "classification": "rejected_by_integrity_after_physical",
+      "not_a_negative_timing_result": true,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/005_restruct_PMP/decision.json",
+      "output": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/005_restruct_PMP",
+      "reason": "engine_incomplete",
+      "process_returncode": 1
+    }
+  ],
+  "focused_night_separate_interrupted_attempts": [
+    {
+      "id": "001_pin_CAST",
+      "classification": "interrupted_before_physical",
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/state.json",
+      "output": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/001_pin_CAST",
+      "returncode": -15,
+      "not_a_timing_failure": true
+    },
+    {
+      "id": "004_restruct_PMP",
+      "classification": "interrupted_before_physical",
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/state.json",
+      "output": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/004_restruct_PMP",
+      "returncode": -15,
+      "not_a_timing_failure": true
+    }
+  ],
+  "focused_night_separate_reload_checks": [
+    {
+      "kind": "baseline",
+      "id": "000_noop_CAST",
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/000_noop_CAST/analysis/result.json",
+      "not_new_optimization": true
+    },
+    {
+      "kind": "final_signoff",
+      "id": "999_noop_CAST",
+      "metrics": {
+        "wns": -0.553,
+        "tns": -322.607,
+        "whs": 0.003,
+        "failing_endpoints": 1285
+      },
+      "analysis_valid": true,
+      "timing_closed": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/999_noop_CAST/analysis/result.json",
+      "not_new_optimization": true
+    }
+  ],
+  "integrity_rejection_005_pmp": {
+    "id": "005_restruct_PMP",
+    "classification": "physical_optimization_completed_but_candidate_rejected_by_state_integrity",
+    "sources": [
+      "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/005_restruct_PMP/REJECTED_UNVERIFIED.txt",
+      "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/005_restruct_PMP/before_state.tsv.other_state.tsv.control_pins.tsv",
+      "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/005_restruct_PMP/after_state.tsv.other_state.tsv.control_pins.tsv",
+      "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/005_restruct_PMP/global_metrics.tsv",
+      "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/005_restruct_PMP/final.partial.dcp"
+    ],
+    "changed_control_pin_count": 11,
+    "changed_control_pin_kinds": {
+      "ENBWREN": 8,
+      "WEBWE[3]": 1,
+      "WEBWE[5]": 1,
+      "WEBWE[6]": 1
+    },
+    "changed_controls": [
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg/ENBWREN",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg/WEBWE[3]",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___152/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___152_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[0].i_tc_sram_wrapper/i_ram/Mem_DP_reg/WEBWE[5]",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___156/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___156_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[1].i_tc_sram_wrapper/i_ram/Mem_DP_reg/ENBWREN",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[2].i_tc_sram_wrapper/i_ram/Mem_DP_reg/ENBWREN",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[3].i_tc_sram_wrapper/i_ram/Mem_DP_reg/ENBWREN",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[4].i_tc_sram_wrapper/i_ram/Mem_DP_reg/ENBWREN",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[5].i_tc_sram_wrapper/i_ram/Mem_DP_reg/ENBWREN",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[6].i_tc_sram_wrapper/i_ram/Mem_DP_reg/ENBWREN",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[7].i_tc_sram_wrapper/i_ram/Mem_DP_reg/ENBWREN",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___29_comp/O"
+      },
+      {
+        "pin": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/gen_data_banks[0].i_data_sram/data_sram/gen_cut[7].i_tc_sram_wrapper/i_ram/Mem_DP_reg/WEBWE[6]",
+        "before": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___46/O",
+        "after": "i_ariane_kr260/i_ariane/i_cva6/gen_cache_wt.i_cache_subsystem/i_wt_dcache/i_wt_dcache_mem/i___46_comp/O"
+      }
+    ],
+    "provisional_metrics_not_admissible": {
+      "wns_ns": -0.553,
+      "tns_ns": -357.937,
+      "failing_setup_endpoints": 1431
+    },
+    "note": "The controller labels engine_incomplete. The physical command and reports completed; state audit rejected changed RAM control topology. This is not a timing policy failure or a proven functional bug. No formal equivalence justification is recorded, so it cannot win."
+  },
+  "best_historical_references": {
+    "old_general_gold": {
+      "id": "additional_postroute_aggressive",
+      "frequency_mhz": 100,
+      "synthesis": "Vivado Synthesis Defaults / inherited checkpoint",
+      "implementation": "additional_postroute_aggressive",
+      "stage": "final",
+      "wns_ns": -0.553,
+      "tns_ns": -434.73,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1716,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "measurement_class": "completed_routed_timing_failure",
+      "validation_status": "timing_failed",
+      "validation_errors": [
+        "negative_wns",
+        "negative_tns",
+        "timing_signoff_phrase_missing"
+      ],
+      "validation_review": [
+        "constant_jtag_scope_matches; verify per-run constant-clock evidence"
+      ],
+      "seconds": 540.1,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/final.dcp",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive",
+      "primary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/result.json",
+      "summary_source": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+      "timing_report": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/timing_summary.rpt",
+      "recipe_file": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/recipes/post_aggressive.tcl"
+    },
+    "latest_adopted_100mhz_balanced": {
+      "applied_steps": [
+        {
+          "family": "SATP",
+          "algorithm": "restruct",
+          "eco_candidate": null,
+          "job_id": "009_restruct_SATP"
+        }
+      ],
+      "validated": true,
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+      "sha256": "169be1450fd1881259ecebe4401790971fe770310a469cc6ef1ff0b0431494ce",
+      "metrics": {
+        "wns": -0.553,
+        "tns": -322.607,
+        "whs": 0.003,
+        "failing_endpoints": 1285
+      },
+      "means": {
+        "all_count": 96433,
+        "all_mean": 5.281735101054618,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.2110305767894371,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.207,
+        "negative_count": 1285,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "provenance": "009_restruct_SATP",
+      "proof_files": {
+        "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/analysis/result.json": "28f47f36ee4ffe1cc3eb9f3bf5f257533451b779f8418ebe96a058ed7316fb8b",
+        "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/009_restruct_SATP/fixed_means.json": "ac9f34ad1bb1692755fbc04eb66b4a192139a117b10c5b3079ca019d8cf61148"
+      }
+    },
+    "night_lowest_tns_but_not_adopted": {
+      "id": "010_restruct_FMA",
+      "campaign": "focused_night_20261021_22",
+      "frequency_mhz": 100,
+      "synthesis": "inherited Vivado Synthesis Defaults; no new synthesis",
+      "implementation": "phys_opt_design -restruct_opt -path_groups exact FMA cohort; restore ordinary clock group",
+      "stage": "post_route_physical_optimization",
+      "wns_ns": -0.553,
+      "tns_ns": -322.047,
+      "whs_ns": 0.003,
+      "failing_setup_endpoints": 1282,
+      "total_setup_endpoints": 96433,
+      "timing_closed": false,
+      "analysis_valid": true,
+      "accepted": true,
+      "adopted": false,
+      "no_observed_change": false,
+      "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/010_restruct_FMA/analysis/result.json",
+      "decision_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/010_restruct_FMA/decision.json",
+      "folder": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/010_restruct_FMA",
+      "checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/010_restruct_FMA/final.dcp",
+      "parent_checkpoint": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/runs/009_restruct_SATP/final.dcp",
+      "recipe": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/records/010_restruct_FMA/job_target.tcl",
+      "spec": {
+        "algorithm": "restruct",
+        "family": "FMA",
+        "minutes": 60,
+        "reason": "Compose an independently useful mechanism on the validated improved parent"
+      },
+      "fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.281726141466096,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.21054412786657403,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.207,
+        "negative_count": 1282,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "before_fixed_means": {
+        "all_count": 96433,
+        "all_mean": 5.281735101054618,
+        "initial_failing_count": 1439,
+        "initial_failing_mean": -0.2110305767894371,
+        "initial_failing_p01": -0.535,
+        "initial_failing_p05": -0.5,
+        "initial_failing_median": -0.207,
+        "negative_count": 1285,
+        "fixed_endpoint_identity_sha256": "c327e7ddcaac317bc8e86e8683365b17762d9ffcec23039dde99493124eb6753"
+      },
+      "state_scope": "Identity, REF, INIT/inversion and controls; original data logic remains Vivado function-preserving optimization, not a formal equivalence proof.",
+      "seconds": 1044.1534061431885
+    },
+    "adoption_reason_for_not_keeping_010": "Controller requires both all_mean and initial_failing_mean nonregression. 010 improves TNS/failing endpoints but all_mean96433 decreases by~0.000008960ns; the fixed-cohort mean improves. Retain009 as adopted winner; list010 separately as valid lowerTNS candidate.",
+    "adoption_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/controller_v2.py"
+  },
+  "focused_night": {
+    "summary_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/summary.json",
+    "status": "complete",
+    "verdict": "NO_CERRO_CON_PROGRESO",
+    "window": {
+      "schema_version": 1,
+      "start": 1792634478.0,
+      "search_deadline": 1792661478.0,
+      "deadline": 1792666878.0,
+      "hard_deadline": 1792666878.0,
+      "timezone": "America/Argentina/Cordoba",
+      "start_local": "2026-10-21T23:01:18-03:00",
+      "search_deadline_local": "2026-10-22T06:31:18-03:00",
+      "deadline_local": "2026-10-22T08:01:18-03:00",
+      "authorization": "User explicitly authorized starting nine-hour night campaign. Tenth hour is not assumed. Deadline includes preparation and is never reset on resume."
+    },
+    "final_signoff_valid": true,
+    "closed_implementation": null,
+    "limit": "A negative campaign result is not a proof that100MHz is impossible. CPU unchanged; static timing only.",
+    "skipped": [
+      {
+        "family": "SATP",
+        "reason": "Authorized ASID10 cohort is not the actual current SATP bottleneck; do not substitute it for ASID8."
+      }
+    ]
+  },
+  "day22_passive_historical_state": {
+    "source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/summary.json",
+    "status_as_saved": "waiting_resources",
+    "reason_as_saved": "Automatic one-shot retry waits for7.5GiB available continuously for60seconds; original day window unchanged",
+    "reviewed_attempts": 0,
+    "valid_candidates": 0,
+    "results": [],
+    "warning": "Historical snapshot, not a current process status. CURRENT_STATUS22Oct says baseline interrupted forRAM; do not count as strategy timing failure.",
+    "status_source": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/CURRENT_STATUS.txt"
+  },
+  "diagnostic_scope": {
+    "source": "/home/nachofalchi/data/fpga-work/timing-preparation/diagnostic_census_20261021/reported_paths_audit/summary.json",
+    "reported_paths_across_imported_reports": 3110,
+    "fully_parsed_report_count": 31,
+    "header_only_report_count": 5,
+    "limits": [
+      "Reports are retained samples, not a census of all failing endpoints.",
+      "Absent pins in top-path samples do not prove their absence in the netlist or electrical improvement.",
+      "Same printed pins across changed netlists do not prove functional equivalence.",
+      "Delay deltas are paired only when driver pin, sink pin, launch register and endpoint all match.",
+      "Printed-arc-only delay deltas are separately labelled exploratory; transition identity and netlist equivalence are unverified.",
+      "Delay improvements on separate arcs must not be added as predicted global WNS improvement.",
+      "Data arc reconstruction excludes clock paths; unavailable input pins are explicit parse limitations.",
+      "No checkpoint, constraint, project, CPU source, campaign code, service or running job is modified."
+    ],
+    "note": "3110 sampled paths across36reports are not3110 distinct failing endpoints or a full1716endpoint census. Original census pipeline markers absent; later focused cohort proof is separate."
+  },
+  "recipe_baseline_reference": {
+    "opt": "ExploreWithRemap",
+    "place": "Explore",
+    "physopt": "Explore",
+    "route": "NoTimingRelaxation -tns_cleanup",
+    "postroute": "Explore"
+  },
+  "recipe_caveats": [
+    "Named strategy changes may affect several implementation steps at once; isolated directives have separate evidence.",
+    "ML1/2/3 are native RQS strategies; do not conflate with Auto_1/2/3 placement.",
+    "Physical net aliases can identify another hierarchy than their actual driver; local_fma includedCASTdriver targets.",
+    "Final and routed stage metrics can differ. Keep both stage reports; compare selected_stage, not merely the filenamefinal.",
+    "Synthesis/pre-route estimates are not signoff; NO_LC/NoSharing estimated results did not predict routed outcome.",
+    "Historical seconds mix resumed stages, thread counts and checkpoint reuse; do not use them as comparable total flow durations.",
+    "150/300MHz user-reported measurements have no numeric verified provenance in this index; avoid inventing them.",
+    "Synthesis variants can change total setup endpoint population (e.g.NO_LC96439 vs gold96433). A sample of top100 paths is not a fixed-population comparison. Later focused night uses immutable96433/1439endpoint means."
+  ],
+  "inventory": [
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz",
+      "classification": "SATP targeted implementation",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz/results.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4",
+      "classification": "three native RQS implementation recipes, not Auto_1/2/3",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/results.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2",
+      "classification": "directed LUT replication on SATP placed checkpoint",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/results.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3",
+      "classification": "two aggressive optimization variants, including old gold",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/results.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen",
+      "classification": "three isolated implementation directives",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/results.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100",
+      "classification": "three local replication batches; family labels include net-alias caveat",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/results.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h",
+      "classification": "three completed implementation variants, other planned gates conditional",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/results.json",
+        "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/state.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020",
+      "classification": "ten completed selected-stage records, including six Oct21 overnight plus cached NoSharing and three daytime trials",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_screen_100MHz",
+      "classification": "two completed synthesis-only results: NoSharing and AreaHigh",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_screen_100MHz/results.json",
+        "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_screen_100MHz/state.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_no_lc_100MHz",
+      "classification": "one completed synthesis-only NO_LC result",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_no_lc_100MHz/results.json",
+        "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_no_lc_100MHz/state.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/no_share_winner_impl",
+      "classification": "incomplete attempt; later placement resumed in day_night/no_share_baseline",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/no_share_winner_impl/results.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/adaptive_review_20261020",
+      "classification": "adaptive scheduler, analysis and plan; do not count same day_night results again",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/adaptive_review_20261020/PLAN_8h.txt"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/passive_day_20261021",
+      "classification": "resource-limited launcher; completed results stored in day_night; do not count twice",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/passive_day_20261021/state.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/diagnostic_census_20261021",
+      "classification": "read-only diagnostic and pilots; no census_verified.json or candidate_plan.json in original pipeline",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/diagnostic_census_20261021/state.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021",
+      "classification": "exact-cohort post-route optimization; separate day and night campaigns; restores temporary path groups",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/CURRENT_STATUS.txt"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-preparation/night_plan_20261021",
+      "classification": "planning package, not a measured run",
+      "primary_indices": []
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-matrix/pilot_100mhz",
+      "classification": "Initial completed100MHz baseline; metrics reused by search matrix, not an independent repeat",
+      "summary": "/home/nachofalchi/data/fpga-work/timing-matrix/pilot_100mhz/matrix_summary.csv",
+      "row_count": 1,
+      "complete_rows": 1,
+      "interrupted_rows": 0,
+      "rows": [
+        {
+          "synthesis": "current",
+          "implementation": "current",
+          "mhz": "100.0",
+          "execution": "complete",
+          "seconds": "6456.0",
+          "returncode": "0",
+          "wns_ns": "-1.294",
+          "tns_ns": "-2169.251",
+          "whs_ns": "0.0",
+          "ths_ns": "0.0",
+          "wpws_ns": "3.5",
+          "tpws_ns": "0.0",
+          "timing": "violated",
+          "constraints": "review_reports"
+        }
+      ],
+      "state_source": "/home/nachofalchi/data/fpga-work/timing-matrix/pilot_100mhz/state.json",
+      "warning": "Summary occurrences and copied/reused checkpoints are not independent experiments; keep physical provenance."
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz",
+      "classification": "Progressive plan100..300MHz;4 completed100MHz rows and1 interrupted row in matrix_summary; no proof all frequencies executed",
+      "summary": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/matrix_summary.csv",
+      "row_count": 5,
+      "complete_rows": 4,
+      "interrupted_rows": 1,
+      "rows": [
+        {
+          "synthesis": "current",
+          "implementation": "current",
+          "mhz": "100.0",
+          "execution": "complete",
+          "seconds": "6456.0",
+          "returncode": "0",
+          "wns_ns": "-1.294",
+          "tns_ns": "-2169.251",
+          "whs_ns": "0.0",
+          "ths_ns": "0.0",
+          "wpws_ns": "3.5",
+          "tpws_ns": "0.0",
+          "timing": "violated",
+          "constraints": "review_reports"
+        },
+        {
+          "synthesis": "current",
+          "implementation": "explore_postroute",
+          "mhz": "100.0",
+          "execution": "complete",
+          "seconds": "1643.3",
+          "returncode": "0",
+          "wns_ns": "-0.721",
+          "tns_ns": "-915.896",
+          "whs_ns": "0.001",
+          "ths_ns": "0.0",
+          "wpws_ns": "3.5",
+          "tpws_ns": "0.0",
+          "timing": "violated",
+          "constraints": "review_reports"
+        },
+        {
+          "synthesis": "current",
+          "implementation": "extra_timing",
+          "mhz": "100.0",
+          "execution": "complete",
+          "seconds": "3264.8",
+          "returncode": "0",
+          "wns_ns": "-1.112",
+          "tns_ns": "-2041.847",
+          "whs_ns": "0.008",
+          "ths_ns": "0.0",
+          "wpws_ns": "3.5",
+          "tpws_ns": "0.0",
+          "timing": "violated",
+          "constraints": "review_reports"
+        },
+        {
+          "synthesis": "defaults",
+          "implementation": "current",
+          "mhz": "100.0",
+          "execution": "complete",
+          "seconds": "4355.7",
+          "returncode": "0",
+          "wns_ns": "-0.665",
+          "tns_ns": "-727.149",
+          "whs_ns": "0.004",
+          "ths_ns": "0.0",
+          "wpws_ns": "3.5",
+          "tpws_ns": "0.0",
+          "timing": "violated",
+          "constraints": "review_reports"
+        },
+        {
+          "synthesis": "defaults",
+          "implementation": "explore_postroute",
+          "mhz": "100.0",
+          "execution": "interrupted",
+          "seconds": "22.6",
+          "returncode": "-15",
+          "wns_ns": "",
+          "tns_ns": "",
+          "whs_ns": "",
+          "ths_ns": "",
+          "wpws_ns": "",
+          "tpws_ns": "",
+          "timing": "unknown",
+          "constraints": "review_reports"
+        }
+      ],
+      "state_source": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/state.json",
+      "warning": "Summary occurrences and copied/reused checkpoints are not independent experiments; keep physical provenance."
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz",
+      "classification": "Extended matrix with cached Defaults100MHz baseline,5 other completed100MHz rows and1 completed125MHz row; carry125MHz interruption separate",
+      "summary": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/summary.csv",
+      "row_count": 7,
+      "complete_rows": 7,
+      "interrupted_rows": 0,
+      "rows": [
+        {
+          "constraints": "review_reports",
+          "execution": "complete",
+          "implementation": "current",
+          "mhz": "100.0",
+          "path": "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz",
+          "returncode": "0",
+          "reused": "True",
+          "seconds": "4355.7",
+          "signoff": "",
+          "signoff_problems": "",
+          "synthesis": "defaults",
+          "ths_ns": "0.0",
+          "timing": "violated",
+          "tns_ns": "-727.149",
+          "tpws_ns": "0.0",
+          "whs_ns": "0.004",
+          "wns_ns": "-0.665",
+          "wpws_ns": "3.5"
+        },
+        {
+          "constraints": "review_reports",
+          "execution": "complete",
+          "implementation": "current",
+          "mhz": "100.0",
+          "path": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/carry/100MHz/current/100MHz",
+          "returncode": "0",
+          "reused": "False",
+          "seconds": "4409.0",
+          "signoff": "failed",
+          "signoff_problems": "",
+          "synthesis": "carry",
+          "ths_ns": "0.0",
+          "timing": "violated",
+          "tns_ns": "-1249.92",
+          "tpws_ns": "0.0",
+          "whs_ns": "0.002",
+          "wns_ns": "-0.787",
+          "wpws_ns": "3.5"
+        },
+        {
+          "constraints": "review_reports",
+          "execution": "complete",
+          "implementation": "current",
+          "mhz": "100.0",
+          "path": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/alternate/100MHz/current/100MHz",
+          "returncode": "0",
+          "reused": "False",
+          "seconds": "4106.5",
+          "signoff": "failed",
+          "signoff_problems": "",
+          "synthesis": "alternate",
+          "ths_ns": "0.0",
+          "timing": "violated",
+          "tns_ns": "-1045.771",
+          "tpws_ns": "0.0",
+          "whs_ns": "0.0",
+          "wns_ns": "-0.783",
+          "wpws_ns": "3.5"
+        },
+        {
+          "constraints": "review_reports",
+          "execution": "complete",
+          "implementation": "netdelay_high",
+          "mhz": "100.0",
+          "path": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/netdelay_high/100MHz",
+          "returncode": "0",
+          "reused": "False",
+          "seconds": "4579.3",
+          "signoff": "failed",
+          "signoff_problems": "",
+          "synthesis": "defaults",
+          "ths_ns": "0.0",
+          "timing": "violated",
+          "tns_ns": "-1761.613",
+          "tpws_ns": "0.0",
+          "whs_ns": "0.01",
+          "wns_ns": "-0.931",
+          "wpws_ns": "3.5"
+        },
+        {
+          "constraints": "review_reports",
+          "execution": "complete",
+          "implementation": "wl_block",
+          "mhz": "100.0",
+          "path": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/wl_block/100MHz",
+          "returncode": "0",
+          "reused": "False",
+          "seconds": "3363.2",
+          "signoff": "failed",
+          "signoff_problems": "",
+          "synthesis": "defaults",
+          "ths_ns": "0.0",
+          "timing": "violated",
+          "tns_ns": "-1627.704",
+          "tpws_ns": "0.0",
+          "whs_ns": "0.01",
+          "wns_ns": "-0.901",
+          "wpws_ns": "3.5"
+        },
+        {
+          "constraints": "review_reports",
+          "execution": "complete",
+          "implementation": "explore_postroute",
+          "mhz": "100.0",
+          "path": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/explore_postroute/100MHz",
+          "returncode": "0",
+          "reused": "False",
+          "seconds": "3403.1",
+          "signoff": "failed",
+          "signoff_problems": "",
+          "synthesis": "defaults",
+          "ths_ns": "0.0",
+          "timing": "violated",
+          "tns_ns": "-1825.879",
+          "tpws_ns": "0.0",
+          "whs_ns": "0.002",
+          "wns_ns": "-1.0",
+          "wpws_ns": "3.5"
+        },
+        {
+          "constraints": "review_reports",
+          "execution": "complete",
+          "implementation": "current",
+          "mhz": "125.0",
+          "path": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/125MHz/current/125MHz",
+          "returncode": "0",
+          "reused": "False",
+          "seconds": "4064.8",
+          "signoff": "failed",
+          "signoff_problems": "",
+          "synthesis": "defaults",
+          "ths_ns": "0.0",
+          "timing": "violated",
+          "tns_ns": "-32642.748",
+          "tpws_ns": "0.0",
+          "whs_ns": "0.002",
+          "wns_ns": "-3.139",
+          "wpws_ns": "2.5"
+        }
+      ],
+      "state_source": "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/state.json",
+      "warning": "Summary occurrences and copied/reused checkpoints are not independent experiments; keep physical provenance."
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-evidence/20261018",
+      "classification": "Archived observation/index of search matrix, not a new execution campaign",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-evidence/20261018/timing_results.csv",
+        "/home/nachofalchi/data/fpga-work/timing-evidence/20261018/archive_state.json"
+      ],
+      "csv_rows": 5,
+      "archive_state": {
+        "updated_at": "2026-10-19T10:28:36-0300",
+        "captured_versions": 0,
+        "tracked_paths": 6204,
+        "errors": []
+      }
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/20261019",
+      "classification": "read-only timing analysis/strategy/planning index; underlying runs counted elsewhere",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/20261019/audit.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/20261019/audit_report.txt",
+        "/home/nachofalchi/data/fpga-work/timing-audit/20261019/informe_es.txt",
+        "/home/nachofalchi/data/fpga-work/timing-audit/20261019/results_100MHz.csv"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/20261019_exact",
+      "classification": "read-only timing analysis/strategy/planning index; underlying runs counted elsewhere",
+      "primary_indices": []
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/20261019_satp",
+      "classification": "read-only timing analysis/strategy/planning index; underlying runs counted elsewhere",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/20261019_satp/decision_analysis.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/cache_headroom_1792607482",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/cache_headroom_1792607482/result.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_cache_plan_1792612009",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_cache_plan_1792612009/code_cache_extra_plan.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_cache_plan_1792612009/plan.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_maintenance_20261021",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/chrome_http_maintenance_20261021/README.txt"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/cold_text_dedup_1792605627",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/cold_text_dedup_1792605627/plan_and_before.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/cold_text_dedup_1792605627/result.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/cold_text_dedup_extended_1792605899",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/cold_text_dedup_extended_1792605899/plan.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/cold_text_dedup_extended_1792605899/result.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/consolidado_20261019",
+      "classification": "read-only timing analysis/strategy/planning index; underlying runs counted elsewhere",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/consolidado_20261019/evaluaciones.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/consolidado_20261019/reporte_es.txt"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/README.txt",
+        "/home/nachofalchi/data/fpga-work/timing-audit/day_groups_dedup_20261021/cold_logs_plan.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/feasibility_20261020",
+      "classification": "read-only timing analysis/strategy/planning index; underlying runs counted elsewhere",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/feasibility_20261020/feasibility.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/feasibility_20261020/informe_es.txt",
+        "/home/nachofalchi/data/fpga-work/timing-audit/feasibility_20261020/synthesis_comparison.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/implementation_plan_20261020",
+      "classification": "read-only timing analysis/strategy/planning index; underlying runs counted elsewhere",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/implementation_plan_20261020/plan.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/implementation_plan_20261020/plan_es.txt"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/policy_review_20261019",
+      "classification": "read-only timing analysis/strategy/planning index; underlying runs counted elsewhere",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/policy_review_20261019/comparative_evidence.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/policy_review_20261019/revision_es.txt"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde",
+      "classification": "read-only timing analysis/strategy/planning index; underlying runs counted elsewhere",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/revision_es.txt"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/README.txt",
+        "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/cold_duplicate_plan.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/cold_duplicate_refreshed_plan.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/compression_plan.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/compression_result.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/dedup_result.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/failed_update_staging_plan.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/space_cleanup_1792617280/failed_update_staging_result.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/storage_cleanup_20261020",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/storage_cleanup_20261020/planned_cache_cleanup.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/storage_cleanup_20261020/result.json"
+      ]
+    },
+    {
+      "path": "/home/nachofalchi/data/fpga-work/timing-audit/storage_cleanup_20261021",
+      "classification": "storage/cache/compression maintenance audit, not timing experiment",
+      "primary_indices": [
+        "/home/nachofalchi/data/fpga-work/timing-audit/storage_cleanup_20261021/planned.json",
+        "/home/nachofalchi/data/fpga-work/timing-audit/storage_cleanup_20261021/result.json"
+      ]
+    }
+  ],
+  "canonical_source_indices": [
+    "/home/nachofalchi/data/fpga-work/timing-audit/consolidado_20261019/evaluaciones.json",
+    "/home/nachofalchi/data/fpga-work/timing-audit/revision_20261020_tarde/resultados.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/alternate/100MHz/current/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/carry/100MHz/current/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/explore_postroute/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/netdelay_high/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/night_100_200mhz/experiments/defaults/100MHz/wl_block/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/directed/defaults_route_explore/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/current/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/explore_postroute/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/current/100MHz/extra_timing/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-matrix/search_100_300mhz/experiments/defaults/100MHz/current/100MHz/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz/runs/satp_only/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_1_postexplore/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_2_postexplore/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_ml_v4/runs/ml_3_postexplore/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_satp_replication_v2/runs/satp_plus_replication11/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/additional_postroute_aggressive/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/100MHz_targeted_v3/runs/replication_pre_aggressive/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/day_night_20261020/results.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_fanout/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_net_low/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/defaults_impl_screen/runs/defaults_refine/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/diagnostic_census_20261021/reported_paths_audit/summary.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/analyses/satp004_recovery_003_retry1/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/constraint_serialization_v2_20261021/audit/pmp521_001/analysis_v2final/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/cast300_v2_001_execution_record/analysis/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/fma145_v2_001_execution_record/analysis/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/day_groups_20261021/runs/operands344_recovery_v5_001_execution_record/analysis/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/state.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/night_run_20261021/summary.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/focused_physical_20261021/passive_day_20261022/summary.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_cast/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_control/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/local_close100/runs/local_fma/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/alternate_router_first/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/early_block/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/night_100MHz_8h/runs/spread_low/result.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_no_lc_100MHz/results.json",
+    "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_screen_100MHz/results.json"
+  ],
+  "preservation": [
+    "All original reports, checkpoints, manifests, archived execution records and rejected candidates remain external evidence.",
+    "This JSON is a documentation handoff, not permission to resume any historical launcher or to change frozen manifests."
+  ],
+  "synthesis_variant_scope": {
+    "recorded_profiles_with_completed_implementation": [
+      "current project settings",
+      "Vivado Synthesis Defaults",
+      "Flow_PerfThresholdCarry",
+      "Flow_AlternateRoutability",
+      "Defaults RESOURCE_SHARING=off",
+      "Defaults NO_LC=true"
+    ],
+    "recorded_additional_synthesis_only": [
+      "Flow_AreaOptimized_high"
+    ],
+    "scope": "Recorded profile variants, not the full Vivado option space. No clock closure implied by completed synthesis.",
+    "source": "/home/nachofalchi/data/fpga-work/timing-preparation/synthesis_no_lc_100MHz/code/synthesize.tcl"
+  }
+}

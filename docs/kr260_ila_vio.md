@@ -1,8 +1,11 @@
 # KR260: ILA y VIO para depurar memoria
 
+> La integración DDR en curso se describe en [kr260_ddr_integration.md](kr260_ddr_integration.md).
+> Las instrucciones y resultados BRAM de este documento son referencia histórica.
+
 ## Alcance
 
-`ariane_kr260_debug.sv` envuelve al top mínimo `ariane_kr260` sin modificarlo. La variante mínima sigue siendo independiente de los IP de debug. El wrapper usa dos IP reales del catálogo de Vivado 2026.1, creados por `create_kr260_debug_ips.tcl`:
+`kr260_top.sv` envuelve al top mínimo `ariane_kr260` sin modificarlo. La variante mínima sigue siendo independiente de los IP de debug. El wrapper usa dos IP reales del catálogo de Vivado 2026.1, creados por `create_kr260_debug_ips.tcl`:
 
 - `kr260_axi_ila`: ILA de 21 probes (`probe0` a `probe20`), 2048 muestras y clock `clk_i`.
 - `kr260_reset_vio`: VIO con una entrada de 2 bits y una salida de 1 bit.
@@ -112,7 +115,7 @@ make BOARD=kr260 \
 
 El target abre el proyecto existente `ariane_kr260_debug/ariane_kr260_debug.xpr` y utiliza su BD `ariane_kr260_debug/ariane_kr260_debug.srcs/sources_1/bd/ariane_kr260_ps_bd/ariane_kr260_ps_bd.bd`. Las rutas se resuelven desde el script, no desde el directorio de trabajo. Conserva las fuentes, la selección de bootrom, la configuración de los IP, las constraints y las estrategias guardadas en el proyecto: ya no lo recrea con `create_project -force` ni reconfigura el ILA/VIO desde otro Tcl.
 
-Valida el BD, genera sus productos y wrapper, y después elabora y lanza la síntesis de `ariane_kr260_debug` con `general.maxThreads=1` y un solo job. No contiene comandos de implementación ni de bitstream, ni resetea automáticamente los runs existentes. Si Vivado requiere reiniciar una síntesis anterior, hacerlo explícitamente desde la GUI antes de guardar y cerrar.
+Valida el BD, genera sus productos y wrapper, y después elabora y lanza la síntesis de `kr260_top` con `general.maxThreads=1` y un solo job. No contiene comandos de implementación ni de bitstream, ni resetea automáticamente los runs existentes. Si Vivado requiere reiniciar una síntesis anterior, hacerlo explícitamente desde la GUI antes de guardar y cerrar.
 
 El proyecto guardado y su BD son ahora necesarios para este target: si faltan, el script se detiene, sin recurrir a una copia antigua. La copia que antes estaba en `src/` quedó archivada junto con su layout en `corev_apu/fpga/backups/kr260_bd_antes_ids_y_reset_2026-09-10/`; no se utiliza ni se sincroniza automáticamente.
 

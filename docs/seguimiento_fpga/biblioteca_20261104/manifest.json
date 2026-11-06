@@ -1,0 +1,510 @@
+{
+  "organized_at": "2026-11-04T17:07:28.586414-03:00",
+  "central_directory": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga",
+  "original_policy": "retain_all_originals",
+  "existing_documents_changed": false,
+  "files": [
+    {
+      "source": "/home/nachofalchi/data/fpga-work/Timing_CVA6_KR260.pdf",
+      "section": "pdf",
+      "target": "biblioteca_20261104/pdf/2026-10-25_Timing_CVA6_KR260.pdf",
+      "original_sha256": "2cd543eec9d2aa33fafabd02319f1bf70599d28f35ea236ebd948daf9bbde28c",
+      "original_bytes": 461547,
+      "reuse_existing": false,
+      "copied_sha256": "2cd543eec9d2aa33fafabd02319f1bf70599d28f35ea236ebd948daf9bbde28c",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/output/pdf/CVA6_KR260_estado_reunion_20261030.pdf",
+      "section": "pdf",
+      "target": "biblioteca_20261104/pdf/2026-10-30_Estado_reunion.pdf",
+      "original_sha256": "ef210458cffe4a7a7628191ed2902147ada81c9a6443ea3e4557b594ab45c9db",
+      "original_bytes": 50893,
+      "reuse_existing": false,
+      "copied_sha256": "ef210458cffe4a7a7628191ed2902147ada81c9a6443ea3e4557b594ab45c9db",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/manual_placa/output/pdf/Manual_CVA6_KR260_90_9MHz.pdf",
+      "section": "pdf",
+      "target": "biblioteca_20261104/pdf/2026-10-30_Manual_placa_90_9MHz.pdf",
+      "original_sha256": "757ea436e37033638949ed7db92ee43f0817244da8d2263349640f01b4667436",
+      "original_bytes": 129242,
+      "reuse_existing": false,
+      "copied_sha256": "757ea436e37033638949ed7db92ee43f0817244da8d2263349640f01b4667436",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/analisis_100mhz_kr260.md",
+      "section": "investigacion",
+      "target": "biblioteca_20261104/investigacion/analisis_100mhz_kr260.md",
+      "original_sha256": "eded773566047d76d5b06470b85b10a5a50f197a5ff5a56da87dda79657cd57a",
+      "original_bytes": 12773,
+      "reuse_existing": false,
+      "copied_sha256": "eded773566047d76d5b06470b85b10a5a50f197a5ff5a56da87dda79657cd57a",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_bootrom_memory_test.md",
+      "section": "arquitectura",
+      "target": "biblioteca_20261104/arquitectura/kr260_bootrom_memory_test.md",
+      "original_sha256": "d7337fe8782b18a6e26f3e7de7544cee2a91a2a7f8332b836a759f09ab3e3ac3",
+      "original_bytes": 4691,
+      "reuse_existing": false,
+      "copied_sha256": "d7337fe8782b18a6e26f3e7de7544cee2a91a2a7f8332b836a759f09ab3e3ac3",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_ddr_integration.md",
+      "section": "arquitectura",
+      "target": "biblioteca_20261104/arquitectura/kr260_ddr_integration.md",
+      "original_sha256": "a18e078832557a23765b887de28b1828103bf7adef0f72a1da19c97890bd424a",
+      "original_bytes": 5335,
+      "reuse_existing": false,
+      "copied_sha256": "a18e078832557a23765b887de28b1828103bf7adef0f72a1da19c97890bd424a",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_ila_vio.md",
+      "section": "arquitectura",
+      "target": "biblioteca_20261104/arquitectura/kr260_ila_vio.md",
+      "original_sha256": "d8ee36dfba93cd350b5021caf7dc27d14a14e375355440591454451449ca51bf",
+      "original_bytes": 10770,
+      "reuse_existing": false,
+      "copied_sha256": "d8ee36dfba93cd350b5021caf7dc27d14a14e375355440591454451449ca51bf",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_lint.md",
+      "section": "arquitectura",
+      "target": "biblioteca_20261104/arquitectura/kr260_lint.md",
+      "original_sha256": "b93c1d3fff810a43f2059ce4db58c3ee79308525e0cd796f7008843ce63c5408",
+      "original_bytes": 9624,
+      "reuse_existing": false,
+      "copied_sha256": "b93c1d3fff810a43f2059ce4db58c3ee79308525e0cd796f7008843ce63c5408",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_memory_path.md",
+      "section": "arquitectura",
+      "target": "biblioteca_20261104/arquitectura/kr260_memory_path.md",
+      "original_sha256": "580801998f1c7eb64bb417fe415b705fcc7659c17280b0edc4ecd96c613e442c",
+      "original_bytes": 3570,
+      "reuse_existing": false,
+      "copied_sha256": "580801998f1c7eb64bb417fe415b705fcc7659c17280b0edc4ecd96c613e442c",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_port_analysis.md",
+      "section": "arquitectura",
+      "target": "biblioteca_20261104/arquitectura/kr260_port_analysis.md",
+      "original_sha256": "6ea26e8086c2d4b3355e23ebfcf4eb6da53a423fa7c9838ccb7b77ba36d2b3e2",
+      "original_bytes": 7233,
+      "reuse_existing": false,
+      "copied_sha256": "6ea26e8086c2d4b3355e23ebfcf4eb6da53a423fa7c9838ccb7b77ba36d2b3e2",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_ps_ddr_architecture.md",
+      "section": "arquitectura",
+      "target": "biblioteca_20261104/arquitectura/kr260_ps_ddr_architecture.md",
+      "original_sha256": "d61fd1996ad10c3ebc6afaec8190e1a47c91a2940060dcbe3fcfa61dc73bdafc",
+      "original_bytes": 13304,
+      "reuse_existing": false,
+      "copied_sha256": "d61fd1996ad10c3ebc6afaec8190e1a47c91a2940060dcbe3fcfa61dc73bdafc",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/kr260_versionado_y_recuperacion.md",
+      "section": "arquitectura",
+      "target": "biblioteca_20261104/arquitectura/kr260_versionado_y_recuperacion.md",
+      "original_sha256": "9a337b1c1a2823bdfda8a78237771939facd6c7e8ccab4aa499a95b3b7cd7271",
+      "original_bytes": 4207,
+      "reuse_existing": false,
+      "copied_sha256": "9a337b1c1a2823bdfda8a78237771939facd6c7e8ccab4aa499a95b3b7cd7271",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_evidence.md",
+      "section": "campanas",
+      "target": "biblioteca_20261104/campanas/timing_evidence.md",
+      "original_sha256": "8b52f8eb19d8144b93e3affcc07e424e2f01f43becd9bcd127cda28848b4f704",
+      "original_bytes": 5523,
+      "reuse_existing": false,
+      "copied_sha256": "8b52f8eb19d8144b93e3affcc07e424e2f01f43becd9bcd127cda28848b4f704",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_matrix.md",
+      "section": "campanas",
+      "target": "biblioteca_20261104/campanas/timing_matrix.md",
+      "original_sha256": "d8f0acdd7b2a87150bb20dc98c47364a9c8efc4edb4de187aa76f4b37092543e",
+      "original_bytes": 12686,
+      "reuse_existing": false,
+      "copied_sha256": "d8f0acdd7b2a87150bb20dc98c47364a9c8efc4edb4de187aa76f4b37092543e",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/timing_sweep.md",
+      "section": "campanas",
+      "target": "biblioteca_20261104/campanas/timing_sweep.md",
+      "original_sha256": "b1cf4b0e0ceec4086e40f224c908a72275e0fcf0aaab7fcc2d7c5b1c4a968b13",
+      "original_bytes": 10397,
+      "reuse_existing": false,
+      "copied_sha256": "b1cf4b0e0ceec4086e40f224c908a72275e0fcf0aaab7fcc2d7c5b1c4a968b13",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/cva6_ports_zynq_kria.md",
+      "section": "investigacion/kria_zynq",
+      "target": "biblioteca_20261104/investigacion/kria_zynq/cva6_ports_zynq_kria.md",
+      "original_sha256": "14cd9b0816fc228493e2952d4f021ecdd7e4fc103899d1b4f0f495696413d834",
+      "original_bytes": 14140,
+      "reuse_existing": false,
+      "copied_sha256": "14cd9b0816fc228493e2952d4f021ecdd7e4fc103899d1b4f0f495696413d834",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/research_notes/CVA6 en Kria y Zynq UltraScale+/otros_nucleos_kria.md",
+      "section": "investigacion/kria_zynq",
+      "target": "biblioteca_20261104/investigacion/kria_zynq/otros_nucleos_kria.md",
+      "original_sha256": "88d0d8722e189ef25198225439373b9f68548155692b5d41bfb2d3cc27260f25",
+      "original_bytes": 26867,
+      "reuse_existing": false,
+      "copied_sha256": "88d0d8722e189ef25198225439373b9f68548155692b5d41bfb2d3cc27260f25",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/caminos_criticos_y_tecnicas.md",
+      "section": "investigacion/frecuencia_fpga",
+      "target": "biblioteca_20261104/investigacion/frecuencia_fpga/caminos_criticos_y_tecnicas.md",
+      "original_sha256": "eaa798ed47809cf09dabf50e4bcc9e8fcff9b9d11df3bdb5b2dfa81420e32c61",
+      "original_bytes": 42593,
+      "reuse_existing": false,
+      "copied_sha256": "eaa798ed47809cf09dabf50e4bcc9e8fcff9b9d11df3bdb5b2dfa81420e32c61",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/k26_y_comparativa.md",
+      "section": "investigacion/frecuencia_fpga",
+      "target": "biblioteca_20261104/investigacion/frecuencia_fpga/k26_y_comparativa.md",
+      "original_sha256": "3ac5909a89003af719ab464e8c1b99c8c0b6ec7f0ead66a669bb9ad00064789a",
+      "original_bytes": 33307,
+      "reuse_existing": false,
+      "copied_sha256": "3ac5909a89003af719ab464e8c1b99c8c0b6ec7f0ead66a669bb9ad00064789a",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/oficial_cva6_fpga.md",
+      "section": "investigacion/frecuencia_fpga",
+      "target": "biblioteca_20261104/investigacion/frecuencia_fpga/oficial_cva6_fpga.md",
+      "original_sha256": "ed16e4871d2287952a1da895cdee310ceb343c4c23e9a696396a6bf4acd5d9b5",
+      "original_bytes": 45590,
+      "reuse_existing": false,
+      "copied_sha256": "ed16e4871d2287952a1da895cdee310ceb343c4c23e9a696396a6bf4acd5d9b5",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/research_notes/Frecuencia del CVA6 en FPGA/ports_y_papers.md",
+      "section": "investigacion/frecuencia_fpga",
+      "target": "biblioteca_20261104/investigacion/frecuencia_fpga/ports_y_papers.md",
+      "original_sha256": "d3d5ed4bdb875d744941e95be9b7dcd9d8d3ccddfc3ac727f1ab91db3a8e076e",
+      "original_bytes": 49945,
+      "reuse_existing": false,
+      "copied_sha256": "d3d5ed4bdb875d744941e95be9b7dcd9d8d3ccddfc3ac727f1ab91db3a8e076e",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/reports/Frecuencia del CVA6 en FPGA.md",
+      "section": "investigacion",
+      "target": "biblioteca_20261104/investigacion/resumen_investigacion_20261027.md",
+      "original_sha256": "ea2266b87f97dd42f2eca2bb7337330052a77bbb4e85f4846b03884239b4364e",
+      "original_bytes": 29298,
+      "reuse_existing": false,
+      "copied_sha256": "ea2266b87f97dd42f2eca2bb7337330052a77bbb4e85f4846b03884239b4364e",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/DOCUMENTACION_CVA6.md",
+      "section": "organizacion",
+      "target": "biblioteca_20261104/organizacion/DOCUMENTACION_CVA6.md",
+      "original_sha256": "a0a686170261c587300fe6bc216559a2f226fcc90001eb3259aeb62edc49c49c",
+      "original_bytes": 729,
+      "reuse_existing": false,
+      "copied_sha256": "0bb1fdae2b2ac446b38a7a255b32e507fee51eaa7db25ac813d6dcb8f185d54f",
+      "link_rewrites": [
+        {
+          "original": "cva6-equipo/docs/seguimiento_fpga/README.md",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/README.md"
+        },
+        {
+          "original": "cva6-equipo",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo"
+        },
+        {
+          "original": "cva6-equipo/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/ariane_kr260_debug/ariane_kr260_debug.xpr"
+        },
+        {
+          "original": "cva6-equipo/corev_apu/fpga/software/kr260_ps_boot",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot"
+        },
+        {
+          "original": "entregas/reunion_profesor_20261030",
+          "central": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030"
+        }
+      ],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/CVA6_VIVADO_WORKSPACE.md",
+      "section": "organizacion",
+      "target": "biblioteca_20261104/organizacion/CVA6_VIVADO_WORKSPACE.md",
+      "original_sha256": "1471253f69213cd6bc85433dea31dfe986db6b8cae5c4a6a46dc3d9c36b49067",
+      "original_bytes": 10455,
+      "reuse_existing": false,
+      "copied_sha256": "1471253f69213cd6bc85433dea31dfe986db6b8cae5c4a6a46dc3d9c36b49067",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/RESPALDO_EXTERNO_20261029.md",
+      "section": "organizacion",
+      "target": "biblioteca_20261104/organizacion/RESPALDO_EXTERNO_20261029.md",
+      "original_sha256": "1389694823a96520992ef3fae534ce0b1b22010d70a998e741c1e0f88639a250",
+      "original_bytes": 2100,
+      "reuse_existing": false,
+      "copied_sha256": "f16b9a3e68dd6a880855a76bd25d2608a27dae92d1c3263ad000d94c3d0dd305",
+      "link_rewrites": [
+        {
+          "original": "PARA_PLACA_CON_GONZA_20261030.md",
+          "central": "../placa/PARA_PLACA_CON_GONZA_20261030.md"
+        },
+        {
+          "original": "RESPALDO_EXTERNO_20261029.json",
+          "central": "/home/nachofalchi/data/fpga-work/RESPALDO_EXTERNO_20261029.json"
+        },
+        {
+          "original": "timing-audit/limpieza_temporales_20261029/README_RECUPERACION.txt",
+          "central": "/home/nachofalchi/data/fpga-work/timing-audit/limpieza_temporales_20261029/README_RECUPERACION.txt"
+        }
+      ],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/PARA_PLACA_CON_GONZA_20261030.md",
+      "section": "placa",
+      "target": "biblioteca_20261104/placa/PARA_PLACA_CON_GONZA_20261030.md",
+      "original_sha256": "cd1de28ce4be4d2e077c6c9b667beff6e1823b573571d637e57a888bcdbe1dc2",
+      "original_bytes": 4810,
+      "reuse_existing": false,
+      "copied_sha256": "52d96f01fe82be0c56e21b59caf94cf3c9216a4178a3db9f5e7002609b9c8702",
+      "link_rewrites": [
+        {
+          "original": "cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/README.md",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/known_good_2026-09-18/README.md"
+        },
+        {
+          "original": "cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/README.md"
+        },
+        {
+          "original": "cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top.bit",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/corev_apu/fpga/software/kr260_ps_boot/timing_closed_91mhz_2026-10-22/kr260_top.bit"
+        },
+        {
+          "original": "operacion/cva6_ops/fsbl91/build_20261029_1831/fsbl91_manifest.json",
+          "central": "/home/nachofalchi/data/fpga-work/operacion/cva6_ops/fsbl91/build_20261029_1831/fsbl91_manifest.json"
+        },
+        {
+          "original": "operacion/cva6_ops/fsbl91/build_20261029_1831/kr260_fsbl_91mhz_patched.elf",
+          "central": "/home/nachofalchi/data/fpga-work/operacion/cva6_ops/fsbl91/build_20261029_1831/kr260_fsbl_91mhz_patched.elf"
+        },
+        {
+          "original": "automatizacion/README.md",
+          "central": "guia_automatizacion.md"
+        },
+        {
+          "original": "cva6-equipo/docs/seguimiento_fpga/plan_bootrom_original_y_programas_ddr.md",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/plan_bootrom_original_y_programas_ddr.md"
+        },
+        {
+          "original": "timing-audit/ssh_backup_20261029/archivos_placa_local_verificados.json",
+          "central": "/home/nachofalchi/data/fpga-work/timing-audit/ssh_backup_20261029/archivos_placa_local_verificados.json"
+        }
+      ],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/automatizacion/README.md",
+      "section": "placa",
+      "target": "biblioteca_20261104/placa/guia_automatizacion.md",
+      "original_sha256": "ecf6d75cf803e4a13c20fb824dd0f0a5a9ee64cdc0bb46e5d0621ed463258916",
+      "original_bytes": 6269,
+      "reuse_existing": false,
+      "copied_sha256": "dee6f55f71f3abb2303d7fda31359ee62c8357e98d1e8cb8d3466770fd6a7b2c",
+      "link_rewrites": [
+        {
+          "original": "../cva6-equipo/docs/seguimiento_fpga/plan_bootrom_original_y_programas_ddr.md",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/plan_bootrom_original_y_programas_ddr.md"
+        }
+      ],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/README_ENTREGA.md",
+      "section": "reunion_20261030",
+      "target": "biblioteca_20261104/reunion_20261030/README_ENTREGA.md",
+      "original_sha256": "8d82932a364478d263da7177758907245639a199653df41816d44c55414ff6cd",
+      "original_bytes": 2993,
+      "reuse_existing": false,
+      "copied_sha256": "e9acce97fff83a1b2acd49dca72c0834d006cb88da1fe7dc9cec8bcbc03428b2",
+      "link_rewrites": [
+        {
+          "original": "output/pdf/CVA6_KR260_estado_reunion_20261030.pdf",
+          "central": "../pdf/2026-10-30_Estado_reunion.pdf"
+        },
+        {
+          "original": "RESUMEN_REUNION.md",
+          "central": "../../reunion_20261030/RESUMEN_REUNION.md"
+        },
+        {
+          "original": "evidencia_reunion_20261030.zip",
+          "central": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/evidencia_reunion_20261030.zip"
+        },
+        {
+          "original": "../../backups/reunion_20261030/README_RECUPERACION.md",
+          "central": "/home/nachofalchi/data/fpga-work/backups/reunion_20261030/README_RECUPERACION.md"
+        },
+        {
+          "original": "../../cva6-equipo/docs/seguimiento_fpga/README.md",
+          "central": "/home/nachofalchi/data/fpga-work/cva6-equipo/docs/seguimiento_fpga/README.md"
+        },
+        {
+          "original": "../../RESPALDO_EXTERNO_20261029.md",
+          "central": "../organizacion/RESPALDO_EXTERNO_20261029.md"
+        },
+        {
+          "original": "VERIFICACION_DOCUMENTAL_20261029_TARDE.json",
+          "central": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/VERIFICACION_DOCUMENTAL_20261029_TARDE.json"
+        },
+        {
+          "original": "VERIFICACION_AUTOMATIZACION_20261029.json",
+          "central": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/VERIFICACION_AUTOMATIZACION_20261029.json"
+        },
+        {
+          "original": "manual_placa/output/pdf/Manual_CVA6_KR260_90_9MHz.pdf",
+          "central": "../pdf/2026-10-30_Manual_placa_90_9MHz.pdf"
+        },
+        {
+          "original": "manual_placa/MANUAL_PLACA.txt",
+          "central": "../placa/MANUAL_PLACA.txt"
+        },
+        {
+          "original": "manual_placa/RUTAS_IMPORTANTES.txt",
+          "central": "../placa/RUTAS_IMPORTANTES.txt"
+        }
+      ],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/RESUMEN_REUNION.md",
+      "section": "reunion_20261030",
+      "target": "reunion_20261030/RESUMEN_REUNION.md",
+      "original_sha256": "19ed2532fd821d1eea6f8a7bcca8b53ef4bf63135a7dad936da1c886e72a229f",
+      "original_bytes": 9419,
+      "reuse_existing": true,
+      "copied_sha256": "19ed2532fd821d1eea6f8a7bcca8b53ef4bf63135a7dad936da1c886e72a229f",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/manual_placa/MANUAL_PLACA.txt",
+      "section": "placa",
+      "target": "biblioteca_20261104/placa/MANUAL_PLACA.txt",
+      "original_sha256": "4d0e442ae0c32f31f6139ed7d395f881dcd92628909e307729f6d8a4359b289c",
+      "original_bytes": 37519,
+      "reuse_existing": false,
+      "copied_sha256": "4d0e442ae0c32f31f6139ed7d395f881dcd92628909e307729f6d8a4359b289c",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/manual_placa/RUTAS_IMPORTANTES.txt",
+      "section": "placa",
+      "target": "biblioteca_20261104/placa/RUTAS_IMPORTANTES.txt",
+      "original_sha256": "ab735bb2c3b0369c6688b86b957cde5715b1b060eecb5bba446802cad59d4ddb",
+      "original_bytes": 1251,
+      "reuse_existing": false,
+      "copied_sha256": "ab735bb2c3b0369c6688b86b957cde5715b1b060eecb5bba446802cad59d4ddb",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/manual_placa/generar_manual.py",
+      "section": "placa",
+      "target": "biblioteca_20261104/placa/generar_manual.py",
+      "original_sha256": "90f1bd73d74bcce08659b2c97d7cdeb5b1b6c22a67b6e1d6e7d3312488def81d",
+      "original_bytes": 62546,
+      "reuse_existing": false,
+      "copied_sha256": "90f1bd73d74bcce08659b2c97d7cdeb5b1b6c22a67b6e1d6e7d3312488def81d",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/data/fpga-work/entregas/reunion_profesor_20261030/manual_placa/VERIFICACION.json",
+      "section": "placa",
+      "target": "biblioteca_20261104/placa/VERIFICACION.json",
+      "original_sha256": "abe9b49ac5e6bfbe4d337f4d905b6b138dd63a6e66ef9f2206e89e0f3f2e742d",
+      "original_bytes": 1404,
+      "reuse_existing": false,
+      "copied_sha256": "abe9b49ac5e6bfbe4d337f4d905b6b138dd63a6e66ef9f2206e89e0f3f2e742d",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/README.md",
+      "section": "campanas",
+      "target": "biblioteca_20261104/campanas/guia_CAST_100MHz.md",
+      "original_sha256": "2ac45b975b82f45e89c9439e30a33ae1748386d4e11b1a62595aee9eb49d7b1c",
+      "original_bytes": 11925,
+      "reuse_existing": false,
+      "copied_sha256": "2ac45b975b82f45e89c9439e30a33ae1748386d4e11b1a62595aee9eb49d7b1c",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    },
+    {
+      "source": "/home/nachofalchi/Documents/ChatGPT/Tesis/Automatizacion-FPU-100MHz/README-120MHz.md",
+      "section": "campanas",
+      "target": "biblioteca_20261104/campanas/guia_CAST3_120MHz_baja_carga.md",
+      "original_sha256": "ba20eeafc856e79a3d80d80a624a424030e324c845e0eccdf884d3754351ccf3",
+      "original_bytes": 3789,
+      "reuse_existing": false,
+      "copied_sha256": "ba20eeafc856e79a3d80d80a624a424030e324c845e0eccdf884d3754351ccf3",
+      "link_rewrites": [],
+      "preexisting_unresolved_links": []
+    }
+  ]
+}
