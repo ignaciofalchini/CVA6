@@ -12,7 +12,7 @@ El FSBL de 100 MHz también tiene **PASS de compilación** y `cva6 ensayo --frec
 
 ## Estado del repositorio
 
-Al 6 de noviembre, CAST3 y el reloj de 100 MHz ya están en commits de la rama `feature/kr260-ddr4-integration`. **Esa rama todavía no está en ningún remoto.**
+Al 6 de noviembre, CAST3 y el reloj de 100 MHz ya están en commits de la rama `feature/kr260-ddr4-integration`. La rama está subida a `origin` (`ignaciofalchini/CVA6`, público). Para subir hay que usar la cuenta `ignaciofalchini`, porque la activa en esta computadora, `nachofalchi`, no tiene permiso de escritura.
 
 | Commit | Contenido |
 |---|---|
