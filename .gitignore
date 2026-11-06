@@ -91,3 +91,6 @@ gem5_config_CVA6/gem5/tests/matmul_small.config6.json
 gem5_config_CVA6/gem5/tests/matmul_small_clean.config6.txt
 gem5_config_CVA6/gem5/tests/matmul_small.config7.json
 gem5_config_CVA6/gem5/tests/matmul_small_clean.config7.txt
+/.Xil/
+*.dcp
+/docs/seguimiento_fpga/archivo_documental_*.tar.gz
