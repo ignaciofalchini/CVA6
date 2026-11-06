@@ -77,7 +77,7 @@ class CVA6FUPool(MinorFUPool):
 
         fp_cvt = MinorFU()
         fp_cvt.opClasses = minorMakeOpClassSet(['FloatCvt'])
-        fp_cvt.opLat = 2
+        fp_cvt.opLat = 3
         fp_cvt.issueLat = 1
 
         fp_noncomp = MinorFU()
